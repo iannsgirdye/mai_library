@@ -1,0 +1,2424 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Математический анализ}
+    \author{Бабицкий Иван | М8О-111БВ-24 \\ 02.03.02 "Фундаментальная информатика и информационные технологии"}
+    \date{2024/2025 учебный год, 1-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+%-------------------------------------------------------
+\newpage
+\paragraph{2024.09.06 (3)}
+\part{Элементы теории множеств}
+
+\section{Введение}
+
+\subsection{Определение}
+Множество --- это набор элементов.
+
+
+\subsection{Определение}
+Пустое множество $\varnothing$ --- это множество без элементов. Является подмножеством любого множества.
+
+
+\subsection{Определение}
+Универсальное множество $\mathbb{U}$ --- множество элементов рассматриваемого типа.
+\begin{gather*}
+    A \subset B, \text{ если } \forall x \in A \Rightarrow x \in B. \\
+    \varnothing \subset A, A \subset U, A \subseteq A.
+\end{gather*}
+
+
+\subsection{Определение}
+Логическое высказывание --- это повествовательное предложение, про которое можно сказать истинно оно или ложно.
+
+
+\subsection{Определение}
+Предикат --- это утверждение, зависящее от переменной, превращающееся в логическое высказывание при подстановке вместо переменной её конкретного значения.
+
+\subsubsection{Пример}
+$x > 2$ --- предикат от одной переменной.
+
+
+\subsection{Определение}
+Область истинности предиката --- это множество таких значений переменной, при которых этот предикат превращается в истинное высказывание.
+
+\subsubsection{Пример}
+$x \in A$, где $A$ --- область истинности этого предиката.
+
+
+
+\section{Квантеры}
+
+\begin{itemize}
+    \item $\forall$ --- для любого
+    \item $\in$ --- принадлежит
+    \item $\notin, \overline{\in}$ --- не принадлежит
+    \item $\exists$ --- существует
+    \item $\exists!$ --- существует, и при том единственный (-ая, -ое)
+    \item $\subset$ --- подмножество
+    \item $\subseteq$ --- подмножество, совпадающее с множеством
+    \item $\wedge$ --- и
+    \item $\vee$ --- или
+    \item $:$ --- таких, что  
+\end{itemize}
+\includegraphics[scale=0.4]{images/part01_01.png}
+
+
+\section{Операции над множествами}
+
+\subsection{Пересечение}
+\[
+    A \cap B = \{x: x \in A \wedge x \in B\}
+\]
+
+
+\subsection{Объединение}
+\[
+    A \cup B = \{x: x \in A \vee x \in B\}
+\]
+
+
+\subsection{Разность}
+\[
+    A \setminus B = \{x: x \in A \wedge x \notin B\}
+\] 
+
+
+\subsection{Симметрическая разность}
+\begin{gather*}
+    (A \cup B) \setminus (A \cap B) \\
+    (A \setminus B) \cup (B \setminus A)
+\end{gather*}
+
+
+\subsection{Дополнение}
+\[
+    \overline{A} = \mathbb{U} \setminus A = \{x: x \notin A\}
+\]
+
+
+
+\section{Логические высказывания}
+
+\subsection{Операции над логическими высказываниями}
+
+\subsubsection{Отрицание}
+\begin{tabular}{c|c}
+    $A$ & $\overline{A}$ \\
+    \hline
+    $1$ & $0$ \\
+    $0$ & $1$
+\end{tabular}
+\[
+    \urcorner (A \wedge B) = \urcorner A \vee \urcorner B \text{ или } \overline{A \wedge B} = \overline{A} \vee \overline{B}
+\]
+
+\subsubsection{Конъюнкция}
+\begin{tabular}{c|c|c}
+    $A$ & $B$ & $A \wedge B$ \\
+    \hline
+    $0$ & $0$ & $0$ \\
+    $0$ & $1$ & $0$ \\
+    $1$ & $0$ & $0$ \\
+    $1$ & $1$ & $1$ 
+\end{tabular}
+
+\paragraph{2024.09.13 (3, 4)}
+\subsubsection{Дизъюнкция}
+\begin{tabular}{c|c|c}
+    $A$ & $B$ & $A \vee B$ \\
+    \hline
+    $0$ & $0$ & $0$ \\
+    $0$ & $1$ & $1$ \\
+    $1$ & $0$ & $1$ \\
+    $1$ & $1$ & $1$ 
+\end{tabular}
+
+\subsubsection{Импликация}
+\begin{tabular}{c|c|c}
+    $A$ & $B$ & $A \rightarrow B$ \\
+    \hline
+    $0$ & $0$ & $1$ \\
+    $0$ & $1$ & $1$ \\
+    $1$ & $0$ & $0$ \\
+    $1$ & $1$ & $1$ 
+\end{tabular}
+
+\subsubsection{Эквиваленция}
+\begin{tabular}{c|c|c}
+    $A$ & $B$ & $A \leftrightarrow B, A \sim B$ \\
+    \hline
+    $0$ & $0$ & $1$ \\
+    $0$ & $1$ & $0$ \\
+    $1$ & $0$ & $0$ \\
+    $1$ & $1$ & $1$ 
+\end{tabular}
+
+
+
+\section{Декартовое (прямое) произведение множеств}
+
+\subsection{Определение}
+$A$ и $B$ --- множество упорядоченных пар, в которых 1-й элемент принадлежит $A$, а 2-й --- $B$.
+\[
+    A \times B = \{(x, y): x \in A \wedge x \in B\}
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    \text{Пусть } A = [1, 2], B = [2, 3] \\
+    A \times B = \{(x, y): x \in [1, 2] \wedge y \in [2, 3]\}
+\end{gather*}
+\includegraphics[scale=0.3]{images/part01_02.png}
+
+
+
+\section{Соответствия}
+
+\subsection{Определение}
+Соотсветствие между множествами $A$ и $B$ --- это любое подмножество декартового произведения этих элементов.
+
+
+\subsection{Определение}
+Пусть задано соответствие между множествами $A$ и $B$, то есть множество некоторых пар $(x, y)$. \\
+Тогда образ элемента $x$ из множества $A$ --- множество таких $y$ из $B$, которые соответствуют элементу $x$.
+\includegraphics[scale=0.3]{images/part01_03.png}
+
+
+\subsection{Определение}
+Прообраз элемента $y$ из $B$ --- множество таких $x$ из $A$, которые соответствуют элементу $y$.
+
+
+\subsection{Определение}
+Объединение всех прообразов --- область определения соответствий.
+
+
+\subsection{Определение}
+Объединение всех образов --- область значений соответствий.
+
+
+\section{Элементарная классификация соответствий}
+
+\subsection{Многомногозначное соответствие}
+Существует образ и прообраз, состоящие более чем из 1 элемента. \\
+\includegraphics[scale=0.3]{images/part01_04.png}
+
+
+\subsection{Одномногозначное соответствие}
+Образ, состоящий более чем из 1 элемента, но все прообразы состоят не более чем из 1 элемента. \\
+\includegraphics[scale=0.3]{images/part01_05.png}
+
+
+\subsection{Многооднозначное соответствие}
+Все образы состоят не более чем из 1 элемента, но существует прообраз, состоящий более чем из 1 элемента. \\
+\includegraphics[scale=0.3]{images/part01_06.png}
+
+
+\subsection{Однооднозначное соответствие}
+Все образы и все прообразы состоят не более чем из 1 элемента. \\
+\includegraphics[scale=0.3]{images/part01_07.png}
+
+\paragraph{Примечание}
+~\\
+Последние 2 типа соответствия называются функциональными соответствиями или функциями.
+
+
+\subsection{Обратное соответствие}
+\begin{itemize}
+    \item Если $f = \{(x, y): x \in A \wedge y \in B \wedge \text{правило}\}$, то
+          $f^{-1} = \{(y, x): x \in A \wedge y \in B \wedge \text{правило}\}$
+    \item Если $f \subset A \times B$, то
+          $f^{-1} \subset B \times A$
+\end{itemize}
+
+\subsubsection{Пример}
+\[
+    f: y = x^2, \text{ то } f^{-1}: x = \pm \sqrt{y}
+\]
+
+\paragraph{Примечание}
+~\\
+Только соответствие, обратное однозначному, также является функцией.
+\\
+\\
+Пусть $A$ совпадает с областью определения соответствия.
+\subsection{Определение}
+Инъекция (однооднозначное соответствие) --- соответствие, для которого справедливо следующее высказывание:
+\[
+    f(x_1) = f(x_2), \text{ то } x_1 = x_2, \text{ где } x_1, x_2 \in A, f \text{ --- обозначение соответствия}
+\]
+\includegraphics[scale=0.3]{images/part01_08.png}
+
+
+\subsection{Определение}
+Сюръекция --- это функциональное соответствие, в котором область значения совпадает с множеством $B$. \\
+\includegraphics[scale=0.3]{images/part01_09.png}
+
+
+\subsection{Определение}
+Биекция --- это отображение, являющееся одновременно инъекцией и сюръекцией (взаимно однозначное соответствие). \\
+\includegraphics[scale=0.3]{images/part01_10.png}
+
+
+
+\section{Мощность множества}
+
+\subsection{Определение}
+Равнодушные множества --- это 2 множества, между которыми можно установить взаимнооднозначное соответствие.
+
+
+\subsection{Определение}
+Пусть $A$ --- подмножество $B$. Будем говорить, что мощность множества $B$ больше мощности множества $A$, 
+если между $A$ и $B$ нельзя установить взаимнооднозначное соответствие.
+
+
+\subsection{Определение}
+Счётное множество --- это множество, равномощное множеству натуральный чисел.
+
+
+\subsection{Утверждение}
+Множество целых чисел счётно. \\
+\includegraphics[scale=0.3]{images/part01_11.png}
+
+
+\subsection{Утверждение}
+Объединение конечного множества чисел счётных множеств счётно \\
+\begin{gather*}
+    n \text{ множеств }
+    \begin{cases}
+        a_1, a_2, \dots, a_n \\
+        b_1, b_2, \dots, b_n \\
+        c_1, c_2, \dots, c_n
+    \end{cases}    
+\end{gather*}
+
+
+\subsection{Утверждение}
+Объединение счётного числа счётных множеств счётно. \\
+\includegraphics[scale=0.3]{images/part01_12.png} \\
+Отрезки и интервалы имеют равную мощность.
+
+
+\subsection{Утверждение}
+Множество точек отрезка являются более мощными, чем счётное множество.
+
+
+\subsection{Определение}
+Отрезок --- это множество мощностью континум.
+
+
+
+\section{Отношения на множестве}
+
+\subsection{Определение}
+$A \times A = A^2$ --- декартовые квадрат множества $A$.
+
+
+\subsection{Определение}
+Отношение на множестве $A$ --- соответствие, заданное на $A^2$.
+
+\subsection{Определение}
+\begin{itemize}
+    \item $f$ --- отношение \\
+    \item $a f b$ --- $a$ находится в отношении $f$ с элементов $b$.
+\end{itemize}
+
+
+\subsection{Определение}
+Отношения эквивалентности --- это отношения, обладающие следующими тремя свойствами.
+
+
+\subsection{Свойства}
+
+\subsubsection{Рефлексивность}
+$a f a$ --- справедливо для любого $a$.
+
+\subsubsection{Симметричность}
+Если $a f b$, то $b f a$.
+
+\subsubsection{Транзитивность}
+Если $a f b$ и $b f c$, то $a f c$.
+
+
+
+
+%-------------------------------------------------------
+\newpage
+\paragraph{2024.09.20 (3)}
+\part{Аксиоматика действительных чисел}
+
+\section{Введение}
+
+\subsection{Определение}
+Действительные числа --- это множество $\mathbb{R}$, над элементами которого можно совершать операции сложение и умножение, 
+между которыми установлено отношение линейного порядка и для которых выполнено свойство полноты,
+подчиняющиеся следующему набору аксиом.
+
+
+
+\section{Аксиомы}
+\begin{itemize}
+    \item Группа: пункты 11.1.1-11.1.3
+    \item Абелева группа: пункты 11.1.1-11.1.4
+\end{itemize}
+
+\subsection{Аксиомы сложения}
+\[
+    a + b = c \in \mathbb{R}
+\]  
+
+\subsubsection{Существование нуля}
+\[
+    \exists 0 ~ \forall a \in \mathbb{R}: a + 0 = 0 + a = a
+\]
+
+\subsubsection{Существование противоположного элемента}
+\[
+    \forall a \in \mathbb{R} ~ \exists (-a): a + (-a) = 0
+\]
+
+\subsubsection{Ассоциативность}
+\[
+    (a + b) + c = a + (b + c)
+\]
+
+\subsubsection{Коммутативность}
+\[
+    a + b = b + a
+\]
+
+
+\subsection{Аксиомы умножения}
+\begin{itemize}
+    \item Группа: пункты 11.2.1-11.2.3
+    \item Абелева группа: пункты 11.2.1-11.2.4
+\end{itemize}
+
+\subsubsection{Существование единицы}
+\[
+    \exists 1 ~ \forall a \in \mathbb{R}: a \cdot 1 = 1 \cdot a = a
+\]
+
+\subsubsection{Существование обратного элемента}
+\[
+    \forall a \in \mathbb{R}, a \neq 0 ~ \exists a^{-1} = \frac{1}{a}: a \cdot a^{-1} = a^{-1} \cdot a = 1
+\]
+
+\subsubsection{Ассоциативность}
+\[
+    (a \cdot b) \cdot c = a \cdot (b \cdot c)
+\]
+
+\subsubsection{Коммутативность}
+\[
+    a \cdot b = b \cdot a
+\]
+
+
+\subsection{Определение}
+Поле --- это алгебраический объект, на котором введены 2 бинарные операции, подчиняющиеся 8 аксиомам выше.
+
+
+\subsection{Связь сложения и умножения}
+
+\subsubsection{Дистрибутивность}
+\[
+    \forall a, b, c: (a + b) \cdot c = a \cdot c + b \cdot c
+\]
+
+
+\subsection{Аксиомы об отношениях $\ge$}
+
+\subsubsection{Рефлексивность}
+\[
+    a \ge a
+\]
+
+\subsubsection{Антисимметричность}
+\[
+    a \ge b \wedge b \ge a \Rightarrow a = b
+\]
+
+\subsubsection{Транзитивность}
+\[
+    a \ge b \wedge b \ge c \Rightarrow a \ge c
+\]
+
+\subsubsection{Определение, что данное отношение порядка является линейным порядком}
+\[
+    \forall a, b \in \mathbb{R}: a \ge b \vee b \ge a
+\]
+
+\paragraph{Замечание}
+\begin{itemize}
+    \item Если $a \ge b$, то $b \le a$.
+    \item Если $a \ge b$ и $a \neq b$, то $a > b$.
+\end{itemize}
+
+\subsubsection{Связь умножения и порядка}
+\[
+    a \ge 0, b \ge 0 \Rightarrow a \cdot b \ge 0
+\]
+
+\subsubsection{Связь сложения и порядка}
+\[
+    a \ge b \Rightarrow a + c \ge b + c
+\]
+
+\subsubsection{Аксиома полноты}
+\begin{gather*}
+    \text{Пусть } U \text{ и } V \text{ --- такие множества, что } \forall x \in U, \forall y \in V, x \le y. \\
+    \text{Тогда } \exists c \in \mathbb{R} ~~~ \forall x \in U ~~~ \forall y \in V ~~~ x \le c \le y. 
+\end{gather*}
+
+
+
+\paragraph{2024.09.27 (3)}
+\section{Ряд утверждений}
+
+\subsection{Утверждение}
+\[
+    (-a) = (-1) \cdot a
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    (-a) + a = (-1) \cdot a + a \\
+    0 = (-1) \cdot a + a
+\end{gather*}
+
+
+\subsection{Утверждение}
+\[
+    a \cdot 0 = 0
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    a(0 + 0) = a \cdot 0 + a \cdot 0 \\
+    \underbrace{a \cdot 0 + (-a \cdot 0)}_{0} = a \cdot 0 + \underbrace{a \cdot 0 + (-a \cdot 0)}_{0}
+\end{gather*}
+
+
+\subsection{Утверждение}
+\[
+    a < 0, b < 0 \Rightarrow ab > 0
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    a < 0 \\
+    a + (-a) < 0 + (-a) \\
+    0 < (-a) \\
+    0 < (-b) \\
+    (-a)(-b) > 0 \\
+    (-1) \cdot a \cdot (-1) \cdot b > 0 \\
+    (-1)(-1) \cdot ab > 0 \\
+    1 \cdot a \cdot b > 0 \\
+    0 = (-1)(-1 + 1) \\
+    0 = (-1)(-1) + (-1) \cdot 1 \\
+    0 = (-1)(-1) + (-1) \\
+    (-1)(-1) = 1
+\end{gather*}
+
+
+\subsection{Утверждение}
+\[
+    1 > 0
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } 1 < 0 \\
+    1 < 0, 1 < 0 \Rightarrow 1 \cdot 1 > 0 \\
+    1 > 0 \text{ --- противоречие }
+\end{gather*}
+
+
+\subsection{Утверждение}
+\[
+    1 \neq 0
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    1 = 0 \\
+    a \cdot 1 = a \\
+    a \cdot 0 = 0
+\end{gather*}
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Если } a \cdot b = 0, \text{ то или } a = 0, \text{ или } b = 0: \\
+    \forall a, b \in \mathbb{R}: a \cdot b = 0 \Rightarrow a = 0 \vee b = 0
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } a \neq 0, b \neq 0, \text{ но } a \cdot b = 0 \\
+    ab + (-a) = (-a) \\
+    a(b + (-1)) = (-a) \\
+    a \cdot a^{-1} (b + (-1)) = (-1) \cdot a \cdot a^{-1} \\
+    b + (-1) = (-1) \\
+    b = 0 \text{ --- противоречие}
+\end{gather*}
+
+
+
+
+%-------------------------------------------------------
+\newpage
+\paragraph{2024.09.27 (4)}
+\part{Натуральные числа}
+
+\section{Введение}
+
+\subsection{Определение}
+Множество, обладающее тем свойством, что наряду с элементом $a$ ему принадлежит элемент $a + 1$, называется индуктивным множеством.
+
+
+\subsection{Определение}
+Множеством натуральных чисел называется минимальное индуктивное множество, содержащее единицу, то есть пересечение всех индуктивных множеств, содержащих единицу.
+
+
+\subsection{Определение}
+Множество $A$ называется ограниченны сверху, если $\exists c \in \mathbb{R} ~ \forall x \in A: x \ge b$ \\
+Такое число $b$ называется мажорантом множества $A$.
+
+
+\subsection{Определение}
+Множество $A$ называется ограниченным снизу, если $\exists c \in \mathbb{R} ~ \forall x \in A: x \le c$ \\
+Такое число c называется минорантом множества $A$.
+
+
+\subsection{Определение}
+Если множество ограничено как сверху, так и снизу, его называют ограниченным множеством.
+
+
+\subsection{Определение}
+Число $b$ называется максимальным элементом множества $A$, если $b \in A$ и $\forall x \in A: x \le b$ 
+
+
+\subsection{Определение}
+Число $c$ называется минимальным элементом множества $A$, если $c \in A$ и $\forall x \in A: x \ge c$ 
+
+
+
+\section{Существование точных граней множества}
+
+\subsection{Определение}
+Наименьшее из мажорант множества называется точной верхней гранью этого множества.
+
+
+\subsection{Утверждение}
+Любое ограниченное сверху множество имеет точную вернюю грань --- супремум.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } A \text { --- ограниченное множество, } B \text { --- множество его мажорант, тогда} \\ 
+    \forall x \in A \text{ и } \forall y \in B: x = y. \\
+    \text{По аксиоме 16 } \exists c \in \mathbb{R}: \forall x \in A \text{ и } \forall y \in B: x \le c \le y, \\
+    \text{ то есть } c \text{ --- мажоранта } A, \text{ но любая другая мажоранта больше } c, \text{ то есть } c = \sup A.
+\end{gather*}
+
+
+\subsection{Определение}
+Наибольший из минорант множества называется точной нижней гранью этого множества - инфинум $c = \inf A$.
+
+
+\subsection{Утверждение}
+Любое ограниченное снизу множество имеет точную нижнюю грань.
+
+
+
+\section{Принцип вложенных отрезков}
+
+\subsection{Определение}
+Последовательностью называется отображение множества натуральных чисел в множество любой природы.
+
+\subsubsection{Пример} 
+\dots
+
+Пусть $\{I_n\}: \forall n \in \mathbb{N} ~ I_{n+1} < I_n$, тогда $\{I_n\}$ называется системой вложенных отрезков.
+
+
+\subsection{Теорема | Проекция вложенных отрезков (принцип Коша Кантора)}
+Пусть $\{U_n\}, n \in \mathbb{N}$ --- система вложенных отрезков, тогда $\exists c \in \mathbb{R} ~ \forall n \in \mathbb{N}: c \in U_n$. \\
+Кроме того, если $U_n = [a_n ; b_n]$ и $\forall \epsilon > 0 ~ \exists n \in \mathbb{N}$, что $b_n - a_n < \epsilon$, то эта точка --- единственная.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Рассмотрим множества } \{a_1, a_2, ..., a_n, ...\} \text{ и } \{b_1, b_2, ..., b_n, ...\} \\
+    \text{Очевидно, что } \forall k, m: a_k < b_m \\
+    \exists c ~ \forall k, m \in \mathbb{N}: a_k \le c \le b_m \Rightarrow \forall n \in \mathbb{N}: c \in U_n \\
+    \text{Пусть } \forall \epsilon > 0 ~ \exists n \in \mathbb{N}: b_n - a_n < \epsilon \\
+    \text{Пусть } c_1 \neq c, c_1 \in U_n; n \in \mathbb{N} \\
+    \text{Обозначим } \epsilon^{-1} = |c_1 - c| \\
+    \exists n \in \mathbb{N}, \text{что } b_n - a_n < \epsilon \text{, то есть } c_1 \text{ и } c \text{ не могут одновременно принадлежать отрезку } U_n
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+U_n = \left[\frac{1}{2} - \frac{1}{n} ; \frac{1}{2} + \frac{1}{n}\right], c = \frac{1}{2}
+\]
+
+
+\subsection{Определение}
+Система множеств $A_1$, $A_2$, ..., $A_n$, ... называестя покрытием множества $B$, если $\forall x \in B ~ \exists n: x \in A_n$.
+
+
+\subsection{Определение}
+Подпокрытием называется набор множеств покрытия, также являющийся покрытием.
+
+
+\subsection{Пример}
+\begin{gather*}
+    B = \left[0, 1\right],~A_1 = \left(-\frac{1}{2} ; \frac{2}{3}\right),~A_2 = \left(\frac{1}{3} ; \frac{4}{3}\right),~A_3 = \left(\frac{1}{2} ; \frac{2}{3}\right) \\
+    A_1, A_2 \text{ --- подпокрытие} \\
+    A_1, A_2, A_3 \text{ --- покрытие}
+\end{gather*}
+
+
+\subsection{Теорема | Принцип конечного подпокрытия (принцип Бареля Лебега)}
+Из любого покрытия отрезка интервалами можно выделить конечные покрытия.
+
+\subsubsection{Пример}
+\includegraphics[scale=0.4]{images/part03_01.jpg}
+
+\subsubsection{Доказательство}
+Пусть существует бесконечное покрытие отрезка, из которого нельзя выделить конечное покрытие отрезка.
+
+Разделим пополам исходный отрезок.
+
+Тогда для хотя бы одной половины тоже требуется бесконечность покрытия.
+
+Разделим и его пополам и убедимся в том, что одна из новых половин также требует бесконечное покрытие.
+
+Продолжим процесс деления пополам до бесконечности.
+
+Заметим, что выделенная каждый раз половинка образует вложенную систему отрезков, пересечением которых будет некоторая единственная точка $C$, принадлежащая какому-то интервалу из исходного покрытия.
+
+Так как длина половинки может быть как угодно малой, какая-то из половинок целиком попадёт внутрь этого интервала, то есть этот интервал уже является покрытием соответствующей половинки, а вовсе не бесконечного множества интервалов.
+
+
+\subsection{Определение}
+Окрестностью точки называется любой интервал, содержащий эту точку
+
+
+\subsection{Определение}
+Проколотой окрестностью точки называется окрестность точки, из которой исключена сама точка
+
+
+\subsection{Определение}
+Граничной точкой множества называется такая его точка, любая окрестность которой содержит как элементы множества, так и элементы, не принадлежащие множеству
+
+
+\subsection{Определение}
+Внутренней точкой множества называется точка множества, принадлежащая ему вместе с некоторой своей окрестностью.
+
+
+\subsection{Определение}
+Предельной точкой множества называется такая его точка, в любой окрестности которой содержится бесконечно много точек множества.
+
+\subsubsection{Пример}
+\includegraphics[scale=0.2]{images/part03_02.jpg}
+
+
+\subsection{Определение}
+Изолированной точкой множества называется такая точка этого множества, у которой существует проколотая окрестность, не содержащая элементов множеств.
+
+
+\subsection{Теорема | Принцип существования}
+Любое бесконечное ограниченное множество имеет предельную точку
+
+\subsubsection{Доказательство}
+$A$ --- бесконечное множество, $\exists [a, b]: A \subset [a, b]$.
+
+Пусть $U_n$ --- произвольное покрытие отрезка $[a, b]$ интервалами, тогда $U_n$ --- покрытие множества $A$.
+
+Пусть $A$ не имеет предельных точек, тогда любой интервал из $U_n$ содержит не более чем конечное множество точек из множества $A$.
+
+Из $U_n$ можно выделить конечное подпокрытие, то есть $A$ --- конечное множество.
+
+
+
+
+%-------------------------------------------------------
+\newpage
+\paragraph{2024.10.04 (3), 2024.10.11 (3, 4)}
+\part{Предел последовательности}
+
+\section{Введение}
+
+\subsection{Определение}
+Числовой последовательностью называется отображение множества $\mathbb{N}$ в множестве $\mathbb{R}$.
+\[
+\{a_n\}, a_n \in \mathbb{R}, n \in \mathbb{N}
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    a_n = 1 \\
+    a_n = (-1)^n \\
+    a_n = \frac{1}{n} \\
+    a_n = 1 + (-1)^n
+\end{gather*}
+
+
+\subsection{Определение}
+Последовательность называется ограниченной, если множество её значений ограничено.
+
+
+\subsection{Определение}
+Число $A$ называется пределом последовательности $a_n$, если какова бы не была окрестность точки $A$, найдётся такое $N$, что $\forall n \in \mathbb{N}, n > N, a_n$ находится в этой окрестности.
+\[
+\lim_{n \to \infty} a_n = A
+\]
+
+
+\subsection{Определение}
+\[
+(\lim_{n \to \infty} a_n = A) \Leftrightarrow (\forall \epsilon > 0 ~ \exists N(\epsilon), \forall n \in \mathbb{N}: |a_n - A| < \epsilon)
+\]
+
+
+\subsection{Утверждение}
+Последовательность может иметь не более одного предела
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } \exists \lim_{n \to \infty} a_n = A_1, \exists \lim_{n \to \infty} a_n = A_2, A_1 < A_2 \\
+    \text{Пусть } \epsilon = \frac{A_2 - A_1}{3} \\
+    \epsilon N_1 = \forall n > N_1: |a_1 - A_1| < \epsilon \Leftrightarrow A_1 - \epsilon < a_n < A_1 + \epsilon \\
+    \epsilon N_2 = \forall n > N_2: |a_2 - A_2| < \epsilon \Leftrightarrow A_2 - \epsilon < a_n < A_2 + \epsilon \\
+    \text{Пусть } N = \max\{N_1, N_2\}: \\
+    \forall n > N: a_1 < A_1 + \epsilon = A_1 + \frac{A_2 - A_1}{3} = \frac{2A_1 + A_2}{3} < \frac{A_1 + 2A_2}{3} = A_2 - \epsilon < a_n    
+\end{gather*}
+
+
+\subsubsection{Замечание}
+Ограниченная последовательность может не иметь предел
+
+\subsubsection{Пример}
+\includegraphics[scale=0.2]{images/part04_01.jpg}
+
+
+\subsection{Определение}
+\begin{gather*}
+    (\lim_{n \to \infty} a_n = \infty) \Leftrightarrow (\forall \epsilon > 0 ~ \exists N(\epsilon) ~ \forall n > N: |a_n| > \epsilon) \\
+    (\lim_{n \to \infty} a_n = +\infty) \Leftrightarrow (\forall \epsilon > 0 ~ \exists N(\epsilon) ~ \forall n > N: a_n > \epsilon) \\
+    (\lim_{n \to \infty} a_n = -\infty) \Leftrightarrow (\forall \epsilon > 0 ~ \exists N(\epsilon) ~ \forall n > N: a_n > -\epsilon) \\
+    (\{a_n\} \text{ является сходящей}) \Leftrightarrow (\forall \epsilon > 0 ~ \exists N(\epsilon), m \in \mathbb{N}, n > m > N: |a_n - a_m| < \epsilon)
+\end{gather*}
+
+
+\subsection{Определение}
+Если предел последовательности равен $\infty$, $+\infty$ или $-\infty$ последовательность называется \\
+бесконечно большой.
+
+
+\subsection{Определение}
+Последовательность называется сходящейся, если она имеет конечный (числовой) предел.
+
+
+\subsection{Определение}
+Если последовательность имеет предел равный нулю, то она называется бесконечно малой \\
+последовательностью.
+
+
+\subsection{Определение}
+Последовательность $\{a_n\}$ называется фундаментальной, если 
+\[
+\forall\epsilon > 0, \exists{N(\epsilon)}: \forall{m} > n > N: |a_m - a_n| < \epsilon
+\]
+
+
+\subsection{Критерий Коши} 
+(последовательность является фундаментальной) $\Leftrightarrow$ (последовательность является сходящейся)
+
+\subsubsection{Доказательство $1 \Rightarrow 2$}
+\begin{gather*}
+    \exists \lim_{n\to\infty} a_n = A, A \in \mathbb{R} \\
+    \forall\epsilon > 0~\exists{N(\epsilon)} \\
+    \forall{n} > N, n \in \mathbb{N}: |a_n - A| < \frac{\epsilon}{2} \\
+    \forall{m} > N, n \in \mathbb{N}: |a_m - A| < \frac{\epsilon}{2} \\
+    |a_n - a_m| = |a_n - A - (a_m - A)| \le |a_n - A| + |a_m - A| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \\
+\end{gather*}
+
+\subsubsection{Доказательство $1 \Leftarrow 2$}
+\begin{gather*}
+	\forall \epsilon > 0~\exists N(\epsilon): \forall m > n > N : |a_n - a_m| < \frac{\epsilon}{3} \\
+	\text{Пусть } x_n =\inf_{m \ge n} a_m \\
+	\text{Пусть } y_n =\sup_{m \ge n} a_m \\
+	x_n \le x_{n+1} \le y_{n+1} \le y_n \\
+	\{[x_n, y_n]\} \text{ --- система вложенных отрезков} \Rightarrow \exists c: \forall n \in \mathbb{N}, c \in [x_n, y_n] \\
+	m > n \\
+	a_n - \frac{\epsilon}{3} < a_m < a_n + \frac{\epsilon}{3} \\
+	a_n - \frac{\epsilon}{3} \le x_m \le c \le y_m \le a_n + \frac{\epsilon}{3} \\
+	|a_n - c| \le \frac{\epsilon}{3} \\
+	|a_m - a_n| < \frac{\epsilon}{3} \\
+	|x_m - a_n| \le \frac{\epsilon}{3} \\
+	|y_m - a_n| \le \frac{\epsilon}{3} \\
+	|a_m - c| \le |a_m - a_n + a_n - c| \le |a_m - a_n| + |a_n - c| \le
+	\frac{\epsilon}{3} + \frac{\epsilon}{3} = \frac{2\epsilon}{3} < \epsilon
+\end{gather*}
+
+\includegraphics[scale=0.2]{images/part04_02.jpg}
+
+\subsubsection{Следствие}
+Область значений последовательности есть ограниченное множество, то есть последовательность ограничена.
+
+
+
+\section{Алгебраические свойства пределов последовательности}
+Пусть $\lim_{n \to \infty} a_n = A, \lim_{n \to \infty} b_n = B$
+
+\subsection{Утверждение | Сложение}
+$\exists \lim_{n \to \infty} (a_n + b_n) = A + B$
+
+\subsubsection{Доказательство}
+\begin{gather*}
+	\text{Если } (\lim_{n \to \infty} a_n = A) \Leftrightarrow (\forall \epsilon > 0 \text{ } \exists N_1(\epsilon): \forall n > N_1, n \in \mathbb{N} : |a_n - A| < \frac{\epsilon}{2}) \\
+	(\lim_{n \to \infty} b_n = B) \Leftrightarrow (\forall \epsilon > 0 \text{ } \exists N_2(\epsilon): \forall n > N_2, n \in \mathbb{N} : |b_n - B| < \frac{\epsilon}{2}) \\
+	\text{Пусть } N = \max\{N_1, N_2\} \\
+	\forall n > N : |a_n + b_n - (A + B)| \le |a_n - A| + |b_n - B| \le \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \Leftrightarrow \lim_{n \to \infty} (a_n + b_n) = A + B
+\end{gather*}
+
+
+\subsection{Утверждение | Умножение}
+$\exists \lim_{n \to \infty} (a_n \cdot b_n) = A \cdot B$
+
+\subsubsection{Доказательство}
+\begin{gather*}
+	a_n \cdot b_n = (a_n - A + A)(b_n - B + B) = (a_n - A)(b_n - B) + A(b_n - B) + B(a_n - A) + AB \\
+	\forall \epsilon > 0 ~ \exists N_1(\epsilon): \forall n > N_1 : |a_n - A| < \epsilon \\
+	\forall \epsilon > 0 ~ \exists N_2(\epsilon): \forall n > N_2 : |b_n - B| < \epsilon \\
+	\forall \epsilon > 0 ~ \exists N_3(\epsilon): \forall n > N_3 : |b_n - B| < \frac{\epsilon}{3|A|} \text{ (если $A \neq 0$, иначе отсутствует)} \\
+	\forall \epsilon > 0 ~ \exists N_4(\epsilon): \forall n > N_4 : |a_n - A| < \frac{\epsilon}{3|B|} \text{ (если $A \neq 0$, иначе отсутствует)} \\
+	\text{let } N = \max\{N_1, N_2, N_3, N_4\} \\
+	\forall n > N: |a_n b_n - AB| \le |a_n - A||b_n - B| + |A||b_n - B| + |B||a_n - A| < \\
+	< \epsilon^2 + |A| \frac{\epsilon}{3|A|} + |B| \frac{\epsilon}{3|B|} < 3 \cdot \frac{\epsilon}{3} = \epsilon \\
+	(\epsilon^2 < \frac{\epsilon}{3} \Leftarrow \epsilon < \frac{1}{3})
+\end{gather*}
+
+\subsection{Утверждение | Деление}
+Если $B \neq 0$, то $\exists \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{A}{B}$
+
+\subsubsection{Доказательство}
+\begin{gather*}
+\frac{a_n}{b_n} = \frac{A}{B} = \frac{a_n \cdot B - b_n \cdot A}{b_n \cdot B} = \frac{(a_n - A) \cdot B + A \cdot B - (b_n - B) \cdot A - A \cdot B}{b_n \cdot B} = \frac{a_n - A}{b_n} - \frac{b_n - B}{b_n} \cdot \frac{A}{B} \\
+\exists \epsilon ~ N_1 \forall n > N_1 |b_n| > \frac{B}{2} \\
+\exists \epsilon ~ N_2 \forall n > N_2 |a_n - A| < \frac{\epsilon|A|}{4} \\
+\exists \epsilon ~ N_3 \forall n > N_3 |b_n - B| < \frac{\epsilon|B|^2}{4|A|} \\
+\text{Пусть } N = max\{N_1, N_2, N_3\}, \forall n > N: \\
+\frac{|a_n - A|}{b_n - B} \le {} \frac{|a_n - A|}{|b_n|} + \frac{|b_n - B|}{b_n} \cdot \frac{|A|}{|B|} \le \frac{2 \cdot \epsilon \cdot |B|}{4|B|} + \frac{2 \cdot \epsilon* |B|^2}{4|B|} \cdot \frac{|A|}{|B|} = \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+\end{gather*}
+
+
+
+\section{Предельный переход в неравенства}
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{1. } \exists \lim_{n \to \infty} a_n = A \\
+    \text{2. } \exists \lim_{n \to \infty} b_n = B \\
+    \text{3. } \forall n \in \mathbb{N}: a_n \le c_n \le b_n
+\end{gather*}
+
+\subsubsection{Доказательство $\Rightarrow$}
+$\exists \lim_{n \to \infty} c_n = A$
+
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{1. } \exists \lim_{n \to \infty} a_n = A \\
+    \text{2. } \exists \lim_{n \to \infty} b_n = B \\
+    \text{3. } \forall n \in \mathbb{N}: a_n < b_n
+\end{gather*}
+
+\subsubsection{Доказательство $\Rightarrow$}
+\begin{gather*}
+    \forall \epsilon > 0 ~ \exists N_1(\epsilon): \\
+    \forall n > N_1: |a_n - A| < \epsilon \Leftrightarrow A - \epsilon < a_n < A + \epsilon \\
+    \forall n > N_2: |b_n - B| < \epsilon \Leftrightarrow B - \epsilon < b_n < B + \epsilon \\
+    c_n = b_n - a_n, \exists \lim_{n \to \infty} c_n = B - a, c_n \ge 0, \forall n \in \mathbb{N} \\
+    \text{Пусть } B - A < 0: \epsilon = \frac{1}{2} \cdot |B - A| \\
+    \exists N ~ \forall n > N: c_n < B - A + \epsilon = B - A + \frac{1}{2} \cdot (A - B) = \frac{1}{2} \cdot B - \frac{1}{2} \cdot A < 0 \\
+    b_n - a_n < 0 \text{ --- противоречие}
+\end{gather*}
+
+
+\subsection{Утверждение | Принцип двух полицейских}
+\begin{gather*}
+	\begin{cases}
+		\exists \lim_{n \to \infty} a_n = A \\
+		\exists \lim_{n \to \infty} b_n = A \\
+		\forall n \in \mathbb{N}: a_n \le c_n \le b_n
+	\end{cases} \Rightarrow \lim_{c \to \infty} c_n = A
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \forall \epsilon ~ \exists N(\epsilon) ~ \forall n > N_1 \\
+    \forall \epsilon ~ \exists N(\epsilon) ~ \forall n > N_2 \\
+    N = \max{N_1, N_2} \\
+    \forall n > N: A - \epsilon < a_n \le c_n \le b_n < A + \epsilon \\
+    A - \epsilon < c_n < A + \epsilon \\
+    |c_n - A| < \epsilon
+\end{gather*}
+
+
+
+\section{Монотонные последовательности}
+
+\subsection{Определение}
+Последовательность $\{a_n\}$ называется возрастающей, если для $\forall n \in \mathbb{N} ~ a_n < a_n+1$.
+
+
+\subsection{Определение}
+Последовательность $\{a_n\}$ называется неубывающей, если для $\forall n \in \mathbb{N} ~ a_n \le a_n+1$.
+
+
+\subsection{Определение}
+Последовательность $\{a_n\}$ называется убывающей, если для $\forall n \in \mathbb{N} ~ a_n > a_n+1$.
+
+
+\subsection{Определение}
+Последовательность $\{a_n\}$ называется невозрастающей, если для $\forall n \in \mathbb{N} ~ a_n \ge a_n+1$.
+
+
+\subsection{Теорема | Вейерштрасс}
+Монотонная ограниченная последовательность имеет конечный предел.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть для последовательности } \{a_n\}: \\
+    \forall{n} \in \mathbb{N}: a_{n+1} \ge a_n, \\
+    \forall{n} \in \mathbb{N}: a_n < A, \text{тогда} \\
+    \text{1. } a_n \text{ --- финальная постоянная последовательность, то есть } \exists{N} ~ \forall{n} > N: a_n = a \in \mathbb{R} \\
+    \lim_{n\to\infty} a_n \\
+    \text{2. Множество значений } a_n \text{ бесконечно, то есть множество значений имеет предельную точку,} \\ 
+    \text{так как $a_n$ --- ограничена} \\
+    \text{3. } \exists c = \sup_{n \in \mathbb{N}} a_n ~ \forall \epsilon > 0 ~ \exists a_n: c - \epsilon < a_n \le c, \forall m > n: \\
+    c - \epsilon < a_n \le a_m \le c \rightarrow \lim_{n \to \infty} a_n = c
+\end{gather*}
+
+
+\subsection{Утверждение}
+Неубывающая последовательность, имеющая предел, ограничена сверху.
+
+
+\subsection{Утверждение}
+Для того, чтобы монотонная последовательность имела предел, необходимо и достаточно, чтобы она была ограничена.
+
+\subsubsection{Пример}
+\begin{gather*}
+a_n = \frac{n}{q^n}, q > 1 \\
+\frac{a_{n+1}}{a_n} = \frac{n + 1}{q^{n + 1}} \cdot \frac{q^n}{n} = \frac{n + 1}{q^n} < 1 \\
+n + 1 < q \cdot n \\
+1 < (q - 1) \cdot n \\
+n > \frac{1}{q - 1} \text{ --- начиная с этого } n \text{, последовательность убывает} \\
+a_n \text{ --- финально убывающая ограниченная снизу последовательность}
+\end{gather*}
+
+\paragraph{2024.10.18 (3)}
+\subsubsection{Пример}
+\begin{gather*}
+    a_n = (1 + \frac{1}{n})^n \\
+    (1 + \alpha)^n \ge 1 + \alpha n, \alpha > -1 \\
+    \text{Пусть } n = 1, \text{ тогда } 1 + \alpha \ge 1 + \alpha \\
+    \text{Пусть } n = k, \text{ тогда } (1 + \alpha)^k \ge 1 + \alpha k \\
+    \text{Пусть } n = k + 1, \text{ тогда } (1 + \alpha)^{k + 1} = (1 + \alpha)^k (1 + \alpha) \ge (1 + \alpha k)(1 + \alpha) = 1 + \alpha (k + 1) + \alpha^2k > 1 + \alpha (k + 1) \\
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    b_n = \left(1 + \frac{1}{n}\right)^{n + 1} \\
+    \frac{b_{n-1}}{b_n} = 
+    \frac{\left(1 + \frac{1}{n - 1}\right)^n}{\left(1 + \frac{1}{n}\right)^{n + 1}} = 
+    \left(\frac{1 + \frac{1}{n - 1}}{1 + \frac{1}{n}}\right)^n \frac{1}{1 + \frac{1}{n}} = 
+    \left(\frac{n^2}{n^2 - 1}\right)^n \frac{n}{n + 1} = 
+    \left(1 + \frac{1}{n^2 - 1}\right)^n \frac{n}{n + 1} \ge 
+    \left(1 + \frac{n}{n^2 - 1}\right) \frac{n}{n + 1} > \\
+    > \left(1 + \frac{1}{n}\right) \left(1 - \frac{1}{n + 1}\right) =
+    1 + \frac{1}{n} - \frac{1}{n + 1} - \frac{1}{n(n + 1)} =
+    1 + \frac{1}{n(n + 1)} - \frac{1}{n(n + 1)} = 1 \\
+    \frac{n}{n^2 - 1} > \frac{1}{n} \\
+    \frac{b_{n - 1}}{b_n} > 1 \Rightarrow b_n < b_{n - 1} \Rightarrow b_n \text{ --- убывающая}
+\end{gather*}
+
+\section{Подпоследовательности}
+
+\subsection{Определение}
+Любая бесконечная выборка из последовательности называется подпоследовательностью.
+\[
+    \{a_n\} \rightarrow a_{n_1}, a_{n_2}, \dots, a_{n_k}
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    a_n = (-1)^n: \\
+    a_2, a_4, a_6,\dots, a_{2k}, \dots \\
+    a_1, a_3, a_5,\dots, a_{2k - 1}, \dots
+\end{gather*}
+
+\subsection{Утверждение}
+Из любой ограниченной последовательности можно выбрать сходящуюся последовательность.
+
+\subsubsection{Доказательство}
+\begin{enumerate}
+    \item Пусть область значений последовательности $a_n$ --- конечное множество. \\
+          Выберем то из значений последовательности, которому соответствует бесконечно много элементов последовательности. \\
+          Эти элементы и образуют исходную подпоследовательность.
+    \item Если множество значений последовательности $a_n$ бесконечно, то оно имеет предельную точку. \\
+          Пусть $c$ --- предельная точка.
+
+          $\epsilon = 1$, тогда $\exists a_{k_1} \in (c - 1 ; c + 1)$
+
+          $\epsilon = \frac{1}{2}$, тогда $\exists a_{k_2} \in (c - \frac{1}{2} ; c + \frac{1}{2}), k_2 > k_1$
+
+          $\epsilon = \frac{1}{3}$, тогда $\exists a_{k_3} \in (c - \frac{1}{3} ; c + \frac{1}{3}), k_3 > k_2$
+
+          ${a_{k_n}}: \lim_{n \to \infty} a_{k_n} = C$ \\
+\end{enumerate}
+
+
+
+\section{Нижний и верхний пределы последовательности}
+
+\subsection{Определение}
+Предел сходящейся подпоследовательности называется частичным пределом последовательности.
+
+\subsubsection{Пример}
+\begin{gather*}
+    \text{Пусть } a_n \text{ --- ограниченная последовательность} \\
+    \text{Пусть } x_n = \inf_{m \ge n} a_m, y_n = \sup_{m \ge n} a_m \\
+    x_{n+1} \ge x_n, \{x_n\} \text{ --- неубывающая последовательность} \\
+    \{x_n\} \text{ ограничена сверху (любое $y_k$ является мажорантом)} \\
+    x_n \text{ --- сходится, } \exists \lim_{n \to \infty} x_n = m
+\end{gather*}
+
+\subsection{Определение | Нижний предел}
+Нижним пределом последовательности $\{a_n\}$ называестя
+\[
+\exists \varliminf_{n \to \infty} a_n = \lim_{n \to \infty} x_n
+\]
+
+
+\subsection{Определение | Верхний предел}
+Верхним пределом последовательности $\{a_n\}$ называется
+\[
+\exists \varlimsup_{n \to \infty} a_n = \lim_{n \to \infty} y_n
+\]
+
+
+\subsection{Определение}
+Если последовательность не ограничена сверху, будем говорить, что
+\[
+\varlimsup_{n \to \infty} a_n = +\infty
+\]
+
+
+\subsection{Определение}
+Если последовательность не ограничена снизу, будем говорить, что
+\[
+\varliminf_{n \to \infty} a_n = -\infty
+\]
+
+
+\subsection{Утверждение}
+Пусть последовательность $\{a_n\}$ сходится. В этом случае верхний и нижний предел совпадают и равны просто пределу последовательности.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } \exists \lim_{n \to \infty} a_n = A \Rightarrow \varlimsup_{n \to \infty} a_n = \varliminf_{n \to \infty} A\\
+    x_n = \inf_{m \ge n} a_m \\
+    \exists \lim x_n = A_1, A - A_1 < \epsilon, \epsilon > 0, \epsilon \in \mathbb{R} \\
+    A_1 = A
+\end{gather*}
+
+
+\subsection{Утверждение}
+Если верхний и нижний пределы последовательности равны между собой, то последовательность сходится именно к этому пределу.
+
+
+\subsection{Утверждение}
+Нижний предел последовательности совпадает с наименьшим из частичных пределов.
+
+
+\subsection{Утверждение}
+Верхний предел последовательности совпадает с наибольшим из частичных пределов.
+
+
+
+\paragraph{2024.10.25 (3, 4)}
+\part{Предел функции}
+
+\section{Введение}
+
+\subsection{Определение}
+Базой называется набор множеств, обладающий следующими свойствами
+
+\begin{enumerate}
+    \item Пустое множество не является элементом этого набора: $\varnothing \notin \mathcal{B}$
+    \item Если $B_1 \in \mathcal{B}$, $B_2 \in \mathcal{B}$, то $\exists B_3 \in \mathcal{B}: B_3 \subseteq B_1 \cup B_2$ 
+\end{enumerate}
+
+\subsubsection{Пример 1 | База проколотых окрестностей точки $x_0$}
+Все интервалы, содержащие точку $x_0$, из которых исключена сама точка $x_0$. \\
+\includegraphics[scale=0.3]{images/part04_03.jpg}
+
+\subsubsection{Пример 2 | База окрестностей бесконечности}
+\[
+    B = \mathbb{R} \setminus \left[ a, b \right], a <0, b > 0
+\]
+\includegraphics[scale=0.3]{images/part04_04.jpg}
+
+\subsubsection{Пример 3 | База окрестностей $+\infty$}
+\[
+    B = (a, +\infty)
+\]
+\includegraphics[scale=0.3]{images/part04_05.jpg}
+
+\subsubsection{Пример 4 | $x \rightarrow x_0+$}
+\[
+    B = (x_0, x_0 + a), a > 0
+\]
+
+
+\subsection{Определение}
+Пусть $V(A)$ --- окрестность точки $A$.
+\[
+    \left( \lim_B f(x) = A \right) \overset{def}{\Leftrightarrow} \left( \forall V(A)~\exists B \in \mathcal{B}: f(B) \subset V(A) \right)
+\]
+
+\subsubsection{Перевод на другой математический язык}
+\[
+    B: x \to a
+\] 
+(фото 2)
+
+
+\subsection{Определение (классическое определение предела функции)}
+\[
+    \left( \lim_{x \to a} f(x) = A \right) \overset{def}{\Leftrightarrow} \left( \forall \epsilon > 0~\exists \delta(\epsilon) > 0~\forall x, x \neq a, |x - a| < \delta: |f(x) - A| < \epsilon \right)
+\]
+(фото 3)
+
+\subsubsection{Пример}
+\begin{gather*}
+    \text{Дано: } \\ 
+    \lim_{x \to 2} x^2 = 4, \forall \epsilon > 0 \\
+    \text{Доказать: } \\ 
+    \exists \delta: \forall x \neq 2, |x - 2| < \delta (2 - \delta < x < 2 + \delta): |x^2 - 4| < \epsilon \\
+    \text{Доказательство:} \\
+    |x^2 - 4| < \epsilon \Leftrightarrow 4 - \epsilon < x^2 < 4 + \epsilon \\
+    \sqrt{4 - \epsilon} < x < \sqrt{4 + \epsilon} ~~~~~~~~~~~~~~~~~~~~ \delta < \frac{\epsilon}{5}\\ 
+    \sqrt{4 - \epsilon} < 2 - \delta, \sqrt{4 - \epsilon} > 2 + \epsilon \\
+    4 - \epsilon < 4 - 4 \delta + \delta^2 \Rightarrow 4\delta - \delta^2 < \epsilon, 4 \delta + \delta^2 < \epsilon \rightarrow \frac{4}{5} \epsilon + \frac{\epsilon^2}{25} < \epsilon \Leftrightarrow \frac{\epsilon}{5} < 1 \Rightarrow \epsilon < 5 \\
+    \forall \epsilon > 0~\exists \delta(\epsilon) = \min \left( \frac{\epsilon}{5} ; 1 \right): |x - 2| < \delta \Rightarrow |x^2 - 4| < \epsilon
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \text{sign} x = 
+    \begin{cases}
+        1, x > 0 \\
+        0, x = 0 \\
+        -1, x < 0
+    \end{cases}
+    \text{(фото 4)}
+\end{gather*}
+
+
+\subsection{Определение}
+\[
+(\exists \lim_{x \to a+} f(x) = A) \overset{def}{\Leftrightarrow} (\forall \epsilon >0~\exists \delta(\epsilon) > 0~\forall x: a < x < a + \delta: |f(x) - A| < \epsilon)
+\]
+(фото 5)
+
+
+\subsection{Определение}
+Функция $f(x)$ называется финально постоянной при базе $\mathcal{B}$, если
+\[
+\exists B \in \mathcal{B}~\forall x \in B: f(x) = C = \text{const}, c \in \mathbb{R}
+\]
+
+\subsection{Утверждение}
+\[
+\lim_{\mathcal{B}} f(x) = C
+\]
+
+\subsection{Определение}
+Функция $f(x)$ называеся финально ограниченной при базе $\mathcal{B}$, если
+\[
+\exists B \in \mathcal{B}, f(x) \text{ ограничена на } \mathcal{B}, \text{ то есть } \exists M \in \mathbb{R}, \forall x \in B.~|f(x)| < M
+\]
+
+\subsection{Определение}
+Функция $f(x)$ называеися бесконечно-малой при базе $\mathcal{B}$, если
+\[
+\exists \lim_{\mathcal{B}} f(x) = 0
+\]
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Пусть } f(x) \text{ --- бесконечно малая при } \mathcal{B} \\
+    ~~~~~ g(x) \text{ --- финально-ограниченная при } \mathcal{B} \\
+    \text{Тогда } f(x) \cdot g(x) \text{ --- бесконечно мало при } \mathcal{B} \\
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \exists B_1 \in \mathcal{B} \text{ и } \exists M \in \mathbb{R}: \forall x \in B_1: |g(x)| < M \\
+    \forall \epsilon > 0~\exists B_2 \in \mathcal{B}~\forall x \in B_2: |f(x)| < \frac{\epsilon}{M} \\
+    \exists B_3 \in \mathcal{B}, B_3 \subset B_1 \cap B_2 \Rightarrow \forall x \in B_3: |f(x) \cdot g(x)| = |f(x)| \cdot |g(x)| < M \cdot \frac{\epsilon}{M} = \epsilon, \\
+    \text{то есть } \lim_{\mathcal{B}} f(x) \cdot g(x) = 0
+\end{gather*}
+
+\subsubsection{Пример}
+(график y = sin(1/x))
+
+
+\subsection{Утверждение}
+Функция при выбранной базе может иметь не более одного предела.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } \exists \lim_{\mathcal{B}} f(x) = A, \exists \lim_{\mathcal{B}} f(x) = B, A \neq B \\
+    V_1(A) \text{ --- окрестность } A, V_2(A) \text{ --- окрестность } B, V_1 \cap V_2 = \varnothing \\
+    \exists B_1 \in \mathcal{B}, f(B_1) \subset V_1(A) \\
+    \exists B_2 \in \mathcal{B}, f(B_2) \subset V_2(B) \\
+    B_3 \in \mathcal{B}, B_3 \in B_1 \cap B_2 \\
+    f(B_3) \subset V_1(A), f(B_3) \subset V_2(B) \text{ --- chooshe}
+\end{gather*}
+
+
+\subsubsection{Пример}
+\begin{gather*}
+    ...    
+\end{gather*}
+
+
+\subsection{Определение | Альтернативное классическое определение предела (Гейне)}
+\[
+    (\lim_{x \to a} f(x) = A) \overset{def}{\Leftrightarrow} (\forall \{x_n\}, \lim_{n \to \infty} x_n = a: \lim_{n \to \infty} f(x_n) = A)
+\]
+
+\subsection{Утверждение | Эквивалентность определений Коши и Гейне}
+
+\subsubsection{Доказательство $\Rightarrow$}
+\begin{gather*}
+    \forall \epsilon > 0~\exists \delta(\epsilon) > 0~\forall x \neq a, |x - a| < \delta: |f(x) - A| < \epsilon \\
+    \forall x_n \lim_{n \to \infty} x_n = a~~~~~\forall \delta > 0~\exists N(\delta)~\forall n > N: |x_n - a| < \delta \\
+    \forall n > N: |f(x_n) - A| < \epsilon \Rightarrow \lim_{n \to \infty} f(x_n) = A
+\end{gather*}
+
+
+\subsubsection{Доказательство $\Leftarrow$}
+(фото)
+
+\subsection{Утверждение}
+Финально постоянная функция (при $\mathcal{B}$) имеет предел по этой базе.
+
+\subsubsection{Доказательство}
+$\exists B \in \mathcal{B}~\forall x \in B: f(x) = A, lim_{\mathcal{B}} f(x) = A$
+
+\subsection{Утверждение}
+\[
+\text{Если } \lim_{\mathcal{B}} f(x) = A, \text{ то } f(x) = A \text{ --- бесконечно мала при } \mathcal{B}.
+\]
+
+
+\section{Арифметические свойства пределов функции}
+\[
+    \lim_{\mathcal{B}} f(x) = A, \lim_{\mathcal{B}} g(x) = B
+\]
+
+\subsection{Утверждение | Сложение}
+\[
+    \exists \lim_{\mathcal{B}} (f(x) + g(x)) = A + B
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \forall \epsilon > 0 \\
+    \exists B_1 \in \mathcal{B}: \forall x \in B_1: |f(x) - A| < \frac{\epsilon}{2} \\
+    \exists B_2 \in \mathcal{B}: \forall x \in B_2: |g(x) - B| < \frac{\epsilon}{2} \\
+    \dots
+\end{gather*}
+
+
+\subsection{Утверждение | Умножение}
+\[
+    \exists \lim_{\mathcal{B}} (f(x) \cdot g(x)) = A \cdot B
+\]
+
+\subsubsection{Доказательство}
+Докажем, что $f(x) \cdot g(x) - A \cdot B$ --- бесконечно мала при $\mathcal{B}$
+\begin{gather*}
+    f(x) \cdot g(x) - A \cdot B = 
+    \underbrace{\underbrace{\underbrace{(f(x) - A)}_{\text{б.м.}} \underbrace{(g(x) - B)}_{\text{б.м.}}}_{\text{б.м.}} + 
+    \underbrace{\underbrace{B}_{\text{огр.}} \underbrace{(f(x) - A)}_{\text{б.м.}}}_{\text{б.м.}} + 
+    \underbrace{\underbrace{A}_{\text{огр.}} \underbrace{(g(x) - B)}_{\text{б.м.}}}_{\text{б.м.}}}_{\text{б.м.}}
+\end{gather*}
+
+
+\subsection{Утверждение | Умножение}
+Если $B \neq 0$, то 
+\[
+    \exists \lim_{\mathcal{B}} \frac{f(x)}{g(x)} = \frac{A}{B}
+\]
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Если } B \neq 0, \text{ то} \\
+    \frac{f(x)}{g(x)} - \frac{A}{B} = 
+    \frac{f(x) \cdot B - g(x) \cdot A}{B \cdot g(x)} = \\
+    = \frac{(f(x) - A) \cdot B - (g(x) - B) \cdot A}{B \cdot g(x)} =
+    \underbrace{(f(x) - A)}_{\text{б.м.}} \underbrace{\left( \frac{1}{g(x)} \right)}_{\text{б.м.}} - 
+    \underbrace{(g(x) - B)}_{\text{б.м.}} \underbrace{\left( \frac{A}{B \cdot g(x)} \right)}_{\text{б.м.}} \text{ --- б.м.}
+\end{gather*}
+\[
+\exists B_1 \in \mathcal{B}~\forall x \in B_1: \frac{|B|}{2} < |g(x)| < \frac{3|B|}{2} \Rightarrow \frac{1}{g(x)} \text{ --- финально ???}
+\]
+
+
+\paragraph{2024.11.01 (3)}
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Пусть } \exists \lim_{\mathcal{B}} f(x) = a, \exists \lim_{\mathcal{B}} f(x) = b, b > a \\
+    \text{Тогда } \exists B_1 \in \mathcal{B} ~ \forall x \in B_1: f(x) < g(x)
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } \epsilon = \frac{b - a}{3} \\
+    \text{Тогда }
+    \begin{rcases} 
+        & \exists B_2 \in \mathcal{B} ~ \forall x \in B_2: |f(x) - a| < \epsilon \Rightarrow f(x) < a + \epsilon \\
+        & \exists B_3 \in \mathcal{B} ~ \forall x \in B_3: |g(x) - b| < \epsilon \Rightarrow b - \epsilon < g(x)
+    \end{rcases}
+    a + \epsilon < b - \epsilon \\
+    \text{Пусть } B_1 \subset B_2 \cap B_3, B_1 \in \mathcal{B} \Rightarrow \forall x \in B_1: f(x) < a + \epsilon < b - \epsilon < g(x)
+\end{gather*}
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Пусть } \exists \lim_{\mathcal{B}} f(x) = a, \exists \lim_{\mathcal{B}} f(x) = b, b > a \\
+    \exists B_1 \in \mathcal{B} ~ \forall x \in B_1: f(x) \le g(x) \\
+    \text{Тогда } a \le b
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } a > b, \epsilon = \frac{a - b}{3} \\
+    \text{Тогда } \\
+    \exists B_2 \in \mathcal{B} ~ \forall x \in B_2: |f(x) - a| < \epsilon \\
+    \exists B_3 \in \mathcal{B} ~ \forall x \in B_3: |g(x) - b| < \epsilon \\
+    \text{Пусть } B_4 \subset B_2 \cap B_3, B_4 \in \mathcal{B} \Rightarrow \forall x \in B_4: g(x) < b + \epsilon < a - \epsilon < f(x) \Rightarrow g(x) < f(x) \\
+    \text{Пусть } B_5 \subset B_1 \cap B_4 \Rightarrow \forall x \in B_5: f(x) \le g(x), g(x) < f(x) \text{ --- reductio ad absurdum}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = -\sin^2 x \\
+    g(x) =  \sin^2 x \\
+    \text{Если } x \in [-1; 1] \setminus \{0\} ~~~ f(x) < g(x) \\
+    \lim_{x \to 0} f(x) = 0 \\
+    \lim_{x \to 0} g(x) = 0
+\end{gather*}
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Пусть } \lim_{\mathcal{B}} f(x) = a, \lim_{\mathcal{B}} g(x) = a \\
+    \exists B_1 \in \mathcal{B} ~ \forall x \in B_1: f(x) \le h(x) \le g(x) \\
+    \text{Тогда } \exists \lim_{\mathcal{B}} h(x) = a
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \exists B_2 \in \mathcal{B} ~ \forall x \in B_2: a - \epsilon < f(x) \\
+    \exists B_3 \in \mathcal{B} ~ \forall x \in B_3: g(x) < a + \epsilon \\
+    \text{Пусть } B_4 \subset B_1 \cap B_2 \cap B_3, B_4 \in \mathcal{B} ~ \forall x \in B_4: a - \epsilon < f(x) \le h(x) \le g(x) < a + \epsilon \\
+    a - \epsilon < h(x) < a + \epsilon \\
+    |h(x) - a| < \epsilon \\
+    \lim_{\mathcal{B}} h(x) = a
+\end{gather*}
+
+
+
+\section{Первый замечательный предел}
+
+\subsection{Определение}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sin x}{x} = 1 \\
+    \text{(фото 1)} \\
+    S_{\Delta OAB} < S_{\Delta OAC} < S_{\Delta ODC} \\
+    \frac{1}{2} \cdot \cos x \cdot \sin x < \frac{x}{2} < \frac{1}{2} \cdot \tg x \\
+    \cos x \cdot \sin x < x < \tg x \\
+    \underbrace{cos x}_{1 \text{ при } x \rightarrow 0+} < \frac{x}{\sin x} < \underbrace{\frac{1}{\cos x}}_{1 \text{ при } x \rightarrow 0+} \\
+    \lim_{x \to 0+} \frac{x}{\sin x} = 1 \Rightarrow \lim_{x \to 0} \frac{\sin x}{x} = 1 
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = f(x) = sin \frac{1}{x} \\
+    \nexists \lim_{x \to 0} f(x)
+\end{gather*}
+
+
+\subsection{Определение}
+\begin{gather*}
+    \text{Пусть } f(x): X \rightarrow \mathbb{R} \\
+    \text{Колебанием функции } f(x) \text{ на множестве } X \text{ называется } \omega(t, x) = \sup_X |f(x_1) - f(x_2)|, \forall x_1, x_2 \in X
+\end{gather*}
+
+\subsubsection{Замечание}
+\[
+    \text{Если } f(x) \text{ неограничена на } X \text{, будем считать, что } \omega(f, x) = +\infty
+\]
+
+
+
+\section{Критерий Коши существования предела функции}
+
+\subsection{Утверждение}
+\begin{gather*}
+    \left( \exists \lim_{\mathcal{B}} f(x) = a, a \in \mathbb{R} \right) \Leftrightarrow 
+    \left( \forall \epsilon > 0 ~ \exists B \in \mathcal{B}, \omega(f, B) < \epsilon \right)
+\end{gather*}
+
+\subsubsection{Доказательство 1 $\Rightarrow$ 2}
+\begin{gather*}
+    \exists \lim \Rightarrow \text{Критерий Коши} \\
+    \forall \epsilon > 0 ~ \exists B \in \mathcal{B} ~ \forall x \in B: |f(x) - a| < \frac{\epsilon}{3} \\
+    \text{Пусть } x_1, x_2 \in B \\
+    |f(x_1) - f(x_2)| = |f(x_1) - a - (f(x_2) - a)| \le |f(x_1) - a| + |f(x_2) - a| < \frac{\epsilon}{3} + \frac{\epsilon}{3} = \frac{2 \epsilon}{3} \\
+    |f(x_1) - f(x_2)| < \frac{2 \epsilon}{3} \\
+    \sup_{x_1, x_2 \in B} |f(x_1) - f(x_2)| \le \frac{2 \epsilon}{3} < \epsilon \Rightarrow
+    \omega(f, B) < \epsilon
+\end{gather*}
+
+\paragraph{2024.11.08 (3, 4)}
+\subsubsection{Доказательство 1 $\Leftarrow$ 2}
+\begin{gather*}
+    \text{Критерий Коши} \Rightarrow \exists \lim \\
+    \forall \epsilon > 0 ~ \exists B \in \mathcal{B}, \omega(f, B) < \epsilon \Rightarrow
+    \exists \lim_{\mathcal{B}} f(x) = A, a \in \mathbb{R} \\
+    \exists B_1 \in \mathcal{B}: \omega(f, B_1) < 1 \\
+    \exists B_\frac{1}{2} \in \mathcal{B}: \omega(f, B_{\frac{1}{2}}) < \frac{1}{2} \\
+    \dots \\
+    \exists B_\frac{1}{n} \in \mathcal{B}: \omega(f, B_{\frac{1}{n}}) < \frac{1}{n} \\
+    \text{Пусть} x_1 \in B_1 \\
+    x_{\frac{1}{2}} \in B_{\frac{1}{2}} \\
+    \dots \\
+    x_{\frac{1}{n}} \in B_{\frac{1}{n}} \\
+    \{x_n\} \rightarrow \{f(x_n)\} \\
+    \text{Пусть } x \in B_{\frac{1}{n}} \\
+    |f(x_n) - f(x_m) \le |f(x_n) - f(x)| + |f(x_m) + f(x)| < \frac{1}{n} + \frac{1}{m} \\
+    f(x) \text{ является последовательностью, удовлетворяющей критерию Коши } \\
+    \Rightarrow \text{ она сходится} \Rightarrow
+    \exists \lim_{n \to \infty} f(x_n) = A \\
+    \forall \epsilon > 0 ~ \exists B \in \mathcal ~ \forall x \in B: |f(x) - A| < \epsilon \\
+    \text{Зорич forever --- Родников}
+\end{gather*}
+
+
+
+\subsection{Определение | Монотонные функции}
+\[
+    f: E \rightarrow \mathbb{R} \\
+\]
+
+\subsubsection{Определение | Возрастающая функция}
+$f$ называется возврастающей на $E$, если
+\[
+\forall x_1, x_2 \in E: x_1 < x_2 \Rightarrow f(x_1) < f(x_2).
+\]
+Является строгомонотонной функцией.
+
+\subsubsection{Определение | Неубывающая функция}
+$f$ называтся неубывающей на $E$, если
+\[
+    \forall x_1, x_2 \in E: x_1 < x_2 \Rightarrow f(x_1) \le f(x_2).
+\]
+
+\subsubsection{Определение | Невозрастающая функция}
+$f$ называтся невозрастающей, на $E$, если
+\[
+    \forall x_1, x_2 \in E: x_1 < x_2 \Rightarrow f(x_1) \ge f(x_2).
+\]
+
+\subsubsection{Определение | Убывающая функция}
+$f$ называтся убывающей, на $E$, если
+\[
+    \forall x_1, x_2 \in E: x_1 < x_2 \Rightarrow f(x_1) > f(x_2).
+\]
+Является строкомонотонной функцией.
+
+
+\section{Ограниченные функции}
+\begin{gather*}
+    f: E \rightarrow \mathbb{R} \\
+    s = \sup E ~ (\text{если } E \text{ неограничено сверху, то пусть } s = +\infty) \\
+    i = \inf E ~ (\text{если } E \text{ неограничено снизу,  то пусть } i = -\infty) \\
+    i, s \text{ --- предельные точки множества } E \Rightarrow
+    x \rightarrow s, x \in E; x \rightarrow i, x \in E
+\end{gather*}
+
+\subsection{Утверждение} 
+\begin{gather*}
+    \text{Пусть } f(x) \text{ --- неубывающая функция на } E, \\
+    \text{тогда } \left( \exists \lim_{x \to s, ~ x \in E} f(x) = A, A \in \mathbb{R} \right) \Leftrightarrow
+    \left( f(x) \text{ --- ограничена на } E \right)
+\end{gather*}
+
+\subsubsection{Доказательство $1 \Rightarrow 2$}
+\begin{gather*}
+    \exists \lim_{x \to s, ~ x \in E} f(x) = A \Rightarrow
+    \forall \epsilon > 0 ~ \exists E_{\delta} = \{x, x \in E, s - \delta < s \le s\} \\
+    \forall x \in E_{\delta}: |f(x) - A| < \epsilon \Rightarrow f(x) < A + \epsilon \\
+    \forall x_1 \in E \setminus E_{\delta}: f(x_1) \le f(x) ~ (x \in E_{\delta}) \Rightarrow
+    \forall x \in E: f(x) < A + \epsilon \rightarrow f(x) \le A \\
+    f(x) \text{ --- ограничена на } E
+\end{gather*}
+
+%\subsubsection{Доказательство $2 \Rightarrow 1$}
+%\begin{gather*}
+    %f(x) \text{ --- ограничена сверху на } E \\
+    %A_1 = \sup_{x \in E} f(x) \\
+    %\forall \epsilon > 0 ~ \exists x_0 \in E: A_1 - \epsilon < f(x_0) \le A_1 \\
+    %\forall x \in E, x > x_0: A_1 - \epsilon < f(x_0) < f(x) \le A_1 \\
+    %\forall \epsilon > 0 ~ \exists x_0 ~ \forall \underbar{x \in E, x \in (x_0, s)}_{\text{элемент базы. x \rightarrow s, x \in E}}:
+    %A_1 - \epsilon < f(x) \le A_1 \Rightarrow
+    %|f(x) - A_1| < \epsilon \Rightarrow \exists \lim_{x \to s, ~ x \in E} f(x) = A_1
+%\end{gather*}
+
+
+\subsection{Утверждение}
+\[
+    \left( \exists \lim_{x to i, ~ x \in E} f(x) = A, A \in \mathbb{R} \right) \Leftrightarrow
+    \left( f(x) \text{ ограничена снизу}\right)
+\]
+
+
+\subsection{Утверждение}
+\[
+    \left( \exists \lim_{x to s, ~ x \in E} f(x) = A, A \in \mathbb{R} \right) \Leftrightarrow
+    \left( f(x) \text{ ограничена снизу}\right)
+\]
+
+
+\subsection{Утверждение}
+\[
+    \left( \exists \lim_{x to i, ~ x \in E} f(x) = A, A \in \mathbb{R} \right) \Leftrightarrow
+    \left( f(x) \text{ ограничена сверху}\right)
+\]
+
+
+\subsubsection{Пример для всех Утверждений}
+\begin{gather*}
+    y = \arctg x ~~~ x \in \mathbb{R} ~~~ -\frac{\pi}{2} < y < \frac{\pi}{2} \\
+    \exists \lim_{x \to +\infty} y =  \frac{\pi}{2} \\
+    \exists \lim_{x \to -\infty} y = -\frac{\pi}{2}
+\end{gather*}
+
+
+
+
+\section{Предел композиции функции}
+\subsection{Утверждения}
+%\begin{gather*}
+%\begin{enumerate}
+%    \item f: Y \rightarrow \mathbb{R}, \mathcal{B}_Y, \exists \lim_{\mathcal{B}} f(y)
+%    \item g: X \rightarrow Y, \mathcal{B}_X
+%    \item \forall B_y \in \mathbb{B}_Y ~ \exists B_x \in \mathcal{B}_X: g(B_x) \subset B_y
+%    (1) (2) (3) \Rightarrow \exists \lim_{\mathcal{B}_X} f(g(x)) = \lim_{\mathcal{B}_y} f(y)
+%\end{enumerate}
+%\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } \lim_{\mathcal{B}_Y} f(y) = A \\
+    \begin{rcases}
+        \forall V(A) \exists B_y \in \mathcal{B}_y: f(B_y) \subset V(A) \\
+        \exists B_x \in \mathcal{B}: g(B_x) \subset B_y
+    \end{rcases} \Rightarrow
+    \forall V(A) ~ \exists B_x \in \mathcal{B}_x: f(g(B_x)) \subset V(A) \Rightarrow 
+    \exists \lim_{\mathcal{B}} f(g(x)) = A
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sin 5x}{5x} = \lim_{y \to 0} \frac{\sin y}{y}, y = 5x \\
+    \lim_{x \to 1} \frac{\sin (x - 1)}{x - 1} = 1
+\end{gather*}
+
+\subsection{...}
+\begin{gather*}
+    \lim_{x \to 0} (1 + x)^{\frac{1}{x}} = e \\
+    \lim_{x \to \infty} (1 + \frac{1}{x})^x = e \\
+    \lim_{x \to 0} \frac{\ln (1  + x)}{x} = 1 ~~~ \frac{\ln (1 + x)}{x} = \ln (1 + x)^{\frac{1}{x}} \\
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ x \to 0
+\end{gather*}
+
+
+\section{Анализ бесконечно малых}
+
+\subsection{Определение}
+Функция
+
+\subsection{Определение}
+Функция $f(x)$ называется бесконечно малой по сравнению с $g(x)$ при $\mathcal{B}$, если
+$f(x) = \alpha(x)g(x)$, где $\alpha(x)$ --- бесконечно малая при $\mathcal{B}$.
+\begin{gather*}
+    f(x) = \overline{\overline{o}} \text{ при } \mathcal{B} \\
+    x^2 = \overline{\overline{o}}(x) ~~~ x \to 0 \\
+    \tg x - \sin x = \overline{\overline{o}} ~~~ x \to 0 \\
+    x = \overline{\overline{o}}(1) ~~~ x \to 0 \\
+    1 - \cos x = \overline{\overline{o}}(x) ~~~ x \to 0
+\end{gather*}
+
+\paragraph{Примечание}
+$\overline{\overline{o}}$ --- "о"  большая (из истории в аудио 2024.11.08 (4) 0:10:00-0:17:00)
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sin x}{x} = 1 \\
+    \frac{\sin x}{x} = 1 + \alpha(x) \\
+    \alpha(x) \text{ --- бесконечно малая при } x \to 0 \\
+    \sin x = x + \alpha(x)x \\
+    \sin x = x(1 + \alpha(x))
+\end{gather*}
+
+
+\subsection{Определение}
+\begin{gather*}
+    f(x) = \underline{\underline{o}}(g(x)) \text{ при } \mathcal{B} \\
+    \text{Если } f(x) = \varphi(x)g(x), \text{ где } \varphi \text{ --- финально ограничена при } \mathcal{B}
+\end{gather*}
+
+
+\subsection{Определение}
+$f(x)$ и $g(x)$ называется величинами одного порядка при $\mathcal{B}$, если
+$f(x) = O(g(x))$ и $g(x) = O(f(x))$
+
+
+\subsection{Утверждение}
+$f(x)$ и $g(x)$ являются величинами одного порядка при $\mathcal{B}$, если
+\begin{gather*}
+    \exists B\in \mathcal{B} ~~~ c_1, c_2, \text{ что } \forall x \in B: c_1|f(x)| \le |g(x)| \le c_2|f(x)| \\
+    (c_1 > 0, c_2 > 0)
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } f(x), g(x) \text{ --- бесконечно малые при } \mathcal{B} \\
+    c_1|f(x)| \le |g(x)| \le c_2|f(x)| \\
+    c_1 \le \underbrace{\frac{|g(x)|}{|f(x)|}}_{\text{эта функция ограничена}} \le c_2 
+    \Rightarrow \frac{1}{c_2} \le |\frac{f(x)}{g(x)}| \le \frac{1}{c_1} \\
+    g(x) = O(f(x)); f(x) = O(g(x))
+\end{gather*}
+
+\paragraph{Замечание}
+\begin{gather}
+    \text{Если } \exists \lim_{\mathcal{B}} \frac{f(x)}{g(x)} = A, A \neq O,
+    \text{то } f(x) \text{ и } g(x) \text{ --- величины одного порядка}
+\end{gather}
+
+
+\subsection{Определение}
+\begin{gather*}
+    f(x) \text{ и } g(x) \text{ --- бесконечно малые при } \mathcal{B} \\
+    \text{Говорят, что } f(x) \sim g(x) (\sim \text{ --- Эквивалентность})
+    \text{если } f(x) = \gamma(x) g(x), \lim_{\mathcal{B}} \gamma(x) = 1
+\end{gather*}
+
+\subsubsection{Замечание}
+\begin{gather*}
+    f(x) = (1 + \alpha(x)) \cdot g(x) \\
+    \alpha(x) \text{ --- бесконечно малая при } \mathcal{B}
+\end{gather*}
+
+\subsubsection{Замечание}
+...
+
+
+\section{Эквивалентности}
+
+\subsection{Основные эквивалентности}
+\begin{enumerate}
+    \item $\sin x \sim x$
+    \item $\ln(1 + x) \sim x$
+    \item $e^x - 1 \sim x$
+    \item $(1 + x)^{\alpha} - 1 \sim \alpha x$
+    \item $1 - \cos x \sim \frac{x^2}{2}$
+\end{enumerate}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{1 - \cos x}{\frac{x^2}{2}} =
+    \lim_{x \to 0} \frac{2 \sin^2 \frac{x}{2}}{\frac{x^2}{2}} =
+    \lim_{x \to 0} \frac{\sin \frac{x}{2}}{\frac{x}{2}} \cdot \frac{\sin \frac{x}{2}}{...}
+\end{gather*}
+
+
+\subsection{Некоторые другие эквивалентности}
+\begin{enumerate}
+    \item $\tg x \sim x ~~~ x \to 0$
+    \item $\sqrt{1 + x} - 1 \sim \frac{x}{2}$ 
+\end{enumerate}
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \lim_{\mathcal{B}} \frac{f(x)}{g(x)} = A \\
+    f(x), g(x) \text{ --- бесконечно малые при } \mathcal{B} \\
+    \text{Тогда если } f(x) \sim h(x) \text{ при } \mathcal{B}, \text{ то } \lim_{\mathcal{B}} \frac{h(x)}{g(x)} = A
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    f(x) \sim h(x) \Rightarrow f(x) = (1 + \gamma(x)) h(x),\gamma(x) \text{ --- бесконечно малая} \\
+    \lim_{\mathcal{B}} \frac{h(x)}{g(x)} = ...
+\end{gather*}
+
+
+
+\section{Главная часть функции}
+
+\subsection{Определение | Главная часть функции}
+\begin{gather*}
+    \text{Пусть } f(x) \text{ --- бесконечно малая при } x \to x_0 \\
+    \text{Если } f(x) = C(x - x_0)^{\alpha} + h(x), \text{ где }
+    h(x) = o (x -x_0)^{\alpha} \text{ при } x \to x_0, \\
+    \text{то } C(x - x_0)^{\alpha} \text{ называется главной частью функции } f(x).
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\tg x - \sin x}{x^{\alpha}}
+\end{gather*}
+
+
+
+\paragraph{2024.11.15 (3)}
+~\\
+Преподаватель Байков Александр Евреньевич (доцент кафедры 802)
+
+\subsection{Определение}
+\begin{gather*}
+    f(x) = o(g(x)), x \to a \\
+    f(x) = \alpha(x) g(x), \\
+    \text{где } \lim_{x \to 0} \alpha(x) = 0 \Leftarrow \lim_{x \to a} \frac{f(x)}{g(x)} = 0 \\
+    ~\\
+    f(x) = O(g(x)), x \to a \\
+    f(x) = \beta(x) g(x), \\
+    \text{где } \beta \text{ --- финально ограниченная функция при } x \to a
+\end{gather*}
+
+
+\section{Свойства $o$ $O$ (при $\mathcal{B}$)}
+
+\subsection{Первое}
+\begin{itemize}
+    \item $o(f) \pm o(f) = o(f)$
+    \item $\alpha_1 f \pm \alpha_2 f = (\alpha_1 \pm \alpha_2) f$
+    \item $o(f) \pm O(f) = O(f)$
+    \item $O(f) \pm O(f) = O(f)$
+\end{itemize}
+
+\paragraph{Проколотая окрестность $a$}
+\[
+    \overset{o}{U}_{\delta}(a) = U_{\delta}(a) \setminus \{a\}
+\]
+\includegraphics{images/new_02.png}
+
+
+\subsection{Второе}
+\begin{itemize}
+    \item $o(o(f)) = o(f)$
+    \item $o(O(f)) = o(f)$
+    \item $O(o(f)) = o(f)$
+    \item $O(O(f)) = O(f)$
+\end{itemize}
+
+\begin{gather*}
+    \underbrace{\beta(x)}_{\text{огр.}} \underbrace{\alpha(x)}_{\text{б. м.}} f(x) = \gamma(x) f(x) \\
+    \gamma(x) = \beta(x) \alpha(x) \text{ --- бесконечно малая}
+\end{gather*}
+
+
+\subsection{Третье}
+\begin{itemize}
+    \item $o(f + o(f)) = o(f)$
+    \item $o(f + O(f)) = o(f)$
+\end{itemize}
+
+
+\subsection{Четвёртное}
+\begin{itemize}
+    \item $o(f) o(g) = o(fg)$
+    \item $O(f) o(g) = o(fg)$
+    \item $f o(g) = o(fg)$
+\end{itemize}
+
+\subsubsection{Пример}
+\begin{itemize}
+    \item $o(1)$ --- бесконечно малая функция
+    \item $O(1)$ --- финально ограниченная функция
+\end{itemize}
+
+\begin{gather*}
+    f(x) = g(x) + o(g(x)), x \to a \\
+    g \cancel{\equiv} 0 \text{ в проколотой окрестности } a \\
+    g \text{ --- главная часть функции } f \text{ при } x \to a \\
+    \text{Обычно } g(x) = C(x - a)^{\alpha}, C \neq 0, \alpha \in \mathbb{R} \\
+    g \text{ --- степенная главная часть} \Leftrightarrow \\
+    \Leftrightarrow f(x) \sim g(x), 
+\end{gather*}
+
+
+\section{Фото 8 | Пример}
+\paragraph{Дано}
+\[
+    f(x) = \tg x - \sin x, x \to 0 \\
+\]
+
+\paragraph{Найти степенную главную часть}
+\[
+    f(x) = cx^{\alpha} + o(x^{\alpha})
+\]
+
+\paragraph{Не решение}
+\begin{gather*}
+    f(x) = x + o(x) - (x + o(x)) = o(x) - o(x) = o(x), x \to 0 \\
+    f(x) = \tg x (1 - \cos x) = (x + o(x)) \left( \frac{x^2}{2} + o(x^2) \right) = \\
+    = \frac{1}{2} x^3 + x o(x^2) + \frac{x^2}{2} o(x) + o(x) o(x^2) =
+    \frac{1}{2} x^3 + o(x^3) + o(x^3) + o(x^3) = \\
+    = \frac{1}{2} x^3 + o(x^3), x \to 0 \Rightarrow
+    g(x) = \frac{1}{2} x^3 \text{ --- главная часть}
+\end{gather*}
+
+
+
+\section{Непрерывность}
+\includegraphics[scale=0.5]{images/new_01.png}
+
+\subsection{Определение | Непрерывность функции в точке по Коши}
+\[
+    f: E \to \mathbb{R}, a \in E
+\]
+
+$f$ непрерывна в точке $a$, если:
+\begin{gather*}
+    \forall \epsilon > 0 ~ \exists \delta = \delta(\epsilon) > 0 ~ \forall x \in E \\
+    |x - a| < \delta \Rightarrow |f(x) - f(a)| < \epsilon
+\end{gather*}
+В определении предела $|x - a| < \delta \Rightarrow |f(x) - A| < \epsilon$
+
+
+\subsection{Определение}
+\begin{gather*}
+    \forall V(f(a)) ~ \exists U(a) ~ \underbrace{f(U_E(a)) \subset V(f(a))}_{\forall x \in U_E(a) ~~~ f(x) \in V(f(a))} \\
+    U_E(a) := U(a) \cap E \\
+    f(U_E(a)) \text{ --- образ}
+\end{gather*}
+\includegraphics[scale=0.3]{images/new_03.png}
+
+
+
+
+\subsection{Определение | Непрерывность функции в точке по Гейне}
+\[
+    f: E \rightarrow \mathbb{R}, a \in E
+\]
+
+\subsubsection{Случай 1}
+$f$ непрерывна в точке $a$, если:
+\[
+    \forall \{x_n\}^{\infty}_{n = 1} \supset E, \lim_{n \to \infty} x_n = a \Rightarrow \lim_{n \to \infty} f(x_n) = f(a)
+\]
+
+\subsubsection{Случай 2}
+$a$ --- предельная точка множества $E$:
+\begin{gather*}
+    \forall \delta > 0 ~~ \overset{o}{U}_{\delta}(a) \cap E \neq \varnothing ~\Leftrightarrow~
+    \forall \delta > 0 ~~ U_{\delta}(a) \cap E \text{ --- бесконечное множество }
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f: E \to \mathbb{R} \\
+    f(x) \equiv c \Leftrightarrow \forall x \in E f(x) = c.
+\end{gather*}
+
+\subsubsection{Случай 3}
+$a$ --- внутренняя точка множества $E$:
+\begin{gather*}
+    \exists \delta_0 > 0 ~ U_{\delta} \subset E.
+\end{gather*}
+
+\subsubsection{Связь непрерывности и предела}
+Если $f$ непрерывна в точке $a$ --- предел в точке для $E$, то
+\[
+    \exists \lim_{x \to a} f(x) = f(a), x \to a, x \in E.
+\]
+
+% \subsection{Замечание}
+% Если $f$ не является непрерывной в точке $a$, то она разрывна в точке $a$. 
+
+% \subsubsection{Случай 1}
+% $a$ --- изолированная точка множества $E$ \\
+
+% \begin{gather*}
+%     \exists \delta_0 > 0 ~ U_{\delta_0} \cap E = (a - \delta_0, a + \delta_0) = \{a\}
+% \end{gather*}
+% (график 3 (прямая с буквой Е над полосками на прямой))
+% \begin{gather*}
+%     f: E \rightarrow \mathcal{R} \\
+% \end{gather*}
+
+
+
+\section{Функция Дирихле (фото 14, 15)}
+\begin{gather*}
+    D(x) =
+    \begin{cases}
+        1, x \in \mathbb{Q} \\
+        0, x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases} \\
+    D: \mathbb{R} \rightarrow \mathbb{R} \\
+    a \in \mathbb{R} \setminus \mathbb{Q} \\
+    x_n = a - \frac{1}{n} \underset{n \to \infty}{\longrightarrow} a \\
+    \{y_n\}_{n = 1} \subset \mathbb{Q}, y_n \underset{n \to a}{\longrightarrow} \\
+    \lim_{n \to \infty} D(x_n) = \lim_{n \to \infty} 0 = 0 \\
+    \lim_{n \to \infty} D(y_n) = \lim_{n \to \infty} 1 = 1 \\
+    \nexists \lim_{x \to n} D(x) \Rightarrow D \text{ разрывна в точке } a
+\end{gather*}
+
+
+
+\section{фото 16, 17}
+
+\begin{gather*}
+    x_n^{'}  \underset{n \to \infty}{\longrightarrow} a \in \mathbb{R} \setminus \mathbb{Q} \\
+    x_n^{''} \underset{n \to \infty}{\longrightarrow} a \\
+    \lim_{n \to \infty} R(x_n) = 0 \Leftarrow
+    \begin{cases}
+        \underset{n \to \infty}{\lim} ~ R(x_n^{''}) = \underset{n \to \infty}{\lim} ~ 0 = 0 \\
+        \underset{n \to \infty}{\lim} ~ R(x_n^{'})  = \underset{n \to \infty}{\lim} ~ R \left( \frac{k_n}{m_n} \right) =
+        \underset{n \to \infty}{\lim} ~ \frac{1}{m_n} = 0
+    \end{cases} \\
+    m_n \to \infty, n \to \infty, \text{ так как } x_n^{'} \to a \in \mathbb{R} \setminus \mathbb{Q}, n \to \infty
+\end{gather*}
+
+
+
+\section{Классификация точек разрыва}
+
+$a$ --- внутренняя точка $E$, $f: E \rightarrow \mathbb{R}$
+
+\subsection{Определение}
+Функция $f$ имеет устранимый рарзыв в точке $a$, если
+\[
+    \exists \lim_{x \to a} f(x) \neq f(a)
+\]
+
+\paragraph{Переопределение}
+\begin{gather*}
+    \overset{\sim}{f} (x) =
+    \begin{cases}
+        f(x), x \in E \setminus \{a\} \\
+        \underset{t \to a}{\lim} ~ f(t), x = a
+    \end{cases}
+\end{gather*}
+
+
+\subsection{Определение}
+Функция $f$ имеет разрыв первого рода в точке $a$, если
+\begin{gather*}
+    \exists \lim_{x \to a + 0} f(x) = f_+(a) \\
+    \exists \lim_{x \to a - 0} f(x) = f_-(a) \\
+    f_+(a) \neq f_-(a)
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = sign(x) \\
+    x = 0 \text{ --- точка разрыва первого порядка}
+\end{gather*}
+
+
+\paragraph{2024.11.22 (3, 4)}
+\subsection{Определение}
+Разрывом второго рода называется разрыв, который не является разрывом первого рода.
+
+\subsubsection{Пример}
+\[
+    y = \frac{1}{x}
+\]
+\begin{gather*}
+    \lim_{x \to 0-} \frac{1}{x} = -\infty \\
+    \lim_{x \to 0+} \frac{1}{x} = +\infty \\
+    x = 0 \text{ --- точка разрыва второго рода}
+\end{gather*}
+\includegraphics[scale=0.1]{images/2024-11-22_01.png}
+
+\subsubsection{Пример}
+\[
+    y = e^{\frac{1}{x - 1}}
+\]
+\begin{gather*}
+    \lim_{x \to 1-} e^{\frac{1}{x - 1}} = 0 \\
+    \lim_{x \to 1+} e^{\frac{1}{x - 1}} = +\infty \\
+    \text{разрыв второго рода}
+\end{gather*}
+\includegraphics[scale=0.5]{images/2024-11-22_02.png}
+
+\subsubsection{Пример}
+\[
+    y = \sin \frac{1}{x}
+\]
+\begin{gather*}
+    \nexists \lim_{x \to 0+} \sin \frac{1}{x} \\
+    \nexists \lim_{x \to 0-} \sin \frac{1}{x} \\
+    \text{разрыв второго рода}
+\end{gather*}
+\includegraphics[scale=0.3]{images/2024-11-22_03.png}
+
+
+\subsection{Определение | Точка устранимого разрыва}
+\begin{gather*}
+    \text{Пусть } f: E \rightarrow \mathbb{R}, a \in E, f \notin C(a) \\
+    \text{Если } \exists \overset{\sim}{f}: E \rightarrow \mathbb{R}, 
+    \overset{\sim}{f} \in E \text{ при } x \neq a, \overset{\sim}{f}(x) = f(x), \\
+    \text{то } x = a \text{ называется точкой устранимого разрыва}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = | \underbrace{signum}_{= f(x)} ~ x | = 
+    \begin{sqcases}
+        1, x \neq 0 \\ 
+        0, x = 0
+    \end{sqcases}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \text{Пусть } a \text{ --- точка устранимого разрыва} \\
+                \exists \lim_{x \to a}  \overset{\sim}{f}(x) = \overset{\sim}{f}(a) \Rightarrow \\
+    \Rightarrow \exists \lim_{x \to a-} \overset{\sim}{f}(x) = \overset{\sim}{f}(a),
+                \exists \lim_{x \to a+} \overset{\sim}{f}(x) = \overset{\sim}{f}(a) \\
+\end{gather*}
+    
+\subsubsection{Следствие}
+Устранимый разрыв --- это разрыв первого рода, причём пределы фцнкии слева и справа равны между собой.
+
+
+
+\section{Функция Римана}
+
+\subsection{Определение}
+\begin{gather*}
+    R(x) =
+    \begin{cases}
+        \frac{1}{n}, x = \frac{m}{n} \text{ --- несократимая дробь} \\
+                  0, x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases}
+\end{gather*}
+
+\subsubsection{Пример}
+\paragraph{Дано}
+\[
+    \text{Если } x_0 \in \mathbb{R} \setminus \mathbb{Q}, \text{ то } R(x) \in C(x_0)
+\]
+\paragraph{Доказательство}
+\begin{gather*}
+    \epsilon > 0 ~~~ M = \{x, R(x) \ge \epsilon\} \Rightarrow \text{если } x \in M, \text{ то } x \in \mathbb{Q} \\
+    M = \left\{ \frac{m}{n}; \underbrace{\frac{1}{n} \ge \epsilon} \right\} \\
+    ~~~~~~~~~~~~~ n \le \frac{1}{\epsilon} \\
+    \text{В любом ограниченном промежутке находится конечное число элементов множества } M
+\end{gather*}
+\begin{gather*}
+    \text{Пусть } x_0 \in \mathbb{R} \setminus \mathbb{Q} \\
+    \overset{\sim}{x} \text{ --- наиболее близкий к } x_0 \text{ элемент } M \\
+    \delta = \frac{\left| x_0 - \overset{\sim}{x} \right|}{2} \\
+    \text{в промежутке } (x_0 - \delta; x_0 + \delta) \text{ нет элементов } M, \\
+    \text{то есть } \forall x \in (x_0 - \delta; x_o + \delta): R(x) < \epsilon \\
+    \exists \lim_{x \to x_0} R(x) = R(x_0) = 0
+\end{gather*}
+\includegraphics[scale=0.3]{images/2024-11-22_04.png}
+
+
+\section{Локальные свойства непрерывных функций}
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Пусть } f: E \rightarrow \mathbb{R}, a \in E, \underbrace{f(x) \in C(a)}_{\text{функция непрерывна в точке } a} \\
+    \text{тогда } \exists U_E(a), \text{ в которой } f(x) \text{ --- ограничена}
+    \left( U_E(a) = \underbrace{U(a)}_{\text{окрестность точки } a} \cap E \right)
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \forall \epsilon > 0 ~ \exists U_E(a), \forall x \in U_E(a): |f(x) - f(a)| < \epsilon \Rightarrow \\
+    \Rightarrow \underbrace{f(a) - \epsilon}_{\text{миноранта}} < f(x) < \underbrace{f(a) + \epsilon}_{\text{мажоранта}}
+\end{gather*}
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \text{Пусть } f: E \rightarrow \mathbb{R}, a \in E, f \in C(a), f(a) > 0 \\
+    \text{тогда } \exists U_E(a), \forall x \in U_E(a): f(x) > 0
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } \epsilon = \frac{f(a)}{2} \\
+    \text{тогда } \exists U_E(a), \forall x \in U_E(a): \left| f(x) - f(a) \right| < \epsilon \Rightarrow \\
+    \Rightarrow f(a) - \epsilon < f(x) \Rightarrow \\
+    \Rightarrow 0 < \frac{f(a)}{2}< f(x)
+\end{gather*}
+
+
+\subsection{Утверждение | Арифметические свойства непрерывных функций}
+\begin{gather*}
+    \begin{cases}
+        f(x) \in C(a) \\
+        g(x) \in C(a)
+    \end{cases} \Rightarrow
+    \begin{cases}
+        f(x) + g(x) \in C(a) \\
+        f(x) \cdot g(x) \in C(a) \\
+        \frac{f(x)}{g(x)} \in C(a)$, если $g(a) \neq 0
+    \end{cases}
+\end{gather*}
+
+\subsubsection{Доказательство}
+Доказательства каждого свойства можно провести по соответствующим свойствам пределов.
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \begin{cases}
+        f: E \rightarrow \mathbb{R}, f \in C(a), a \in E \\
+        g: U \rightarrow E,          g \in C(a), g(b) = a
+    \end{cases} \Rightarrow
+    h(x) = f(g(x)) \in C(b)
+\end{gather*}
+\includegraphics[scale=0.5]{images/2024-11-22_05.png}
+
+\subsubsection{Доказательство}
+Для доказательства достаточно сослаться на теорему о пределе композиций двух функций.
+
+
+
+\section{Глобальные свойства непрерывных функций}
+
+\subsection{Теорема (Больцано-Коши)}
+\begin{align*}
+    \begin{rcases}
+        f(x) \in C([a, b]) \\
+        f(a) \cdot f(b) < 0
+    \end{rcases} \Rightarrow
+    \exists c \in [a, b], f(c) = 0
+\end{align*}
+\includegraphics[scale=1]{images/2024-11-22_08.png}
+
+\subsubsection{Доказательство}
+Поделим отрезок $[a, b]$ пополам:
+\begin{enumerate}
+    \item $f(\frac{a + b}{2}) = 0$, то $c = \frac{a + b}{2}$
+    \item $f(\frac{a + b}{2}) \neq 0$, то значение функции $f(x)$ на концах одной из половинок имеют разные знаки. \\
+    Обозначим эту половинку как $[a_1, b_1]$. \\
+    Для отрезка $[a_1; b_1]$ повторим процедуру. \\ 
+    В результате либо найдм точку с, либо найдём отрезок $[a_2, b_2]$, обладающий тем же свойством. \\
+    Будем повторять эту процедуру либо до нахождения точки $c$, либо либо до бесконечности. \\
+    Предположим, пришлось выполнять процедуру до бесконечности. \\
+    В результате получаем последовательность вложенных отрезков. \\
+\end{enumerate}
+\begin{gather*}
+    [a_2, b_2], [a_3, b_3], \dots, [a_n, b_n], \dots \\
+    \lim_{n \to \infty} (b_n - a_n) = 0 \\
+    \exists! c \in [a_n, b_n], n \in \mathbb{N} \\
+    \exists \lim_{n \to \infty} a_n = c ~~~ f(a_n) < 0 \\
+    \exists \lim_{n \to \infty} b_n = c ~~~ f(b_n) > 0 \\
+    f(x) \in C(c) ~~~~ \exists \lim_{x \to c} f(x) = f(c) \\
+    \lim_{n \to \infty} f(a_n) = f(c) \le 0, \lim_{n \to \infty} f(b_n) = f(c) \ge 0
+\end{gather*}
+
+\subsubsection{Следствие}
+\begin{gather*}
+    \text{Пусть } f(x): [a, b] \Rightarrow \mathbb{R}, ~~ 
+    f(x) \in C([a, b]), ~~ 
+    a_1, b_1 \in [a, b], ~~ 
+    f(a_1) = A, f(b_1) = B, A < B, \\
+    \text{тогда } \forall C \in [A, B] ~ \exists c \in [a_1, b_1], f(c) = C 
+\end{gather*}
+\includegraphics[scale=0.5]{images/2024-11-22_07.png}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    F(x) = f(x) - C ~~~ F(a_1) < 0 ~~~ F(b_1) > 0 \rightarrow \\
+    \rightarrow \text{Больцано-Коши: } \exists c, F(c) = 0 \Rightarrow f(c) = C    
+\end{gather*}
+
+\subsubsection{Примеры нарушения теоремы}
+\dots
+
+
+\subsection{Теорема | Вейерштрасс о максимальном значении}
+
+Пусть $f(x) \in C([a, b])$, тогда
+\begin{enumerate}
+    \item $f(x)$ --- ограничена на $[a, b]$
+    \item Если $M = \sup_{[a, b]} f(x)$, $m = \inf_{[a, b]} f(x)$, \\
+    то $\exists c, C \in [a, b], f(c) = m, f(C) = M$
+\end{enumerate}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \epsilon > 0 ~~~ \forall x_o \in [a, b] ~ \exists U_{[a, b]}(x_0) ~ \forall x \in U_{[a, b]}: |f(x) - f(x_0)| < \epsilon \\
+    \{U(x_0), x_0 \in [a, b]\} \text{ --- покрытие отрезка} \\
+    \text{Выделим из этого покрытия конечное подпокрытие: } \{U(x_{01}), U(x_{02}), \dots, U(x_{0N})\} \\
+    \forall x \in U(x_{0k}): |f(x) - f(x_{0k})| < \epsilon \Rightarrow f(x) < f(x_{0k}) + \epsilon \\
+    \text{Пусть } Z = \max \{f(x_{0k}, k = 1, 2, \dots, N)\}, \text{тогда } \forall x \in [a, b]: f(x) < Z + \epsilon
+\end{gather*}
+Тем самым мы доказали, что функция $f(x)$ ограничена сверху. Аналогично доказывается, что функция ограничивается снизу. \\
+\includegraphics[scale=0.5]{images/2024-11-22_09.png}
+
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } M = \sup_{[a, b]} f(x), ~~~ \forall x \in [a, b]: f(x) < M, \\
+    \text{тогда } \forall \epsilon > 0 ~ \exists y \in [a, b]: f(y) > M - \epsilon \\
+    F(x) = \frac{1}{M - f(x)}, ~~~ F(x) \in C([a, b]) \\
+    F(y) = \frac{1}{M - f(y)} > \frac{1}{\epsilon} \Rightarrow F(y) \text{ неограничена --- absurdum!} \Rightarrow
+    \exists c, f(c) = M 
+\end{gather*}
+Аналогично доказывается, что наименьшее значение тоже достигается.
+
+
+\subsubsection{Следствие} 
+Область значений непрерывной или на отрезке функции есть отрезок.
+
+\subsubsection{Примеры}
+\includegraphics[scale=0.3]{images/2024-11-22_10.png}
+
+
+
+\section{Равномерная непрерывность}
+Пусть $f: E \rightarrow \mathbb{R}$
+
+\subsection{Определение}
+Функция $f(x)$ называется равномерно непрерывной на $E$, если
+\[
+    \forall \epsilon > 0 ~ \exists \delta(\epsilon) > 0 ~ \forall x_1, x_2 \in E, |x_1 - x_2| < \delta \Rightarrow |f(x_1) - f(x_2)| < \epsilon
+\]
+
+
+\subsection{Утверждение | Связь определения с обычной непрерывностью}
+Если $f$ равномерно непрерывна на $E$, то $f$ непрерывна в любой точке $E$.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \text{Пусть } x_o \in E ~ \forall \epsilon > 0 ~ \exists \delta(\epsilon) > 0 ~ \forall x \in E,
+    |x - x_0| < \delta: |f(x) - f(x_0)| < \epsilon, \\
+    \text{ то есть } \exists \lim_{x \to x_0} f(x) = f(x_0), f(x) \in C(x_0) 
+\end{gather*}
+Из непрерывности не следует равномерная непрерывность.
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = x^2, x \in \mathbb{R} \\
+    y = x^2 \in C(\mathbb{R}) \\
+    x_1 = \sqrt{n}, ~ x_2 = \sqrt{n + 1} \\
+    f(x_2) - f(x_1) = 1 \\
+    x_2 - x_1 = \sqrt{n + 1} - \sqrt{n} \\
+    \lim_{n \to \infty} (\sqrt{n + 1} - \sqrt{n}) = 
+    \lim_{x \to \infty} \frac{1}{\sqrt{n + 1} + \sqrt{n}} \\
+    y = x^2 \text{ не является равномерно непрерывной на } \mathbb{R}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{1}{x}, x \in (0; 1) \\
+    x_1 = \frac{1}{n + 1} ~~ y_1 = n + 1 \\
+    x_2 = \frac{1}{n}     ~~ y_2 = n \\
+    y_1 - y_2 = 1 \\
+    \lim_{n \to \infty} (x_2 - x_1) = 
+    \lim_{n \to \infty} (\frac{1}{n} - \frac{1}{n + 1}) =
+    \lim_{n \to \infty} \frac{1}{n(n + 1)} = 0 \\
+    y = \frac{1}{x} \text{ не является равномерно непрерывной на } (0; 1)
+\end{gather*}
+
+
+
+\subsection{Теорема равномерной непрерывности}
+Если функция непрерывна на отрезка, то она равномерно непрерывна на этом отрезке.
+
+
+\end{document}

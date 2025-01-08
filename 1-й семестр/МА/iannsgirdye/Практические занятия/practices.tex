@@ -1,0 +1,2114 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Математический анализ}
+    \author{Бабицкий Иван | М8О-111БВ-24 \\ 02.03.02 "Фундаментальная информатика и информационные технологии"}
+    \date{2024/2025 учебный год, 1-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+\newpage
+\paragraph{ПЗ-1 | 2024.09.09 (5)}
+\part{Комплексные числа}
+
+\section{Введение}
+
+\subsection{Определение}
+\begin{gather*}
+    c \in \mathbb{C} ~~~ c: (x, y) ~~~ x, y \in \mathbb{R} \\
+    x = ReC \text{ (real --- реальная)} \\
+    y = ImC \text{ (imagine --- воображаемая)}
+\end{gather*}
+
+
+\subsection{Определение}
+\begin{align*}
+    i~  &= i  \\
+    i^2 &= -1 \\
+    i^3 &= -i \\
+    i^4 &= 1  \\
+    i^5 &= i  \\ 
+    i^6 &= -1 \\
+    \dots
+\end{align*}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Алгебраическая форма записи комплексного числа}
+\begin{gather*}
+    c = x + iy \\
+    c* = x - iy \text{ --- комплексно-сопряженные числа}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Действия над комплексными числами}
+\begin{itemize}
+    \item $c_1 = x_1 + iy_1$
+    \item $c_2 = x_2 + iy_2$
+    \item $c_{11} = 5 - 8i$
+    \item $c_{22} = 3 + i$
+\end{itemize}
+
+\subsection{Сложение}
+\begin{gather*}
+    c_1 \pm c_2 = (x_1 + iy_1) \pm (x_2 \pm iy_2) = (x_1 \pm x_2) + i(y_1 \pm y_2) \\ \\
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    c_{11} + c_{22} = 8 - 7i
+\]
+
+\subsubsection{Пример}
+\[
+    c_{22} - c_{11} = -2 + 9i
+\]
+
+\subsubsection{Пример}
+\[
+    c_{11} - c_{22} = 2 - 9i
+\]
+
+
+\subsection{Умножение}
+\[
+    c_1 c_2 = (x_1 + iy_1)(x_2 + iy_2) = 
+    x_1 x_2 + x_1 i y_2 + x_2 i y_1 + i^2 y_1 y_2 = 
+    \underbrace{(x_1 x_2 = y_1 y_2)}_{Re} + \underbrace{i(x_1 y_2 + x_2 y_1)}_{Im}
+\]
+
+\subsubsection{Пример}
+\[
+    c_{11} c_{22} = (5 - 8i)(3 + i) = 15 + 5i - 24i - 8i^2 = 15 - 19i + 8 = 25 - 19i
+\]
+
+\subsubsection{Пример}
+\[
+    c^2_{11} = (5 - 8i)^2 = 25 - 80i + 64i^2 = 25 - 80i - 64 = -39 - 80i
+\]
+
+\subsubsection{Пример}
+\[
+    c c* = (x + iy)(x - iy) = x^2 - xiy + xiy + i^2 y^2 = x^2 + y^2 \in \mathbb{R}
+\]
+
+\subsubsection{Пример}
+\[
+    c_{11} c*_{11} = (5 - 8i)(5 + 8i) = 25 - 40i + 40i - 64i^2 = 25 + 64 = 89
+\]
+
+
+\subsection{Деление}
+\[
+    \frac{c_1}{c_2} = 
+    \frac{c_1}{c_2} \cdot \frac{c*_2}{c*_2} = 
+    \frac{x_1 + iy_1}{x_2 + iy_2} \cdot \frac{x_2 - iy_2}{x_2 - iy_2} =
+    \frac{x_1 x_2 - i x_1 y_2 + i x_2 y_1 - i y_1 y_2}{x^2_2 + y^2_2} =
+    \frac{x_1 x_2 + y_1 y_2}{x^2_2 + y^2_2} + i \cdot \frac{x_2 y_1 - x_1 y_2}{x^2_2 + y^2_2}
+\]
+
+\subsubsection{Пример}
+\[
+    \frac{c_{11}}{c_{22}} = 
+    \frac{c_{11}}{c_{22}} \cdot \frac{c*_{22}}{c*_{22}} =
+    \frac{5 - 8i}{3 + i} \cdot \frac{3 - i}{3 - i} =
+    \frac{15 - 5i - 24i - 8i^2}{9 - i^2} =
+    \frac{15 - 29i + 8}{9 + 1} =
+    \frac{23 - 29i}{10} =
+    \frac{23}{10} - i \frac{29}{10}
+\]
+
+\subsubsection{Пример}
+\[
+    \frac{c_{22}}{c_{11}} = 
+    \frac{c_{22}}{c_{11}} \cdot \frac{c*_{11}}{c*_{11}} =
+    \frac{3 + i}{5 - 8i} \cdot \frac{5 + 8i}{5 + 8i} =
+    \frac{15 + 24i + 5i + 8i^2}{25 - 64i^2} =
+    \frac{15 + 29i - 8}{25 + 64} =
+    \frac{7 + 29i}{89} =
+    \frac{7}{89} + i \frac{29}{89}
+\]
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Тригонометрическая форма записи комплексного числа}
+\[
+    c = r(\cos \varphi + i \cdot \sin \varphi)
+\]
+
+Характеризуется радиус-вектором и углом
+\[
+    |c| = r = \sqrt{x^2 + y^2}
+\]
+
+$\varphi$ --- аргумент $c$
+
+\begin{gather*}
+    \tg \varphi = \frac{y}{x} ~~~ \varphi = \arctg (\frac{y}{x}) \\
+    x = r \cdot \cos \varphi ~~~ y = r \cdot \sin \varphi \\
+    c = r \cdot \cos \varphi + i \cdot r \cdot \sin \varphi \\
+    c = r(\cos \varphi + i \cdot \sin \varphi)
+\end{gather*}
+
+
+\subsection{Формула Муавра}
+\[
+    c^n = r^n \cdot (\cos(n \varphi) + i \cdot \sin(n \varphi))
+\]
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Показательная форма записи комплексного числа}
+Формула Эйлера
+\[
+    e^{\ln r} = \underbrace{e^x}_{= r} (\cos \underbrace{y}_{= \varphi} \pm i \cdot \sin \underbrace{y}_{= \varphi})
+\]
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Переход между формами записи комплексного числа}
+\begin{gather*}
+    c = r(\cos \varphi + i \cdot \sin \varphi) \\
+    r = e^x \\
+    x = \ln r \\
+    e^{\ln r \pm iy} = r(\cos \varphi + i \cdot \sin \varphi)
+\end{gather*}
+
+
+
+
+\newpage
+\paragraph{ПЗ-2 | 2024.09.16(5)}
+\part{Свойства функций}
+
+\section{Область определения}
+
+\subsection{Теория}
+\dots
+
+
+\subsection{Практика}
+\subsubsection{Пример}
+\begin{gather*}
+    y = \sqrt{1 + x} \\
+    1 + x \ge 0 \\
+    x \ge -1 \\
+    x \in [-1; +\infty)
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{1}{4 - x^2} \\
+    4 - x^2 \neq 0 \\
+    x^2 \neq 4 \\
+    \begin{cases}
+        x \neq -2 \\
+        x \neq 2
+    \end{cases} \\
+    x \in (-\infty; -2) \cup (-2; 2) \cup (2; +\infty)
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \sqrt{2 + x - x^2} \\
+    2 + x - x^2 \ge 0 \\
+    x^2 - x - 2 \le 0 \\
+    \left( x - \frac{1}{2} \right)^2 - \frac{1}{4} - 2 \le 0 \\
+    \left( x - \frac{1}{2} \right)^2 - \frac{9}{4} \le 0 \\
+    \left( x - \frac{1}{2} - \frac{3}{2} \right) \left( x - \frac{1}{2} + \frac{3}{2} \right) \le 0 \\
+    (x - 2)(x + 1) \le 0 \\
+    x \in [-1; 2]
+\end{gather*}
+\includegraphics[scale=0.2]{2024-09-16_01.png}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \sqrt{-x} + \frac{1}{\sqrt{2 + x}} \\
+    \begin{cases}
+        -x \ge 0 \\
+        \sqrt{2 + x} > 0
+    \end{cases}
+    \begin{cases}
+        x \le 0 \\
+        2 + x > 0
+    \end{cases}
+    \begin{cases}
+        x \le 0 \\
+        x > -2
+    \end{cases} \\
+    x \in (-2; 0]
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \lg \frac{x^2 - 3x + 2}{x + 1} \\
+    \begin{cases}
+        \frac{x^2 - 3x + 2}{x + 1} > 0 \\
+        x + 1 \neq 0
+    \end{cases} \\
+    \text{Пусть } x^2 - 3x + 2 = 0 \\
+    D = (-3)^2 - 4 \cdot 1 \cdot 2 = 9 - 8 = 1 \\
+    x_1 = \frac{-(-3) - \sqrt{1}}{2 \cdot 1} = \frac{3 - 1}{2} = \frac{2}{2} = 1 \\
+    x_2 = \frac{-(-3) + \sqrt{1}}{2 \cdot 1} = \frac{3 + 1}{2} = \frac{4}{2} = 2 \\
+    \begin{cases}
+        \frac{(x - 1)(x - 2)}{x + 1} > 0 \\
+        x + 1 \neq 0
+    \end{cases} \\
+    x \in (-1; 1) \cup (2; +\infty)
+\end{gather*}
+\includegraphics[scale=0.2]{2024-09-16_02.png}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \sqrt{\sin 2x} \\
+    \sin 2x \ge 0 \\
+    2x \in [2 \pi n, \pi + 2 \pi n, n \in \mathbb{Z}] \\
+     x \in [\pi n, \frac{\pi}{2} + \pi n, n \in \mathbb{Z}]
+\end{gather*}
+(тригонометрическая окружность, на которой отмечены подходящие $x$)
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Чётность}
+
+\subsection{Теория}
+\begin{itemize}
+    \item $f(-x) = f(x)$ --- чётная
+    \item $f(-x) = -f(x)$ --- нечётная
+\end{itemize}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = \frac{1}{2} (a^x + a^{-x}) \\
+    f(-x) = \frac{1}{2} (a^{-x} + a^x) \\
+    f(-x) = f(x) \Rightarrow \text{чётная}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = \sqrt{1 + x + x^2} - \sqrt{1 - x + x^2} \\
+    f(-x) = \sqrt{1 - x + x^2} - \sqrt{1 + x + x^2} \\
+    f(-x) = -f(x) \Rightarrow \text{нечётная}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    ...
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = \lg \frac{1 + x}{1 - x} \\
+    f(-x) = \lg \frac{1 - x}{1 + x} = \lg \left( \frac{1 + x}{1 - x} \right)^{-1} = -\lg \frac{1 + x}{1 - x} \\
+    f(-x) = -f(x) \Rightarrow \text{нечётная}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Периодичность}
+
+\subsection{Теория}
+...
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = 10 \sin 3x \\
+    \sin \alpha: T = 2\pi \\
+    \sin 3x: T = \frac{2\pi}{3}
+\end{gather*}
+(график)
+
+\subsection{Пример}
+\begin{gather*}
+    f(x) = \sin^2 x: T = \pi \\
+    \sin^2 x = \frac{1 - \cos 2x}{2} = \frac{1}{2} - \frac{1}{2} \cos 2x     
+\end{gather*}
+
+\subsection{Пример}
+\begin{gather*}
+    f(x) = a \sin(\lambda x) + b \cos(\lambda x): T = \frac{2 \pi}{\lambda}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{???}
+
+\subsection{Теория}
+\begin{gather*}
+    y = a(x - x_0)^2 + y_0 \\
+    y = a(x - x_0)^3 - y_0
+\end{gather*}
+(не закончено)
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = ax^2 + bx + c \\
+    a = 1, b = -2, c = 3 \\
+    y = x^2 - 2x + 3 = (x - 1)^2 + 2
+\end{gather*}
+\includegraphics[scale=0.1]{2024-09-16_03.jpg}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = -2x^2 + 6x = -2(x^2 - 3x) = -2 \left( x^2 - 3x + \frac{9}{4} - \frac{9}{4} \right) =
+    -2 \left( \left( x - \frac{3}{2} \right)^2 - \frac{9}{4} \right) =
+    -2 \left( x - \frac{3}{2} \right)^2 + \frac{9}{2}
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = 2 + (x - 1)^3
+\end{gather*}
+\includegraphics[scale=0.1]{2024-09-16_04.jpg}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{1}{1 - x} = \frac{-1}{x - 1}
+\end{gather*}
+\includegraphics[scale=0.1]{2024-09-16_05.jpg}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{x - 2}{x + 2} = \frac{x + 2 - 2 - 2}{x + 2} = \frac{x + 2}{x + 2} + \frac{-4}{x + 2}
+\end{gather*}
+\includegraphics[scale=0.1]{2024-09-16_06.jpg}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{2x - 3}{3x + 2} = \frac{2}{3} \cdot \frac{x - \frac{3}{2}}{x + \frac{2}{3}} =
+    \frac{2}{3} \cdot \frac{x + \frac{2}{3} - \frac{2}{3} - \frac{3}{2}}{x + \frac{2}{3}} =
+    \frac{2}{3} - \frac{2}{3} \cdot \frac{\frac{13}{6}}{x + \frac{2}{3}} =
+    \frac{2}{3} \cdot \frac{-\frac{13}{9}}{x + \frac{2}{3}}
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = x + \frac{1}{x}
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{x^2}{x + 1} = \frac{(x^2 - 1) + 1}{x + 1} = \frac{(x - 1)(x + 1) + 1}{x + 1} = x - 1 + \frac{1}{x + 1}
+\end{gather*}
+(график)
+
+
+
+
+\newpage
+\paragraph{ПЗ-3 | 2024.09.23(5)}
+\part{Системы координат}
+
+\section{Полярная система координат}
+
+\subsection{Теория}
+...
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \frac{1}{2} (x + |x|)
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = x |x|
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\[
+    y = \sin x + |\sin x|
+\]
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = \begin{cases}
+        3 - x^2 |x| \le 1\\
+        \frac{2}{|x|}, |x| > 1
+    \end{cases} \\
+    x = r \cos \varphi \\
+    y = r \sin \varphi
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    r = 1 \\
+    x^2 + y^2 = 1 \\
+    r = \frac{\varphi}{2} \\
+    \begin{tabular}{c|c}
+        $\varphi$ & $r$ \\
+        \hline
+        $\frac{\pi}{6}$ & $\frac{\pi}{12}$ \\
+        $\frac{\pi}{4}$ & $\frac{\pi}{8} $ \\
+        $\frac{\pi}{2}$ & $\frac{\pi}{4} $ \\
+        $\pi          $ & $\frac{\pi}{2} $ \\
+        \dots           & \dots
+    \end{tabular}
+\end{gather*}
+(2 графика)
+
+\subsubsection{Пример}
+\begin{gather*}
+    r = \frac{1}{\sin \varphi}                                  \\
+    y = \frac{1}{\sin \varphi} \cdot \sin \varphi = 1           \\
+    x = \frac{1}{\sin \varphi} \cdot \cos \varphi = ctg \varphi \\
+    \begin{tabular}{c|c|c}
+        $\varphi$       & $\sin \varphi$ &                              \\
+        \hline
+        $0$             & $0$            &                              \\
+        $\frac{\pi}{4}$ & $\sqrt{2}$     & $x = 1, y = 1, r = \sqrt{2}$ \\
+        $\frac{\pi}{2}$ & $1$            &
+    \end{tabular}
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    r = 2\cos \varphi \\
+    (x + 1)^2 + y^2 = 1 \\
+    \begin{tabular}{c|c}
+        $r$        & $\varphi$       \\
+        \hline
+        $2$        & $0$             \\
+        $\sqrt{3}$ & $\frac{\pi}{6}$ \\
+        $\sqrt{2}$ & $\frac{\pi}{4}$ \\
+        $1$        & $\frac{\pi}{3}$ \\
+        $0$        & $\frac{\pi}{2}$
+    \end{tabular}
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    r = \sec \frac{\varphi}{2} = \frac{1}{\cos^2 \frac{\varphi}{2}} \\
+    0 \le \varphi \le 2\pi \\
+    \begin{tabular}{c|c}
+        $\varphi$        & $r$           \\
+        \hline
+        $0$              & $1$           \\
+        $\frac{\pi}{3}$  & $\frac{4}{3}$ \\
+        $\frac{\pi}{2}$  & $2$           \\
+        $\frac{2\pi}{3}$ & $4$           \\
+        $\pi$            & $\to \infty$
+    \end{tabular} \\
+    x = -\frac{y^2}{4} + 1
+\end{gather*}
+(график)
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Функция, заданная параметрически}
+
+\subsection{Теория}
+\begin{gather*}
+    \begin{cases}
+        x = \psi(t) \\
+        y = \psi(t)
+    \end{cases}
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = \cos t \\
+        y = \sin t
+    \end{cases} \\
+    \begin{tabular}{c|c|c}
+        $t$             & $x$                  & $y$                  \\
+        \hline
+        $0$             & $1$                  & $0$                  \\
+        $\frac{\pi}{2}$ & $0$                  & $1$                  \\
+        $\frac{\pi}{4}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{2}}{2}$
+    \end{tabular}
+\end{gather*}
+(график)
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = t^3 \\
+        y = t^2
+    \end{cases} \\
+    \begin{tabular}{c|c|c}
+        $t$ & $x$ & $y$ \\
+        \hline
+        $0$  & $0$  & $0$ \\
+        $1$  & $1$  & $1$ \\
+        $-1$ & $-1$ & $1$ \\
+        $2$  & $-8$ & $4$ \\
+        $-2$ & $8$  & $4$
+    \end{tabular}
+\end{gather*}
+(2 графика)
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = 2^t + 2^{-t} \\
+        y = 2^t - 2^{-t}
+    \end{cases} \\
+    \begin{cases}
+        x = 2 \cos^2 t \\
+        y = 2 \sin^2 t
+    \end{cases}
+    \begin{cases}
+        x \in [0;2] \\
+        y \in [0;2]
+    \end{cases} \\
+    \begin{tabular}{c|c}
+        $t$             & $(x;y)$                     \\
+        \hline
+        $0$             & $(2;0)$                     \\
+        $\frac{\pi}{6}$ & $(\frac{3}{2};\frac{1}{2})$ \\
+        $\frac{\pi}{3}$ & $(\frac{1}{2};\frac{3}{2})$ \\
+        $\frac{\pi}{4}$ & $(1;1)$                     \\
+        $\frac{\pi}{2}$ & $(0;2)$
+    \end{tabular} \\
+    x + y = 2; x, y \ge 0
+\end{gather*}
+(2 графика)
+
+
+
+
+\newpage
+\paragraph{ПЗ-4 | 2024.09.30(5)}
+\part{Предел последовательности}
+
+\section{Введение}
+
+\subsection{Теория}
+\dots
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{n \to \infty} \frac{2n + 3}{n + 1} = 
+\end{gather*}
+
+
+
+
+\newpage
+\paragraph{ПЗ-6 | 2024.10.14(5)}
+\part{Предел функции}
+
+\section{Введение}
+
+\subsection{Теория}
+\begin{gather*}
+    \dots
+\end{gather*}
+
+\subsubsection{Следствие}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{P_m(x)}{Q_n(x)} =
+    \begin{cases}
+        0, m < n \\
+        A, m = n \\
+        \infty, m > n
+    \end{cases}
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{x^2 + 5x}{x + 1} = 
+    \left[ \frac{\infty}{\infty} \right] =
+    \lim_{x \to \infty} \frac{\frac{x^2}{x^2} + \frac{5x}{x^2}}{\frac{x}{x^2} + \frac{1}{x^2}} =
+    \lim_{x \to \infty} \frac{1 + \boxed{\frac{5}{x}}^{\to 0}}{\boxed{\frac{1}{x}}_{\to 0} + \boxed{\frac{1}{x}}_{\to 0}} = 
+    \infty
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{3x^2 + 5}{x^3 - x^2 + 9} = 
+    \lim_{x \to \infty} \frac{\frac{3}{x} + \frac{5}{x^3}}{1 - \frac{1}{x} + \frac{9}{x^3}} = 
+    \frac{0}{1} = 0
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{(x + 1)^2}{x^2 + 1} = \left[ \frac{\infty}{\infty} \right] =
+    \lim_{x \to \infty} \frac{\left( 1 + \boxed{\frac{1}{x}}^{\to 0} \right)^2}{\left( 1 + \boxed{\frac{1}{x^2}}_{\to 0} \right)} = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{2x^2 - 3x - 4}{\sqrt{x^4 + 1}} =
+    \lim_{x \to \infty} \frac{2 - \frac{3}{x} - \frac{4}{x^2}}{\sqrt{1 + \frac{1}{x^4}}} = 2
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{2x + 3}{x + \sqrt[3]{x}} =
+    \lim_{x \to \infty} \frac{2 + \frac{3}{x}}{1 + \sqrt[3]{\frac{1}{x^2}}} = \frac{2}{1} = 2
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \frac{\sqrt[3]{x^2 + 1}}{x + 1} =
+    \lim_{x \to \infty} \frac{\sqrt[3]{\frac{1}{x} + \frac{1}{x^3}}}{1 + \frac{1}{x}} = 0    
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{x \sqrt{x} + x^2}{x \sqrt{x} + x} = 
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 0} \frac{\sqrt{x} + x}{\sqrt{x} + 1} = 0
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{3x^2 + x - \sqrt{x}}{x^3 - x \sqrt{x}} =
+    \lim_{x \to 0} \frac{3x \sqrt{x} + \sqrt{x} - 1}{x^2 \sqrt{x} - x} = \infty
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{3x^2 + x - \sqrt{x}}{x^3 - \sqrt{x}} = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{3x^2 + 5x^3}{-x^2 + 9x^5 \sqrt{x}} = -3    
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to -1} \frac{x^2 - 1}{x^2 + 3x + 2} = 
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to -1} \frac{(x + 1)(x - 1)}{(x + 1)(x + 2)} = -2
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 1} \frac{x^3 - 3x + 2}{x^4 - 4x + 3} =
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 1} \frac{(x - 1)(x^2 + x - 2)}{(x - 1)(x^3 + x^2 + x - 3)} =
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 1} \frac{(x - 1)(x + 2)}{(x - 1)(x^2 + 2x + 3)} =
+    \frac{3}{6} = \frac{1}{2}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 1} \left( \frac{1}{1 - x} - \frac{3}{1 - x^3} \right) = 
+    [\infty - \infty] =
+    \lim_{x \to 1} \frac{1 + x + x^2 - 3}{(1 - x)(1 + x + x^2)} =
+    \left[ \frac{0}{0} \right] = \\
+    = \lim_{x \to 1} \frac{(x - 1)(x + 2)}{(1 - x)(x^2 + x + 1)} =
+    \lim_{x \to 1} \frac{-x - 2}{x^2 + x + 1} = -1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 5} \frac{x^2 - 5x + 10}{x^2 - 25} =
+    \left[ \frac{10}{0} \right] = \infty
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to -1} \frac{x^3 + 1}{x^2 + 1} = \frac{0}{2} = 0
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 1} \frac{\sqrt{x} - 1}{x - 1} = 
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 1} \frac{\sqrt{x} - 1}{(\sqrt{x} - 1)(\sqrt{x} + 1)} = \frac{1}{2}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 64} \frac{\sqrt{x} - 8}{\sqrt[3]{x} - 4} =
+    \left[ \frac{0}{0} \right] \\
+    \text{Замена: } t = x^{\frac{1}{6}}, \text{тогда } t \to 2 \\
+    \lim_{t \to 2} \frac{t^3 - 8}{t^2 - 4} = 
+    \left[ \frac{0}{0} \right] =
+    \lim_{t \to 2} \frac{(t - 2)(t^2 + 2t + 4)}{(t - 2)(t + 2)} =
+    \lim_{t \to 2} \frac{t^2 + 2t + 4}{t + 2} =
+    \frac{12}{4} = 3
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 7} \frac{2 - \sqrt{x - 3}}{x^2 - 49} =
+    \lim_{x \to 7} \frac{4 - x + 3}{(x^2 - 49)(2 + \sqrt{x} - 3)} =
+    \lim_{x \to 7} \frac{-(x - 7)}{(x - 7)(x + 7)(2 + \sqrt{x} - 3)} = \frac{-1}{56}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sqrt{1 + x} - \sqrt{1 - x}}{x} =
+    \lim_{x \to 0} \frac{1 + x - 1 + x}{x \left( \sqrt{1 + x} + \sqrt{1 - x} \right)} =
+    \lim_{x \to 0} \frac{2x}{x \left( \sqrt{1 + x} + \sqrt{1 - x} \right)} =
+    \lim_{x \to 0} \frac{2}{\sqrt{1} + \sqrt{1}} = 1
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Первый замечательный предел}
+
+\subsection{Теория}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sin x}{x} = 1 \\
+    \lim_{U(x) \to 0} \frac{\sin (U(x))}{U(x)} = 
+    \lim_{t \to 0} \frac{\sin t}{t} = 1
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sin 3x}{x} =
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 0} \frac{\sin 3x}{3x} \cdot 3 = 3
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{\sin 5x}{2x} =
+    \lim_{x \to 0} \frac{\sin 5x}{2 \cdot 5x} \cdot 5 = \frac{5}{2}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \left( x \sin \frac{\pi}{x} \right) =
+    [\infty \cdot 0] =
+    \lim_{x \to \infty} \frac{\pi \cdot \sin \frac{\pi}{x}}{\frac{1}{x}} =
+    \left[ \frac{0}{0} \right] = \pi
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \dots
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \frac{1 - \cos x}{x^2} =
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 0} \frac{2 \sin \frac{2x}{2}}{x^2} =
+    \lim_{x \to 0} \frac{\frac{2}{4} \sin^2 \frac{x}{2}}{\frac{x^2}{4}} =
+    \lim_{x \to 0} \frac{2}{4} \left( \frac{\sin \frac{x}{2}}{\frac{x}{2}} \right)^2 =
+    \frac{2}{4} \cdot 1^2 = \frac{1}{2}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \left( x \cdot \sin \frac{1}{x} \right) =
+    [0 \cdot \sin \infty] = 0
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\paragraph{ПЗ-7 | 2024.10.21 (5)}
+\section{Второй замечательный предел}
+
+\subsection{Теория}
+\[
+    \lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^x = \left( 1 + \alpha \right)^{\frac{1}{\alpha}} = e
+\]
+
+\subsubsection{Следствие}
+\begin{gather}
+    \begin{rcases}
+        \lim_{x \to a} U(x) = A \\
+        \lim_{x \to a} U(x) = B
+    \end{rcases}
+    const ~~~ A^B \text{ --- решение} \\
+    \begin{rcases}
+        \lim_{x \to a} U(x) = A \neq 1 \\
+        \lim_{x \to a} U(x) = \infty
+    \end{rcases}
+    A^{\infty} \text{ --- решение} \\
+    \begin{rcases}
+        \lim_{x \to a} U(x) = 1 \\
+        \lim_{x \to a} U(x) = \infty
+    \end{rcases}
+    [1^{\infty}] \text{ --- решение}
+\end{gather}
+\begin{gather*}
+    U(x) = 1 + \varphi, \lim_{x \to a} \varphi(x) = 0 \\
+    \lim_{x \to a} (1 + \varphi(x))^{U(x)} =
+    \lim_{x \to a} \left[ \underbrace{(1 + \varphi(x))^{\frac{1}{\varphi(x)}}}_{e} \right]^{\varphi(x) U(x)} =
+    e^{\lim_{x \to a} \varphi(x) U(x)}
+\end{gather*}
+
+\subsubsection{Примечание}
+Квадратные скобки выше и далее используются как круглые для того, чтобы различать скобки из-за нагромождений.
+
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \left( \frac{2 + x}{3 - x} \right) = 
+    \left[ \left( \frac{2}{3} \right)^0 \right] = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 1} \left( \frac{x - 1}{x^2 - 1} \right)^{x + 1} = 
+    \left[ \left( \frac{0}{0} \right)^2 \right] =
+    \lim_{x \to 1} \left( \frac{x - 1}{(x - 1)(x + 1)} \right) =
+    \lim_{x \to 1} \left( \frac{1}{x + 1} \right)^{x + 1} = \frac{1}{4}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \left( \frac{1}{x^2} \right)^{\frac{2x}{x + 1}} =
+    \left[ 0^2 \right] = 0
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \left( 1 + \frac{2}{x} \right)^x = 
+    \left[ 1^{\infty} \right] = 
+    \lim_{x \to \infty} = \left[ \left( 1 + \frac{2}{x} \right)^{\frac{x}{2}} \right]^2 = e^2
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \left( \frac{x}{x + 1} \right)^x = 
+    \left[ 1^{\infty} \right] = 
+    \lim_{x \to \infty} \left( \frac{(x + 1) - 1}{x + 1} \right)^x =
+    \lim_{x \to \infty} \left( 1 - \frac{1}{x + 1} \right)^x = 
+    \lim_{x \to \infty} \left( 1 + \left( -\frac{1}{x + 1} \right) \right)^x = \\
+    \lim_{x \to \infty} \left[ \left( 1 + \left(-\frac{1}{x + 1} \right) \right)^{?} \right]^{?} =
+    e^{\lim_{x \to \infty} \frac{-x}{x + 1}} = e^{-1} = \frac{1}{e}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to \infty} \left(\frac{x - 1}{x + 3}\right)^{x + 2} = \left[1^\infty\right] = 
+    \lim_{x \to \infty} \left(\frac{x + 3 - 4}{x + 3}\right)^{x + 2} =
+    \lim_{x \to \infty} \left(1 + \left(-\frac{4}{x + 3}\right) \right)^{x + 2} = \\
+    \lim_{x \to \infty} \left[ \left(1 + \left(-\frac{4}{x + 3}\right) \right)^{-\frac{x + 3}{4}} \right]^{-\frac{4}{x + 3} (x + 2)} =
+    e^{\lim_{x \to \infty} -\frac{4(x + 2)}{x + 3}} = e^{-4}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \left( 1 + \sin x \right)^{\frac{1}{x}} = 
+    \left[ 1^{\infty} \right] =
+    \lim_{x \to 0} \left[ \left( 1 + \sin x \right)^{\frac{1}{\sin x}} \right]^{\frac{sin x \cdot 1}{x}} =
+    e^{\lim_{x \to 0} \frac{\sin x}{x}} = e 
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \sqrt[x]{1 - 2x} =
+    \lim_{x \to 0} (1 - 2x)^{\frac{1}{x}} =
+    \lim_{x \to 0} \left[(1 - 2x)^{\frac{1}{-2x}}\right]^{-2} =
+    e^{-2}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} (\cos x)^{\frac{1}{x}} = 
+    [1^\infty] =
+    \lim_{x \to 0} \left[ 1 + \left(-2 \sin ^2 \frac{x}{2} \right)^{-\frac{1}{2 \sin ^2 \frac{x}{2}}} \right]^{\frac{-2 \sin ^2 \frac{x}{2}}{x}} = \\
+    e^{\lim_{x \to \infty} \frac{-2 \sin ^2 \frac{x}{2}}{x}} = 
+    e^{\lim_{x \to \infty} \frac{-2 \sin \frac{x}{2} \cdot \sin \frac{x}{2}}{\frac{x}{2} \cdot 2}} = e^0 = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} (\cos x)^{\frac{1}{x^2}} =
+    [1^\infty] =
+    \lim_{x \to 0} \left[ ... \right]
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \left( \frac{\cos x}{\cos 2x} \right)^{\frac{1}{x^2}} =
+    \lim_{x \to 0} \left( 1 + \frac{\cos x - \cos 2x}{\cos 2x} \right)^{\frac{1}{x^2}} = 
+    \lim_{x \to 0} \left( 1 + \frac{-2\cdot\sin \frac{3}{2} x\cdot\sin (-\frac{x}{2})}{\cos 2x} \right)^{\frac{1}{x^2}} = \\
+    = \lim_{x \to 0} \left( 1 + \frac{2\cdot\sin \frac{3}{2}x\cdot\sin \frac{x}{2}}{\cos 2x} \right)^{\frac{1}{x^2}} =
+    \lim_{x \to 0} \left[ \left( 1 + \frac{2\cdot\sin \frac{3}{2}x\cdot\sin \frac{x}{2}}{\cos 2x} \right)^{\frac{\cos 2x}{2 \cos \frac{3x}{2} \sin \frac{3}{2}}} \right]^{\frac{2 \sin \frac{3x}{2 \sin \frac{x}{2}}}{x^2 \cos 2x}} =
+    e^{\lim_{x \to 0} \frac{2 \sin \frac{3x}{2} \sin \frac{x}{2}}{\frac{2}{3}\cdot\frac{3x}{2}\cdot\frac{2}{1}\cdot\frac{x}{2}\cdot\cos 2x}} =
+    e^{\frac{3}{2}}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 0} \lg \frac{(1 + 10x)}{x} =
+    \lim_{x \to 0} \lg (1 + 10x)^{\frac{1}{x}} =
+    \lg \lim_{x \to 0} \left[ (1 + 10x)^{\frac{1}{10x}} \right]^{\cdot 10} =
+    \lg e^{10} = 
+    10 \cdot \lg e =
+    10 \cdot \frac{\ln e}{\ln 10} =
+    \frac{10}{\ln 10}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\paragraph{ПЗ-8 | 2024.10.28(5)}
+\section{Односторонние пределы}
+
+\subsection{Теория}
+...
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{n \to \infty} \cos^n \frac{x}{\sqrt{n}} = 
+    e^{\lim_{n \to \infty} \cos^n \frac{x}{\sqrt{n}} - n} = 
+    e^{-\frac{x^2}{2}}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{n \to \infty} \cos^n \frac{x}{\sqrt{n}} = 
+    \lim_{n \to \infty} e^{n \ln (\cos \frac{x}{\sqrt{n}} - 1 + 1)} = 
+    \lim_{n \to \infty} e^{n (\cos \frac{x}{\sqrt{n}} - 1)} =
+    \lim_{n \to \infty} e^{n -2\sin^2 \frac{x}{2 \sqrt{n}}} =
+    \lim_{n \to \infty} e^{n -2 \frac{x^2}{4n}} = e^{-\frac{x^2}{2}}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    ...
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to -\infty} \frac{x}{\sqrt{x^2 + 1}} = -1 = 
+    \lim_{x \to -\infty} \frac{x}{|x| \sqrt{1 + \frac{1}{x^2}}}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to +\infty} \frac{x}{\sqrt{x^2 + 1}} = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to -0} = \frac{1}{1 + e^{\frac{1}{x}}} = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to +0} = \frac{1}{1 + e^\frac{1}{x}} = 0
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to -0} \frac{|\sin x|}{x} = -1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to +0} \frac{|\sin x|}{x} = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 1 - 0} \frac{x - 1}{|x - 1|} = -1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 1 + 0} \frac{x - 1}{|x - 1|} = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 2 - 0} \frac{x}{x - 2} = -\infty
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \lim_{x \to 2 + 0} \frac{x}{x - 2} = +\infty
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Эквивалентность}
+
+\subsection{Теория}
+\begin{gather*}
+    x \to 0 \\
+    \sin x       \sim x \\
+    \tg x        \sim x \\
+    \arcsin x    \sim x \\
+    \arctg x     \sim x \\
+    \ln(1 + x)   \sim x \\
+    e^x - 1      \sim x \\
+    1 - \cos x   \sim \frac{x^2}{2} \\
+    1 - \cos^2 x \sim x^2
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+...
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\paragraph{ПЗ-9 | 2024.11.18 (5)}
+\section{Точка разрыва}
+
+\subsection{Теория}
+
+\begin{gather*}
+    y = f(x) \\
+    \lim_{x \to a + 0} f(x) = A \\
+    \lim_{x \to a -  0} f(x) = B
+\end{gather*}
+
+
+\subsubsection{Точка разрыва первого рода}
+\[
+    A, B = const
+\]
+\subsubsection{Точка разрыва устранимого рода}
+Частный случай точки разрыва первого рода
+\[
+    A = B
+\]
+
+\subsubsection{Точка разрыва второго рода}
+\[
+    A \text{ или } B = \pm \infty, \neg \exists
+\]
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1}{x}
+\]
+\begin{gather*}
+    x = 0 \\
+    \lim_{x \to -0} \frac{1}{x} = -\infty \\
+    \lim_{x \to +0} \frac{1}{x} = +\infty \\
+    \text{Точка разрыва второго рода} 
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{x^2}{x - 2}
+\]
+\begin{gather*}
+    D_x \in (-\infty; 2) \cup (2; +\infty) \\
+    \lim_{x \to 2+} = \frac{x^2}{x - 2} = +\infty \\
+    \lim_{x \to 2-} = \frac{x^2}{x - 2} = -\infty \\
+    \text{Точка разрыва второго рода}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1 + x^3}{1 + x}
+\]
+\begin{gather*}
+    \lim_{x \to -1 + 0} \frac{1 + x^3}{1 + x} = 
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to -1 + 0} \frac{(x + 1)(1 - x + x^2)}{x + 1} = 3 \\
+    \text{Точка разрыва первого рода (устранимая)}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{\sqrt{7 + x} - 3}{x^2 - 4}
+\]
+\begin{gather*}
+    \begin{cases}
+        x \ge -7 \\
+        x \neq 2 \\
+        x \neq -2
+    \end{cases} \\
+    \lim_{x \to -2 + 0} \frac{\sqrt{7 + x} - 3}{x^2 - 4} =
+    \frac{\sqrt{5} - 3}{-0} = +\infty \\
+    \lim_{x \to -2 - 0} \frac{\sqrt{7 + x} - 3}{x^2 - 4} =
+    \frac{\sqrt{5} - 3}{+0} = -\infty \\
+    \lim_{x \to 2 \pm 0} \frac{\sqrt{7 + x} - 3}{x^2 - 4} =
+    \left[ \frac{0}{0} \right] =
+    \lim_{x \to 2 \pm 0} \frac{(\sqrt{7 + x} - 3)(\sqrt{7 + x} + 3)}{(x^2 - 4)(\sqrt{7 + x} + 3)} =
+    \lim_{x \to 2 \pm 0} \frac{7 + x - 9}{(x - 2)(x + 2)(\sqrt{7 + x} + 3)} = \\
+    = \lim_{x \to 2 \pm 0} \frac{1}{(x + 2)(\sqrt{7 + x} + 3)} = 
+    \frac{1}{24}
+\end{gather*}
+
+
+
+
+%--------------------------------------------------
+\newpage
+\part{Производные}
+
+\section{Введение}
+
+\subsection{Определение}
+
+\subsubsection{Основное}
+\begin{gather*}
+    y = f(x) \\
+    y' = \frac{dy}{dx} \\
+    y' = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+\end{gather*}
+
+\subsubsection{Таблица производных}
+\begin{itemize}
+    \item $(x^n)' = nx^{n - 1}, n = const$
+    \item $(\sin x)' = \cos x$
+    \item $(\cos x)' = -\sin x$
+    \item $(\tg x)'= \frac{1}{\cos^2 x}$
+    \item $(\ctg x)'= - \frac{1}{\sin^2 x}$
+    \item $(\arctg x)' = \frac{1}{1 + x^2}$
+    \item $(\arcsin x)' = \frac{1}{\sqrt{1 - x^2}}$
+    \item $(e^x)' = e^x$
+    \item $(a^x)' = a^x \cdot \ln a$
+    \item $(\ln x)' = \frac{1}{x}$
+\end{itemize}
+
+\subsubsection{Правила}
+\begin{itemize}
+    \item $c' = 0$
+    \item $x' = 1$
+    \item $(u(x) \pm v(x))' = u'(x) \pm v'(x)$
+    \item $(u(x) \cdot v(x))' = u'(x) \cdot v(x) + v'(x) \cdot u(x)$
+    \item $\left( \frac{u(x)}{v(x)} \right)' = \frac{u'(x) \cdot v(x) - v'(x) \cdot u(x)}{v^2}$
+    \item $(c \cdot u(x))' = c \cdot u'(x)$
+\end{itemize}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    (x^2)' = 2x
+\]
+
+\subsubsection{Пример}
+\[
+    \left( \frac{1}{x^2} \right)' = (x^{-2})' = -2x^{-3} = \frac{-2}{x^3}
+\]
+
+\subsubsection{Пример}
+\[
+    (\sqrt{x})' = (x^{\frac{1}{2}}) = \frac{1}{2} x^{-\frac{1}{2}} = \frac{1}{2 \sqrt{x}}
+\]
+
+\subsubsection{Пример}
+\[
+    \left( \frac{1}{x} \right)' = (x^{-1})' = -\frac{1}{x^2}
+\]
+
+\subsubsection{Пример}
+\[
+    y = 3x^{\frac{2}{3}} - 2x^{\frac{3}{2}} + \frac{1}{x^3}
+\]
+\begin{gather*}
+    y' = \frac{2}{\sqrt[3]{x}} - 3 \sqrt{x} - 3 \frac{1}{x^4}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{a}{\sqrt[3]{x^2}} - \frac{b}{x \sqrt[3]{x}}
+\]
+\begin{gather*}
+    y = a \cdot \frac{1}{x^{\frac{2}{3}}} - b \cdot \frac{1}{x^{\frac{4}{3}}} =
+    a \cdot x^{-\frac{2}{3}} - b \cdot x^{-\frac{4}{3}} \\
+    y' = -\frac{2}{3} \cdot a \cdot x^{-\frac{5}{3}} + \frac{4}{3} \cdot b \cdot x^{-\frac{7}{3}} =
+    -\frac{2a}{3x \sqrt[3]{x^2}} + \frac{4b}{3x^2 \sqrt[3]{x}}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{ax^2 + b}{\sqrt{a^2 + b^2}}
+\]
+\begin{gather*}
+    y = \frac{ax^2}{\sqrt{a^2 + b^2}} + \frac{b}{\sqrt{a^2 + b^2}} = 
+    \frac{a}{\sqrt{a^2 + b^2}} \cdot x^2 + \frac{b}{\sqrt{a^2 + b^2}} \\
+    y' = \frac{2a}{\sqrt{a^2 + b^2}} \cdot x
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1 + \sqrt{x}}{1 - \sqrt{x}}
+\]
+\begin{gather*}
+    (1 - \sqrt{x})' = (1 - x^{\frac{1}{2}})' = 0 - \frac{1}{2 \sqrt{x}} \\
+    (1 + \sqrt{x})' = \frac{1}{2 \sqrt{x}} \\
+    y' = \frac{\frac{1}{2 \sqrt{x}} (1 - \sqrt{x}) + \frac{1}{2 \sqrt{x}} (1 + \sqrt{x})}{(1 - \sqrt{x})^2} =
+    \frac{1 - \sqrt{x} + 1 + \sqrt{x}}{2 \sqrt{x} (1 - \sqrt{x})^2} =
+    \frac{1}{\sqrt{x} (1 - \sqrt{x})^2}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{\sin x + \cos x}{\sin x - \cos x}
+\]
+\begin{gather*}
+    y' = \frac{(\sin x + \cos x)' \cdot (\sin x - \cos x) - (\sin x - \cos x)' \cdot (\sin x + \cos x)}{(\sin x - \cos x)^2} = \\
+    = \frac{(\cos x - \sin x) \cdot (\sin x - \cos x) - (\cos x + \sin x) \cdot (\sin x + \cos x)}{(\sin x - \cos x)^2}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{(1 + x^2) \arctg x - x}{2}
+\]
+\begin{gather*}
+    y = \frac{1}{2} \cdot \left( (1 + x^2) \cdot \arctg x - x \right) \\
+    y' = \frac{1}{2} \left[ \frac{1 + x^2}{1 + x^2} + 2x \arctg x - 1 \right] =
+    x \arctg x
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{x^2}{\ln x}
+\]
+\begin{gather*}
+    y' = \frac{\ln x \cdot 2x - x^2 \frac{1}{x}}{\ln^2 x} =
+    \frac{\ln x \cdot 2x - x}{\ln^2 x}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1}{x} + 2 \ln x - \frac{\ln x}{x}
+\]
+\begin{gather*}
+    y' = -\frac{1}{x^2} + \frac{2}{x} - \frac{1 - \ln x}{x^2}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \ln x \lg x - \ln a \log_{a} x
+\]
+\begin{gather*}
+    y' = \left( \ln x \frac{\ln x}{\ln 10} - \ln a \frac{\ln x}{\ln a} \right)' =
+    \left( \ln x \left( \frac{\ln x}{\ln 10} - 1 \right) \right)' =
+    \frac{1}{x} \left( \frac{\ln x}{\ln 10} - 1 \right) + \ln x \cdot \frac{1}{x \cdot \ln 10} =
+    \frac{2 \lg x}{x} - \frac{1}{x}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = (1 - x^2)(1 + x^3)(1 + x^4)
+\]
+\begin{gather*}
+    y' = \left((1 - x^2)'(1 + x^3) + (1 - x^2)(1 + x^3) \right)(1 + x^4) + (1 + x^4)'(1 - x^2)(1 + x^3) = \\
+    = -2x (1 + x^3)(1 + x^4) + 3x^2 (1 - x^2)(1 + x^4) + 4x^3 (1 - x^2)(1 + x^3) 
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\paragraph{ПЗ-10 | 2024.11.25 (5)}
+\section{Сложные функции}
+
+\subsection{Теория}
+
+\subsubsection{Основное}
+\begin{gather*}
+    f'(x) \\
+    f'(u(x)) = f_u' \cdot u(x)' \\ 
+\end{gather*}
+
+\subsubsection{Типовые производные}
+\begin{gather*}
+    (\sqrt{x})' = \frac{1}{2\sqrt{x}} \\
+    \left( \frac{1}{x} \right)' = -\frac{1}{x^2}
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    (e^{-x})' = e^{-x} \cdot (-x)' = -e^{-x}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \left( \sin \frac{x}{2} \right)' = \cos \frac{x}{2} \cdot \left( \frac{x}{2} \right)' = \frac{1}{2} \cos \frac{x}{2}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{3}{56(2x - 1)^7} - \frac{1}{24(2x - 1)^5} - \frac{1}{40(2x - 1)^3}
+\]
+\begin{gather*}
+    y' = -\frac{7 \cdot 3 \cdot 2}{56(2x - 1)^8} + \frac{1 \cdot 5 \cdot 2}{24(2x - 1)^6} + \frac{1 \cdot 3 \cdot 2}{40(2x - 1)^4}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = (3 - 2\sin x)^5
+\]
+\begin{gather*}
+    y' = 5(3 - 2\sin x)^4 \cdot \cos x \cdot (-2)   
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \tg x - \frac{1}{3} \tg^3 x + \frac{1}{5} \tg^5 x
+\]
+\begin{gather*}
+    y' = \frac{1}{\cos^2 x} - \frac{\tg^2 x}{\cos^2 x} + \frac{\tg^4 x}{\cos^2 x}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt{\ctg x} + \sqrt{\ctg \alpha}
+\]
+\begin{gather*}
+    y' = \frac{1}{2 \sqrt{\ctg x}} \left( \frac{-1}{\sin^2 x} \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt[3]{\sin^2 x} + \frac{1}{\cos^3 x}
+\]
+\begin{gather*}
+    y' = \left( \sin^{\frac{2}{3}} + \frac{1}{\cos^3 x} \right)' = 
+    \frac{2}{3} \cdot \frac{1}{\sqrt[3]{\sin x}} \cdot \cos x - \frac{3}{\cos^4 x} \cdot (-\sin x)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt{1 + \arcsin x}
+\]
+\begin{gather*}
+    y' = \frac{1}{2 \sqrt{1 + \arcsin x} \cdot \sqrt{1 - x^2}}    
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt{xe^{x^2} + \cos x}
+\]
+\begin{gather*}
+    y' = \frac{1}{2 \sqrt{xe^{x^2} + \cos x}} \cdot \left( e^{x^2} + xe^{x^2} \cdot 2x - \sin x \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \arctg(\ln x) + \ln(\arctg x)
+\]
+\begin{gather*}
+    y' = \frac{1}{(1 + \ln^2 x) \cdot x} + \frac{1}{\arctg x (1 + x^2)}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \ln \ln(3 - 2x^3)
+\]
+\begin{gather*}
+    y' = \frac{-6x^2}{\ln(3 - 2x^3)(3 - 2x^3)}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = 3^{\frac{\sin \alpha x}{\cos \beta x}}
+\]
+\begin{gather*}
+    y' = 3^{\frac{\sin (\alpha x)}{\cos (\beta x)}} \cdot \ln 3 \cdot \left( \frac{\sin (\alpha x)}{\cos (\beta x)} \right)' =
+    \ln 3 \cdot 3^{\frac{\sin (\alpha x)}{\cos (\beta x)}} \cdot 
+    \frac{\alpha \cdot \cos (\alpha x) \cdot \cos (\beta x) + \beta \cdot \sin (\beta x) \cdot \sin (\alpha x)}{\cos^2 (\beta x)}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt{\cos x} \cdot 2^{\sqrt{\cos x}}
+\]
+\begin{gather*}
+    y' = \frac{1}{2\sqrt{\cos x}} \cdot (-\sin x) \cdot 2^{\sqrt{\cos x}} +
+    \sqrt{\cos x} \cdot 2^{\sqrt{\cos x}} \cdot \ln 2 \cdot \frac{1}{2\sqrt{\cos x}} \cdot (-\sin x)
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Особый случай}
+
+\subsection{Теория}
+\begin{gather*}
+    (x^x)' = x^x \cdot (\ln x^x)' \\
+    y' = y \cdot (\ln y)'
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    y = \left( x^x \right)
+\]
+\begin{gather*}
+    y' = \left( x^x \right)' = 
+    \left( e^{x \cdot \ln x} \right)' =
+    e^{x \cdot \ln x} \cdot \left( x \cdot \ln x \right)' =
+    e^{x \cdot \ln x} \cdot \left( \ln x + x \cdot \frac{1}{x} \right) =
+    e^{x \cdot \ln x} \cdot \left( \ln x + 1 \right) =
+    x^x \cdot (\ln x + 1)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = x^{(x^2)}
+\]
+\begin{gather*}
+    y' = x^{x^2} \cdot \left( \ln x^{x^2} \right)' =
+    x^{x^2} \cdot \left( x^2 \ln x \right)' =
+    x^{x^2} \cdot \left( \frac{x^2}{x} + 2x \ln x \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt[x]{x} = x^{\frac{1}{x}}
+\]
+\begin{gather*}
+    y' = e^{\frac{1}{x} \ln x} \cdot \left( \frac{1}{x} \cdot \frac{1}{x} + \left( -\frac{1}{x^2} \right) \cdot \ln x \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \cos x^{\sin x}
+\]
+\begin{gather*}
+    y' = \cos x^{\sin x} \cdot \left( \ln \cos x^{\sin x} \right)' =
+    \cos x^{\sin x} \cdot \left( \sin x \cdot \ln \cos x \right)' =
+    \cos x^{\sin x} \cdot \left( \cos x \cdot \ln \cos x + \sin x \cdot \frac{-\sin x}{\cos x} \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{(x - 2)^9}{\sqrt{(x - 1)^5(x - 3)^{11}}}
+\]
+\begin{gather*}
+    y' = y \cdot (\ln y)' =
+    y \cdot \left( 9\ln(x - 2) - \frac{5}{2}\ln(x - 1) - \frac{11}{2}\ln(x - 3) \right)' =
+    y \cdot \left( \frac{9}{x - 2} - \frac{5}{2(x - 1)} - \frac{11}{2(x - 3)} \right) = \\
+    = \frac{(x - 2)^9}{\sqrt{(x - 1)^5(x - 3)^{11}}} \cdot \left( \frac{9}{x - 2} - \frac{5}{2(x - 1)} - \frac{11}{2(x - 3)} \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt{\frac{x(x^3 - 1)}{5x - 2}}
+\]
+\begin{gather*}
+    y' = y \cdot \left( \ln \left( \frac{x(x^3 - 1)}{5x - 2} \right)^{\frac{1}{2}} \right)' =
+    y \cdot \left( \frac{1}{2} \ln \left( \frac{x(x^3 - 1)}{5x - 2} \right)\right)' =
+    \frac{y}{2} \cdot \left( \ln x + \ln (x^3 - 1) - \ln(5x - 2) \right)' = \\
+    = \frac{y}{2} \cdot \left( \frac{1}{x} + \frac{3x^2}{x^3 - 1} - \frac{5}{5x - 2} \right)'
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Неявные функции [1/2]}
+
+\subsection{Теория}
+\dots
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    \tg y = xy
+\]
+\begin{gather*}
+    \tg \underbrace{\cos^2 x}_{y(x)} = x \underbrace{\cos^2 x}_{y(x)} \\
+    \frac{1}{\cos^4 x} \cdot (\cos^2 x)' = \cos^2 x + x \cdot (\cos^2 x) \\
+    \frac{1}{\cos^2 y} \cdot y' = y + xy' \\
+    y' = \frac{4}{\frac{1}{\cos^2 y} - x}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \arctg \frac{y}{x} = \frac{1}{2} \ln(x^2 + y^2)
+\]
+\begin{gather*}
+    \left( \arctg \frac{y}{x} \right)' = \left( \frac{1}{2} \ln(x^2 + y^2) \right)' \\
+    \frac{1}{1 + \left( \frac{y}{x} \right)^2} \cdot \frac{y' \cdot x - y}{x^2} =
+    \frac{1}{2} \cdot \frac{1}{x^2 + y^2} \cdot (2x + 2y \cdot y') \\
+    y' = \frac{x + y}{x - y}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    x^y = y^x
+\]
+\begin{gather*}
+    (x^y)' = (y^x)' \\
+    x^y = e^{\ln x^y} = e^{y \cdot \ln x} ~~~~~ y^x = e^{\ln y^x} = e^{x \cdot \ln y} \\
+    (x^y)' = e^{y \cdot \ln x} \cdot (y \cdot \ln x)' =
+    \underbrace{e^{y \cdot \ln x}}_{x^y} \left( y' \cdot \ln x + \frac{y}{x} \right) \\
+    (y^x)' = e^{x \cdot y} \cdot \left( \ln y + x \cdot \frac{1}{y} \cdot y' \right) \\
+    x^y \cdot \left( y' \cdot \ln x + \frac{y}{x} \right) = 
+    y^x \cdot \left( \ln y + \frac{x \cdot y'}{y} \right)
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Параметрически заданная функция [1/2]}
+
+\subsection{Теория}
+
+\begin{gather*}
+    \begin{cases}
+        x = x(t) \\
+        y = y(t)
+    \end{cases} \\
+    y_x' = \frac{y_t'}{x_t'} \\
+    \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+\end{gather*}
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    x^2 + y^2 = R^2
+\]
+\begin{gather*}
+    \begin{cases}
+        x = R \cos t \\
+        y = R \sin t 
+    \end{cases} \Leftrightarrow
+    x^2 + y^2 = R^2 \\
+    \frac{dy}{dx} = \frac{R \cos t}{-R \sin t} = -\frac{x}{y}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = 2t - 1 \\
+        y = t^3
+    \end{cases} \\
+    \frac{dy}{dx} = \frac{3t^2}{2}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = \frac{1}{t + 1} \\
+        t = \left( \frac{1}{t + 1} \right)^2 = \frac{1}{(t + 1)^2}
+    \end{cases} \\
+    \frac{dy}{dt} = \frac{-2}{(t + 1)^3} ~~~~~~~~~~
+    \frac{dx}{dt} = \frac{-1}{(t + 1)^2} ~~~~~~~~~~
+    \frac{dy}{dx} = \frac{2(t + 1)^2}{(t + 1)^3} = \frac{2}{t + 1}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = \cos^2 t \\
+        y = \sin^2 t
+    \end{cases} \\
+    x_t' = 2 \cos t \cdot (-\sin t) ~~~~~~~~~~
+    y_t' = 2 \sin t \cdot \cos t    ~~~~~~~~~~
+    y_x' = \frac{2 \sin t \cos t}{-2\cos t \sin t} = -1
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\paragraph{2024.12.02 (5)}
+\section{???}
+
+\subsection{Теория}
+\begin{gather*}
+    y' = \frac{dx}{dy} \\
+    y^{(n)} = \left( y^{(n - 1)} \right)' \\
+    \frac{d^n y}{d x^n} = \frac{d}{dx} \left( y^{(n - 1)} \right) 
+\end{gather*}
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    y = x^2
+\]
+\begin{gather*}
+    y'   = 2x \\
+    y''  = 2  \\
+    y''' = 0  \\
+    \dots
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = e^x 
+\]
+\begin{gather*}
+    y'      = e^x \\
+    y''     = e^x \\
+    y'''    = e^x \\
+    y^{(n)} = e^x
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = e^{2x} 
+\]
+\begin{gather*}
+    y'      = 2e^{2x} \\
+    y''     = 4e^{2x} \\
+    y'''    = 8e^{2x} \\
+    y^{(n)} = 2^n e^{2x}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sin x
+\]
+\begin{gather*}
+    y'      =  \cos x \\
+    y''     = -\sin x \\
+    y'''    = -\cos x \\
+    y''''   =  \sin x \\
+    y^{(n)} =  \sin \left( x + \frac{\pi n}{2} \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = xe^x
+\]
+\begin{gather*}
+    y'      = e^x + xe^x     = (1 + x)e^x \\
+    y''     = (1 + 1 + x)e^x = (2 + x)e^x \\
+    y'''    = (1 + 2 + x)e^x = (3 + x)e^x \\
+    y^{(n)} = (n + x)e^x
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = e^{x^2}
+\]
+\begin{gather*}
+    y'   = e^{x^2} \cdot 2x \\
+    y''  = (e^{x^2})' \cdot 2x + e^{x^2} \cdot (2x)' =
+    e^{x^2} \cdot 2x \cdot 2x + e^{x^2} \cdot 2 =
+    e^{x^2} (4x^2 + 2x) \\
+    y''' = 2xe^{x^2} \cdot (2 + 4x^2) + e^{x^2} \cdot 8x
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \ln \sqrt[3]{1 + x^2}
+\]
+\begin{gather*}
+    y    = \frac{1}{3} \ln (1 + x^2) \\
+    y'   = \frac{2x}{3(1 + x^2)}
+    y''  = \frac{2}{3} \left( \frac{(1 + x^2) - 2x^2}{(1 + x^2)^2} \right) =
+    \frac{2}{3} \cdot \frac{1 - x^2}{(1 + x^2)^2}
+    y''' = \frac{2}{3} \frac{-2x(1 + x^2)^2 - (1 - x^2) \cdot 2 (1 + x^2) \cdot 2x}{(1 + x^2)^4}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1 + x}{1 - x}
+\]
+\begin{gather*}
+    y'      = \frac{1 - x + 1 + x}{(1 - x)^2} = \frac{2}{(1 - x)^2} = 2(1 - x)^{-2} \\
+    y''     = 2 \cdot 2 \cdot (1 - x)^{-3}  = \frac{2 \cdot 2}{(1 - x)^3} \\
+    y'''    = 2 \cdot 2 \cdot 3 \cdot (1 - x)^{-4} = \frac{2 \cdot 2 \cdot 3}{(1 - x)^4} \\
+    y^{(n)} = \frac{2 \cdot n!}{(1 - x)^{n + 1}}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \ln (1 + x)
+\]
+\begin{gather*}
+    y'   = \frac{1}{1 + x} = (x + 1)^{-1} \\
+    y''  = -1 \cdot (x + 1)^{-2} \\
+    y''' = (-1)(-2)(x + 1)^{-3} \\
+    y^{(n)} = \frac{(-1)^{n - 1} \cdot (n - 1)!}{(x + 1)^n}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1}{2} x^2 e^x ~~~ y'' - 2y' + y = e^x
+\]
+\begin{gather*}
+    y' = \frac{1}{2} \cdot \left( 2x \cdot e^x + x^2 \cdot e^x \right) =
+    \frac{1}{2} \cdot e^x \cdot \left( x^2 + 2x \right) \\
+    y '' = \frac{1}{2} \cdot \left( e^x \cdot (x^2 + 2x) + (2x + 2) \cdot e^x \right) =
+    \frac{1}{2} \cdot e^x \cdot \left( x^2 + 4x + 2 \right) =
+    \frac{1}{2} \cdot \left( x^2 + 4x + 2 \right) - (x^2 + 2x) + \frac{1}{2} x^2 = 1 \\
+    \frac{1}{2} x^2 + 2x + 1 - x^2 - 2x + \frac{1}{2} x^2 = 1 \\
+    1 = 1
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{x^2 + 2x + 2}{2} ~~~ 1 + y' = 2yy''
+\]
+\begin{gather*}
+    y' = \frac{1}{2} (2x + 2) = x + 1 \\
+    y'' = 1 \\
+    1 + (x + 1)^2 = (x^2 + 2x + 2) 
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Формула Лебнеца}
+
+\subsection{Теория}
+\[
+    (uv)^{(n)} = u^{(n)}v + nu^{(n - 1)}v' + \frac{n(n - 1)u^{(n - 2)v''}}{1 \cdot 2} + \dots + uv^{(n)}
+\]
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    y = x^2 e^{-2x}
+\]
+\begin{gather*}
+    v = x^2, u = e^{-2x} \\
+    y^{(n)} = (-2)^n e^{-2x} \cdot x^2 + n(-2)^{n - 1} \cdot e^{-2x} \cdot 2x + \frac{n \cdot (n - 1) \cdot (-2)^{n - 2} \cdot e^{-2x} \cdot 2}{2} =
+    (-2)^{n - 2} \cdot e^{-2x} \left( 4x^2 - 4nx + n(n - 1) \right)
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1 + x}{\sqrt{x}}
+\]
+\begin{gather*}
+    y = \underbrace{x^{-\frac{1}{2}}}_{u} \cdot \underbrace{(1 + x)}_{v} \\
+    u' = -\frac{1}{2} x^{-\frac{3}{2}} \\
+    u'' = \left( -\frac{1}{2} \right) \left( -\frac{3}{2} \right) \cdot x^{\frac{5}{2}} \\
+    u''' = \left( -\frac{1}{2} \right) \left( -\frac{3}{2} \right) \left( -\frac{5}{2} \right) \cdot x^{\frac{7}{2}} \\
+    u^{(n)} = (-1)^n \cdot \frac{(2n - 1)!!}{2^n} \cdot x^{-\frac{2n + 1}{2}} \\
+    y^(n) = (-1)^n \cdot \frac{(2n - 1)!!}{2^n} \cdot \frac{1 + x}{\sqrt{x^{2n + 1}}} + (-1)^{n - 1} \cdot \frac{(2n - 3)!!}{2^{n - 1}} \cdot \frac{1}{\sqrt{x^{2n - 1}}} =
+    (-1)^{n - 1} \cdot \frac{(2n - 3)!!}{2^{n - 1}} \cdot \frac{1}{\sqrt{x^{2n - 1}}} \cdot \left( 1 - \frac{2n - 1}{2}  \cdot \frac{1 + x}{|x|}\right)
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Неявно заданная функция [2/2]}
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \\
+    \frac{2x}{a^2} + \frac{2y}{b^2}y' = 0 \\
+    \frac{x}{a^2} + \frac{y}{b^2}y' = 0 \\
+    \frac{1}{a^2} + \frac{1}{b^2} \left( y' \cdot y' + y \cdot y'' \right) = 0 \\
+    y'^2 + yy''
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = x + \arctg y
+\]
+\begin{gather*}
+    y' = 1 + \frac{1}{1 + y^2} \cdot y' \\
+    1 + y' \left( \frac{1}{1 + y^2} - 1\right) = 0 \\
+    y'' \cdot \left( \frac{1}{1 + y^2} - 1 \right) - y' \left( \frac{2y \cdot y'}{(1 + y^2)^2} \right) \\
+    1 + y' \left( \frac{y^2}{1 + y^2} \right) = 0 \\
+    y' = -\frac{1 + y^2}{y^2} = -\frac{1}{y^2} - 1
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    xy = \arctg \frac{x}{y}
+\]
+\begin{gather*}
+    y + xy' = \frac{1}{1 + \left( \frac{x}{y} \right)^2} \cdot \frac{y - xy'}{y^2} \\
+    y + xy' = \frac{y - xy'}{y^2 + x^2} \\
+    y' + y' + xy'' = \frac{(y' - y' - xy'')(y^2 + x^2) - (y' - xy')(2y \cdot y' + 2x)}{(y^2 + x^2)^2}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Параметрическая функция [2/2]}
+
+\subsection{Теория}
+\begin{gather*}
+    \frac{dx}{dy} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} \\
+    \frac{d^2y}{dx^2} = \frac{d}{dx} \left( \frac{dy}{dx} \right) =
+    \frac{d}{dx} \left( \frac{\frac{dy}{dt}}{\frac{dx}{dt}} \right) =
+    \frac{d}{dt} \left( \frac{\frac{dy}{dt}}{\frac{dx}{dt}} \right) \cdot \frac{dt}{dx} =
+    \frac{d}{dt} \left( \frac{y_t'}{x_t'} \right) \frac{1}{x_t'} =
+    \frac{y_{tt}'' x_t' - y_t' x_{tt}''}{(x_t')^3} = y_{xx}''
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = \cos t \\
+        y = \sin t
+    \end{cases}
+    \frac{dy}{dx} = 
+    \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = 
+    \frac{-\cos t}{\sin t} = 
+    -\ctg t \\
+    y_{xx}'' = \frac{\sin^2 t - \cos^2 t}{\sin^3 t} = -\frac{1}{\sin^3 t}
+\end{gather*}
+
+
+\subsubsection{Пример}
+\begin{gather*}
+    \begin{cases}
+        x = a \cos^3 t \\
+        y = a \sin^3 t
+    \end{cases} \\
+    x_t'     = -3a \cdot \cos^2 t \cdot \sin t \\
+    x_{tt}'' = -3a \cdot \left( -2 \cdot \cos t \cdot \sin^2 t + \cos^3 t \right) \\
+    y_t'     = 3a \cdot \sin^2 t \cdot \cos t \\
+    y_{tt}'' = 3a \cdot \left( 2 \cdot \sin t \cdot \cos^2 t - \cdot \sin^3 t \right) \\
+    y_{xx}'' = \frac{-9a^2 \left( 2 \sin t \cdot \cos^2 t - \sin^3 t \cdot \cos^2 t  \cdot \sin t + 9a^2\right)}{...}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\paragraph{2024.12.16 (5)}
+\section{Экстремум}
+
+\subsection{Теория}
+\begin{gather*}
+    y = f(x) ~~~~~ y = f'(x) \\
+    \text{Необходимые условия: } f'(x_0) = 0, \neg \exists \\
+    \text{Достаточные условия: (схема-фото)} 
+\end{gather*}
+
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    y = (x - 2)^2
+\]
+\begin{gather*}
+    y' = 2(x - 2) = 0 \Rightarrow x = 2 \text{ --- точка экстремума}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{x}{3} - \sqrt[3]{x}
+\]
+\begin{gather*}
+    y' = \frac{1}{3} - \frac{1}{3} \cdot x^{-\frac{2}{3}} =
+    \frac{1}{3} - \frac{1}{3 \cdot \sqrt[3]{x^2}} \\
+    \begin{cases}
+        x = 0 \\
+        y \neg \exists
+    \end{cases} \\
+    y' = 0 = \frac{1}{3} - \frac{1}{3 \cdot \sqrt[3]{x^2}} \\
+    \frac{1}{3} \left( 1 - \frac{1}{\sqrt[3]{x^2}} \right) \\
+    1 = \sqrt[3]{x^2} \\
+    x = \pm 1 \\
+    x \in \underbrace{(-\infty; -1)}_{f' > 0 ~|~ \nearrow} \cup \underbrace{(-1; 0)}_{f' < 0 ~|~ \searrow} \cup \underbrace{(0; 1)}_{f' < 0 ~|~ \searrow} \cup \underbrace{(1; +\infty)}_{f' > 0 ~|~ \nearrow}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{e^x}{x}
+\]
+\begin{gather*}
+    y' = \frac{(e^x)' \cdot x - x' \cdot e^x}{x^2} =
+    \frac{e^x \cdot x - e^x}{x^2} \\
+    \begin{cases}
+        x = 0 \\
+        y \neg \exists
+    \end{cases} \\
+    y' = 0: e^x \cdot x - e^x = 0 ~~\rightarrow~~ 
+    e^x(x - 1) = 0 ~~\rightarrow~~ 
+    x = 1 ~~\rightarrow~~
+    \underbrace{(-\infty; 0)}_{f' < 0 ~|~ \searrow} \cup \underbrace{(0; 1)}_{f' < 0 ~|~ \searrow} \cup \underbrace{(1; +\infty)}_{f' > 0 ~|~ \nearrow}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \frac{x}{\sqrt[3]{x^2 - 4}}
+\]
+\begin{gather*}
+    \dots
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Вторая производная}
+
+\subsection{Теория}
+...
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    y = \frac{1}{x + 3}
+\]
+\begin{gather*}
+    y = (x + 3)^{-1} \\
+    y' = -(x + 3)^{-2} \\
+    y'' = \text{стёрли}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \sqrt[3]{4x^3 - 12x}
+\]
+\begin{gather*}
+    y = (4x^3 - 12x)^{\frac{1}{3}} \\
+    y' = \frac{1}{3} (4x^3 - 12x)^{-\frac{2}{3}} \cdot (12x^2 - 12) \\
+    y'' = \left(\frac{1}{3} (4x^3 - 12x)^{-\frac{2}{3}}\right)' \cdot (12x^2 - 12) + 
+    (12x^2 - 12)' \cdot \left(\frac{1}{3} (4x^3 - 12x)\right)^{-\frac{2}{3}} = \\
+    = \frac{1}{3} \cdot \left( -\frac{2}{3} \right) \cdot (4x^3 - 12x)^{-\frac{5}{3}} \cdot (12x^2 - 12) \cdot (12x^2 - 12) +
+    24x \cdot \left(\frac{1}{3} (4x^3 - 12x)\right)^{-\frac{2}{3}} = \\
+    = -\frac{2}{3} \cdot \frac{1}{\sqrt[3]{(4x^3 - 12)^5}} \cdot (12x^2 - 12)^2 + 24x \cdot \frac{1}{\sqrt[3]{(4x^3 - 12)^2}} =
+    -\frac{2(12x^2 - 12)^2}{3\sqrt[3]{(4x^3 - 12)^5}} + \frac{24x}{\sqrt[3]{(4x^3 - 12)^2}}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{???}
+\paragraph{2024.12.23 (5)}
+\[
+    y = \frac{x}{x^2 - 4x + 3}
+\]
+\begin{gather*}
+    x^2 - 4x + 3 = 0
+    \begin{cases}
+        x_! = 3 \\
+        x_2 = 1
+    \end{cases} \\
+    \lim_{x \to 3\pm} \frac{x}{(x - 3)(x - 1)} = \pm \infty \\
+    \lim_{x \to 1\pm} \frac{x}{(x - 3)(x - 1)} = \mp \infty \\
+    k = \lim_{x \to \infty} \frac{x}{x(x - 3)(x - 1)} = \lim_{x \to \infty} \frac{1}{(x - 3)(x - 1)} = 0 \\
+    b = \lim_{x \to \infty} \frac{x}{(x - 3)(x - 1)} = \lim_{x \to \infty} \frac{1}{(x + 1) + (x + 3)}
+\end{gather*}
+
+
+\[
+    y = x - 2 + \frac{x^2}{\sqrt{x^2 + 9}}
+\]
+\begin{gather*}
+    k = \lim_{x \to \infty} = \frac{x - 2 + \frac{x^2}{\sqrt{x^2 - 9}}}{x} =
+    \lim_{x \to \infty} \left( 1 - \frac{2}{x} + \frac{x}{\sqrt{x^2 + 9}} \right) \\
+    b = \lim_{x \to \infty} \left( x - 2 + \frac{x^2}{\sqrt{x^2 + 9}} - 2x \right) =
+    \lim_{x \to \infty} \left(\frac{x^2}{\sqrt{x^2 + 9}} - x - 2 \right) =
+    \lim_{x \to \infty} \frac{-x \sqrt{x^2 + 9} + x^2}{\sqrt{x^2 + 9}} = \\
+    = \lim_{x \to \infty} \frac{x^2 \left( 1 - \sqrt{1 + \frac{9}{x^2}} \right)}{x \left( \sqrt{1 + \frac{9}{x^2}} \right)} =
+    \left[ \infty \cdot 0 \right] =
+    \lim_{x \to \infty }\frac{x \left( 1 - \sqrt{1 + \frac{9}{x^2}} \right)}{\sqrt{1 + \frac{9}{x^2}}} =
+    \lim_{x \to \infty} \frac{x \left( 1 - 1 - \frac{9}{x^2} \right)}{\sqrt{1 + \frac{9}{x^2}} \cdot \left( 1 + \sqrt{1 + \frac{9}{x^2}} \right)} = \\
+    = \lim_{x \to \infty} \frac{-9}{x \left( \sqrt{1 + \frac{9}{x^2}} \right) \left( 1 + \sqrt{1 + \frac{9}{x^2}} \right)} = 0 \\
+    y = 2x \\
+    k_1 = \lim_{x \to -\infty} \left( 1 - \frac{2}{x} + \frac{x}{\sqrt{x^2 + 9}} \right) =
+    \lim_{x \to -\infty} \left( 1 - \frac{2}{x} + \frac{x}{|x| \sqrt{1 + \frac{9}{x^2}}} \right) = 0 \\
+    b = \lim_{x \to -\infty} \left( x - 2 + \frac{x^2}{\sqrt{x^2 + 9}} \right) =
+    \lim_{x \to -\infty} \frac{x \cdot \sqrt{x^2 + 9} + x^2}{\sqrt{x^2 + 9}} =
+    \lim_{x \to -\infty} \left( \frac{x \cdot |x| \cdot \sqrt{1 + \frac{9}{x^2}} + x^2}{\sqrt{x^2 + 9}} - 2 \right) = \infty
+\end{gather*}
+
+\[
+    y = x^2 + \frac{2}{x}
+\]
+\begin{gather*}
+    1) x \in (-\infty; 0) \cup (0; +\infty) \\
+    2) \lim_{x \to 0-} x^2 + \frac{2}{x} = -\infty \\
+       \lim_{x \to 0+} x^2 + \frac{2}{x} = +\infty \\
+       k = \lim_{x \to \pm \infty} \frac{x^2 + \frac{2}{x}}{x} =
+       \lim_{x \to \pm \infty} \left( x + \frac{2}{x} \right) = \pm \infty \neq const \\
+    3) y' = 0, \neg \exists, y' = 2x - \frac{2}{x^2}
+\end{gather*}
+
+
+
+
+
+\end{document}

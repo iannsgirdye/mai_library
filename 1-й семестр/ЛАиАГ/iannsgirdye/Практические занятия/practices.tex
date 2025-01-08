@@ -1,0 +1,1017 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases, lipsum}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+% Примечание* --- информация, добавленная от себя, но не написанная преподавателем на доске
+% 99.9% Материала в этом и других документах является информацией, набранной с доски, и, если меня не было на занятии, набранной с конспектов одногруппников.
+% Поэтому в моих документах редко где может встретиться то, что преподаватель сказал, но не написал (или одногруппники что-то недописали).
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Линейная алгебра и Аналитическая геометрия}
+    \author{Бабицкий Иван | М8О-111БВ-24 \\ 02.03.02 "Фундаментальная информатика и информационные технологии"}
+    \date{2024/2025 учебный год, 1-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ПЗ-9 | 2024.11.11 (3)}
+\part{Произведения геометрических векторов}
+
+\section{Теория}
+
+\subsection{Скалярное}
+
+\subsubsection{Определение}
+\begin{gather*}
+    \text{Число } = (\overline{a}, \overline{b}) \equiv \overline{a} \cdot \overline{b} \overset{\Delta}{=}
+    |\overline{a}| \cdot \underbrace{|\overline{b}| \cdot \cos \varphi}_{\text{Пр}_{\overline{a}} \overline{b}}
+    ~~~~~ \varphi = \widehat{\overline{a}, \overline{b}} \in \left[ 0; \pi \right] 
+\end{gather*}
+
+\subsubsection{Геометрический смысл}
+(рисунок)
+
+\subsubsection{Вычисление}
+\begin{align*}
+    \begin{rcases}
+        \overline{a} = a_x \overline{i} + a_y \overline{j} + a_z \overline{k} = \{a_x, a_y, a_z\}_{(\overline{i}, \overline{j}, \overline{k})} \\
+        \overline{b} = b_x \overline{i} + b_y \overline{j} + b_z \overline{k} = \{b_x, b_y, b_z\}_{(\overline{i}, \overline{j}, \overline{k})}
+    \end{rcases} \Rightarrow
+    \overline{a} \cdot \overline{b} = \boxed{a_x b_x + a_y b_y + a_z b_z}
+\end{align*}
+
+\subsubsection{Свойства}
+\begin{itemize}
+    \item 
+    \[
+        \overline{a} \cdot \overline{b} = \overline{b} \cdot \overline{a}
+    \]
+    \item 
+    \[
+    \overline{a} \cdot \overline{b} = 0, 
+    \text{ если } \overline{a} \neq \overline{0}, 
+    \overline{b} \neq \overline{0}, 
+    \underbrace{\overline{a} \bot \overline{b}}_{\text{ортогональные}}
+    \]
+    \item 
+    \[
+    \overline{a} \cdot \overline{a} = |\overline{a}|^2
+    \]
+    \item 
+    \[
+    (\alpha_1 \overline{a}_1 + \alpha_2 \overline{a}_2) \cdot \overline{b} =
+    \alpha_1 \underbrace{\overline{a}_1 \overline{b}}_{= \overline{b} \overline{a}_1} + \alpha_2 \overline{a}_2 \overline{b}
+    \]
+    \item 
+    \[
+    \overline{a} \cdot \overline{b} = |\overline{a}| \cdot \text{Пр}_{\overline{a}} \overline{b}
+    \]
+\end{itemize}
+
+\subsubsection{Применение}
+\begin{itemize}
+    \item 
+    \[
+    |\overline{a}| = \sqrt{\overline{a} \cdot \overline{a}} = \sqrt{a_x^2 + a_y^2 + a_z^2}
+    \]
+    \item 
+    \[
+    \text{Пр}_{\overline{a}} \overline{b} =\frac{\overline{a} \cdot \overline{b}}{|\overline{a}|}
+    \]
+    \item 
+    \[
+    \cos \varphi = \frac{\overline{a} \cdot \overline{b}}{|\overline{a}| \cdot |\overline{b}|}
+    \]
+\end{itemize}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Векторное}
+
+\subsubsection{Определение}
+\[
+    \text{Вектор } = \left[ \overline{a}, \overline{b} \right] \equiv \overline{a} \times \overline{b} = \overline{n}:
+\]
+\begin{itemize}
+    \item $\overline{n} \bot \overline{a}, \overline{n} \bot \overline{b}$
+    \item Тройка $\overline{a}, \overline{b}, \overline{n}$ --- правая ($\overline{n}$ --- по правилу буравчика)
+    \item $|\overline{n}| = |\overline{a}| \cdot |\overline{b}| \cdot \sin \varphi = S_{\#}$
+\end{itemize}
+
+
+\subsubsection{Геометрический смысл}
+\includegraphics[scale=0.15]{practice09_01.jpg}
+
+\subsubsection{Вычисление (через декартовы прямые координаты)}
+\begin{gather*}
+    \overline{n} = \overline{a} \times \overline{b} =
+    \begin{vmatrix}
+        \overline{i} & \overline{j} & \overline{k} \\
+        a_x          & a_y          & a_z          \\
+        b_x          & b_y          & b_z
+    \end{vmatrix} =
+    A_{11} \overline{i} + A_{12} \overline{j} + A_{13} \overline{k} =
+    \{\underbrace{A_{11}}_{n_x}, \underbrace{A_{12}}_{n_y}, \underbrace{A_{13}}_{n_z}\}
+\end{gather*}
+
+
+\subsubsection{Свойства}
+\begin{itemize}
+    \item 
+    \[
+    \overline{a} \times \overline{b} = -\overline{b} \times \overline{a}
+    \]
+    \item 
+    \begin{align*} 
+        \begin{rcases}
+            \overline{a} \times \overline{b} = \overline{0} \\
+            \overline{a} \neq \overline{0}, \overline{b} \neq \overline{0}    
+        \end{rcases} \Leftrightarrow 
+        \overline{a} \parallel \overline{b} 
+    \end{align*}
+    \item 
+    \[
+    \overline{a} \times \overline{a} = \overline{0}
+    \]
+    \item 
+    \[
+    \left( \alpha_1 \overline{a}_1 + \alpha_2 \overline{a}_2 \right) \times \overline{b} =
+    \alpha_1 \underbrace{\overline{a}_1 \times \overline{b}}_{\neq \overline{b} \times \overline{a}_1} +
+    \alpha_2 \overline{a}_2 \times \overline{b}
+    \]
+\end{itemize}
+
+\subsubsection{Применение}
+\begin{itemize}
+    \item 
+    \[
+    S_{\#}^{\overline{a}, \overline{b}} = \left| \overline{a} \times \overline{b} \right|
+    \]
+    \item 
+    \[
+    \overline{n} = \overline{a} \times \overline{b} \text{ --- нормаль к плоскости } P \parallel \overline{a}, \overline{b}
+    \]
+\end{itemize}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Смешанное (векторно-скалярное)}
+
+\subsubsection{Определение}
+\begin{gather*}
+    \text{Число } = (\overline{a}, \overline{b}, \overline{c}) \overset{\Delta}{=}
+    (\overbrace{\overline{a} \underset{(1)}{\times} \overline{b}}^{\overline{n}}) \underset{(2)}{\cdot} \overline{c}
+\end{gather*}
+
+
+\subsubsection{Геометрический смысл}
+(рисунок)
+
+\subsubsection{Вычисление}
+\begin{gather*}
+    (\overline{a}, \overline{b}, \overline{c}) =
+    \begin{vmatrix}
+        a_x & a_y & a_z \\
+        b_x & b_y & b_z \\
+        c_x & c_y & c_z
+    \end{vmatrix}
+\end{gather*}
+\paragraph{Проверка по $\overline{n} = \overline{a} \times \overline{b}$}
+\[
+    \overline{n} \cdot \overline{c} \overset{?}{=} (\overline{a}, \overline{b}, \overline{c})
+\]
+
+
+\subsubsection{Свойства}
+\begin{itemize}
+    \item Перестановки круговые:
+    \[
+    (\overline{a}, \overline{b}, \overline{c}) =
+    (\overline{b}, \overline{c}, \overline{a}) =
+    (\overline{c}, \overline{a}, \overline{b}) =
+    (\overline{a}, \overline{b}, \overline{c})
+    \]
+    \item Перестановки соседей:
+    \[
+     (\overline{a}, \overline{b}, \overline{c}) =
+    -(\overline{b}, \overline{a}, \overline{c})
+    \]
+    \[
+     (\overline{a}, \overline{b}, \overline{c}) =
+    -(\overline{a}, \overline{c}, \overline{b})
+    \]
+    \item 
+    \[
+    \left( \left( \alpha_1 \overline{a}_1 + \alpha_2 \overline{a}_2 \right), \overline{b}, \overline{c} \right) =
+    \alpha_1 \left( \overline{a}_1, \overline{b}, \overline{c} \right) +
+    \alpha_2 \left( \overline{a}_2, \overline{b}, \overline{c} \right)
+    \]
+    \item Компланарная тройка:
+    \begin{align*}
+        \begin{rcases}
+            (\overline{a}, \overline{b}, \overline{c}) = 0 \\
+            \overline{a} \neq \overline{0}, \overline{b} \neq \overline{0}, \overline{c} \neq \overline{0} 
+        \end{rcases} \Leftrightarrow
+        \overline{a}, \overline{b}, \overline{c} \text{ --- тройка компланарна}
+    \end{align*}
+\end{itemize}
+
+\subsubsection{Применение}
+\begin{itemize}
+    \item Объём параллелепипеда:
+    \[
+    V_{\#}^{\overline{a}, \overline{b}, \overline{c}} = \left| \left( \overline{a}, \overline{b}, \overline{c} \right) \right|
+    \]
+    \item
+    \begin{itemize}
+        \item $\left( \overline{a}, \overline{b}, \overline{c} \right) > 0 \Leftrightarrow$ тройка правая
+        \item $\left( \overline{a}, \overline{b}, \overline{c} \right) < 0 \Leftrightarrow$ тройка левая
+    \end{itemize}
+\end{itemize}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Практика}
+
+\subsection{1.108}
+
+\paragraph{Дано}
+\begin{itemize}
+    \item $\Delta ABC$
+    \item $A(1; -1; 2)$
+    \item $B(5; -6; 2)$
+    \item $C(1; 3; -1)$
+\end{itemize}
+
+\paragraph{Найти}
+\begin{itemize}
+    \item $\angle A = \alpha = \widehat{\overline{AB}, \overline{AC}}$
+    \item $S_{ABC}$
+    \item Высота $h_B = BD, BD \bot AC$
+\end{itemize}
+
+\paragraph{Решение}
+\begin{enumerate}
+    \item Введём векторы сторон $\Delta ABC$, исходящие из одной вершины:
+    $\overline{AB} = \{5 - 1; -6 - (-1); 2 - 2\} = \{4; -5; 0\} = 4\overline{i} - 5\overline{j} + 0\overline{k}$ \\
+    $\overline{AC} = \{0; 4; - 3\} = 0\overline{i} + 4\overline{j} - 3\overline{k}$
+    \item $\cos \alpha = \frac{\overline{AB} \cdot \overline{AC}}{|\overline{AB}| \cdot |\overline{AC}|} = 
+    \frac{4 \cdot 0 - 4 \cdot 5 - 3 \cdot 0}{\sqrt{16 + 25} \cdot \sqrt{16 + 9}} = 
+    \frac{-20}{5\sqrt{41}} = -\frac{4}{\sqrt{41}} \in [-1; 1] \\
+    \alpha = \arccos \left( \frac{-4}{\sqrt{41}} \right) = \pi - \arccos \left( \frac{4}{\sqrt{41}} \right)$ --- тупой
+\end{enumerate}
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ПЗ-10 | 2024.11.18 (3)}
+\part{Прямая линия $l$ в плоскости $Oxy$}
+
+\section{Теория}
+
+\subsection{Общее уравнение}
+\includegraphics[scale=0.2]{practice10_01.jpg}
+\begin{gather*}
+    \forall M(x, y) \in l: \overline{M_0 M} \bot \overline{N} \Leftrightarrow \overline{N} \cdot \overline{M_0 M} = 0 \\
+    \boxed{A(x- x_0) + B(y - y_0) = 0} \Rightarrow \boxed{Ax + By + C = 0} \\
+\end{gather*}
+
+\subsubsection{Примечание*}
+$\overline{N}(A, B)$ --- вектор нормали прямой $l$.
+
+\subsubsection{Случаи}
+\begin{enumerate}
+    \item $A = 0 \Rightarrow y = y_{*}$
+    \item $B = 0 \Rightarrow x = x_{*}$
+    \item $C = 0 \Rightarrow y = kx$
+\end{enumerate}
+\includegraphics[scale=0.2]{practice10_02.jpg}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Параметричесие и каноническое уравнения $l \subset Oxy$}
+\includegraphics[scale=0.2]{practice10_03.jpg}
+\begin{gather*}
+    \forall M(x, y) \in l: \overline{M_0 M} \parallel \overline{q} \Leftrightarrow \exists t \in \mathbb{R}: \overline{M_0 M} = t\overline{q} \Leftrightarrow
+    \begin{cases}
+        x - x_0 = mt \\
+        y - y_0 = nt
+    \end{cases} t \in \mathbb{R} \Rightarrow \\
+    \Rightarrow t = \frac{x - x_0}{m} = \frac{y - y_0}{n} \Rightarrow
+    n(x - x_0) = m(y - y_0) \Rightarrow \boxed{n(x - x_0) - m(y - y_0) = 0}
+\end{gather*}
+
+\subsubsection{Примечание*}
+$\overline{q}(-B, A)$ --- направляющий вектор прямой $l$.
+
+\subsubsection{Случай 1}
+\[
+    m = 0
+\]
+\begin{gather*}
+    \frac{x - 1}{0} = \frac{y + 2}{3} \\
+    \begin{cases}
+        x - 1 = 0t \rightarrow x = 1 \\
+        y + 2 = 3t \rightarrow y \in \mathbb{R}
+    \end{cases}
+\end{gather*}
+\includegraphics[scale=0.15]{practice10_04.jpg}
+
+\subsubsection{Случай 2}
+\[
+    n = 0
+\]
+\begin{gather*}
+    \frac{x - 2}{4} = \frac{y + 5}{0} \\
+    \begin{cases}
+        x - 2 = 4t \rightarrow x \in \mathbb{R} \\
+        y + 5 = 0t \rightarrow y = -5
+    \end{cases}
+\end{gather*}
+\includegraphics[scale=0.15]{practice10_05.jpg}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Через 2 точки}
+\includegraphics[scale=0.2]{practice10_06.jpg}
+\begin{align*}
+    \begin{rcases}
+        M_1(x_1, y_1) \in l \\
+        M_2(x_2, y_2) \in l
+    \end{rcases} \Rightarrow
+    \boxed{\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}}
+\end{align*}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Расстояние от точки $D$ до прямой $l$}
+\begin{gather*}
+    l: Ax + By + C = 0, ~~~ D(x_D, y_D) \\
+    \rho(D(x_D, y_D); l: Ax + By + C = 0) = \frac{|A_{x_D} + B_{y_D} + C|}{\sqrt{A^2 + B^2}}
+\end{gather*}
+\includegraphics[scale=0.15]{practice10_07.jpg}
+
+
+\par\noindent\rule{\textwidth}{2pt}
+\section{Практика}
+
+\subsection{1.150}
+
+\paragraph{Дано}
+\begin{itemize}
+    \item $\Delta ABC$
+    \item $A(1; 2)$
+    \item $B(2; -2)$
+    \item $C(6; 1)$
+\end{itemize}
+
+\paragraph{Найти}
+\begin{enumerate}
+    \item Уравнение стороны $(AB)$
+    \item Уравнение высоты $(CD)$
+    \item Длина $h_c$ высоты $CD$ 
+    \item Уравнение медианы $(BM)$
+    \item Точка пересечения $k = (CD) \cap (BM)$
+    \item Угол между высотой $(CD)$ и медианой $(BM)$
+\end{enumerate}
+
+\paragraph{Примечание} 
+~\\ Проверить найденные результаты по рисунку.
+
+\paragraph{Пункт 1 | Решение}
+\begin{align*}
+    \begin{rcases}
+        M_1 = A(1; 2)  \in (AB) \\
+        M_2 = B(2; -2) \in (AB)
+    \end{rcases} \Rightarrow
+    \text{каноническое уравнение: } \frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}
+\end{align*}
+\begin{gather*}
+    \frac{x - 1}{2 - 1} = \frac{y - 2}{-2 - 2} ~~\rightarrow~~
+    \frac{x - 1}{1} = \frac{y - 2}{-4} ~~\rightarrow~~
+    -4(x - 1) = y - 2 ~~\rightarrow~~
+    y - 2 + 4(x - 1) = 0 \\
+    y - 2 + 4x - 4 = 0 ~~\rightarrow~~
+    \boxed{4x + y - 6 = 0} \text{ ---  общее уравнение}
+\end{gather*}
+
+\paragraph{Пункт 1 | Проверка}
+Проверка точек пересечения с осями
+\begin{gather*}
+    Ox: y = 0 \Rightarrow 4x + 0 - 6 = 0 ~~\rightarrow~~ x = \frac{6}{4} = \frac{3}{2} \text{ --- есть на рисунке} \\
+    Oy: x = 0 \Rightarrow 4 \cdot 0 + y - 6 = 0 ~~\rightarrow~~ y = 6 \text{ --- есть на рисунке}
+\end{gather*}
+
+\paragraph{Пункт 1 | Ответ}
+\[
+    (AB): 4x + y - 6 = 0
+\]
+
+\paragraph{Пункт 2 | Решение}
+\begin{gather*}
+    \begin{cases}
+        M_0 = C(6; 1) \in (CD) \\
+        \frac{\pi}{2}: \overline{AB} \bot \overline{CD} \Rightarrow N_{(CD)} = \overline{AB} = \{2 - 1; -2 - 2\} = \{1; -4\}
+    \end{cases} \\
+    \text{Общее уравнение с точкой: } \\
+    A(x - x_0) + B(y - y_0) = 0 ~~\rightarrow~~
+    1(x - 6) - 4(y - 1) = 0 ~~\rightarrow~~
+    \boxed{x - 4y - 2 = 0}
+\end{gather*}
+
+\paragraph{Пункт 2 | Проверка}
+\begin{gather*}
+    Oy: x = 0 \Rightarrow y = -\frac{1}{2} \text{ --- есть на рисунке} \\
+    Ox: y = 0 \Rightarrow x = 2 \text{ --- есть на рисунке}
+\end{gather*}
+
+\paragraph{Пункт 2 | Ответ}
+\[
+    (CD): x - 4y - 2 = 0
+\]
+
+\paragraph{Пункт 3 | Решение}
+\begin{align*}
+    \begin{rcases}
+        \text{точка } C(6; 1) = D \\
+        \text{уравнение } (AB): 4x + y - 6 = 0
+    \end{rcases} \Rightarrow \\
+\end{align*}
+\begin{gather*}
+    \Rightarrow h_c = \rho(C, (AB)) = 
+    \frac{\left| Ax_d + By_d + C \right|}{\sqrt{A^2 + B^2}} = 
+    \frac{\left| 4 \cdot 6 + 1 \cdot 1 - 6 \right|}{\sqrt{4^2 + 1^2}} = 
+    \boxed{\frac{19}{\sqrt{17}}} \approx 
+    4.6 \text{ --- есть на рисунке}
+\end{gather*}
+
+\paragraph{Пункт 3 | Ответ}
+\[
+    h_c = \frac{19}{\sqrt{17}}
+\]
+
+\paragraph{Пункт 4 | Решение}
+\begin{align*}
+    \begin{rcases}
+        \text{точка } B(2; - 2) \in BM \\
+        \text{точка } M\left( \frac{6 + 1}{2}; \frac{1 + 2}{2} \right) \Rightarrow \text{точка } M(3,5; 1,5)
+    \end{rcases} \Rightarrow
+\end{align*}
+\begin{gather*}
+    \Rightarrow \frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1} ~~\rightarrow~~ 
+    \frac{x - 2}{3,5 - 2} = \frac{y + 2}{1,5 + 2} ~~\rightarrow~~
+    \frac{x - 2}{1,5} = \frac{y + 2}{3,5} ~~\rightarrow~~
+    \frac{2x - 4}{3} = \frac{2y + 4}{7} \\
+    14x - 28 = 6y + 12 ~~\rightarrow~~
+    14x - 6y - 40 = 0 ~~\rightarrow~~
+    \boxed{7x - 3y - 20 = 0}
+\end{gather*}
+
+\paragraph{Пункт 4 | Проверка}
+\begin{gather*}
+    Oy: x = 0 \Rightarrow y = -\frac{20}{3} \approx -7 \text{ --- есть на рисунке} \\
+    Ox: y = 0 \Rightarrow x = \frac{20}{7} \approx 3 \text{ --- есть на рисунке}
+\end{gather*}
+
+\paragraph{Пункт 4 | Ответ}
+\[
+    (BM): 7x - 3y - 20 = 0
+\]
+
+\paragraph{Пункт 5 | Решение и проверка}
+\begin{align*}
+    k = (CD) \cap (BM):
+    \begin{rcases}
+        k \in (CD) \\
+        k \in (BM)
+    \end{rcases} \Rightarrow
+\end{align*}
+\begin{gather*}
+    \Rightarrow K(x, y) - ?
+    \begin{cases}
+        x - 4y - 2 = 0 \\
+        7x - 3y - 20 = 0
+    \end{cases} \rightarrow~~
+    \begin{cases}
+        x - 4y = 2 \\
+        7x - 3y = 20
+    \end{cases}
+\end{gather*}
+Правило Крамера:
+\begin{gather*}
+    A = \begin{pmatrix}
+        1 & -4 \\
+        7 & -3
+    \end{pmatrix}, ~~
+    \overline{b} = \begin{pmatrix}
+        2  \\
+        20
+    \end{pmatrix}, ~~
+    A \cdot \overline{x} = \overline{b}, ~~
+    x_i = \frac{\Delta_i}{\Delta}, ~~
+    \Delta = \det A \\
+    \Delta = -3 + 25 = 25 \neq 0 \Rightarrow \exists A^{-1}! \\
+    \Delta_1 = \begin{vmatrix}
+        2  & -4 \\
+        20 & -3
+    \end{vmatrix} = -6 + 80 = 74 \\
+    \Delta_2 = \begin{vmatrix}
+        1 &  2 \\
+        7 & 20
+    \end{vmatrix} = 20 - 14 = 6 \\
+    x_1 = \frac{74}{25} = 2.96 \\
+    x_2 = \frac{6}{25}  = 0.24  \\
+    k(3 - \frac{1}{25}; 0.24) \text{ --- есть на рисунке}
+\end{gather*}
+
+\paragraph{Пункт 5 | Ответ}
+\[
+    k(2.96; 0.24)
+\]
+
+\paragraph{Пункт 6 | Решение и проверка}
+\begin{align*}
+    \begin{rcases}
+        (CD): x - 4y - 2 = 0   \Rightarrow \overline{N_1} = \{1; -4\} \bot (CD) \\
+        (BM): 7x - 3y - 20 = 0 \Rightarrow \overline{N_2} = \{7; -3\} \bot (BM)
+    \end{rcases} \Rightarrow
+\end{align*}
+\begin{gather*}
+    \Rightarrow \cos \alpha = |\cos \varphi| = \left| \frac{\overline{N_1} \cdot \overline{N_2}}{|\overline{N_1}| \cdot |\overline{N_2}|} \right| =
+    \frac{| \{1; -4\} \cdot \{7; -3\} |}{| \{1; -4\} | \cdot | \{7; -3\} | } =
+    \frac{|1 \cdot 7 + 4 \cdot 3|}{\sqrt{1^2 + 4^2} \cdot \sqrt{7^2 + 3^2}} =
+    \frac{19}{\sqrt{17} \cdot \sqrt{58}} \in [0; 1] \\
+    \alpha = \arccos \frac{19}{\sqrt{17} \cdot \sqrt{58}} = \dots \approx 53^{\circ} \text{ --- совпадает с рисунком}
+\end{gather*}
+
+\paragraph{Пункт 6 | Ответ}
+\[
+    \alpha \approx 53^{\circ}
+\]
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ПЗ-11 | 2024.11.25 (3)}
+\part{Плоскость $P$ в пространстве $Oxyz$}
+
+\section{Теория}
+
+\subsection{Общее уравнение}
+\includegraphics[scale=0.15]{practice11_01.jpg}
+\begin{align*}
+    \begin{rcases}
+        \overline{N} = \{A, B, C\} \bot P \\
+        M_0(x_0, y_0, z_0) \in P
+    \end{rcases} \Rightarrow
+    \forall M(x, y, z) \in P: \overline{M_0 M} \bot \overline{N} \Leftrightarrow \overline{N} \cdot \overline{M_0 M} = 0 \Leftrightarrow
+\end{align*}
+\begin{gather*}
+    \Leftrightarrow \boxed{A(x - x_0) + B(y - y_0) + C(z - z_0) = 0} ~~\rightarrow~~ \boxed{Ax + By + Cz + D = 0} \Rightarrow \{A, B, C\} \bot P
+\end{gather*}
+
+\subsubsection{Случай 1}
+\[
+    A = 0 ~~~~~ By + Cz + D = 0: l_{yz}
+\]
+\includegraphics[scale=0.15]{practice11_02.jpg}
+
+\subsubsection{Случай 2}
+\[
+    A = B = 0 ~~~~~ Cz = D ~~~~~ z = z_*
+\]
+\includegraphics[scale=0.15]{practice11_03.jpg}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Компланарное уравнение}
+\includegraphics[scale=0.15]{practice11_04.jpg}
+\begin{align*}
+    \begin{rcases}
+        M(x_0, y_0, z_0) \in P \\
+        \overline{p} \parallel P \\
+        \overline{q} \parallel P \\
+        \overline{p} \nparallel q
+    \end{rcases} \Rightarrow
+    \forall M(x, y, z) \in P: \overline{M_0 M}, \overline{p}, \overline{q} \text{ --- компланарны} \Leftrightarrow
+    (\overline{M_0 M}, \overline{p}, \overline{q}) = 0
+\end{align*}
+\begin{gather*}
+    \begin{vmatrix}
+        x - x_0 & y - y_0 & z - z_0 \\
+        p_x     & p_y     & p_z     \\
+        q_x     & q_y     & q_z
+    \end{vmatrix} = 0 \Rightarrow
+    (x - x_0)A_{11} + (y - y_0)A_{12} + (z - z_0)A_{13} = 0
+\end{gather*}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Через 3 точки}
+\includegraphics[scale=0.15]{practice11_05.jpg}
+\begin{gather*}
+    P: \begin{vmatrix}
+        x   - x_1 & y   - y_1 & z   - z_1 \\
+        x_2 - x_1 & y_2 - y_1 & z_2 - z_1 \\
+        x_3 - x_1 & y_3 - y_1 & z_3 - z_1 \\
+    \end{vmatrix} = 0
+\end{gather*}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Расстояние от точки $M_1$ до плоскости $P$}
+\begin{gather*}
+    P: Ax + By + Cz + D = 0 \\
+    \rho(M_1, P) = \frac{| Ax_1 + By_1 + Cz_1 + D |}{\sqrt{A^2 + B^2 + C^2}}
+\end{gather*}
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\subsection{Взаимное расположение плоскостей $P_1$ и $P_2$}
+\begin{gather*}
+    P_1: A_1x + B_1y + C_1z + D_1 = 0 \\
+    P_2: A_2x + B_2y + C_2z + D_2 = 0
+\end{gather*}
+
+\subsubsection{Случай 1}
+\begin{gather*}
+    \boxed{P_1 \parallel P_2 } \Leftrightarrow
+    \frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2}:
+    \rho(P_1 \parallel P_2) = \rho(M_1 \in P_1, P_2) =
+    \frac{| A_2 x_1 + B_2 y_1 + C_2 z_1 + D_2 |}{\sqrt{A^2_2 + B^2_2 + C^2_2}}, \\
+    \text{где } x_1, y_1, z_1 ?: \begin{cases}
+        A_1 x_1 + B_1 y_1 + C_1 z_1 + D_1 = 0 \\
+        \underbrace{x_1 = y_1 = 0}_{z_1 - ?} \text{ или } \underbrace{x_1 = z_1 = 0}_{y_1 - ?} \text{ или } \underbrace{y_1 = z_1 = 0}_{x_1 - ?}
+    \end{cases}
+\end{gather*}
+
+\subsubsection{Случай 2}
+\begin{gather*}
+    \boxed{P_1 \nparallel P_2} \Leftrightarrow 
+    \frac{A_1}{A_2} \neq \frac{B_1}{B_2} \text{ или } \frac{B_1}{B_2} \neq \frac{C_1}{C_2} \\
+    \alpha = \widehat{P_1, P_2} \in \left( 0; \frac{\pi}{2} \right]:
+    \cos \alpha = |\cos \varphi| = \frac{| \overline{N_1} \cdot \overline{N_2} |}{| \overline{N_1} | \cdot | \overline{N_2} |}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{2pt}
+\section{Практика}
+
+\subsection{}
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ПЗ-12 | 2024.12.02 (3)}
+\part{Прямая линия $L$ в пространстве $Oxyz$}
+
+\section{Теория}
+
+\subsection{Общее уравнение}
+\begin{gather*}
+    L:
+    \begin{cases}
+        A_1x + B_1y + C_1z + D_1 = 0 \rightarrow \overline{N_1} \\
+        A_2x + B_2y + C_2z + D_2 = 0 \rightarrow \overline{N_2}
+    \end{cases} \\
+    \frac{A_1}{A_2} \neq \frac{B_1}{B_2} \text{ или } \frac{B_1}{B_2} \neq \frac{C_1}{C_2} \\
+\end{gather*}
+
+
+\subsection{Параметрическое и каноническое уравнения}
+\begin{gather*}
+    \begin{cases}
+        x - x_0 = mt \\
+        y - y_0 = nt \\
+        z - z_0 = pt
+    \end{cases} t \in \mathbb{R} 
+    \Leftrightarrow t = \frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p}
+\end{gather*}
+
+
+\subsection{Расстояние от точки $M_1$ до прямой линии $L$}
+\begin{gather*}
+    L: \frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p} \\
+    \rho(M_1, L) = \frac{\left| \overline{M_0 M_1} \times \overline{q} \right|}{\left| \overline{q} \right|}
+\end{gather*}
+
+
+\subsection{Взаимное расположение $L_1$ и $L_2$}
+\begin{gather*}
+    L_1: \frac{x - x_1}{m} = \frac{y - y_1}{n} = \frac{z - z_1}{p} \\
+    L_2: \frac{x - x_2}{m} = \frac{y - y_2}{n} = \frac{z - z_2}{p} \\
+    \text{Из числителей: }   M_1 \in L_1, M_2 \in L_2 \\
+    \text{Из знаменателей: } \overline{q_1} \parallel L_1, \overline{q_2} \parallel L_2 \\
+\end{gather*}
+
+\subsubsection{Случай 1}
+\[
+    L_1 \parallel L_2 \Leftrightarrow \frac{m_1}{m_2} = \frac{n_1}{n_2} = \frac{p_1}{p_2}
+\]
+\begin{gather*}
+    \rho(L_1 \parallel L_2) = 
+    \rho(M_1 \in L_1, L_2) = 
+    \frac{\left| \overline{M_2 M_1} \times \overline{q_2} \right|}{\left| \overline{q_2} \right|} =
+    \begin{cases}
+        \neq 0 \text{ --- не совпадают} \\
+           = 0 \text{ --- совпадают}
+    \end{cases}
+\end{gather*}
+
+\subsubsection{Случай 2}
+\[
+    L_1 \nparallel L_2 \Leftrightarrow \frac{m_1}{m_2} \neq \frac{n_1}{n_2} \text{ или } \frac{n_1}{n_2} \neq \frac{p_1}{p_2}
+\]
+\begin{gather*}
+    \rho(L_1 \nparallel L_2) =
+    \frac{\left| \left( \overline{M_2 M_1}, \overline{q_1}, \overline{q_2} \right) \right|}{\left| \overline{q_1} \times \overline{q_2} \right|} =
+    \begin{cases}
+        \neq 0 \text{ --- скрещиваются} \\
+           = 0 \text{ --- пересекаются}
+    \end{cases}
+\end{gather*}
+\begin{gather*}
+    \alpha = \widehat{L_1, L_2} \in \left[ 0; \frac{\pi}{2} \right] \\
+    \cos \alpha = \left| \cos \varphi \right| = 
+    \frac{\left| \overline{q_1} \cdot \overline{q_2} \right|}{\left| \overline{q_1} \right| \cdot \left| \overline{q_2} \right|}
+\end{gather*}
+
+
+\subsection{Взаимное расположение прямой линии $L$ и плоскости $P$}
+\begin{gather*}
+    L: \frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p} \\
+    P: Ax + By + Cz + D = 0 \rightarrow \overline{N} = \{A, B, C\} \bot P
+\end{gather*}
+
+\subsubsection{Случай 1}
+\[
+    L \parallel P \Leftrightarrow \overline{q} \bot \overline{N}, 
+    \overline{N} \cdot \overline{q} = 0 \\
+    Am + Bn + Cp = 0
+\]
+
+\subsubsection{Случай 2}
+\[
+    L \nparallel P \Leftrightarrow Am + Bn + Cp \neq 0
+\]
+\begin{gather*}
+    \beta = \widehat{L, P}: 
+    \sin \beta = \left| \cos \varphi \right| = 
+    \frac{\left| \overline{N} \cdot \overline{q} \right|}{\left| \overline{N} \right| \cdot \left| \overline{q} \right|}
+\end{gather*}
+
+\begin{gather*}
+    k = L \cap P:
+    \begin{cases}
+        \frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p} = t \\
+        Ax + By + Cz + D = 0
+    \end{cases} \rightarrow
+    \begin{cases}
+        x = x_0 + mt \\
+        y = y_0 + nt \\
+        z = z_0 + pt
+    \end{cases} \rightarrow
+    \begin{cases}
+        x_k = x_0 + mt_{\*} \\
+        y_k = y_0 + nt_{\*} \\
+        z_k = z_0 + pt_{\*}
+    \end{cases} \\
+    A(x_0 + mt) + B(y_0 + nt) + C(z_0 + pt) + D = 0 \rightarrow t = t_{\*}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Практика}
+\subsection{1.197(а)}
+
+\paragraph{Дано}
+\begin{gather*}
+    L:
+    \begin{cases}
+        2x -  y + 2z - 3 = 0 \\
+         x + 2y -  z - 1 = 0
+    \end{cases} \overset{?}{\Rightarrow}
+    \frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p}
+\end{gather*}
+
+\paragraph{Решение}
+\paragraph{Пункт 1}
+\begin{gather*}
+    \overline{q} = 
+    \overline{N_1} \times \overline{N_2} =
+    \begin{vmatrix}
+        \overline{i} & \overline{j} & \overline{k} \\
+                  2  &          -1  &           2  \\
+                  1  &           2  &          -1  
+    \end{vmatrix} =
+    \overline{i} \begin{vmatrix}
+        -1 &  2 \\
+        2  & -1
+    \end{vmatrix} -
+    \overline{j} \begin{vmatrix}
+        2 &  2 \\
+        1 & -1
+    \end{vmatrix} +
+    \overline{k} \begin{vmatrix}
+        2 & -1 \\
+        1 &  2
+    \end{vmatrix} =
+    -3 \overline{i} + 4 \overline{j} + 5 \overline{k} = \{ -3, 4, 5 \}
+\end{gather*}
+
+\paragraph{Пункт 2}
+\begin{gather*}
+    M_0: z = 0 \Rightarrow
+    \begin{cases}
+        2x -  y = 3 \\
+         x + 2y = 1
+    \end{cases} \\
+    \text{Правило Крамера} \\
+    \Delta = \det A = \begin{vmatrix}
+        2 & -1 \\
+        1 &  2  
+    \end{vmatrix} = 4 + 1 = 5 \\
+    \Delta_1 = \begin{vmatrix}
+        3 & -1 \\
+        1 &  2
+    \end{vmatrix} = 7 \Rightarrow x = \frac{7}{5} =  1.4 \\
+    \Delta_2 = \begin{vmatrix}
+        2 & 3 \\
+        1 & 1
+    \end{vmatrix} -1 \Rightarrow y = \frac{-1}{5} = -0.2 \\
+    M(1.4; -0.2; 0) \\
+    L: \frac{x - 1.4}{-3} \frac{y + 0.2}{4} = \frac{z - 0}{5} \\
+    \text{Проверка} \\
+\end{gather*}
+
+
+
+\subsection{1.200}
+\paragraph{Дано}
+\begin{gather*}
+    L: \frac{x - 1}{2} = \frac{y}{1} = \frac{z + 1}{0} \\
+    M_1(0; 1; 2) \\
+\end{gather*}
+
+\paragraph{Пункт 1 | Уравнение плоскости $P_1$}
+\begin{gather*}
+    P: \begin{cases}
+        M_1 \in P \\
+        M_0 \in P \\
+        \overline{q} \parallel P
+    \end{cases} \\
+    \overline{M_0 M_1} = \{-1, 1, 3\} \\
+    \begin{vmatrix}
+        x - 1 & y - 0 & z + 1 \\
+           -1 &     1 &     3 \\
+            2 &     1 &     0 
+    \end{vmatrix} = 0 \\
+    (x - 1) \begin{vmatrix}
+        1 & 3 \\
+        1 & 0
+    \end{vmatrix} -
+    y \begin{vmatrix}
+        -1 & 3 \\
+         2 & 0
+    \end{vmatrix} +
+    (z + 1) \begin{vmatrix}
+        -1 & 1 \\
+         2 & 1 
+    \end{vmatrix} = 0 \\
+    -3x + 3 + 6y - 3z - 3 = 0 \\
+    -3x + 6y - 3z = 0 \Rightarrow
+    P_1: x - 2y + z = 0
+\end{gather*}
+
+\paragraph{Пункт 2 | Уравнение плоскости $P_2$}
+\begin{gather*}
+    P_2: M_1 \in P_2, P_2 \bot L \\
+    \overline{N} = \overline{q} = \{2; 1; 0\} \\
+    M_1 = \{0; 1; 2\} \\
+    2(x - 0) + 1(y - 1) + 0(z - 2) = 0 \\
+    P_2: 2x + y - 1 = 0
+\end{gather*}
+
+\paragraph{Пункт 3 | Уравнение прямой линии $L'$}
+\begin{gather*}
+    L': M_1 \in L', L' \bot L, L' \cap L \neq \varnothing \\
+    L' = P_1 \cap P_2: \begin{cases}
+         x - 2y + z = 0 \\
+        2x +  y - 1 = 0
+    \end{cases}
+\end{gather*}
+
+\paragraph{Пункт 4 | Расстояние от $M_1$ до $L$}
+\begin{gather*}
+    \rho(M_1, L) =
+    \frac{\left| \overline{M_0 M_1} \times \overline{q} \right|}{\left| \overline{q} \right|} =
+    \frac{\sqrt{3^2 + 6^2 + 3^2}}{\sqrt{2^2 + 1^2 + 0^2}} =
+    \frac{\sqrt{54}}{\sqrt{5}} \\
+    \overline{M_0 M_1} \times \overline{q} =
+    \begin{vmatrix}
+        \overline{i} & \overline{j} & \overline{k} \\
+                  -1 &           1  &           3  \\
+                   2 &           1  &           0
+    \end{vmatrix} =
+    \overline{i} \begin{vmatrix}
+        1 & 3 \\
+        1 & 0
+    \end{vmatrix} -
+    \overline{j} \begin{vmatrix}
+        -1 & 3 \\
+         2 & 0
+    \end{vmatrix} +
+    \overline{k} \begin{vmatrix}
+        -1 & 1 \\
+         2 & 1
+    \end{vmatrix} =
+    -3 \overline{i} + 6 \overline{j} - 3 \overline{k} = \{-3; 6; -3\}
+\end{gather*}
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ПЗ-13 | 2024.12.09 (3) (относительно конспекта Дани Палкина)}
+\part{Кривые второго порядка}
+
+\section{Теория}
+
+\subsection{Общее уравнение}
+\begin{gather*}
+    Ax^2 + 2Bxy + Cyz + D + Ey + F = 0
+\end{gather*}
+
+\subsection{Приведение к каноническому виду}
+\begin{gather*}
+    B \neq 0 (x, y \text{есть})
+\end{gather*}
+
+
+
+
+
+
+
+
+\end{document}

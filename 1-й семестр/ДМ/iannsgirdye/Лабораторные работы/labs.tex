@@ -1,0 +1,2813 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Дискретная математика}
+    \author{Бабицкий Иван, М8О-111БВ-24}
+    \date{2024/2025 учебный год, 1-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+\newpage
+\paragraph{2024.09.17 (3, 4)}
+\part{Теория множеств}
+
+\section{Введение}
+
+\subsection{Определение | Форма от $x$}
+$P(x)$ ("форма от $x$") --- \{И, Л\} \\
+$A =$ \{$x$ | $P(x) =$ И\} = \{$x$ | $P(x)$\} ("множество $A$ --- это множество таких $x$, что форма от $x$ истинна")
+
+\subsubsection{Пример}
+\begin{gather*}
+    x^2 - 1 = 0 \\
+    A = \{1, -1\} = \{x~|~x^2 - 1 = 0\}
+\end{gather*}
+
+
+\subsection{Свойства}
+\begin{enumerate}
+    \item $\{1, 2\} = \{2, 1, 1, 2, 1\}$ \\
+    \item $A \subseteq B \Rightarrow \forall x \in A$ \\
+    \item $A \subseteq B, B \subseteq C \Rightarrow A \subseteq C$ \\
+    \item $A = B \Leftrightarrow A \subseteq B, B \subseteq A$
+\end{enumerate}
+
+\subsubsection{Пример}
+\[
+    \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    A = \{1, 2\}, B = \{ \{1, 2\}, 3 \}, C = \{1, 2, 3\} \\
+    1 \in A, 1 \notin B, A \subseteq C, B \neq C, A \in B
+\end{gather*}
+
+
+\subsection{Определение | Количество элементов в множестве}
+\[
+    m(A) = |A| = \#A
+\]
+
+\subsubsection{Пример}
+\[
+    m(\varnothing) = 0
+\]
+
+
+\subsection{Определение | Множество степени}
+$P(A)$ --- множество подмножеств $A$, называемых собственными.
+
+\subsubsection{Пример}
+\begin{gather*}
+    A = \{1, 2, 3\} \\
+    P(A) = \{\varnothing, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, A\}
+\end{gather*}
+
+\subsubsection{Пример}
+\includegraphics[scale=0.2]{images/part01_01.png}
+
+\subsubsection{Пример}
+\includegraphics[scale=0.2]{images/part01_02.png}
+
+
+\section{Операции над множествами}
+
+\subsection{Определение | Объединение}
+Объединение множеств $A$ и $B$
+\[
+    A \cup B = \{x~|~x \in A \text{ или } x \in B\}
+\]
+\includegraphics[scale=0.3]{images/part01_03.jpg}
+
+
+\subsection{Определение | Пересечение}
+Пересечение множеств $A$ и $B$
+\[
+    A \cap B = \{x~|~x \in A \text{ и } x \in B\}
+\]
+\includegraphics[scale=0.3]{images/part01_04.jpg}
+
+\subsubsection{Пример (для обеих операций)}
+\[
+    A \subseteq B \Rightarrow A \cup B = B, A \cap B = A
+\]
+\includegraphics[scale=0.3]{images/part01_05.jpg}
+
+\subsubsection{Пример (для обеих операций)}
+Бесконечное множество концентрических квадратов (т.е. с общим центром) \\
+\includegraphics[scale=0.2]{images/part01_06.jpg}
+
+
+\subsection{Определение | Относительное дополнение (разность)}
+Относительное дополнение множества $B$ до множества $A$
+\[
+    B \setminus A = \{x~|~x \in B \text{ и } x \notin A\}
+\]
+\includegraphics[scale=0.3]{images/part01_07.jpg}
+
+\subsubsection{Пример}
+\[
+    A \subseteq B \Rightarrow A \setminus B = \varnothing
+\] 
+
+
+\subsection{Определение | Симметрическая разность}
+Симметрическая разность множеств $A$ и $B$
+\[
+    A \oplus B = A + B = A \bigtriangleup B = A \setminus B \cup B \setminus A = (A \cup B) \setminus (A \cap B)
+\]
+\includegraphics[scale=0.3]{images/part01_08.jpg}
+
+
+\subsection{Определение | Абсолютное дополнение (отрицание)}
+Абсолютное дополнение множества $A$
+\[
+    \overline{A} = \{x~|~x \notin A\}
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    B \setminus A = B \cap \overline{A} \\
+    A \oplus B = (A \cap B) \cup (B \cap \overline{A}) = (A \cup B) \cap (\overline{A \cap B})
+\end{gather*}
+
+\subsubsection{Примечание}
+$\mathbb{U}$ (или $\mathbb{E}$) --- универсальное множество (множество всех подмножеств). \\
+\includegraphics[scale=0.3]{images/part01_09.jpg}
+
+\subsection{Пример (для всех свойств)}
+\paragraph{Дано}
+\[
+    A = [5 ; 9), B = [6, 10), C = [4; 8)
+\]
+\paragraph{Найти}
+\[
+    A \cup B;~~~A \cap C;~~~\overline{B};~~~C \setminus A;~~~B \oplus C;~~~\left( \overline{A} \setminus (B \cup \overline{C}) \right) \oplus \left( (\overline{B \setminus A}) \cup (\overline{C \setminus B}) \right)
+\]
+\paragraph{Решение}
+\begin{enumerate}
+    \item $A \cup B = [5; 10)$
+    \item $A \cap C = [5; 8)$
+    \item $\overline{B} = (-\infty; 6) \cup[10; +\infty)$
+    \item $C \setminus A = [4; 5)$
+    \item $B \oplus C = [4; 6) \cup [8; 10)$
+    \item $\underbrace{\left( \underbrace{\underbrace{\overline{A}}_{\text{(a)}} \setminus \underbrace{(B \cup \underbrace{\overline{C}}_{\text{(b)}})}_{\text{(c)}}}_{\text{(d)}} \right) \oplus 
+                       \left( \underbrace{\underbrace{(\overline{B \setminus A})}_{\text{(e, f)}} \cup \underbrace{(\overline{C \setminus B})}_{\text{(g, h)}}}_{\text{(i)}} \right)}_{\text{(j)}}$
+    \begin{enumerate}
+        \item $\overline{A} = (-\infty; 5) \cup [9; +\infty)$
+        \item $\overline{C} = (-\infty; 4) \cup [8; +\infty)$
+        \item $B \cup \overline{C} = (-\infty; 4) \cup [6; +\infty)$
+        \item $\overline{A} \setminus (B \cup \overline{C}) = [4; 5)$
+        \item $B \setminus A = [9; 10)$
+        \item $\overline{B \setminus A} = (-\infty; -9) \cup [10; +\infty)$
+        \item $C \setminus B = [4; 6)$
+        \item $\overline{C \setminus B} = (-\infty; 4) \cup [6; +\infty)$
+        \item $(\overline{B \setminus A}) \cup (\overline{C \setminus B}) = (-\infty; 4) \cup [6; +\infty)$
+        \item $(-\infty; \infty) = \mathbb{R}$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\section{Свойства операций (основные тождества)}
+
+\subsection{Коммутативность (переместительный закон)}
+\begin{gather*}
+    A \cup B = B \cup A \\
+    A \cap B = B \cap A \\
+    A \oplus B = B \oplus A
+\end{gather*}
+
+
+\subsection{Ассоциативность (сочетательный закон)}
+\begin{gather*}
+    A \cup (B \cup C) = (A \cup B) \cup C = A \cup B \cup C \\
+    A \cap (B \cap C) = (A \cap B) \cap C = A \cap B \cap C \\
+    A \setminus (B \setminus C) = (A \setminus B) \setminus C
+\end{gather*}
+
+
+\subsection{Дистрибутивность (распределительный закон)}
+\begin{gather*}
+    A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
+    A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+\end{gather*}
+
+\subsubsection{Примечание}
+Приоритет операций определяется только скобками.
+
+
+\subsection{Закон идемпотентности}
+\begin{gather*}
+    A \cup A = A \\
+    A \cap A = A
+\end{gather*}
+
+
+\subsection{Закон де Моргана}
+\begin{gather*}
+    \overline{A \cup B} = \overline{A} \cap \overline{B} \\
+    \overline{A \cap B} = \overline{A} \cup \overline{B}
+\end{gather*}
+
+
+\subsection{Закон поглощения}
+\begin{gather*}
+    A \cup (A \cap B) = A \\
+    A \cap (A \cup B) = A
+\end{gather*}
+
+
+\subsection{Расщепления}
+\begin{gather*}
+    A = (A \cup B) \cap (A \cup \overline{B})
+\end{gather*}
+
+
+\subsection{Двойное отрицание}
+\begin{gather*}
+    \overline{\overline{A}} = A \\
+    X \setminus Y = X \cap \overline{Y} \\
+    X \oplus Y = (X \cap \overline{Y}) \cup (\overline{X} \cap Y) = (X \cup Y) \cap (\overline{X} \cup \overline{Y})
+\end{gather*}
+
+
+\subsection{Разности}
+\begin{gather*}
+    A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C) \\
+    A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C) \\ 
+    (A \setminus B) \cap C = (A \cap C) \setminus (B \cap C) \\
+    (A \setminus B) \setminus C = (A \setminus C) \setminus B
+\end{gather*}
+
+
+
+\section{Характеристическая функция множества}
+
+\subsection{Определение}
+\begin{gather*}
+    A \subseteq \mathbb{U} \\
+    A \Rightarrow \psi_A: \mathbb{U} \Rightarrow \{0, 1\} \\
+    \psi_A(x) = 
+    \begin{cases}
+        1, \text{ если } x \in A \\
+        0, \text{ если } x \notin A
+    \end{cases}
+\end{gather*}
+
+
+\subsection{Функции основных операций через характеристические функции}
+$\psi_A(x), \psi_B(x)$
+\begin{enumerate}
+    \item $\psi_{A \cap B} = \psi_A \cdot \psi_B$
+    \item $\psi_{A \cup B} = \psi_A + \psi_B - \psi_A \cdot \psi_B$
+    \item $\psi_{\overline{A}} = 1 - \psi_A$
+    \item $\psi_{A \setminus B} = \psi_{A \cap \overline{B}} = \psi_A \cdot (1 - \psi_B) = \psi_A - \psi_A \psi_B$
+    \item $\psi^2_A = \psi_A$
+    \item $\psi_{A \oplus B} = \psi_A + \psi_B - 2 \psi_A \psi_B = \psi^2_A + \psi^2_B - 2 \psi_A \psi_B = (\psi_A - \psi_B)^2 = |\psi_A - \psi_B|$
+\end{enumerate}
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    \psi_{A \setminus (B \setminus C)} = 
+    \psi_A \cdot (1 - \psi_{B \setminus C}) = 
+    \psi_A (1 - \psi_B (1 - \psi_C)) =
+    \psi_A - \psi_A \psi_B + \psi_A \psi_B \psi_C \\
+    \psi_{(A \setminus B) \cup (A \cap C)} = 
+    \psi_A (1 - \psi_B) + \psi_A \psi_C - \psi_A (1 - \psi_B) \cdot \psi_A \psi_C = \\
+    = \psi_A - \psi_A \psi_B + \psi_A \psi_C - \psi_A \psi_C + \psi_A \psi_B \psi_C = \psi_A - \psi_A \psi_B + \psi_A \psi_B \psi_C
+\end{gather*}
+
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \cap (B \oplus C) = (A \cap B) \oplus (A \cap C)
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    \psi_{A \cap (B \oplus C)} = \psi_A \psi_{B \oplus C} = \psi_A |\psi_B - \psi_C| \\
+    \psi_{(A \cap B) \oplus (A \cap C)} = |\psi_{A \cap B} - \psi_{A \cap C}| = \psi_A |\psi_B - \psi_C|
+\end{gather*}
+
+
+\section{Таблица характеристических операций}
+
+
+\subsection{Определение}
+\begin{tabular}{L | L | L | L | L | L | L}
+    \psi_A & \psi_B & \psi_{A \cap B} & \psi_{A \cup B} & \psi_{\overline{A}} & \psi_{A \setminus B} & \psi_{A \oplus B} \\
+    \hline
+    1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+    0 & 1 & 0 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 0 & 0 & 1 & 0 & 0
+\end{tabular}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)
+\]
+
+\paragraph{Доказательство}
+~\\
+\begin{tabular}{L | L | L | L | L || L | L | L}
+    \psi_{A} & \psi_{B} & \psi_{С} & \psi_{B \setminus C} & \psi_{A \setminus (B \setminus C)} & \psi_{A \setminus B} & \psi_{A \cap C} & \psi_{(A \setminus B) \cup (A \cap C)} \\
+    \hline
+    1 & 1 & 1 & 0 & \textcolor{green}{1} & 0 & 1 & \textcolor{green}{1} \\
+    1 & 1 & 0 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    1 & 0 & 1 & 0 & \textcolor{green}{1} & 1 & 1 & \textcolor{green}{1} \\
+    1 & 0 & 0 & 0 & \textcolor{green}{1} & 0 & 0 & \textcolor{green}{1} \\
+    0 & 1 & 1 & 0 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 1 & 0 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 0 & 1 & 0 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 0 & 0 & 0 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0}
+\end{tabular}
+
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \cap (B \oplus C) = (A \cap B) \oplus (A \cap C)
+\]
+
+\paragraph{Доказательство}
+~\\
+\begin{tabular}{L | L | L | L | L | L | L | L}
+    \psi_{A} & \psi_{B} & \psi_{С} & \psi_{B \oplus C} & \psi_{A \cap (B \oplus C)} & \psi_{A \cap B} & \psi_{A \cap C} & \psi_{A \cap C} \\
+    \hline
+    1 & 1 & 1 & 0 & \textcolor{green}{0} & 1 & 1 & \textcolor{green}{0} \\
+    1 & 1 & 0 & 1 & \textcolor{green}{1} & 1 & 0 & \textcolor{green}{1} \\
+    1 & 0 & 1 & 1 & \textcolor{green}{1} & 0 & 1 & \textcolor{green}{1} \\
+    1 & 0 & 0 & 0 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 1 & 1 & 0 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 1 & 0 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 0 & 1 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+    0 & 0 & 0 & 0 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0}
+\end{tabular}
+
+
+
+\section{Методы утверждений}
+\begin{enumerate}
+    \item Теорема --- важный результат
+    \item Утверждение --- теорема с менее важным результатом
+    \item Лемма --- вспомогательное утверждение для теоремы
+\end{enumerate}
+
+
+\subsection{Утверждение}
+3 эквивалентных условия (выполняются все при выполнении одного)
+\begin{enumerate}
+    \item $A \subseteq B$
+    \item $A \cap B = A$
+    \item $A \cup B = B$
+\end{enumerate}
+
+\subsubsection{Доказательство 1 $\Rightarrow$ 2}
+\paragraph{Дано}
+\[
+    A \subseteq B
+\]
+
+\paragraph{Доказать}
+\[
+    A \cap B = A
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    x = y \Leftrightarrow x \subseteq y, y \subseteq x \\
+    x \subseteq y: \forall x \in X \Rightarrow x \in y
+\end{gather*}
+\begin{enumerate}
+    \item $A \cap B \subseteq A$
+    \[
+        \text{Пусть } x \in A \cap B \Rightarrow x \in A.
+    \]
+    \item $A \subseteq A \cap B$
+    \[
+        \text{Пусть } x \in A \underset{\text{усл.}}{\Rightarrow} x \in B \Rightarrow x \in A \cap B.
+    \]
+\end{enumerate}
+
+
+\subsubsection{Доказательство 2 $\Rightarrow$ 3}
+\paragraph{Дано}
+\[
+    A \cap B = A
+\]
+
+\paragraph{Доказать}
+\[
+    A \cup B = B
+\]
+
+\paragraph{Доказательство}
+\[
+    A \cup B = (A \cap B) \cup B = B \text{ --- поглощение}
+\]
+
+
+\subsubsection{Доказательство 3 $\Rightarrow$ 1}
+\paragraph{Дано}
+\[
+    A \cup B = B
+\]
+
+\paragraph{Доказать}
+\[
+    A \subseteq B
+\]
+
+\paragraph{Доказательство (от противного)}
+\begin{gather*}
+    \text{Предположим, что } A \nsubseteq B \Rightarrow \exists x \in A \text{ и } x \notin B. \\ 
+    \text{Так как } x \in A \Rightarrow x \in A \cup B \underset{\text{усл.}}{\Rightarrow} x \in B \text{ --- противоречие} \Rightarrow A \subseteq B
+\end{gather*}
+
+
+
+
+\newpage
+\paragraph{2024.10.01 (3, 4)}
+\part{Методы доказательств (опровержений) тождеств}
+
+\section{Метод рассуждений}
+
+\subsection{Пример | И. А. Лавров, Л. Л. Максимова: номер 13(г)}
+Доказать, что 
+\[
+    A \subseteq B \cup C \Leftrightarrow A \cap \overline{B} \subseteq C
+\]
+
+\subsubsection{Доказательство 1 $\Rightarrow$ 2}
+\paragraph{Дано}
+\[
+    A \subseteq B \cup C
+\]
+
+\paragraph{Доказать}
+\[
+    A \cap \overline{B} \subseteq C
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    \text{Пусть } x \in A \cap \overline{B} \Rightarrow x \in A \text{ и } x \in \overline B. \\
+    x \in A \underset{\text{усл.}}{\Rightarrow} x \in B \cup C \Rightarrow x \in B \text{ или } x \in C, \text{ но } x \notin B \Rightarrow x \in C.
+\end{gather*}
+
+
+\subsubsection{Доказательство 1 $\Leftarrow$ 2}
+\paragraph{Дано}
+\[
+    A \cap \overline{B} \subseteq C
+\]
+
+\paragraph{Доказать}
+\[
+    A \subseteq B \cup C
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    \text{Пусть } x \in A. \\
+    \text{Если } x \in B \Rightarrow x \in B \cup C. \\
+    \text{Если } x \notin B \Rightarrow x \in A \cap \overline B \underset{\text{усл.}}{\Rightarrow} x \in C \Rightarrow x \in B \cup C.
+\end{gather*}
+
+
+\subsection{Пример}
+\begin{gather*}
+    X = Y \Rightarrow X \cup Z = Y \cup Z \\
+    X \cup Z = Y \cup Z \nRightarrow X = Y
+\end{gather*}
+
+
+\subsection{Пример}
+Доказать, что
+\[
+    A \oplus B = B \setminus C \Leftrightarrow A = B \cap C
+\]
+
+\subsubsection{Доказательство 1 $\Leftarrow$ 2}
+\paragraph{Дано}
+\[
+    A = B \cap C
+\]
+
+\paragraph{Доказать}
+\[
+    A \oplus B = B \setminus C
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    (B \cap C) \oplus B = (B \cap C \cap \overline{B}) \cup \left( (\overline{B \cap C}) \cap B \right) = 
+    (\overline{B} \cup \overline{C}) \cap B = (\overline{B} \cap B) \cup (B \cap C) = B \cap C
+\end{gather*}
+
+
+\subsubsection{Доказательство 1 $\Rightarrow$ 2}
+\paragraph{Дано}
+\[
+    A \oplus B = B \setminus C
+\]
+
+\paragraph{Доказать}
+\[
+    A = B \cap C
+\]
+
+\paragraph{Доказательство 1}
+\begin{enumerate}
+    \item Докажем, что $A \subseteq B \cap C$
+    \begin{gather*}
+        \text{Пусть } x \in A. \\
+        \text{Если } x \in B \Rightarrow x \notin A \oplus B \underset{\text{усл.}}{\Rightarrow} 
+        x \notin B \setminus C \Rightarrow x \in \overline{B \setminus C} = \overline{B \cap \overline{C}} = \overline{B} \cup C \Rightarrow \\
+        x \in \overline{B} \text{ или } x \in C, \text{ но } x \in B \text{ --- противоречие } \Rightarrow x \in B.
+    \end{gather*}
+    \item Докажем, что $B \cap C \subseteq A$
+    \begin{gather*}
+    \text{Пусть } x \in B \cap C \Rightarrow x \in B \text{ и } x \in C \Rightarrow 
+    x \notin B \setminus C \underset{\text{усл.}}{\Rightarrow} x \notin A \oplus B \Rightarrow x \in A.
+    \end{gather*}
+\end{enumerate}
+
+\paragraph{Доказательство 2}
+\begin{gather*}
+    (A \oplus B) \oplus B = (B \setminus C) \oplus B \\
+    A = (B \setminus C) \oplus B \\
+    (B \setminus C) \oplus B = 
+    (B \cap \overline{C} \cap \overline{B}) \cup \left( (\overline{B \cap \overline{C}}) \cap B \right) = 
+    (\overline{B} \cup C) \cap B = 
+    (B \cap \overline{B}) \cup (B \cap C) = B \cap C.
+\end{gather*}
+
+
+\subsection{Пример | И. А. Лавров, Л. Л. Максимова: номер 13(е)}
+Доказать, что
+\[
+    (A \cap B) \cup C = A \cap (B \cup C) \Leftrightarrow C \subseteq A
+\]
+
+\subsubsection{Доказательство 1 $\Leftarrow$ 2}
+\paragraph{Дано}
+\[
+C \subseteq A
+\]
+
+\paragraph{Доказать}
+\[
+    (A \cap B) \cup C = A \cap (B \cup C)
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    C \subseteq A \Rightarrow C \cup A = A, C \cap A = C. \\
+    (A \cap B) \cup C = (A \cup C) \cap (B \cup C) = A \cap (B \cup C)
+\end{gather*}
+
+
+\subsubsection{Доказательство 1 $\Rightarrow$ 2}
+\paragraph{Дано}
+\[
+    (A \cap B) \cup C = A \cap (B \cup C)
+\]
+
+\paragraph{Доказать}
+\[
+    C \subseteq A
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    \text{Пусть } x \in C. \\
+    \text{Если } x \in C \Rightarrow (A \cap B) \cup C \Rightarrow x \in A \cap (B \cup C) \Rightarrow x \in A
+\end{gather*}
+
+
+\subsection{Пример}
+Доказать, что
+\[
+    A \subseteq B \Leftrightarrow A \setminus B = \varnothing
+\]
+
+\subsubsection{Доказательство 1 $\Rightarrow$ 2}
+\paragraph{Дано}
+\[
+    A \subseteq B
+\]
+
+\paragraph{Доказать}
+\[
+    A \setminus B = \varnothing
+\]
+
+\paragraph{Доказательство (от противного)}
+\begin{gather*}
+    \text{Пусть } A \setminus B \neq \varnothing \Rightarrow x \in A \setminus B \Rightarrow \\
+    \Rightarrow x \in A \text{ и } x \notin B, \text{ но } A \subseteq B \text{ --- противоречие } \Rightarrow A \setminus B = \varnothing
+\end{gather*}
+
+
+\subsubsection{Доказательство 1 $\Leftarrow$ 2}
+\paragraph{Дано}
+\[
+    A \setminus B = \varnothing
+\]
+
+\paragraph{Доказать}
+\[
+    A \subseteq B
+\]
+
+\paragraph{Доказательство (от противного)}
+\begin{gather*}
+    \text{Пусть } A \nsubseteq B \Rightarrow x \in A \text{ и } x \notin B \Rightarrow \\
+    \Rightarrow x \in A \setminus B, \text{ но } A \setminus B = \varnothing \text{ --- противоречие} \Rightarrow A \subseteq B
+\end{gather*}
+
+
+\subsection{Пример}
+Доказать, что
+\[
+    A = B \Leftrightarrow A \oplus B = \varnothing
+\]
+
+\subsubsection{Доказательство 1 $\Leftarrow$ 2}
+\paragraph{Дано}
+\[
+    A \oplus B = \varnothing
+\]
+
+\paragraph{Доказать}
+\[
+    A = B
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    A \oplus B = \varnothing \Leftrightarrow (A \setminus B) \cup (B \setminus A) = \varnothing \Leftrightarrow
+    \begin{cases}
+        A \setminus B = \varnothing \\
+        B \setminus A = \varnothing
+    \end{cases} \Leftrightarrow
+    \begin{cases}
+        A \subseteq B \\
+        B \subseteq A
+    \end{cases} \Leftrightarrow
+    A = B
+\end{gather*}
+
+
+
+\section{Характеристическая функция}
+
+\subsection{Утверждение}
+Пусть $F_1$, $F_2$, $G_1$, $G_2$ --- формулы, тогда
+\begin{enumerate}
+    \item $F_1 = F_2 \Leftrightarrow G_1 = G_2$ выполняется тогда и только тогда, когда $\psi_{F_1 \oplus F_2} = \psi_{G_1 \oplus G_2}$.
+    \item $F_1 = F_2 \Leftrightarrow G_1 \subseteq G_2$ выполняется тогда и только тогда, когда $\psi_{F_1 \oplus F_2} = \psi_{G_1 \setminus G_2}$.
+    \item $F_1 \subseteq F_2 \Leftrightarrow G_1 = G_2$ выполняется тогда и только тогда, когда $\psi_{F_1 \setminus F_2} = \psi_{G_1 \oplus G_2}$.
+    \item $F_1 \subseteq F_2 \Leftrightarrow G_1 \subseteq G_2$ выполняется тогда и только тогда, когда $\psi_{F_1 \setminus F_2} = \psi_{G_1 \setminus G_2}$.
+\end{enumerate}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример | И. А. Лавров, Л. Л. Максимова: номер 13(г)}
+Доказать, что
+\[
+    A \subseteq B \cup C \Leftrightarrow A \cap \overline{B} \subseteq C
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    A \setminus (B \cup C) = \varnothing \Leftrightarrow (A \cap \overline{B}) \setminus C = \varnothing \\
+    \psi_{A \setminus (B \cup C)} = 0 \Leftrightarrow \psi_{(A \cap \overline{B}) \setminus C} = 0 \\
+    \psi_{A \setminus (B \cup C)} = \psi_{(A \cap \overline{B}) \setminus C} \\
+    \begin{tabular}{c|c|c|c|c|c|c|c}
+        $\psi_A$ & $\psi_B$ & $\psi_C$ & $\psi_{B \cup C}$ & $\psi_{A \setminus (B \cup C)}$ & $\psi_{\overline{B}}$ & $\psi_{A \cap \overline{B}}$ & $\psi_{(A \cap \overline{B}) \setminus C}$ \\
+        \hline
+        0 & 0 & 0 & 0 & \textcolor{green}{0} & 1 & 0 & \textcolor{green}{0} \\
+        0 & 0 & 1 & 1 & \textcolor{green}{0} & 1 & 0 & \textcolor{green}{0} \\
+        0 & 1 & 0 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+        0 & 1 & 1 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+        1 & 0 & 0 & 0 & \textcolor{green}{1} & 1 & 1 & \textcolor{green}{1} \\
+        1 & 0 & 1 & 1 & \textcolor{green}{0} & 1 & 1 & \textcolor{green}{0} \\
+        1 & 1 & 0 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\
+        1 & 1 & 1 & 1 & \textcolor{green}{0} & 0 & 0 & \textcolor{green}{0} \\  
+    \end{tabular}
+\end{gather*}
+
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \cup B \subseteq C \Leftrightarrow A \subseteq C \text{ и } B \subseteq C
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    (A \cup B) \setminus C = \varnothing \Leftrightarrow A \setminus C = \varnothing \text{ и } B \setminus C = \varnothing \\
+    \psi_{(A \cup B) \setminus C} = 0 \Leftrightarrow \psi_{A \setminus C} \text{ и } \psi_{B \setminus C} = 0 \\
+    \begin{tabular}{c|c|c|c|c||c|c}
+        $\psi_A$ & $\psi_B$ & $\psi_C$ & $\psi_{A \cup B}$ & $\psi_{(A \cup B) \setminus C}$ & $\psi_{A \setminus C}$ & $\psi_{B \setminus C}$ \\
+        \hline
+        0 & 0 & 0 & 0 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\
+        0 & 0 & 1 & 0 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\
+        0 & 1 & 0 & 1 & \textcolor{red}{1} $\nLeftarrow$  & \textcolor{red}{0}   & \textcolor{red}{1}   \\
+        0 & 1 & 1 & 1 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\
+        1 & 0 & 0 & 1 & \textcolor{green}{1}              & \textcolor{green}{1} & \textcolor{green}{0} \\
+        1 & 0 & 1 & 1 & \textcolor{red}{0} $\nRightarrow$ & \textcolor{red}{0}   & \textcolor{red}{0}   \\
+        1 & 1 & 0 & 1 & \textcolor{green}{1}              & \textcolor{green}{1} & \textcolor{green}{1} \\
+        1 & 1 & 1 & 1 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\  
+    \end{tabular}
+\end{gather*}
+
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \cup B \subseteq C \Leftrightarrow A \subseteq C \text{ и } A \subseteq B
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    (A \cup B) \setminus C = \varnothing \Leftrightarrow A \setminus C = \varnothing \text{ и } A \setminus B = \varnothing \\
+    \psi_{(A \cup B) \setminus C} = 0 \Leftrightarrow \psi_{A \setminus C} \text{ и } \psi_{A \setminus B} = 0 \\
+    \begin{tabular}{c|c|c|c|c||c|c}
+        $\psi_A$ & $\psi_B$ & $\psi_C$ & $\psi_{A \cup B}$ & $\psi_{(A \cup B) \setminus C}$ & $\psi_{A \setminus C}$ & $\psi_{A \setminus B}$ \\
+        \hline
+        0 & 0 & 0 & 0 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\
+        0 & 0 & 1 & 0 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\
+        0 & 1 & 0 & 1 & \textcolor{red}{1} $\nLeftarrow$  & \textcolor{red}{0}   & \textcolor{red}{1}   \\
+        0 & 1 & 1 & 1 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\
+        1 & 0 & 0 & 1 & \textcolor{green}{1}              & \textcolor{green}{1} & \textcolor{green}{0} \\
+        1 & 0 & 1 & 1 & \textcolor{red}{0} $\nRightarrow$ & \textcolor{red}{0}   & \textcolor{red}{0}   \\
+        1 & 1 & 0 & 1 & \textcolor{green}{1}              & \textcolor{green}{1} & \textcolor{green}{1} \\
+        1 & 1 & 1 & 1 & \textcolor{green}{0}              & \textcolor{green}{0} & \textcolor{green}{0} \\  
+    \end{tabular}
+\end{gather*}
+
+
+\subsubsection{Пример}
+Доказать, что
+\[
+    A \oplus B = B \setminus C \Leftrightarrow A = B \cap C
+\]
+
+\paragraph{Доказательство}
+\begin{gather*}
+    \psi_{(A \oplus B) \oplus (B \setminus C)} = \psi_{A \oplus (B \cap C)} \\
+    \begin{tabular}{c|c|c|c|c|c|c|c}
+        $\psi_A$ & $\psi_B$ & $\psi_C$ & $\psi_{A \oplus B}$ & $\psi_{B \setminus C}$ & $\psi_{(A \oplus B) \oplus (B \setminus C)}$ & $\psi_{B \cap C}$ & $\psi_{A \oplus (B \cap C)}$ \\
+        \hline
+        0 & 0 & 0 & 0 & 0 & \textcolor{green}{0} & 0 & \textcolor{green}{0} \\
+        0 & 0 & 1 & 0 & 0 & \textcolor{green}{0} & 0 & \textcolor{green}{0} \\
+        0 & 1 & 0 & 1 & 1 & \textcolor{green}{0} & 0 & \textcolor{green}{0} \\
+        0 & 1 & 1 & 1 & 0 & \textcolor{green}{1} & 1 & \textcolor{green}{1} \\
+        1 & 0 & 0 & 1 & 0 & \textcolor{green}{1} & 0 & \textcolor{green}{1} \\
+        1 & 0 & 1 & 1 & 0 & \textcolor{green}{1} & 0 & \textcolor{green}{1} \\
+        1 & 1 & 0 & 0 & 1 & \textcolor{green}{1} & 0 & \textcolor{green}{1} \\
+        1 & 1 & 1 & 0 & 0 & \textcolor{green}{0} & 1 & \textcolor{green}{0} \\  
+    \end{tabular}
+\end{gather*}
+
+
+
+\section{Решение уравнений и системы уравнений}
+Пусть $A$, $B$, $C \subseteq \mathbb{U}$, $X$ --- ? ~~~~~ $\oplus$ --- $+$, $\varnothing$ --- $0$
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\begin{gather*}
+    A + X = 0 \\
+    X = A
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    A + X = B~~~|+B \\
+    A + B + X = 0 \\
+    X = A + B
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    A \cap X = 0 \\
+    X \setminus \overline{A} = 0 \\
+    X \subseteq \overline{A}
+\end{gather*}
+\includegraphics[scale=0.4]{images/part02_01.png}
+
+\subsubsection{Пример}
+\[
+    A \cap X = B
+\]
+
+\paragraph{Решение}
+\begin{gather*}
+    (A \cap X) + B = \varnothing \\
+    (A \cap X \cap \overline{B}) \cup \left( (\overline{A \cap X}) \cap B \right) = \varnothing \\
+    (A \cap X \cap \overline{B}) \cup \left( (\overline{A} \cup \overline{X}) \cap B \right) = \varnothing \\
+    (X \cap A \cap \overline{B}) \cup (\overline{A} \cap B) \cup (\overline{X} \cap B) = \varnothing \\
+    \begin{cases}
+        X \cap A \cap \overline{B} = \varnothing ~~~ (1) \\
+        \overline{A} \cap B = \varnothing                \\
+        \overline{X} \cap B = \varnothing ~~~~~~~~~  (3)
+    \end{cases} \Leftrightarrow
+    \begin{cases}
+        B \subseteq A \\
+        B \subseteq X
+    \end{cases} \\
+    X \cap (A \cap \overline{B}) = X \setminus (\overline{A \cap \overline{B}}) = X \setminus (\overline{A} \cup B) = \varnothing \\
+    (1) ~~~ (A \cup B) \cap \overline{C} \cap A \cap \overline{B} = 
+    (\overline{A} \cap \overline{C} \cap A \cap B) \cup (B \cap \overline{C} \cap A \cap \overline{B}) = \varnothing \\
+    (3) ~~~ \left( (\overline{\overline{A} \cup B}) \cap \overline{C} \right) \cap B =
+    \left( (A \cap B) \cup C \right) \cap B =
+    (A \cap \overline{B} \cap B) \cup (C \cap B) = B \cap C = \varnothing \\
+    B \subseteq A, C \subseteq \overline{A}
+\end{gather*}
+\includegraphics[scale=0.3]{images/part02_02.png}
+
+
+\paragraph{Ответ}
+\[
+    X = (\overline{A} \cup B) \setminus C, B \subseteq A, C \subseteq \overline{A}
+\]
+
+
+\subsubsection{Пример}
+\begin{gather*}
+\begin{cases}
+    A \cup X = B \\
+    A \cup X = C
+\end{cases}
+\end{gather*}
+
+\paragraph{Решение}
+\begin{gather*}
+    (A \cup X) \oplus C = \varnothing; \\
+    \left( (A \cup X) \cap \overline{C} \right) \cup \left( (\overline{A \cup X}) \cap C \right) = \varnothing \\
+    (A \cap \overline{C}) \cup (X \cap \overline{C}) \cup (\overline{A} \cap \overline{X} \cap C) = \varnothing \\
+    \begin{cases}{}
+        X \cap A \cap \overline{B} = \varnothing \\
+        \overline{A} \cap B = \varnothing \\
+        \overline{X} \cap B = \varnothing \\
+        A \cap \overline{C} = \varnothing \\
+        X \cap \overline{C} = \varnothing \\
+        \overline{A} \cap \overline{X} \cap \overline{C} = \varnothing
+    \end{cases} \Leftrightarrow
+    \begin{cases}{}
+        X \subseteq \overline{A} \cup B ~~~ (1) \\
+        B \subseteq A ~~~~~~~~~ (2) \\
+        B \subseteq X ~~~~~~~~~ (3) \\
+        A \subseteq C ~~~~~~~~~ (4) \\
+        X \subseteq C ~~~~~~~~~ (5) \\
+        \overline{A} \cap C \subseteq X ~~~ (6) \\
+    \end{cases}
+\end{gather*}
+\includegraphics[scale=0.6]{images/part02_03.png}
+\begin{gather*}
+    (3), (6):
+    \begin{cases}
+        B \subseteq X \\
+        \overline{A} \cap C \subseteq X
+    \end{cases} \Leftrightarrow
+    B \cup (\overline{A} \cap C) = X \\
+    (1), (5):
+    \begin{cases}
+        X \subseteq \overline{A} \cup B \\
+        X \subseteq C
+    \end{cases} \Leftrightarrow
+    X \subseteq (\overline{A} \cup B) \cap C \\
+    X \subseteq (\overline{A} \cap C) \cup (B \cap C) \Leftrightarrow X \subseteq (A \cap C) \cup B
+\end{gather*}
+
+
+
+\newpage
+\paragraph{2024.10.15 (3, 4)}
+\part{Бинарные отношения}
+
+\section{Введение}
+
+\subsection{Определение | Упорядоченная пара}
+\begin{gather*}
+    \langle x, y \rangle \\
+    \langle x, y \rangle = \langle a, b \rangle \Leftrightarrow x = a, b = y \\
+\end{gather*}
+
+
+\subsection{Определение | Бинарные отношения $\rho$ на множестве $X$}
+\begin{gather*}
+    \rho = \{\langle x, y \rangle | ~x, y \in X \rho(x, y)\} \\
+    \langle x, y \rangle \in \rho, x \rho y \\
+    \langle x, y \rangle \notin \rho, x \cancel{\rho} y
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \rho \text{ --- } =, \mathbb{R}:~ \langle 2, 2 \rangle \in =, 2 = 2 \\
+    \rho \text{ --- } \le, \mathbb{R}:~ \langle 2, 5 \rangle \in \le, 2 \le 5
+\end{gather*}
+
+
+
+\section{Характеристики}
+
+\subsection{Область определения $\rho$ на $X$}
+\[
+D_{\rho} = \{x \in X ~|~ x \rho y\}
+\]
+
+
+\subsection{Область значения $\rho$ на $X$}
+\[
+R_{\rho} = \{y \in X ~|~ x \rho y\}
+\]
+
+\subsection{Пример}
+\begin{gather*}
+    \rho = \{\langle x, y \rangle |~\mathbb{R}, y = \sqrt{x - 1}\} \\
+    D_{\rho} = [1; +\infty) \\
+    R_{\rho} = (0; +\infty) \\
+    \\
+    X = \{1, 2, 3\} \\
+    \rho = \{\langle 1, 2 \rangle, \langle 1, 3 \rangle, \langle 2, 3 \rangle\} \\
+    D_{\rho} = \{1, 2\}; R_{\rho} = \{2, 3\}
+\end{gather*}
+
+
+
+\section{Прямое (декартовое) произведение}
+
+\subsection{Определение}
+\[
+X, Y~~~X \times Y = \{\langle x, y \rangle |~x \in X, y \in Y\}
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    X = \{1, 2, 3\};~Y = \{4, 5\} \\
+    X \times Y = \{\langle 1, 4 \rangle, \langle 1, 5 \rangle, \langle 2, 4 \rangle, \langle 2, 5 \rangle, \langle 3, 4 \rangle, \langle 3, 5 \rangle\} \\
+    Y \times X = \{\langle 4, 1 \rangle, \langle 4, 2 \rangle, \langle 4, 3 \rangle, \langle 5, 1 \rangle, \langle 5, 2 \rangle, \langle 5, 3 \rangle\} \\
+\end{gather*}
+\includegraphics[scale=0.3]{images/part03_01.jpg}
+
+
+\subsection{Свойства}
+\begin{gather*}
+    X \times Y \neq Y \times X \\
+    X \times X = X^2 \\
+    D_{X \times Y} = X \\
+    R_{X \times Y} = Y
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+R^3 = R \times R \times R
+\]
+\includegraphics[scale=0.3]{images/part03_02.jpg}
+
+
+\subsubsection{Пример}
+\[
+    (A \times B) \setminus (C \times D) = (A \times (B \setminus D)) \cup ((A \setminus C) \times B) \\
+\]
+\begin{enumerate}
+    \item Докажем, что $(A \times B) \ (C \times D) \subseteq (A \times (B \setminus D)) \cup ((A \setminus C) \times B)$
+    \begin{gather*}
+        \text{Пусть } \langle x, y \rangle \in (A \times B) \setminus (C \times D) \Rightarrow \langle x, y \rangle \in A \times B \text{ и } \langle x, y \rangle \notin C \times D \Rightarrow \\
+        \\
+        \Rightarrow \begin{cases}
+            x \in A \\
+            y \in B
+        \end{cases} \text{ и } (x \notin C \text{ или } y \notin D) \\
+        \\
+        \text{Если } \begin{cases}
+            x \notin C, x \in A \\
+            y \in B
+        \end{cases}
+        \Rightarrow \begin{cases}
+            x \in A \setminus C \\
+            y \in B
+        \end{cases} \Rightarrow \\
+        \Rightarrow \langle x, y \rangle \in (A \setminus C) \times B \Rightarrow \langle x, y \rangle \in (A \times (B \setminus D)) \cup ((A \setminus C) \times B). \\
+        \\
+        \text{Если } \begin{cases}
+            x \in A \\
+            y \notin D, y \in B
+        \end{cases}
+        \Rightarrow \begin{cases}
+            x \in A \\
+            y \in B \setminus D
+        \end{cases} \Rightarrow \\
+        \Rightarrow \langle x, y \rangle \in A \times (B \setminus D) \Rightarrow \langle x, y \rangle \in (A \times (B \setminus D)) \cup ((A \setminus C) \times B). \\
+    \end{gather*}
+    \item Докажем, что $(A \times (B \setminus D)) \cup ((A \setminus C) \times B) \subseteq (A \times B) \setminus (C \times D)$ \\
+    \begin{gather*}
+        \text{Пусть } \langle x, y \rangle \in (A \times (B \setminus D)) \cup ((A \setminus C) \times B) \Rightarrow \\ \langle x, y \rangle \in A \times (B \setminus D) \text{ или } \langle x, y \rangle \in (A \setminus C) \times B. \\
+        \text{Если } \langle x, y \rangle \in A \times (B \setminus D) \Rightarrow
+        \begin{cases}
+            x \in A \\
+            y \in B \setminus D
+        \end{cases}
+        \Rightarrow \begin{cases}
+            x \in A \\
+            y \in B, y \notin D
+        \end{cases} \Rightarrow \\
+        \Rightarrow \langle x, y \rangle \in A \times B, \langle x, y \rangle \notin C \times D \text { (так как } y \notin D) \Rightarrow \langle x, y \rangle \in (A \times B) \setminus (C \times D). \\
+        \text{Если } \langle x, y \rangle \in (A \setminus C) \times B \Rightarrow
+        \begin{cases}
+            x \in A \setminus C \\
+            y \in B
+        \end{cases}
+        \Rightarrow \begin{cases}
+            x \in A, x \notin C \\
+            y \in B
+        \end{cases} \Rightarrow \\
+        \Rightarrow \langle x, y \rangle \in A \times B, \langle x, y \rangle \notin C \times D \text{ (так как } x \notin C) \Rightarrow \langle x, y \rangle \in (A \times B) \setminus (C \times D).
+    \end{gather*}
+\end{enumerate}
+
+
+\subsubsection{Пример}
+\[
+    L = (A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D) = R
+\]
+\begin{enumerate}
+    \item Докажем, что $L \subseteq R$
+    \begin{gather*}
+        \text{Пусть } \langle x, y \rangle \in L \Rightarrow
+        \begin{cases}
+            x \in A, x \in C \\
+            y \in B, y \in D
+        \end{cases} \Rightarrow 
+        \begin{cases}
+            x \in A \cap C \\
+            y \in B \cap D
+        \end{cases}
+        \Rightarrow \langle x, y \rangle \in R. \\
+    \end{gather*}
+    \item Докажем, что $R \subseteq L$
+    \begin{gather*}
+        \text{Пусть } \langle x, y \rangle \in R \Rightarrow
+        \begin{cases}
+            x \in A \cap C \\
+            y \in B \cap D
+        \end{cases} \Rightarrow 
+        \begin{cases}
+            x \in A, x \in C \\
+            y \in B, y \in D
+        \end{cases}
+        \Rightarrow \langle x, y \rangle \in L.
+    \end{gather*}
+\end{enumerate}
+
+
+\section{Операции над бинарными отношениями}
+
+\subsection{???}
+\[
+    \cup, \cap, \dots
+\]
+
+
+\subsection{Абсолютное дополнение}
+\[
+    \overline{\rho} = X \setminus \rho 
+\]
+
+
+\subsection{Обратное отношение}
+\[
+    \rho^{-1} = \{\langle x, y \rangle |~x, y \in X: \langle y, x \rangle \in \rho \}
+\]
+
+
+\subsection{Композиция (произведение)}
+\[
+    \rho_1 \circ \rho_2 = \{\langle x, y \rangle |~\exists z \in X: \langle x, z \rangle \in \rho_2, \langle z, y \rangle \in \rho_1\}
+\]
+
+
+\subsubsection{Пример}
+\begin{gather*}
+    f \circ g = f(g(x)) \\
+    \langle x, z \rangle: z = g(x), \langle z, y \rangle: y = f(z) \Rightarrow \langle x, y \rangle: y = f(g(x))
+\end{gather*}
+
+
+\subsection{Свойства}
+\begin{enumerate}
+    \item $(\rho^{-1})^{-1} = \rho$
+    \item $(\rho_1 \circ \rho_2)^{-1} = \rho^{-1}_2 \circ \rho^{-1}_1$
+\end{enumerate}
+
+\subsubsection{Пример}
+\paragraph{Дано}
+\[
+    X = \{1, 2, 3, 4\}, \rho = \{\langle 1, 2 \rangle, \langle 2, 3 \rangle, \langle 2, 4 \rangle, \langle 4, 3 \rangle, \langle 4, 1 \rangle\}
+\]
+
+\paragraph{Найти}
+\[
+    D_{\rho}, R_{\rho}, \rho^{-1}, \rho \circ \rho^{-1}, \rho^{-1} \circ \rho, \rho^{2} = \rho \circ \rho
+\]
+
+\paragraph{Решение}
+\begin{gather*}
+    D_{\rho} = \{1, 2, 4\}, R_{\rho} = X \\
+    \begin{tabular}{c|c|c|c|c|c}
+        $\rho^{-1}$ & $\rho$ & $\rho^{-1}$ & $\rho \circ \rho^{-1}$ & $\rho^{-1} \circ \rho$ & $\rho \circ \rho$ \\
+        \hline
+        $\langle 2, 1 \rangle$ & $\langle 1, 2 \rangle$ & $\langle 2, 1 \rangle$ & $\langle 2, 2 \rangle$ & $\langle 1, 1 \rangle$ & $\langle 1, 3 \rangle$ \\
+        $\langle 3, 2 \rangle$ & $\langle 2, 3 \rangle$ & $\langle 3, 2 \rangle$ & $\langle 3, 3 \rangle$ & $\langle 2, 2 \rangle$ & $\langle 1, 4 \rangle$ \\
+        $\langle 4, 2 \rangle$ & $\langle 2, 4 \rangle$ & $\langle 4, 2 \rangle$ & $\langle 3, 4 \rangle$ & $\langle 4, 2 \rangle$ & $\langle 2, 3 \rangle$ \\
+        $\langle 3, 4 \rangle$ & $\langle 4, 3 \rangle$ & $\langle 3, 4 \rangle$ & $\langle 4, 3 \rangle$ & $\langle 4, 4 \rangle$ & $\langle 2, 1 \rangle$ \\
+        $\langle 1, 4 \rangle$ & $\langle 4, 1 \rangle$ & $\langle 1, 4 \rangle$ & $\langle 4, 4 \rangle$ & $\langle 2, 4 \rangle$ & $\langle 4, 2 \rangle$ \\
+                               &                        &                        & $\langle 3, 1 \rangle$ &                        &                        \\
+                               &                        &                        & $\langle 1, 3 \rangle$ &                        &                        \\
+                               &                        &                        & $\langle 1, 1 \rangle$ &                        &       
+    \end{tabular}
+\end{gather*}
+
+\subsubsection{Пример}
+\paragraph{Дано}
+\[
+    \rho = \{\langle x, y \rangle |~x, y \in \mathbb{R}: y \divby x\} 
+\]
+Пример: $\langle 2, 6 \rangle \in \rho: 6 \divby 2, \langle 6, 2 \rangle \notin \rho: 2 \cancel{\divby} 6$
+
+\paragraph{Найти}
+\[
+    D_{\rho}, R_{\rho}, \rho^{-1}, \rho \circ \rho^{-1}, \rho^{-1} \circ \rho, \rho^{2}
+\]
+
+\paragraph{Решение}
+\begin{gather*}
+    D_{\rho} = \mathbb{N} = R_{\rho} \\
+    \rho^{-1} = \{\langle x, y \rangle |~x, y \in \mathbb{N}: \langle y, x \rangle \in \rho\} = x \divby y \\
+    \rho \circ \rho^{-1} = 
+    \{\langle x, y \rangle |~x, y \in \mathbb{N}, \exists z \in \mathbb{N}: \underbrace{\langle x, z \rangle \in \rho^{-1}}_{x \divby z}, \underbrace{\langle z, y \rangle \in \rho}_{y \divby z}\} = 
+    \langle \mathbb{N}, \mathbb{N} \rangle = \mathbb{N} \times \mathbb{N} = \mathbb{N}^2 \\
+    \rho^{-1} \circ \rho = 
+    \{\langle x, y \rangle |~x, y \in \mathbb{N}, \exists z \in \mathbb{N}: \underbrace{\langle x, z \rangle \in \rho}_{z \divby x}, \underbrace{\langle z, y \rangle \in \rho^{-1}}_{z \divby y}\} = \mathbb{N}^2 \\
+    \rho^2 = \rho \circ \rho = 
+    \{\langle x, y \rangle |~x, y \in \mathbb{N}, \exists z \in \mathbb{N}: \underbrace{\langle x, z \rangle \in \rho}_{z \divby x}, \underbrace{\langle z, y \rangle \in \rho}_{y \divby z}\} = \rho \\
+\end{gather*}
+
+\subsubsection{Пример}
+\paragraph{Дано}
+\[
+    \rho = \{\langle x, y \rangle |~x, y \in \mathbb{R}: 2x \ge 3y\}
+\]
+
+\paragraph{Найти}
+\[
+    D_{\rho}, R_{\rho}, \rho^{-1}, \rho \circ \rho^{-1}, \rho^{-1} \circ \rho, \rho^{2}
+\]
+
+\paragraph{Решение}
+\begin{gather*}
+    D_{\rho} = \mathbb{R} = R_{\rho} \\
+    \rho^{-1} = \{\langle x, y \rangle |~x, y \in \mathbb{R}: \langle y, x \rangle \in \rho\} = 2y \ge 3x \\
+    \rho \circ \rho^{-1} = 
+    \{\langle x, y \rangle |~x, y \in \mathbb{R}, \exists z \in \mathbb{R}: \underbrace{\langle x, z \rangle \in \rho^{-1}}_{2z \ge 3x}, \underbrace{\langle z, y \rangle \in \rho}_{2z \ge 3y}\} = \mathbb{R}^2 \\
+    \rho^{-1} \circ \rho = \{\langle x, y \rangle |~x, y \in \mathbb{R}, \exists z \in \mathbb{R}: \underbrace{\langle x, z \rangle \in \rho}_{2x \ge 3z}, \underbrace{\langle z, y \rangle \in \rho^{-1}}_{2y \ge 3z}\} = \mathbb{R}^2 \\
+    \rho^2 = \rho \circ \rho = \{\langle x, y \rangle |~x, y \in \mathbb{R}, \exists z \in \mathbb{R}: \underbrace{\langle x, z \rangle \in \rho}_{2x \ge 3z \Rightarrow 4x \ge 6z}, \underbrace{\langle z, y \rangle \in \rho}_{2z \ge 3y \Rightarrow 6z \ge 9y}\} = 4x \ge 9y \\
+\end{gather*}
+
+
+\section{Основные свойства}
+
+\subsection{Определение | Рефлексивность}
+Бинарное отношение $\rho$ на множестве $X$ называется рефлексивным, если $\forall x \in X: x \rho x$.
+
+\subsubsection{Пример}
+\begin{gather*}
+    \le, \mathbb{R}. ~ \forall x \in \mathbb{R}: x \le x \\
+    x \rho y \Leftrightarrow x + y = 1, \mathbb{R} \\
+    \langle 0, 0 \rangle \notin \rho, 0+0 \neq 1
+\end{gather*}
+
+
+\subsection{Определение | Симметричность}
+Бинарное отношение $\rho$ на множестве $X$ называется симметричным, если $\forall x, y \in X: x \rho y \Rightarrow y \rho x$.
+
+\subsubsection{Пример}
+\begin{gather*}
+    \le, \mathbb{R}. ~ \forall x, y \in X: \\
+    x \rho y \Leftrightarrow x + y = 1, \mathbb{R} \\
+    \le, \mathbb{R}. ~ x + y = 1 \Rightarrow y + x = 1 \\
+    1 \le 2 \nRightarrow 2 \le 1
+\end{gather*}
+
+
+\subsection{Определение | Антисимметричность}
+Бинарное отношение $\rho$ на множестве $X$ называется антисимметричным, если 
+\[
+    \forall x, y \in X: x \rho y, y \rho x \Rightarrow x = y.
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    \le, \mathbb{R}. ~ x \le y, y \le x \Leftrightarrow x = y \\
+    x \rho y \Leftrightarrow x + y = 1, \mathbb{R} \\
+    \langle 0, 1 \rangle \in \rho, \langle 1, 0 \rangle \in \rho, 1 \neq 0
+\end{gather*}
+
+
+\subsection{Определение | Асимметричность}
+Бинарное отношение $\rho$ на множестве $X$ называется асимметричным, если
+\[
+    \forall x, y \in X: x \rho y \Rightarrow y \overline{\rho} x.
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    <, \mathbb{R}. ~ x < y ~\Rightarrow y \cancel{<} x \\
+    x \rho y \Leftrightarrow x + y = 1, \mathbb{R} \\
+    \langle 0, 1 \rangle, \langle 1, 0 \rangle \in \rho
+\end{gather*}
+
+
+\subsection{Определение | Транзитивность}
+Бинарное отношение $\rho$ на множестве $X$ называется транзитивным, если
+\[
+\forall x, y, z \in X: x \rho y, y \rho z \Rightarrow x \rho z.
+\]
+
+\subsubsection{Пример}
+\begin{gather*}
+    <, \mathbb{R}. ~ x < y, y < z \Rightarrow x < z \\
+    \text{любовь, люди} \\
+    \text{Петя любит Машу, Маша любит Васю } \cancel{\Rightarrow} \text{ Петя любит Васю}
+\end{gather*}
+
+\subsection{Практика} 
+
+\subsubsection{Пример | Расчётно-графическая работа: задание 2}
+\paragraph{Дано}
+\[
+    X = \{1, 2, 3, 4\}, \rho = \{\langle 1, 1 \rangle, \langle 1, 2 \rangle, \langle 2, 1 \rangle, \langle 2, 2 \rangle, \langle 2, 3 \rangle, \langle 1, 3 \rangle, \langle 3, 4 \rangle, \langle 4, 4 \rangle\} \\
+\]
+
+\paragraph{Найти}
+\[
+    D_{\rho}, R_{\rho}, \rho^{-1}, \rho^2; \text{Р, С, Ант, Ас, Т --- ?}
+\]
+
+\paragraph{Решение}
+\begin{gather*}
+    D_{\rho} = X = R_{\rho} \\
+    \begin{tabular}{c|c|c}
+        $\rho$ & $\rho^{-1}$ & $\rho^2$ \\
+        \hline
+        $\langle 1, 1 \rangle$ & $\langle 1, 1 \rangle$ & $\langle 1, 1 \rangle$ \\
+        $\langle 1, 2 \rangle$ & $\langle 2, 1 \rangle$ & $\langle 1, 2 \rangle$ \\
+        $\langle 2, 1 \rangle$ & $\langle 1, 2 \rangle$ & $\langle 1, 3 \rangle$ \\
+        $\langle 2, 2 \rangle$ & $\langle 2, 2 \rangle$ & $\langle 2, 1 \rangle$ \\
+        $\langle 2, 3 \rangle$ & $\langle 3, 2 \rangle$ & $\langle 2, 2 \rangle$ \\
+        $\langle 1, 3 \rangle$ & $\langle 3, 1 \rangle$ & $\langle 2, 3 \rangle$ \\
+        $\langle 3, 4 \rangle$ & $\langle 4, 3 \rangle$ & $\langle 2, 4 \rangle$ \\
+        $\langle 4, 4 \rangle$ & $\langle 4, 4 \rangle$ & $\langle 1, 4 \rangle$ \\
+                               &                        & $\langle 3, 4 \rangle$ \\
+                               &                        & $\langle 4, 4 \rangle$
+    \end{tabular}
+    \\
+\end{gather*}
+Рефлексивность --- нет, так как $\langle 3, 3 \rangle \notin \rho$ \\
+Симметричность --- нет, так как $\langle 2, 3 \rangle \in \rho, \langle 3, 2 \rangle \notin \rho$ \\
+Антисимметричность --- нет, так как $\langle 1, 2 \rangle \in \rho, \langle 2, 1 \rangle \in \rho, 2 \neq 1$ \\
+Асимметричность --- нет, так как $\langle 1, 1 \rangle \in \rho$ \\
+Транзитивность --- нет, так как $\langle 2, 3 \rangle \in \rho, \langle 3, 4 \rangle \in \rho, \langle 2, 4 \rangle \notin \rho$ \\
+\includegraphics[scale=0.3]{images/part03_03.jpg}
+
+
+
+\section{Другие свойства}
+
+\subsection{Определение | Эквивалентность}
+Бинарное отношение $\rho$ на множестве $X$ называется отношением эквивалентности, \\
+если $\rho$ --- рефлексивно, симметрично, транзитивно.
+
+
+\subsection{Определение | Частичный порядок}
+Бинарное отношение $\rho$ на множестве $X$ называется отношением частичного порядка, \\
+если $\rho$ --- рефлексивно, антисимметрично, транзитивно.
+
+
+\subsection{Определение | Квазипорядок}
+Бинарное отношение $\rho$ на множестве $X$ называется отношением квазипорядка, \\
+если $\rho$ --- рефлексивно, транзитивно.
+
+
+\subsection{Определение | Строгий порядок}
+Бинарное отношение $\rho$ на множестве $X$ называется отношением строгого порядка, \\
+если $\rho$ --- ассимметрично, транзитивно.
+
+
+\subsection{Определение | Линейный порядок}
+Бинарное отношение $\rho$ на множестве $X$ называется отношением линейного порядка, \\
+если $\rho$ --- частичный порядок, у которого все элементы сравнимы.
+\[
+\forall x, y: x \rho y \text{ или } y \rho x.
+\]
+
+
+
+\section{Условия}
+
+\subsection{Рефлексивность}
+\[
+    d = \{\langle x, x \rangle |~\forall x \in X\}, \boxed{d \subseteq \rho}
+\]
+$d$ --- отношение-диагональ \\
+\includegraphics[scale=0.3]{images/part03_04.png}
+
+\subsubsection{Пример}
+\[
+    d = \{\langle 1, 1 \rangle, \langle 2, 2 \rangle, \langle 3, 3 \rangle, \langle 4, 4 \rangle\}
+\]
+
+
+\subsection{Симметричность}
+\[
+    \boxed{\rho = \rho^{-1}}
+\]
+\includegraphics[scale=0.3]{images/part03_05.png}
+
+
+\subsection{Антисимметричность}
+\[
+    \boxed{\rho \cap \rho^{-1} \subseteq d}
+\]
+\includegraphics[scale=0.3]{images/part03_06.png}
+
+\subsubsection{Пример}
+\[
+    \rho \cap \rho^{-1} = \{\langle 1, 1 \rangle, \langle 1, 2 \rangle, \langle 2, 1 \rangle, \langle 2, 2 \rangle, \langle 4, 4 \rangle\}
+\]
+
+
+\subsection{Асимметричность}
+\[
+    \boxed{\rho \cap \rho^{-1} = \varnothing}
+\]
+\includegraphics[scale=0.3]{images/part03_07.png}
+
+
+\subsection{Транзитивность}
+\begin{gather*}
+    x \rho y, y \rho z \Rightarrow x \rho z \\
+    x \rho y, y \rho z \Rightarrow x \rho^2 z \\
+    \boxed{\rho^2 \subseteq \rho} \\
+    \rho = \{\langle 1, 2 \rangle\} \text{ --- транзитивно} \\
+    \rho^2 = \varnothing
+\end{gather*}
+
+
+
+\subsection{Практика}
+\paragraph{Дано}
+\begin{enumerate}
+    \item $\rho_1 \cap \rho_2$
+    \item $\rho_1 \cup \rho_2$
+\end{enumerate}
+
+\subsubsection{Пример}
+\paragraph{Узнать}
+Рефлексивны на $X$?
+
+\paragraph{Решение для 1 и 2}
+\[
+    \forall x \in X, \langle x, x \rangle \in \rho_1, \rho_2 \underset{\text{рефл.}}{\Rightarrow} \langle x, x \rangle \in \rho_1 \cap \rho_2, \rho_1 \cup \rho_2
+\]
+
+
+\subsubsection{Пример}
+\paragraph{Узнать}
+Симметричны на $X$?
+
+\paragraph{Решение для 1}
+\[
+    \langle x, y \rangle \in \rho_1 \cap \rho_2 \Rightarrow \langle x, y \rangle \in \rho_1, \rho_2 \underset{\text{асимм.}}{\Rightarrow} \langle y, x \rangle \in \rho_1, \rho_2 \Rightarrow \langle y, x \rangle \in \rho_1 \cap \rho_2
+\]
+
+\paragraph{Решение для 2}
+\[
+    \langle x, y \rangle \in \rho_1 \cup \rho_2 \Rightarrow \langle x, y \rangle \in \rho_1 \cup \rho_2
+\]
+
+
+\subsubsection{Пример}
+\paragraph{Узнать}
+Антисимметричны на $X$?
+
+\paragraph{Решение для 1}
+\begin{gather*}
+    \text{Если } x \neq y: \langle x, y \rangle \in \rho_1 \cap \rho_2 \Rightarrow 
+    \langle x, y \rangle \in \rho_1, \rho_2 \underset{\text{ант.}}{\Rightarrow} 
+    \langle y, x \rangle \notin \rho_1, \rho_2 \Rightarrow \langle y, x \rangle \notin \rho_1 \cap \rho_2
+\end{gather*}
+
+\paragraph{Решение для 2}
+Нет, так как
+\[
+    \rho_1 = \{\langle 1, 2 \rangle\}, \rho_2 = \{\langle 2, 1 \rangle\} \text{ --- ант.}, \rho_1 \cup \rho_2 = \{\langle 1, 2 \rangle, \langle 2, 1 \rangle\} \text{ --- не ант.}
+\]
+
+
+\subsubsection{Пример}
+\paragraph{Узнать}
+Асимметричны на $X$?
+
+\paragraph{Решение для 1 и 2}
+Аналогично прошлому премеру
+
+
+\subsubsection{Пример}
+\paragraph{Узнать}
+Транзитивны на $X$?
+
+\paragraph{Решение для 1}
+\begin{gather*}
+    \langle x, y \rangle \in \rho_1 \cap \rho_2, \langle y, z \rangle \in \rho_1 \cap \rho_2 \Rightarrow \langle x, y \rangle \in \rho_1, \rho_2; \langle y, z \rangle \in \rho_1, \rho_2 \Rightarrow \\
+    \underset{\text{тр. }\rho_2}{\Rightarrow} \langle x, z \rangle \in \rho_1, \rho_2 \Rightarrow \langle x, z \rangle \in \rho_1 \cap \rho_2
+\end{gather*}
+
+
+\paragraph{Решение для 2}
+\[
+    \rho_1 = \{\langle 1, 2 \rangle\}, \rho_2 = \{\langle 2, 3 \rangle\} \text{ --- тр.}, \rho_1 \cup \rho_2 = \{\langle 1, 2 \rangle, \langle 2, 3 \rangle\} \text{ --- нет}
+\]
+
+
+
+
+\newpage
+\paragraph{2024.10.29 (3, 4)}
+\part{Специальные типы бинарных отношений}
+
+\section{Отношения частичного порядка}
+
+\subsection{Определение}
+$\rho$ на $X$ --- частичный порядок, если $\rho$ --- рефлексивно, антисимметрично, транзитивно.
+
+
+\subsection{Определение}
+Частичный порядок, у которого все элементы сравнимы, называется линейным порядком (ЛП).
+\[
+    \forall a, b \in X: a \rho b \text{ или } b \rho a
+\]
+Обозначение --- $\preccurlyeq (\succcurlyeq)$
+
+\subsubsection{Пример}
+\[
+    =, \mathbb{R}
+\]
+\begin{gather*}
+    \forall x \in \mathbb{R}: x = x \\
+    \forall x, y \in \mathbb{R}: x = y, y = x \Rightarrow x = y \\
+    \forall x, y, z \in \mathbb{R}: x = y, y = z \Rightarrow x = z
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \le, \mathbb{R}
+\]
+\begin{gather*}
+    \forall x \in \mathbb{R}: x \le x \\
+    \forall x, y \in \mathbb{R}: x \le y, y \le x \Rightarrow x = y \\
+    \forall x, y, z \in \mathbb{R}: x \le y, y \le z \Rightarrow x \le z
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \subseteq, \mathbb{U}
+\]
+\begin{gather*}
+    A \subseteq A, A \subseteq B, B \subseteq A \Rightarrow A = B \\
+    A \subseteq B, B \subseteq C \Rightarrow A \subseteq C
+\end{gather*}
+\includegraphics[scale=0.4]{images/part04_01.png}
+
+\paragraph{Примечание}
+~\\
+\begin{gather*}
+    \forall A_i, A_j \text{ --- сравнимы}, где A_i \subseteq A_j \text{ или } A_j \subseteq A_i \\
+    \forall B_i, B_j \text{ --- сравнимы}, где B_i \subseteq B_j \text{ или } B_j \subseteq B_i \\
+    \forall A_i, B_i \text{ --- не сравнимы}
+\end{gather*}
+(фото 1, 2, 3)
+
+
+
+\section{Отношение Парето (подраздел частичного порядка)}
+
+\subsection{Определение}
+\begin{gather*}
+    \langle x, y \rangle \text{ П } \langle a, b \rangle \Leftrightarrow (x \ge a, y > b) \text{ или } (x > a, y \ge b)    
+\end{gather*}
+ 
+
+\subsection{Диаграмма Хассе}
+\begin{gather*}
+    x \preccurlyeq y \\
+    x \prec y \Leftrightarrow x \preccurlyeq y, x \neq y \\
+    y \text{ покрывает } x \text{(непосредственно предшествует)}:
+    \nexists u \in X: x \prec u \prec y
+\end{gather*}
+\includegraphics[scale=0.2]{images/part04_02.png}
+\begin{gather*}
+    x \preccurlyeq y \Leftrightarrow x = u_1 \prec u_2 \prec \dots \prec u_n = y, \text{где } u_{i + 1} \text{ покрывает } u_i
+\end{gather*}
+
+
+
+\subsubsection{Пример}
+\[
+    X = \{ 1, 2, 3, 5, 6, 10, 15, 30 \}~~~~~ x \rho y \Leftrightarrow y \divby x
+\]
+\includegraphics[scale=0.2]{images/part04_03.png}
+
+
+\subsection{Определение}
+\begin{gather*}
+    x \in \min_{X} \rho \text{, если } \nexists y: y \prec x \\
+    x \in \max_{X} \rho \text{, если } \nexists y: y \succ x \\
+    x \text{ --- наименьший}: \min \text{, сравнимый со всеми;} \\
+    x \text{ --- наибольший}: \max \text{, сравнимый со всеми,} \\
+    \text{то есть выполняется условие } \forall y: x \rho y
+\end{gather*}
+
+\subsubsection{Примечение}
+Наименьший (наибольший) либо $\nexists$, либо единственный.
+
+\subsubsection{Пример}
+\includegraphics[scale=0.3]{images/part04_04.png} \\
+\begin{itemize}
+    \item Наименьших нет, так как $1$ и $2$ не сравнимы.
+    \item Единственность: предположим, $\exists a \neq b$ --- наименьший
+\end{itemize}
+\begin{align*}
+\begin{rcases}
+    a \text{ --- наименьший } \Rightarrow a \rho b \\
+    b \text{ --- наименьший } \Rightarrow b \rho a
+\end{rcases}
+\Rightarrow a = b
+\end{align*}
+
+\subsubsection{Пример}
+\includegraphics[scale=0.2]{images/part04_05.png}
+\begin{gather*}
+    \rho = \{ \langle a, a \rangle, \langle b, b \rangle, \langle c, c \rangle, \langle d, d \rangle, \langle e, e \rangle, \langle f, f \rangle, \langle g, g \rangle, \\
+              \langle a, c \rangle, \langle a, e \rangle, \langle a, f \rangle, \langle a, g \rangle, \langle b, f \rangle, \langle b, g \rangle, \\ 
+              \langle d, c \rangle, \langle d, e \rangle, \langle d, f \rangle, \langle d, g \rangle, \langle c, f \rangle, \langle c, g \rangle, \langle e, f \rangle, \langle e, g \rangle, \langle f, g \rangle \} \\
+    \min_X \rho = {a, b, d} \\
+    \max_X \rho = {g} \\
+    \text{Наименьший: —} \\
+    \text{Наибольший: } g
+\end{gather*}
+
+\subsubsection{Пример}
+\includegraphics[scale=0.2]{images/part04_06.png}
+\begin{gather*}
+    \rho = \{ \langle a, a \rangle, \langle b, b \rangle, \langle c, c \rangle, \langle d, d \rangle, \langle e, e \rangle, \langle f, f \rangle, \langle g, g \rangle, \textcolor{blue}{\langle k, k \rangle}, \\
+              \langle a, c \rangle, \langle a, e \rangle, \langle a, f \rangle, \langle a, g \rangle, \langle b, f \rangle, \langle b, g \rangle, \\ 
+              \langle d, c \rangle, \langle d, e \rangle, \langle d, f \rangle, \langle d, g \rangle, \langle c, f \rangle, \langle c, g \rangle, \langle e, f \rangle, \langle e, g \rangle, \langle f, g \rangle \} \\
+    \min_X \rho = {a, b, d, \textcolor{blue}{k}} \\
+    \max_X \rho = {g, \textcolor{blue}{k}} \\
+    \text{Наименьший: —} \\
+    \text{Наибольший: } \textcolor{blue}{\text{—}}
+\end{gather*}
+
+
+\subsection{Алгоритм достроения до линейного порядка}
+\begin{align*}
+    X_1 &= \min_X \rho \text{ --- произвольно упорядоченное} \\
+    X_2 &= \min_{X \setminus X_1} \rho \text{ --- произвольно упорядоченное} \\
+    \vdots \\
+    X_k &= \min_{X \setminus (X_1 \cup \dots \cup X_{k-1})} \rho \text{ --- произвольно упорядоченное} \\
+    X_{k + 1} &= \varnothing
+\end{align*}
+
+\subsubsection{Пример}
+\begin{align*}
+    X_1 &= \min_X \rho = \{a, b, d\} \\
+    X_2 &= \min_{X \setminus X_1} \rho = \{c, e\} \\
+    X_3 &= \min_{X \setminus (X_1 \cup X_2)} \rho = \{f\} \\
+    X_4 &= \min_{X \setminus (x_1 \cup X_2 \cup X_3)} \rho = \{g\}
+\end{align*}
+\includegraphics[scale=0.2]{images/part04_07.png}
+
+
+
+\section{Отношение эквивалентности}
+$\rho$ на $X$ --- EQ, если $\rho$ --- рефлексивно, симметрично, транзитивно. 
+
+\subsubsection{Пример}
+\[
+    =, \mathbb{R}
+\]
+\begin{gather*}
+    \forall x \in \mathbb{R}: x = x \\
+    \forall x, y \in \mathbb{R}: x = y \Rightarrow y = x \\
+    \forall x, y, z \in \mathbb{R}: x = y, y = z \Rightarrow x = z
+\end{gather*}
+
+\subsubsection{Пример}
+Принадлежность к студенческой группе
+\[
+    x \rho y \Leftrightarrow x, y \text{ учатся в одной группе}
+\]
+
+
+\subsection{Определение}
+Класс эквивалентности, порождаемый элементом $x \in X$.
+\begin{gather*}
+    [x_p] = [x] \text{ по отношению эквивалентности } \rho \text{ на } X: \\
+    [x] = \{y \in X~|~x\rho y\}.
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    [x]_= =\{x\}
+\]
+
+\subsubsection{Пример}
+Студенческая группа
+$[$Иванов$]$ = $\{$Иванов, Петров, \dots$\} = [$Петров$]$
+
+
+\subsection{Определение}
+\[
+    x \rho y \Leftrightarrow x \underbrace{\equiv} y(\text{mod } n), n \in \mathbb{N}; N \cup \{0\} = N_0
+\]
+сравнимость по модулю $n$ --- один. остаток от деления на $n$
+
+\subsubsection{Пример}
+\begin{gather*}
+    x \rho y \Leftrightarrow x \equiv y (\text{mod } 3), N_0. \\
+    \rho = \{ <0, 3>, <21, 15>, \dots, <1, 4>, <13, 7>, \dots\, <2, 5>, <17, 11>, \dots\} \\
+    [0]_{\equiv 3} = \{0, 3, 6, 9, \dots\} = [3] = [6] = \dots \\
+    [1] = \{1, 4, 7, 10, \dots\} = [4] = \dots \\
+    [2] = \{2, 5, 8, 11, \dots\} = [8] = \dots \\
+    [3] = [0] \\
+    \dots \\
+    N_0 = [0] \cup [1] \cup [2] \\
+    [i] \cap [j] = \varnothing \\
+    i \neq j ~ \{0, 1, 2\}
+\end{gather*}
+
+\subsection{Определение}
+Фактор-множество --- совокупность (подмножеств разбиения) классов эквивалентности по $\rho$ --- EQ на $X$ --- $X/\rho$.
+
+\subsubsection{Пример}
+\[
+    N_0/\equiv_3 \{[0], [1], [2]\}
+\]
+
+
+
+\section{Практика}
+
+\subsection{Пример | Расчётно-графическая работа: задание 3}
+\begin{align*}
+    &x R_f y \Leftrightarrow f(x) = f(y) \\
+    &X = [0; 5] 
+\end{align*}
+\includegraphics[scale=0.2]{images/part04_08.png}
+\begin{align*}
+    &\forall x \in (0; 1): [x] = \{x, 2 - x, 3 + x\} \\
+    &\forall x \in (1; 2): [x] = \{2 - x, x, 5 - x\} \\
+    &\forall x \in [2; 3] \cup \{0\}: [x] = \{0\} \cup [2, 3] \\
+    &\forall x \in (3; 4): [x] = \{x - 3, 5 - x, x\} \\
+    &\forall x \in (4; 5]: [x] = \{x\} \\
+    &[1] = \{1;4\} = [4]
+\end{align*}
+
+
+\subsection{Пример | Расчётно-графическая работа: задание 3}
+\begin{align*}
+    &x R_f y \Leftrightarrow f(x) = f(y) \\
+    &X = [0; 5] 
+\end{align*}
+\includegraphics[scale=0.2]{images/part04_09.png}
+\begin{align*}
+    &\forall x \in (0; 1]: [x] = \{x, 2 - x, 2 + x, 4 - x\} \\
+    &\forall x \in (1; 2): [x] = \{x, 2 - x, 2 + x, 4 - x\} \\
+    &\forall x \in (2; 3]: [x] = \{x, 4 - x, 6 - x, x - 2\} \\
+    &\forall x \in (3; 4): [x] = \{x, 4 - x, 6 - x, x - 2\} \\
+    &\forall x \in \{0; 2\} \cup (4; 5]: [x] = \{([4; 5] \cup 0 \cup 2)\} \\
+\end{align*}
+
+
+
+\section{Функция}
+
+\subsection{Определение}
+Бинарное отношение называется функцией, если
+\begin{gather*}
+    \langle x, y_1 \rangle \in f, \langle x, y_2 \rangle \in f \Rightarrow y_1 = y_2 \\
+    \langle x, y \rangle \in f, x f y, y = f(x)
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f = \{\langle 1, 2 \rangle, \langle 1, 3 \rangle\} \text{ --- не функция} \\
+    f = \{\langle 1, 2 \rangle, \langle 2, 3 \rangle\} \text{ --- функция}
+\end{gather*}
+\includegraphics[scale=0.2]{images/part04_10.png}
+
+\subsubsection{Пример}
+\[
+    f = \{\langle x, y \rangle ~|~ \mathbb{R}, y = \sqrt{x - 1}\} ~~~ D_f = [1; +\infty) ~~~ R_f = [0; +\infty)
+\]
+
+\subsection{Определение}
+\includegraphics[scale=0.2]{images/part04_11.png}
+
+
+\subsection{Свойства}
+
+\subsubsection{Сюръекция}
+\[
+    f \text{ --- сюръективна, если } \forall y \in Y ~ \exists x \in X: \langle x, y \rangle \in f.
+\]
+
+\subsubsection{Инъекция}
+\[
+    f \text{ --- инъъективна, если } \langle x_1, y \rangle \in f, \langle x_2, y \rangle \in f \Rightarrow x_1 = x_2.
+\]
+
+\subsubsection{Биекция}
+\[
+    f \text{ --- биективна, если } f \text{ --- сюръективна и инъективна.}
+\]
+
+\subsubsection{Примеры для всех свойств}
+\[
+    f: \mathbb{R} \rightarrow \mathbb{R}
+\]
+\includegraphics[scale=0.2]{images/part04_12.png}
+
+\subsubsection{Пример}
+\[
+    f: X \rightarrow Y
+\]
+\paragraph{Пункт 1}
+\begin{gather*}
+    f^{-1} \text{ --- функция?} \\
+    f = \{\langle 1, 3 \rangle, \langle 2, 3 \rangle\} \text{ --- функция} \\
+    f^{-1} = \{\langle 3, 1 \rangle, \langle 3, 2 \rangle\} \text{ --- не функция} \\
+    f^{-1}: Y \rightarrow X \text{ --- функция } \Leftrightarrow f \text{ --- биекция}
+\end{gather*}
+\paragraph{Пункт 2}
+\begin{gather*}
+    f: X \rightarrow Y, g: Y \rightarrow Z \text{ --- функция} \Rightarrow g \circ f: X \rightarrow Z \text{ --- функция}
+\end{gather*}
+
+
+
+\subsubsection{Пример}
+\[
+    f(A \cap B) \neq_{\subseteq} f(A) \cap f(B)
+\]
+\paragraph{Пункт 1}
+\[
+    f(A \cap B) \subseteq f(A) \cap f(B)
+\]
+\begin{gather*}
+    \text{Пусть } y \in f(A \cap B) \Rightarrow 
+    \exists x \in A \cap B \Rightarrow 
+    x \in A \text{ и } x \in B \Rightarrow
+    y \in f(A) \text{ и } y \in f(B) \Rightarrow
+    y \in f(A) \cap f(B).
+\end{gather*}
+\paragraph{Пункт 2}
+\[
+    f(A) \cap f(B) \subseteq f(A \cap B)
+\]
+\begin{gather*}
+    \text{Пусть } y \in f(A) \cap f(B) \Rightarrow
+    y \in f(A) \text{ и } y \in f(B) \nRightarrow
+    \exists x \in A \text{ и } x \in B \Rightarrow
+    x \in A \cap B \Rightarrow y \in f(A \cap B).
+\end{gather*}
+
+
+
+
+\newpage
+\paragraph{2024.11.12 (3)}
+\part{Мощность множеств}
+
+\section{Введение}
+
+\subsection{Определение}
+Два множества А и В называются равномощными, если существует биекция, отображающая одно множество на другом:
+\[
+    A \sim B \text{ --- равномощны, если } \exists \text{ биекция } \varphi: A \rightarrow B 
+\]
+Равномощность --- отношение эквивалентности
+
+\subsection{Свойства}
+\begin{itemize}
+    \item Рефлексивно, если $\varphi: A \rightarrow A$ ~~~ $\rho_A$ --- биекция 
+    \item Симметрично, если $\varphi$ --- биекция ~~~ $\varphi: A \rightarrow B \Rightarrow \varphi^{-1}: B \rightarrow A$ --- биекция
+    \item Транзитивно, если $\varphi$, $\psi$ --- биекции $\Rightarrow \varphi \circ \psi$ --- биекция
+\end{itemize}
+
+
+
+\section{Типы}
+
+\subsection{Конечные множества}
+\begin{gather*}
+    A = \{a_1, \dots, a_k\}, B = \{b_1, \dots, b_m\} \\
+    A \sim B \Rightarrow k = m \\
+\end{gather*}
+\begin{itemize}
+    \item $k > m$ --- не инъективно
+    \item $m > k$ --- не сюръективно
+\end{itemize}
+
+
+\subsection{Счётные множества}
+\begin{gather*}
+    A \sim \mathbb{N}, \mathbb{Z} \sim \mathbb{N} \\
+    \mathbb{Z}: 0, 1, -1, 2, -2, \dots ~~~ z \le 0 \rightarrow n = 2|z| + 1 \\
+    \mathbb{N}: 1, 2,  3, 4,  5, \dots ~~~ z  >  0 \rightarrow n = 2z
+\end{gather*}
+\includegraphics[scale=0.3]{images/part05_01.png}
+\includegraphics[scale=0.3]{images/part05_02.png}
+
+
+\subsection{Континуум}
+\includegraphics[scale=0.3]{images/part05_03.png} \\
+\includegraphics[scale=0.3]{images/part05_04.png}
+
+
+
+\section{Практика}
+
+\subsection{Пример | И. А. Лавров, Л. Л. Максимова: часть 1, параграф 4, номер 20}
+\paragraph{Доказать}
+Любое множество попарно не пересекающихся открытых интервалов на множестве действительных чисел не более чем счётно.
+
+\paragraph{Доказательство}
+~\\
+\includegraphics[scale=0.3]{images/part05_05.png}
+
+
+\subsection{Пример | И. А. Лавров, Л. Л. Максимова: часть 1, параграф 4, номер 23}
+\paragraph{Доказать}
+Множество точек разрыва монотонной функции на множестве действительных чисел не более чем счётно.
+
+\paragraph{Доказательство}
+~\\
+\includegraphics[scale=0.3]{images/part05_06.png}
+
+
+\section{Теорема Кантора-Бернштейна}
+\subsection{Случай 1}
+\[
+    A, B ~~~ A_1 \subseteq A, B_1 \subseteq B: A_1 \sim B, B_1 \sim A \Rightarrow A \sim B
+\]
+
+\subsection{Случай 2}
+\[
+    A_1 \sim B, \nexists B_1 \sim A \Rightarrow m(A) > m(B)
+\]
+
+\subsection{Случай 3}
+\[
+    B_1 \sim A, \nexists A_1 \sim B \Rightarrow m(B) > m(A)
+\]
+
+\subsection{Случай 4}
+\[
+    \nexists A_1 \sim B, \nexists B_1 \sim A \Rightarrow A, B \text{ --- не сравнимы?}
+\]
+
+\section{Лемма Цермело}
+Любые множества сравнимы по мощности.
+\begin{gather*}
+    \forall A: |A| \ge 2 ~ P(A) = 2^A \text{ --- множество-степень} \\
+    m(P(A)) > m(A) \\
+    m(k) < m(\mathbb{N}) < m(\mathbb{R}) < \dots
+\end{gather*}
+
+
+\subsection{Пример | И. А. Лавров, Л. Л. Максимова: часть 1, параграф 4, номер 25}
+\includegraphics[scale=0.3]{images/part05_07.png}
+
+
+
+
+\newpage
+\part{Математическая логика \\ Логика высказываний}
+
+\section{Введение}
+
+\subsection{Определение}
+Высказывание --- предложение, о котором есть смысл говорить истинно оно или ложно.
+
+
+
+\section{Операции}
+
+\subsection{Отрицание (не)}
+\begin{tabular}{c|c}
+    $P$ & $\neg P$ \\
+    \hline
+    И & Л \\
+    Л & И
+\end{tabular}
+
+
+\subsection{Конъинкция (и)}
+\begin{tabular}{c|c|c}
+    $P$ & $Q$ & $P ~\&~ Q$ \\
+    \hline
+    Л & Л & Л \\
+    Л & И & Л \\
+    И & Л & Л \\
+    И & И & И
+\end{tabular}
+
+
+\subsection{Дизъюнкция (или)}
+\begin{tabular}{c|c|c}
+    $P$ & $Q$ & $P \vee Q$ \\
+    \hline
+    Л & Л & Л \\
+    Л & И & И \\
+    И & Л & И \\
+    И & И & И
+\end{tabular}
+
+
+\subsection{Импликация}
+\begin{itemize}
+    \item если \dots, то \dots
+    \item следует
+    \item влечёт
+\end{itemize}
+\begin{tabular}{c|c|c}
+    $P$ & $Q$ & $P \supset Q$ \\
+    \hline
+    Л & Л & И \\
+    Л & И & И \\
+    И & Л & Л \\
+    И & И & И
+\end{tabular}
+
+\subsubsection{Пример}
+\begin{itemize}
+    \item $P$ --- 'Пацан сказал'
+    \item $Q$ --- 'Пацан сделал'
+\end{itemize}
+
+
+\subsection{Эквивалентация (тогда и только тогда)}
+\begin{tabular}{c|c|c}
+    $P$ & $Q$ & $P \sim Q$ \\
+    \hline
+    Л & Л & И \\
+    Л & И & Л \\
+    И & Л & Л \\
+    И & И & И
+\end{tabular}
+
+
+\subsection{Исключающие 'или'}
+\begin{itemize}
+    \item или \dots, или \dots
+    \item либо \dots, либо \dots
+\end{itemize}
+
+\begin{tabular}{c|c|c}
+    $P$ & $Q$ & $P + Q$ \\
+    \hline
+    Л & Л & Л \\
+    Л & И & И \\
+    И & Л & И \\
+    И & И & Л
+\end{tabular}
+
+
+\section{Пример}
+\[
+    \underbrace{\underbrace{\neg \underbrace{(\underbrace{\neg x}_{(3)} \supset \underbrace{(y + \underbrace{\neg z}_{(1)})}_{(2)})}_{(4)}}_{(5)} \sim \underbrace{(\underbrace{\neg y}_{(7)} \vee \underbrace{(z ~\&~ x)}_{(6)})}_{(8)}}_{(9)}
+\]
+
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
+    $x$ & $y$ & $z$ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) \\
+    \hline
+    И & И & И & Л & И & Л & И & Л & И & Л & И & Л \\
+    И & И & Л & И & Л & Л & И & Л & Л & Л & Л & И \\
+    И & Л & И & Л & Л & Л & И & Л & И & И & И & Л \\
+    И & Л & Л & И & И & Л & И & Л & Л & И & И & Л \\
+    Л & И & И & Л & И & И & И & Л & Л & Л & Л & И \\
+    Л & И & Л & И & Л & И & Л & И & Л & Л & Л & Л \\
+    Л & Л & И & Л & Л & И & Л & И & Л & И & И & И \\
+    Л & Л & Л & И & И & И & И & Л & Л & И & И & Л
+\end{tabular}
+
+
+
+\newpage
+\paragraph{2024.11.12 (4)}
+\part{Математическая логика \\ Тавтологии. Правильные рассуждения}
+
+\section{Введение}
+\[
+A <x_1, \dots x_n>
+\]
+
+\subsection{Определение}
+Формула называется тождественно истинной (тавтологией), если она принимает значение истинна на каждой оценке списка. 
+
+
+\subsection{Определение}
+Формула называется выполнимой, если она принимает значение истинна хотя бы на одной оценке списка.
+
+
+\subsection{Определение}
+Формула называется опровержимой, если она принимает значение ложь хотя бы на оценке списка.
+
+
+\subsection{Определение}
+Формула называется тождественно ложной, если она принимает значение ложь на каждой оценке списка.
+
+
+\section{Тавтологии}
+\begin{itemize}
+    \item $A \vee \neg A$
+    \item $A \supset A$
+    \item $(A \supset B) \supset ((B \supset C) \supset (A \supset C))$ --- ценное рассуждение \\
+    \paragraph{Доказательство}
+    ~\\
+    \includegraphics[scale=0.3]{images/part07_01.png}
+    \item $(A \supset (B \supset C)) \supset ((A \supset B) \supset (A \supset C))$ \\
+    \paragraph{Доказательство}
+    ~\\
+    \includegraphics[scale=0.3]{images/part07_02.png}
+\end{itemize}
+
+
+
+\section{Посылки, рассуждения, заключения}
+
+\subsection{Определения}
+\begin{itemize}
+    \item $P_1, \dots, P_n$ --- посылки
+    \item $D$ --- заключение
+    \item Рассуждение --- правильное, если $(P_1 ~ ~\&~ ~ P_2 ~ ~\&~ ~ \dots ~ ~\&~ ~ P_n) \supset D$ --- тождественно инстинно
+    \item Схема --- $\frac{P_1, \dots, P_n}{D}$
+\end{itemize}
+
+
+\subsubsection{Примеры}
+\paragraph{Дано}
+~\\
+Проверить правильность следующего рассуждения. \\
+Если Джонс не встречал этой ночью Смита, то либо Смит был убийцой, либо Джонс лжёт. \\
+Если Смит не был убийцей, то Джонс не встречал Смита этой ночью, и убийство имело место после полуночи. \\
+Если убийство было совершено после полуночи, то либо Смит был убийцей, либо Джонс лжёт. \\
+Следовательно, Смит был убийцей.
+
+\paragraph{Высказывания}
+\begin{itemize}
+    \item $A$ --- 'Джонс не встречал ночью Смита'
+    \item $B$ --- 'Смит --- убийца'
+    \item $C$ --- 'Джонс лжёт'
+    \item $D$ --- 'Убийство после полуночи'
+\end{itemize}
+
+\paragraph{Посылки}
+\begin{itemize}
+    \item $P_1 = A \supset (B + C)$
+    \item $P_2 = \neg B \supset (A ~\&~ D)$
+    \item $P_3 = D \supset (B + C)$
+\end{itemize}
+
+\paragraph{Заключение}
+~\\
+$Q = B$
+
+\paragraph{Решение}
+~\\
+\includegraphics[scale=0.3]{images/part07_03.png}
+
+\paragraph{Ответ}
+~\\
+Рассуждение правильно
+
+
+\subsection{Пример}
+\paragraph{Дано}
+~\\
+Проверить правильность следующего рассуждения. \\
+Если Иван приходит домой не поздно и в хорошем настроении, то он смотрит телевизор. \\
+Когда он смотрит телевизор, то всегда что-нибудь ест. \\
+Иван пришёл домой не поздно и ничего не ест. \\
+Следовательно, он пришёл домой в плохом настроении.
+
+\paragraph{Высказывания}
+\begin{itemize}
+    \item $A$ --- 'Иван пришёл не поздно'
+    \item $B$ --- 'Иван пришёл в хорошем настроении'
+    \item $C$ --- 'Иван смотрит телевизор'
+    \item $D$ --- 'Иван что-нибудь ест'
+\end{itemize}
+
+\paragraph{Посылки}
+\begin{itemize}
+    \item $P_1 = (A ~\&~ B) \supset C$
+    \item $P_2 = C \supset D$
+    \item $P_3 = A ~\&~ \neg D$
+\end{itemize}
+
+\paragraph{Заключение}
+~\\
+$Q = \neg B$
+
+\paragraph{Решение}
+~\\
+\includegraphics[scale=0.3]{images/part07_04.png}
+
+\paragraph{Ответ}
+~\\
+Рассуждение правильное
+
+
+
+
+\newpage
+\part{Нормальные формы формул}
+
+\section{Введение}
+
+\subsection{Определение}
+Символы конъюнкции и дизъюнкции называются двойственными
+\begin{gather*}
+    ~\&~, \vee \text{ --- двойственные символы} \\
+    A^* \text{ --- двойственна } A, \text{ если в } A: ~\&~ \leftrightarrow \vee
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    (\neg x ~\&~ (y \vee z))^* \equiv \neg x \vee (y ~\&~ \neg z)
+\]
+
+\subsection{Теорема (пр. двойств.)}
+\begin{itemize}
+    \item $A \equiv B \Rightarrow A^* \equiv B^*$
+    \item $A \supset B \equiv \neg A \vee B \equiv \neg (A ~\&~ \neg B)$
+    \item $A \sim B \equiv (A ~\&~ B) \vee (\neg A ~\&~ \neg B) \equiv (A \supset B) ~\&~ (B \supset A) \equiv (\neg A \vee B) ~\&~ (A \vee \neg B)$
+    \item $A + B \equiv \neg (A \sim B) \equiv (A ~\&~ \neg B) \vee (\neg A ~\&~ B) \equiv (A \vee B) ~\&~ (\neg A \vee \neg B)$
+\end{itemize}
+
+
+
+\section{Свойства}
+
+\subsection{Коммутативность}
+\[
+    A \vee B \equiv B \vee A
+\]
+
+\subsection{Ассоциативность}
+\[
+    A \vee (B \vee C) \equiv (A \vee B) \vee C 
+\]
+
+\subsection{Дистрибутивность}
+\[
+    A \vee (B ~\&~ C) \equiv (A \vee B) ~\&~ (A \vee C)
+\]
+
+\subsection{Идемпотентность}
+\[
+    A \vee A = A
+\]
+
+\subsection{Закон де Моргана}
+\[
+    \neg (A \vee B) = \neg A ~\&~ \neg B
+\]
+
+\subsection{Поглощение}
+\[
+    A \vee (A ~\&~ B) = A
+\]
+
+\subsection{Расщепление}
+\[
+    A \equiv (A \vee B) ~\&~ (A \vee \neg B)
+\]
+
+\subsection{Снятие двойного отрицания}
+\[
+    \neg \neg A \equiv A
+\]
+
+
+
+\section{Обобщённые законы}
+\subsection{Закон де Моргана}
+\[
+    \neg (A_1 \vee \dots \vee A_n) = \neg A_1 ~\&~ \dots ~\&~ \neg A_n
+\]
+
+\subsection{Дистрибутивность}
+\begin{gather*}
+    (A_1 ~\&~ \dots ~\&~ A_k) \vee (B_1 ~\&~ \dots ~\&~ B_m) \equiv \\
+    \equiv (A_1 \vee B_1) ~\&~ (A_1 \vee B_2) ~\&~ \dots ~\&~ (A_1 \vee B_m) ~\&~ (A_2 \vee B_1) ~\&~ \dots ~\&~ (A_k \vee B_m)
+\end{gather*}
+
+
+
+\section{ДНФ и КНФ}
+Дизъюнктивные и конъюнктивные нормальные формы формул
+
+\subsection{Определение}
+Элементарная конъюнкция --- конюънкция переменных или их отрицание.
+
+\subsubsection{Пример}
+\[
+    x, \neg y, x ~\&~ y ~\&~ \neg z
+\]
+
+
+\subsection{Определение}
+Элементарная дизъюнкция --- дизъюнкция переменных или их отрицание.
+
+\subsubsection{Пример}
+\[
+    x, \neg x \vee y \vee z
+\]
+
+
+\subsection{Определение}
+$F$ в ДНФ, если $F$ --- дизъюнкция элементарных конъюнкций (возможно, одного)
+
+
+\subsection{Определение}
+$F$ в КНФ, если $F$ --- конъюнкция элементарных дизъюнкций (возможно, одного)
+
+\subsubsection{Пример (для обоих определений)}
+\[
+    x, \neg y, x ~\&~ y, \neg x \vee z \text{ --- ДНФ, КНФ}
+\]
+
+\subsubsection{Пример (для обоих определений)}
+\[
+    (x ~\&~ \neg y) \vee (x ~\&~ y ~\&~ \neg z) \text{ --- ДНФ}
+\]
+
+\subsubsection{Пример (для обоих определений)}
+\[
+    (\neg x \vee y) ~\&~ (z \vee x) \text{ --- КНФ}
+\]
+
+
+
+\subsection{Алгоритм ДНФ (КНФ)}
+\begin{enumerate}
+    \item $\supset$, $\sim$, \dots $\rightarrow$ $\{\&, \vee, \neg\}$
+    \item $\neg$ --- тесные (перед переменной, а не перед скобкой) --- закон Де Моргана
+    \item Обобщённый закон дистрибутивности
+\end{enumerate}
+
+
+\subsection{Практика}
+\subsubsection{Пример}
+\begin{gather*}
+    \neg(x \supset \neg y) \sim (\neg y \supset \neg z) \equiv
+    \neg(\neg x \vee \neg y) \sim (y \vee \neg z) \equiv
+    (x ~\&~ y) \sim (y \vee \neg z) \equiv \\
+    (x ~\&~ y ~\&~ (y \vee \neg z)) \vee (\neg (x ~\&~ y) ~\&~ \neg (y \vee \neg z)) \equiv
+    (x ~\&~ y) \vee ((\neg x \vee \neg y) ~\&~ \neg y ~\&~ z) \equiv
+    (x ~\&~ y) \vee (\neg y ~\&~ z)_{--- ДНФ} \equiv \\
+    (x \vee \neg y) ~\&~ (x \vee z) ~\&~ (y \vee \neg y) ~\&~ (y \vee z) \equiv
+    (x \vee \neg y) ~\&~ (x \vee z) ~\&~ (y \vee z) 
+\end{gather*}
+\includegraphics[scale=0.3]{images/part08_01.png}
+
+
+\section{Совершенные ДНФ и КНФ (СДНФ, СКНФ)}
+\[
+    F <X_1, \dots, X_n> \text{ в СДНФ (СКФН), если}:
+\]
+\begin{enumerate}
+    \item $F$ в ДНФ (КНФ)
+    \item $\forall$ элементов \&-ия ($\vee$-ия) упорядочена по всему СП: ~~~~~ $i: X_i$ или $\neg x_i$
+    \item $\forall$ элементов \&-ия ($\vee$-ия) ед.
+\end{enumerate}
+
+\subsection{Теорема}
+\[
+    \forall F ~\cancel{\equiv}~ \text{Т.-Л. (Т-И.)} \rightarrow \text{СДНФ (СКНФ). Единств. с точн. до наоборот}
+\]
+
+\subsection{Алгоритм}
+\begin{enumerate}
+    \item $F$ в ДНФ (КНФ)
+    \item Закон расщепления и коммутативность
+    \item Удаляем все одиночные элементы ~\&~ ($\vee$), кроме одной
+\end{enumerate}
+
+
+\subsection{Пример}
+\includegraphics[scale=0.3]{images/part08_02.png}
+
+
+
+\paragraph{2024.11.26 (3, 4)}
+\section{???}
+\subsection{Пример | РГР-5(б)}
+\begin{gather*}
+    \neg(x \subset y) \sim \neg(z \& \neg x) \equiv
+    \neg(\neg x \vee y) \sim \neg(z \& \neg x) \equiv
+    (x \& \neg y) \sim (\neg z \vee x) \equiv \\
+    \equiv (x \& \neg y (\neg z \vee x)) \vee (\neg(x \& \neg y) \& \neg(\neg z \vee x)) \equiv
+    (x \& \neg y) \vee ((\neg x \vee y) \& z \& \neg x) \equiv
+    (x \& \neg y) \vee (z \& \neg x) \equiv \\
+    \equiv (x \& \neg y \& z) \vee (x \& \neg y \& \neg z) \vee (\neg x \& y \& z) \vee (\neg x \& \neg y \& z) \equiv \\
+    \equiv (x \vee z) \& (x \vee \neg x) \& (\neg y \vee z) \& (\neg y \vee \neg x) \equiv
+    (x \vee z) \& (\neg y \vee z) \& (\neg y \vee \neg x) \equiv
+    (x \vee y \vee z) \& (x \vee \neg y \vee z) \& (x ) ...
+\end{gather*}
+
+
+
+
+\part{Булевы функции}
+
+\section{Введение}
+
+\subsection{Определение}
+\begin{gather*}
+    f(x_1, \dots, x_n): \{0, 1\}^n \rightarrow \{0, 1\} \\
+    \text{И} \leftrightarrow 0, \text{Л} \leftrightarrow 1 \\
+    \neg x \rightarrow \overline{x}, F \equiv G \rightarrow f = g, + \text{ --- исключающее 'или' } \rightarrow +\mod 2 
+\end{gather*}
+
+\subsubsection{Пример | РГР-5(в)}
+\[
+    (\overline{x \subset y}) \sim (\overline{z \& \overline{x}})
+\]
+\begin{tabular}{c|c|c|c|c|c|c|c}
+    $x$ & $y$ & $z$ & $x \subset y$ & $\overline{x \subset y}$ & $\overline{x}$ & $z \& \overline{x}$ & $(\overline{x \subset y}) \sim (\overline{z \& \overline{x}})$ \\
+    \hline
+    $1$ & $1$ & $1$ & $1$           & $0$                      & $0$            & $0$                 & $0$ \\
+    $1$ & $1$ & $0$ & $1$           & $0$                      & $0$            & $0$                 & $0$ \\
+    $1$ & $0$ & $1$ & $0$           & $1$                      & $0$            & $0$                 & $0$ \\
+    $1$ & $0$ & $0$ & $0$           & $1$                      & $0$            & $0$                 & $0$ \\
+    $0$ & $1$ & $1$ & $1$           & $0$                      & $1$            & $0$                 & $0$ \\
+    $0$ & $1$ & $0$ & $1$           & $0$                      & $1$            & $0$                 & $0$ \\
+    $0$ & $0$ & $1$ & $1$           & $0$                      & $1$            & $0$                 & $0$ \\
+    $0$ & $0$ & $0$ & $1$           & $0$                      & $1$            & $0$                 & $0$ \\
+\end{tabular}
+
+\subsection{Теорема | Представление функции в виде формулы в СДНФ}
+\[
+    \forall f \cancel{\equiv} 0 \text{ м. предст. } F \text{ в СДНФ } \langle x_1, \dots, x_n \rangle. \text{Единств.} \\
+\]
+\begin{gather*}
+    x^1 = x; x^0 = \overline{x} \\
+    \langle t \rangle = \langle t_1, \dots, t_n \rangle. \text{Эл. \&-ия} x_1^{t_1} \& x_2^{t_2} \& \dots \& x_n^{t_n} \text{ --- ассоциир. с} \langle t \rangle \\
+    \langle 1, 0, 1 \rangle \text{ --- } x_1^1 \& x_2^0 \& x_3^1 = x_1 \& \overline{x_2} \& x_3
+\end{gather*}
+
+\subsubsection{Алгоритм $f \to F$ в СДНФ}
+\begin{enumerate}
+    \item $\forall \langle t \rangle = \langle t_1, \dots, t_n \rangle: f(t_1, \dots, t_n) = 1$.
+    \item $\forall \langle t \rangle: f(t) = 1 \leftrightarrow x_1^{t_1} \& x_2^{t_2} \& \dots \& x_n^{t_n}$
+    \item $F = \vee ...$ 
+\end{enumerate}
+
+\subsubsection{Пример | РГР-5(г)}
+\begin{tabular}{c|c|c|c|c}
+    $x$ & $y$ & $z$ & $f$   & СДНФ                 \\
+    \hline
+    $1$ & $1$ & $1$ & $0$   &                      \\  
+    $1$ & $1$ & $0$ & $0$   &                      \\
+    $1$ & $0$ & $1$ & $1^*$ & $x^1 \& y^0 \& z^1$  \\
+    $1$ & $0$ & $0$ & $1^*$ & $x^1 \& y^0 \& z^0$  \\
+    $0$ & $1$ & $1$ & $1^*$ & $x^0 \& y^1 \& z^1$  \\
+    $0$ & $1$ & $0$ & $0$   &                      \\
+    $0$ & $0$ & $1$ & $1^*$ & $x^0 \& y^0 \& z^1$  \\
+    $0$ & $0$ & $0$ & $0$   &    
+\end{tabular}
+
+
+\subsection{Теорема | о предет. $f$ в СДНФ}
+\begin{gather*}
+    \forall f \cancel{\equiv} 1 \text{ м. предет. } F \text{ в СДНФ } \langle x_1, \dots, x_n \rangle. \text{ Единств.} \\
+    \langle t \rangle = \langle t_1, \dots, t_n \rangle ~~~ \text{эл. } \vee \text{-ия} x_1^{1 - t_1} \vee x_2^{1 - t_2} \vee \dots \vee x_n^{1 - t_n} \text{ --- ассоц. с } \langle t \rangle \\
+    \langle 1, 0, 1 \rangle \text{ --- } x_1^{1 - 1} \vee x_2^{1 - 0} \vee x_3^{1 - 1} = x_1^0 \vee x_2^1 \vee x_3^0 = \overline{x_1} \vee x_2 \vee \overline{x_3}
+\end{gather*}
+
+\subsubsection{Алгоритм $f \to$ в СКНФ}
+\begin{enumerate}
+    \item ...
+\end{enumerate}
+
+\begin{tabular}{c|c|c|c|c}
+    $x$ & $y$ & $z$ & $f$   & СКНФ                    \\
+    \hline
+    $1$ & $1$ & $1$ & $0$   & $x^0 \vee y^0 \vee z^0$ \\  
+    $1$ & $1$ & $0$ & $0$   & $x^0 \vee y^0 \vee z^1$ \\
+    $1$ & $0$ & $1$ & $1^*$ &                         \\
+    $1$ & $0$ & $0$ & $1^*$ &                         \\
+    $0$ & $1$ & $1$ & $1^*$ &                         \\
+    $0$ & $1$ & $0$ & $0$   & $x^1 \vee y^0 \vee z^1$ \\
+    $0$ & $0$ & $1$ & $1^*$ &                         \\
+    $0$ & $0$ & $0$ & $0$   & $x^1 \vee y^1 \vee z^1$
+\end{tabular}
+
+
+
+\section{Полные системы булевых функций}
+
+\subsection{Определение}
+    $\{f_1, \dots, f_m\}$ --- полная, если для любой булевой функции можно выразить через \\
+    $f_1, \dots, f_m$ с помощью суперпозиций. 
+\begin{gather*}
+    f_1(x_1, \dots, x_{k_1}), \dots, f_m(x_1, \dots, x_{k_m}) \\
+    f_z(x_1, \dots, x_{i - 1}, x_i, x_{i + 1}, \dots, x_{k_t}) \\
+\end{gather*}
+
+\subsubsection{Достаточное условие полноты}
+\begin{gather*}
+    \text{Пусть } \{f_1, \dots, f_m\} \text{ --- полная.} \\
+    \text{Тогда } \{g_1, \dots, g_k\} \text{ --- полная.} \\
+    \text{Если  } \forall f_1, \dots, f_m \text{ можно выразить через } \{g_1, \dots, g_k\} \text{с помощью суперпозиции}. \\
+    \{\&, \vee, \neg\} \text{ --- полная} \\
+    f_1 \text{ --- } \&, f_2 \text{ --- } \vee, f_3 \text{ --- } \neg \\
+\end{gather*}
+\paragraph{Доказать полноту $\{\vee, \neg\}$}
+\begin{gather*}
+    g_1 \text{ --- } \vee, g_2 \text{ --- } \neg \\
+    f_2(x, y) \equiv g_1(x, y) \\
+    f_3(x) \equiv g_2(x) \\
+    x \& y \equiv \neg(\neg x \vee \neg y) \\
+    f_1(x, y) = g_2(g_1(g_2(x), g_2(y))) \\
+\end{gather*}
+\paragraph{Пункт 2}
+\begin{gather*}
+    \{\subset, 0\} ~~~ g_1 \text{ --- } \subset, g_2 \text{ --- } 0. \\
+    \neg x = x \subset 0 \\
+    x \vee y = (x \subset 0) \subset y ~~~ (A \subset B \equiv \neg A \vee B \Rightarrow A \vee B \equiv \neg A \subset B) \\
+    x \& y = ~~~ (A \subset B \equiv \neg(A \& \neg B) \Rightarrow A \& \neg B \equiv \neg(A \subset B), A \& B \equiv \neg(A \subset \neg B))
+\end{gather*}
+\paragraph{Пункт 3}
+Функция Шеффера
+\[
+    x \big| y \equiv \neg x \vee \neg y
+\]
+
+Функция Вебба
+\[
+    x \circ y \equiv \neg x \& \neg y
+\]
+
+\begin{tabular}{c|c|c|c}
+    $x$ & $y$ & $x \big| y$ & $x \circ y$ \\
+    \hline
+    $1$ & $1$ & $0$ & $0$ \\
+    $1$ & $0$ & $1$ & $0$ \\
+    $0$ & $1$ & $1$ & $0$ \\
+    $0$ & $0$ & $1$ & $1$ 
+\end{tabular}
+
+
+\paragraph{2024.11.26 (4)}
+\section{Многочлены Жегалкина}
+
+\subsection{Определение}
+\begin{gather*}
+    \{\&, +, 1\} \text{ --- полная.} \\
+    x \& y \\
+    \neg x = x + 1 \\
+    x \vee y = \neg(\neg x \& \neg y) = \left( (x + 1) \& (y + 1) \right) + 1 \\
+    \& \to \cdot \Rightarrow \{+, \cdot, 1\}
+\end{gather*}
+
+\subsection{Свойства}
+
+\subsubsection{Коммутативность}
+\[
+    x + y = y + x; x \cdot y = y \cdot x
+\]
+
+\subsubsection{Ассоциативность}
+\[
+    x + (y + z) = (x + y) + z; x \cdot (y \cdot z) = (x \cdot y) \cdot x
+\]
+
+\subsubsection{...}
+\[
+    x \cdot (y + z) = x \cdot y + x \cdot z
+\]
+
+\subsubsection{...}
+\[
+    x + x = 0; x \cdot x = x
+\]
+
+\begin{tabular}{c|c|c|c|c}
+    $x$ & $y$ & $x \& y$ & $x + y$ & $1$ \\
+    \hline
+    $1$ & $1$ & $1$      & $0$     & $1$ \\
+    $1$ & $0$ & $0$      & $1$     & $1$ \\
+    $0$ & $1$ & $0$      & $1$     & $1$ \\
+    $0$ & $0$ & $0$      & $0$     & $1$
+\end{tabular}
+
+
+\subsection{Определение | Многочлен Жегалкина}
+\begin{gather*}
+    \Sigma x_{i_1} \cdot x_{i_2} \cdot \dots \cdot x_{i_k} + a_i, \\
+    \text{где } a_i = const \in \{0, 1\} \\
+    x \vee y = (x + 1) \cdot (y + 1) + 1 =
+    xy + x + y + 1 + 1 = xy + x + y \\
+    x \subset y = \neg x \vee \neg y = 
+    \neg(x \& \neg y) =
+    x \cdot (y + 1) + 1 = xy + x + 1 \\
+    x \sim y = \neg(x + y) = x + y + 1
+\end{gather*}
+\begin{gather*}
+    x \& y = x \cdot y \\
+    \neg x = x + 1 \\
+    x + y \\
+    x \vee y = xy + x + y \\
+    x \subset y = xy + x + 1 \\
+    x \sin y = x + y + 1
+\end{gather*}
+
+\subsubsection{Пример | РГР-5(д)}
+\paragraph{Способ 1}
+\[
+    F = \neg(x \subset y) \sim \neg(z \neg x) \\
+\]
+\begin{enumerate}
+    \item $\neg(x \subset y) = xy + x + 1 + 1 = xy + x$
+    \item $\neg(z \& \neg x) = z(x + 1) + 1 = xz + z + 1$
+    \item $F = \neg(x \subset y) \sim \neg(z \neg x) = xy + x + xz + z + 1 + 1 = xy + x + z$
+\end{enumerate}
+\begin{tabular}{c|c|c|c}
+    $x$ & $y$ & $z$ & $f$ \\
+    \hline
+    $1$ & $1$ & $1$ & $0$ \\
+    $1$ & $1$ & $0$ & $0$ \\
+    $1$ & $0$ & $1$ & $1$ \\
+    $1$ & $0$ & $0$ & $1$ \\
+    $0$ & $1$ & $1$ & $1$ \\
+    $0$ & $1$ & $1$ & $0$ \\
+    $0$ & $0$ & $1$ & $1$ \\
+    $0$ & $0$ & $0$ & $0$
+\end{tabular}
+\begin{gather*}
+    f(1, 1, 0) = 0 ~~~ xy + yz + x + z \big|_{\langle 1, 1, 0 \rangle} = 1 \cdot 1 + 1 \cdot 0 + 1 + 0 = 0 \\
+    f(1, 0, 1) = 1 ~~~ xy + xz + x + z \big|_{\langle 1, 0, 1 \rangle} = 1 \cdot 0 + 1 \cdot 1 + 1 + 1 = 1
+\end{gather*}
+\paragraph{Способ 2}
+$F$ --- в СДНФ ~~~ $\vee \leftrightarrow +$
+\begin{gather*}
+    F = x \overline{y} z + x \overline{y} \overline{z} + \overline{x} y z + \overline{x} \overline{y} z = \\
+    = x(y + 1)z + x(y + 1)(z + 1) + (x + 1)yz + (x + 1)(y + 1)z = \\
+    = xyz + xz + xyz + xy + xz + x + xyz + yz + xyz + xz + yz + x = \\
+    = xy + x + xz + z
+\end{gather*}
+
+
+
+\section{Критерий Поста}
+
+\subsection{Определение}
+Класс функций называется функционально-замкнутым (ФЗК), если любые суперпозиции функций этого класса остаются в этом классе.
+
+\subsubsection{Примеры}
+\begin{enumerate}
+    \item $K$ --- все булевые функции --- ФЗК
+    \item $P_1$ --- функции одной переменной --- ФЗК \\
+    $f(x), g(x) \in P_1; f(g(x)) \in P_1$
+    \item $P_2$ --- функции двух переменных --- не ФЗК \\
+    $f_1(x, y), f_2(x, y) \in P_2; f_1(x, f_2(y, z)) \notin P_2$
+    \item $T_{\overline{1}}$ --- $f(1, 1, \dots, 1) = 0$ \\
+    $+ \in T_{\overline{1}}$ ~~~ $1 + (1 + 1) = 1 \notin T_{\overline{1}}$
+\end{enumerate}
+
+
+\subsection{5 основных ФЗК}
+\begin{enumerate}
+    \item $T_0$ --- сохраняет $0: f(0, 0, \dots, 0) = 0$ \\
+    $\& \in T_0: 0 \& 0 = 0$ \\
+    $\subset \notin T_0: 0 \subset 0 = 1$
+    \item $T_1$ --- сохраняет $1: f(1, 1, \dots, 1) = 1$ \\
+    $\& \in T_1: 1 \& 1 = 1$ \\
+    $\subset \notin T_1: 1 \subset 1 = 1$
+    \item $S$ --- самодвойственная \\
+    $f^*(x_1, \dots, x_n) = \neg f(\neg x_1, \dots, \neg x_n)$ \\
+    $f$ --- самодвойственна, если $f = f^*$ \\
+    $(x \& y)^* = \neg(\neg x \& \neg y) = x \vee y                          ~~~~~ \&,   \vee \notin S$ \\
+    $(x \sim y)^* = \neg(\neg x \sim \neg y) = x + 1 + y + 1 + 1 + 1 = x + y ~~~~~ \sim, +    \notin S$ \\
+    $(1)^* = \neg 1 = 0                                                      ~~~~~ 1,    0    \notin S$ \\
+    $(\neg x)^* = \neg(\neg(\neg x)) = \neg x                                ~~~~~ \neg       \in    S$ \\
+    \item $L$ --- линейные функции \\
+    $f \in L$, если $f$ --- линейный множитель Жегалкина. \\
+    $f(x_1, \dots, x_n) = a_0 + a_1 x + \cdot + a_n x_n$ \\
+    $\vee \notin L: x \vee y = xy + x + y \notin L$ \\
+    $\sim \in    L: x \sim y = x + y + 1  \in    L$ \\
+    \item $M$ --- монотонные функции \\
+    $\langle t \rangle = \langle t_1, \dots, t_n \rangle; \langle s \rangle = \langle s_1, \dots, s_n \rangle$ \\
+    $\text{Частичный порядок: } \langle t \rangle \preccurlyeq \langle s \rangle \Leftrightarrow t_i \le s_i, \forall i \in \overline{1, n}$ \\
+    $\langle 0, 1, 0 \rangle \preccurlyeq \langle 1, 1, 0 \rangle: \langle 0, 1, 0 \rangle \text{ и } \langle 1, 0, 0 \rangle \text{ --- не сравнимы}$ \\
+    $ f(x_1, \dots, x_n) \in M, \text{если } \forall \langle t \rangle \preccurlyeq \langle s \rangle \Rightarrow f(t) \le f(s)$
+\end{enumerate}
+\begin{tabular}{c|c|c|c}
+    $x$ & $y$ & $x \& y$ & $x \sim y$ \\
+    \hline
+    $1$ & $1$ & $1$      & $1$        \\
+    $1$ & $0$ & $0$      & $0$        \\
+    $0$ & $1$ & $0$      & $0$        \\
+    $0$ & $0$ & $0$      & $1$ 
+\end{tabular}
+
+
+\subsection{Теорема | Критерий Поста}
+Для того, чтобы $\{f_1, \dots, f_m\}$ --- полная, необходимо и достаточно, 
+чтобы для $\forall T_0, T_1, S, L, M \exists f_i \in \{f\}$, не принадлежащая этому классу.
+
+\subsubsection{Пример}
+\[
+    \underbrace{\neg x}_{\notin T_0} \neq \underbrace{\&, \vee}_{\in T_0}
+\]
+
+\subsubsection{Пример}
+\[
+    \{\&, \vee, \neg\} \text{ --- полная?}
+\]
+\begin{tabular}{c|c|c|c|c|c}
+    ~         & $T_0$ & $T_1$ & $S$ & $L$ & $M$ \\
+    $\&$      &   +   &   +   &  -  &  -  &  +  \\
+    $\vee$    &   +   &   +   &  -  &  -  &  +  \\
+    $\neg$    &   -   &   -   &  +  &  +  &  -  \\
+    $\subset$ &       &       &     &     &     \\
+    $\sim$    &       &       &     &     &     \\
+    $+$       &   +   &   -   &  -  &  +  &  -  \\
+    $1$       &   -   &   +   &  -  &  +  &  +  \\
+    $0$       &       &       &     &     &     \\
+    $|$       &       &       &     &     &     \\
+    $\circ$   &       &       &     &     &     
+\end{tabular}
+\begin{tabular}{c|c|c|c|c}
+    $x$ & $y$ & $x \& y$ & $x \vee y$ & $\neg x$ \\
+    $1$ & $1$ & $1$      & $1$        & $0$      \\
+    $1$ & $0$ & $0$      & $1$        & $0$      \\
+    $0$ & $1$ & $0$      & $1$        & $1$      \\
+    $0$ & $0$ & $0$      & $0$        & $1$      
+\end{tabular}
+\begin{gather*}
+    1) \&: \\ 
+    0 \& 0 = 0 \in T_0 \\
+    1 \& 1 = 1 \in T_1 \\
+    (x \& y)^* = \dots = x \vee y \notin S \\
+    x \& y = xy \notin L \\
+    2) \vee: \\
+    0 \vee 0 = 0 \in T_0 \\
+    1 \vee 1 = 1 \in T_1 \\
+    (x \vee y)^* = x \& y \notin S \\
+    x \vee y = xy + x + y \notin L \\
+    3) \neg: \\
+    \neg 0 = 1 \notin T_0 \\
+    \neg 1 = 0 \notin T_1 \\
+    (\neg x)^* = \neg x \in S \\
+    \neg x = x + 1 \in L
+\end{gather*}
+\begin{gather*}
+    \neg \notin T_0, \neg \notin T_1, \& \notin S, \vee \notin L, \neg \notin M. \\
+    \{\vee, \neg\} \text{ --- полная}. \\
+    \neg \notin T_0, T_1, M; \vee \notin S, L. \\
+    \{\&, \vee\} \text{ --- неполная}: \&, \vee \in T_0 \\
+    \{\&, +, 1\} \text{ --- полная}. \\
+    \neg \notin T_0, + \notin T_1, + \notin S, \& \notin S, + \notin M. \\
+    +: \\
+    0 + 0 = 0 \in T_0 \\
+    1 + 1 = 0 \notin T_1 \\
+    (x + y)^* = x \sim y \notin S \\
+    x + y \in L \\
+    \langle 0, 1 \rangle \preccurlyeq \langle 1, 1 \rangle, \text{ но } f(0, 1) > f(1, 1)
+    \{+, \neg, 1\} \text{ нет}; L \\
+    \{\vee, 1\} \text{ --- нет}; T_1
+\end{gather*}
+
+
+
+\newpage
+\section{Независимые системы булевых функций}
+\begin{gather*}
+    T_0: \neg \notin T_0 ~~~ \underbrace{\neg x}_{\notin T_0} \neq \dots \&, \vee, +v \dots \\
+    \{\&, \vee, \neg\} \text{ --- полная} \\
+    x \& y \equiv \neg(\neg x \vee \neg y) \Rightarrow \text{ система зависима} \\
+    \{\vee, \neg\} \text{ --- полная, независимая?}
+\end{gather*}
+
+\subsection{Определение}
+$\{f_1, \dots, f_m\}$ --- независимая, если никакая $f$, 
+
+
+
+\newpage
+\part{Логика предикатов}
+
+\section{Введение}
+
+\subsection{Определение | Предикат}
+Предикат --- $n$-местная функция $P^{(n)}_{x_1, \dots, x_n}: M^n = \{$И, Л$\}$
+
+\section{Кванторы}
+
+\subsection{Квантор общности}
+$(\forall x)$ --- для любого $x$
+\begin{itemize}
+    \item $(\forall x) P(x) =$ И $\Leftrightarrow P(x) =$ И для всех $x \in M$.
+    \item $(\forall x) P(x) =$ Л, если $P(x) =$ Л для некоторого $x \in M$.
+\end{itemize}
+$x$ --- связ. перемен.
+
+
+\subsection{Квантор существования}
+$(\exists x)$ --- существование $x$
+\begin{itemize}
+    \item $(\exists x) P(x) =$ И, если $P(x) =$ И для некоторого $x \in M$.
+    \item $(\exists x) P(x) =$ Л $\Leftrightarrow P(x) =$ Л для всех $x \in M$.
+\end{itemize}
+$x$ --- связ.
+
+
+
+
+\end{document}
