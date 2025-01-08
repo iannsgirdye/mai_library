@@ -39,7 +39,6 @@
 ## 4. Сборники
 - ["Как не сдохнуть" от Яны Касьяновой](https://drive.google.com/drive/folders/1gWxsOAPNeuCbiQ0fGdL3hJu5sokCZNTi)
 - ["Как не сдохнуть 2.0" от Евы Заитовой](https://drive.google.com/drive/u/2/folders/1yQ6xCF8Y_2JbCnXkUn84iUSl3NrZUmkB)
-- [Notion от Евы Заитовой](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
 - [Диск Марата](https://t.me/mafiramulDisk)
 - [GitHub LeSaR-school](https://github.com/LeSaR-school/semester-1)
 - [Репозиторий от студента кафедры 804](https://github.com/studyPM804/MAI_study/tree/main)
