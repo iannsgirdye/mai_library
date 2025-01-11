@@ -4,8 +4,12 @@
 
 ## 1. Файлы
 - Задания
-    - Зачёт
-- [Материалы](https://disk.yandex.ru/d/o3osKwJ4lVpmmQ)
+    - [Классные задания и Домашние задания](https://disk.yandex.ru/d/mQ_VbJchWQwWeg)
+    - [Зачёт](https://disk.yandex.ru/d/bVs9VrceDw6riw)
+- Материалы
+    - [Конспекты](https://disk.yandex.ru/d/UcoN0aOw8D8eJA)
+    - [Литература](https://disk.yandex.ru/d/pJ9kPjlfJ37bMQ)
+    - [Маршрутный лист (файл)](https://disk.yandex.ru/i/Sm8Fg-MvwSn-xw)
 
 
 

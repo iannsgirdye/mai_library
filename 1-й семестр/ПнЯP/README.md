@@ -4,6 +4,8 @@
 
 ## 1. Файлы
 - Задания
+    - Домашние задания
+    - [Коллоквиум](https://disk.yandex.ru/d/43H6t7Fxs9Qggw)
 - Материалы
     - Конспекты
     - [Литература](https://disk.yandex.ru/d/HYYcRCVeKr2ZUg)

@@ -3,8 +3,11 @@
 
 
 ## 1. Файлы
-- [Задания](https://disk.yandex.ru/d/5X3NcAKfU5Vd5Q)
-- [Материалы](https://disk.yandex.ru/d/pH0TLmry3GM6-A)
+- Задания
+    - [Курсовой проект](https://disk.yandex.ru/d/Wan4WLFyQ9QDtQ)
+- Материалы
+    - [Конспекты](https://disk.yandex.ru/d/pH5UidMte5GSKQ)
+    - [Литература](https://disk.yandex.ru/d/AWymJshTUgRWbg)
 
 
 

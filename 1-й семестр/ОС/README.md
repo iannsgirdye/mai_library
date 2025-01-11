@@ -4,11 +4,14 @@
 
 ## 1. Файлы
 - Задания
+    - Домашние задания
     - [Зачёт](https://disk.yandex.ru/d/40qsjLXCIQHcJw)
     - [Курсовой проект](https://disk.yandex.ru/d/v9P8RtPLY4uuhA)
 - Материалы
-    - Конспекты
+    - [Конспекты](https://disk.yandex.ru/d/RUffhXhlvl9XJw)
     - [Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g)
+        - Дополнительная
+        - Основная
 
 
 

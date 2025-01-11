@@ -3,8 +3,14 @@
 
 
 ## 1. Файлы
-- [Задания](https://disk.yandex.ru/d/4Pgsro4Bgf6SuA)
-- [Материалы](https://disk.yandex.ru/d/K0emJVj1lD-XBw)
+- Задания
+    - Зачёт и экзамен
+        - [Материалы](https://disk.yandex.ru/d/gJYWlrx5cto4qA)
+        - [Организационное](https://disk.yandex.ru/d/caNZxHIWZbAxfA)
+    - [Лабораторные работы](https://disk.yandex.ru/d/2tV4o2ShwP3jDw)
+- Материалы
+    - [Конспекты](https://disk.yandex.ru/d/B4qiA0PzCNGbXQ)
+    - [Литература](https://disk.yandex.ru/d/wuzTBSTlMCP4Ew)
 
 
 

@@ -4,12 +4,15 @@
 
 ## 1. Файлы
 - Задания
+    - Домашние задания
     - [Контрольные работы](https://disk.yandex.ru/d/DuN2oJ00arwLqA)
-    - [Расчётно-графические работы](https://disk.yandex.ru/i/cQr_8sBzEEni-g)
+    - [Расчётно-графическая работа](https://disk.yandex.ru/d/kDN2yldFuPWfcA)
     - [Экзамен](https://disk.yandex.ru/d/R00xsnH7FUcnbw)
 - Материалы
-    - Конспекты
+    - [Конспекты](https://disk.yandex.ru/d/SB3zomj-P1nVzQ)
     - [Литература](https://disk.yandex.ru/d/_XKes1uV_gjIpA)
+        - Дополнительная
+        - Основная
 
 
 

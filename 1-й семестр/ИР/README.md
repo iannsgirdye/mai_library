@@ -5,7 +5,10 @@
 ## 1. Файлы
 - Задания
     - [Зачёт](https://disk.yandex.ru/d/bu_TStoUiaWOiA)
-- [Материалы](https://disk.yandex.ru/d/7Hn0EzdCXqYF-g)
+    - [Практические занятия](https://disk.yandex.ru/d/WBWdS1ZJNYivbQ)
+- Материалы
+    - [Конспекты](https://disk.yandex.ru/d/xh3aeie8Cr7gTQ)
+    - [Литература](https://disk.yandex.ru/d/jkIYz11h7feu7A)
 
 
 

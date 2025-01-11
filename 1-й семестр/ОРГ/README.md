@@ -4,9 +4,10 @@
 
 ## 1. Файлы
 - Задания
+    - Домашние задания
     - [Зачёт](https://disk.yandex.ru/d/GjcNMGBDEaIWUQ)
 - Материалы
-    - Конспекты
+    - [Конспекты](https://disk.yandex.ru/d/yrVuARmF378nTw)
     - [Литература](https://disk.yandex.ru/d/hKMfXN_s01R_jA)
 
 
