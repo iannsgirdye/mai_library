@@ -38,8 +38,8 @@
 - Аудитория: ГУК, it-11
 
 #### 2.2.2. Ресурсы
-- [Yandex LMS](https://lms.yandex.ru/)
-- [GitLab MAI](https://gitlab.mai.ru/)
+- [Yandex LMS](https://lms.yandex.ru)
+- [GitLab MAI](https://gitlab.mai.ru)
 
 
 ### 2.3. Контрольные работы 
@@ -54,3 +54,21 @@
 ### 2.4. Коллоквиум
 - Дата и время: 27.12.2024, 09:00
 - Аудитория: ГУК, В-221
+
+
+
+## 3. Дополнительно
+### Git
+- [Ёбаный Git!!!](https://ohshitgit.com/ru)
+- [Git](https://git-scm.com)
+- [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU)
+- [Git для новичков](https://habr.com/ru/articles/541258)
+
+### Jupyter Notebook и Markdown
+- [Особенности Jupyter Notebook](https://habr.com/ru/companies/wunderfund/articles/316826)
+- [Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax)
+- [Шпаргалка по Markdown](https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c)
+- [Математический режим Markdown](https://www.upyesp.org/posts/makrdown-vscode-math-notation)
+
+#### Miniconda
+- [Miniconda — Anaconda documentation](https://docs.anaconda.com/miniconda)

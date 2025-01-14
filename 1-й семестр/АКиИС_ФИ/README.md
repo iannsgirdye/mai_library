@@ -48,7 +48,15 @@
 
 
 
-## 3. Дополнительно
+## 3. Олимпиадное программирование
+- [Codeforces](https://maiol2025.contest.codeforces.com/group/lHpeUb0TF4/contests)
+- [Материалы и записи](https://drive.google.com/drive/folders/1j9-1NfpJ4p0-3-4fY8quOsEo9voJigZ4)
+- [Материалы разборов](https://rutube.ru/plst/574701/)
+- [cppreference.com](https://en.cppreference.com/w/)
+- [Группа в Telegram по спортивному программированию](https://t.me/+9SdNTDNlfxYyNDcy)
+
+
+## 4. Дополнительно
 - [О сдаче от Евы Заитовой](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
 - [Материал от Евы Заитовой](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
 - [Репозиторий с материалами](https://github.com/mai-806/fund-wiki/tree/main)

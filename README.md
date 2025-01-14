@@ -3,8 +3,10 @@
 Всё представленное собрано студентами и куратором группы М8О-111БВ-24.
 
 
+
 ## 1. Для кого?
 Институт №8 → Кафедра 806 → ФИИТ → 2024-й год набора
+
 
 
 ## 2. Структура
@@ -14,28 +16,50 @@
 - [Фото-конспекты](https://t.me/mai_library_photo) — фотографии записей на досках
 
 
+
 ## 3. Общие ресурсы 
-### 3.1. МАИ
-- [Telegram (канал) | МАИ](https://t.me/MAIuniversity)
-- [Telegram (канал) | Молодёжка МАИ](https://t.me/molodejkaMAI)
-- [Telegram (канал) | Профком обучающихся МАИ](https://t.me/mai_profkom)
-- [Telegram (канал) | Профбюро Института №8](https://t.me/pb8mai) 
+### 3.1. Лента информации
+[Telegram канал "МАИ"](https://t.me/MAIuniversity)
 
-<i>Различных каналов много, поэтому решил представить самые основные.</i>
+#### 3.1.1. Учёба
+- [Telegram канал "IT-Центр МАИ"](https://t.me/itcmai)
+- [Telegram канал "Цифровая кадровая платформа МАИ"](https://t.me/platforma_mai_ru)
+- [Telegram канал "CONVERSATION CLUB MAI"](https://t.me/conversationclubMAI)
+- [Telegram канал "ВУЦ при МАИ"](https://t.me/vucmai)
 
-### 3.2. Группы студентов
-- [ВКонтакте (группа) | Поток (основная)](https://vk.me/join/7L0TaQLi0mxL9ZKUA2pWpwYlbLSdAN9Ah7I=)
-- [ВКонтакте (группа) | Поток (флуд)](https://vk.me/join/pIP2DyKEjIltNvsJ4iayzDQVHQDyGVG0QTM=)
-- [Telegram (группа) | ФИИТа](https://t.me/+IWtNm2uDIbQ0YTdi)
+#### 3.1.2. Мероприятия
+- [Telegram канал "Дворец культуры и техники МАИ"](https://t.me/dkit_mai)
+- [Telegram канал "Волонтёрский центр МАИ"](https://t.me/volonteermai)
+- [Telegram канал "КВН МАИ (Маёвская лига КВН)"](https://t.me/kvnmai)
+- [Telegram канал "Молодёжка МАИ"](https://t.me/molodejkaMAI)
+- [Telegram канал "Профком обучающихся Московского Авиационного Института"](https://t.me/mai_profkom)
+- [Telegram канал "Профбюро Института №8"](https://t.me/pb8mai)
 
-### 3.3. Организационное
-- [Сайт | Спортивные секции и клубы](https://mai.ru/campus/locations/sport/sections/stud.php)
-- [Сайт | Отзывы о секциях](https://carbonated-mimosa-298.notion.site/532d2159388f416c9921c283e3eb914e)
-- [Telegram (бот) | Расписание МАИ v2.0](https://t.me/mai_timetablebot)
+#### 3.1.3. Спорт
+- [Telegram канал "ХК МАИ"](https://t.me/maihockey)
+- [Telegram канал "Авиаторы. МАИ-МБА"](https://t.me/bk_mai)
 
-### 3.4. Учебное
-- [Сайт | Система электронного обучения МАИ](https://lms.mai.ru)
-- [Telegram (группа) | Спортивное программирование](https://t.me/+9SdNTDNlfxYyNDcy)
+#### 3.1.4. Разное
+- [MAI STORE](https://t.me/maistoreofficial)
+
+
+### 3.2. Взаимодействие
+### 3.2.1. Учебное
+- [Личный кабинет](https://my.mai.ru/lk_student)
+- [Электронная почта](https://mail.mai.education/#1)
+- [Система электронного обучения МАИ](https://lms.mai.ru)
+
+#### 3.2.2. Группы студентов
+- [Основная группа потока ФИИТа ВКонтакте](https://vk.me/join/7L0TaQLi0mxL9ZKUA2pWpwYlbLSdAN9Ah7I=)
+- [Группа потока ФИИТа для флуда ВКонтакте](https://vk.me/join/pIP2DyKEjIltNvsJ4iayzDQVHQDyGVG0QTM=)
+- [Telegram группа потока ФИИТа](https://t.me/+IWtNm2uDIbQ0YTdi)
+
+#### 3.2.3. Организационное
+- [Спортивные секции и клубы](https://mai.ru/campus/locations/sport/sections/stud.php)
+- [Отзывы о секциях](https://carbonated-mimosa-298.notion.site/532d2159388f416c9921c283e3eb914e)
+- [Telegram бот "Расписание МАИ v2.0"](https://t.me/mai_timetablebot)
+- [Telegram бот "Расписание МАИ"](https://t.me/Timetable_MAI_bot)
+
 
 
 ## 4. Сборники
@@ -47,13 +71,13 @@
 - [Кафедра 805](https://dep805.ru)
 
 
-## 5. Разное
-- [Самоучитель по Git (1)](https://learngitbranching.js.org/?locale=ru_RU)
-- [Самоучитель по Git (2)](https://habr.com/ru/articles/541258/)
+
+## 5. Интересное
 - [Python vs C++](https://faq8.ru/read.php?5,15424)
 - [Крылов на форуме](https://postupim.ru/forum/4-4163-1)
 
 
-## Примечание
+
+## Примечания
 - У некоторых пользователей возникал один и тот же вопрос: <b>"Почему нельзя представить все файлы с помощью одной ссылки?"</b> Дело в том, что на диске хранятся файлы, которые не предназначены для общего доступа, поэтому пришлось представлять общедоступные файлы точечно, то есть через отдельные ссылки на группы файлов.
 - В <b>mai_library</b> собраны только те файлы, которые пригодились группе М8О-111БВ-24 (в большинстве случаев). Рекомендую при необходимости смотреть хранилища других ребят (выше), так как программа обучения нередко меняется.
