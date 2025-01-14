@@ -40,7 +40,7 @@
 - [Telegram-канал "Авиаторы. МАИ-МБА"](https://t.me/bk_mai)
 
 #### 3.1.4. Разное
-- [MAI STORE](https://t.me/maistoreofficial)
+- [Telegram-канал "MAI STORE"](https://t.me/maistoreofficial)
 
 
 ### 3.2. Взаимодействие
