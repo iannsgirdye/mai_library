@@ -19,25 +19,25 @@
 
 ## 3. Общие ресурсы 
 ### 3.1. Лента информации
-[Telegram канал "МАИ"](https://t.me/MAIuniversity)
+[Telegram-канал "МАИ"](https://t.me/MAIuniversity)
 
 #### 3.1.1. Учёба
-- [Telegram канал "IT-Центр МАИ"](https://t.me/itcmai)
-- [Telegram канал "Цифровая кадровая платформа МАИ"](https://t.me/platforma_mai_ru)
-- [Telegram канал "CONVERSATION CLUB MAI"](https://t.me/conversationclubMAI)
-- [Telegram канал "ВУЦ при МАИ"](https://t.me/vucmai)
+- [Telegram-канал "IT-Центр МАИ"](https://t.me/itcmai)
+- [Telegram-канал "Цифровая кадровая платформа МАИ"](https://t.me/platforma_mai_ru)
+- [Telegram-канал "CONVERSATION CLUB MAI"](https://t.me/conversationclubMAI)
+- [Telegram-канал "ВУЦ при МАИ"](https://t.me/vucmai)
 
 #### 3.1.2. Мероприятия
-- [Telegram канал "Дворец культуры и техники МАИ"](https://t.me/dkit_mai)
-- [Telegram канал "Волонтёрский центр МАИ"](https://t.me/volonteermai)
-- [Telegram канал "КВН МАИ (Маёвская лига КВН)"](https://t.me/kvnmai)
-- [Telegram канал "Молодёжка МАИ"](https://t.me/molodejkaMAI)
-- [Telegram канал "Профком обучающихся Московского Авиационного Института"](https://t.me/mai_profkom)
-- [Telegram канал "Профбюро Института №8"](https://t.me/pb8mai)
+- [Telegram-канал "Дворец культуры и техники МАИ"](https://t.me/dkit_mai)
+- [Telegram-канал "Волонтёрский центр МАИ"](https://t.me/volonteermai)
+- [Telegram-канал "КВН МАИ (Маёвская лига КВН)"](https://t.me/kvnmai)
+- [Telegram-канал "Молодёжка МАИ"](https://t.me/molodejkaMAI)
+- [Telegram-канал "Профком обучающихся Московского Авиационного Института"](https://t.me/mai_profkom)
+- [Telegram-канал "Профбюро Института №8"](https://t.me/pb8mai)
 
 #### 3.1.3. Спорт
-- [Telegram канал "ХК МАИ"](https://t.me/maihockey)
-- [Telegram канал "Авиаторы. МАИ-МБА"](https://t.me/bk_mai)
+- [Telegram-канал "ХК МАИ"](https://t.me/maihockey)
+- [Telegram-канал "Авиаторы. МАИ-МБА"](https://t.me/bk_mai)
 
 #### 3.1.4. Разное
 - [MAI STORE](https://t.me/maistoreofficial)
@@ -52,13 +52,13 @@
 #### 3.2.2. Группы студентов
 - [Основная группа потока ФИИТа ВКонтакте](https://vk.me/join/7L0TaQLi0mxL9ZKUA2pWpwYlbLSdAN9Ah7I=)
 - [Группа потока ФИИТа для флуда ВКонтакте](https://vk.me/join/pIP2DyKEjIltNvsJ4iayzDQVHQDyGVG0QTM=)
-- [Telegram группа потока ФИИТа](https://t.me/+IWtNm2uDIbQ0YTdi)
+- [Telegram-группа потока ФИИТа](https://t.me/+IWtNm2uDIbQ0YTdi)
 
 #### 3.2.3. Организационное
 - [Спортивные секции и клубы](https://mai.ru/campus/locations/sport/sections/stud.php)
 - [Отзывы о секциях](https://carbonated-mimosa-298.notion.site/532d2159388f416c9921c283e3eb914e)
-- [Telegram бот "Расписание МАИ v2.0"](https://t.me/mai_timetablebot)
-- [Telegram бот "Расписание МАИ"](https://t.me/Timetable_MAI_bot)
+- [Telegram-бот "Расписание МАИ v2.0"](https://t.me/mai_timetablebot)
+- [Telegram-бот "Расписание МАИ"](https://t.me/Timetable_MAI_bot)
 
 
 
