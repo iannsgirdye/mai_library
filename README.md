@@ -63,12 +63,12 @@
 
 
 ## 4. Сборники
-- ["Как не сдохнуть" от Яны Касьяновой](https://drive.google.com/drive/folders/1gWxsOAPNeuCbiQ0fGdL3hJu5sokCZNTi)
-- ["Как не сдохнуть 2.0" от Евы Заитовой](https://drive.google.com/drive/u/2/folders/1yQ6xCF8Y_2JbCnXkUn84iUSl3NrZUmkB)
-- [Диск Марата](https://t.me/mafiramulDisk)
-- [GitHub LeSaR-school](https://github.com/LeSaR-school/semester-1)
-- [Репозиторий от студента кафедры 804](https://github.com/studyPM804/MAI_study/tree/main)
-- [Кафедра 805](https://dep805.ru)
+- ["Как не сдохнуть" от Яны Касьяновой с кафедры 806](https://drive.google.com/drive/folders/1gWxsOAPNeuCbiQ0fGdL3hJu5sokCZNTi)
+- ["Как не сдохнуть 2.0" от Евы Заитовой с кафедры 806](https://drive.google.com/drive/u/2/folders/1yQ6xCF8Y_2JbCnXkUn84iUSl3NrZUmkB)
+- [Диск Марата Вещина с кафедры 805](https://t.me/mafiramulDisk)
+- [Репозиторий студента c кафедры 804](https://github.com/studyPM804/MAI_study/tree/main)
+- [Репозиторий студента с кафедры 806](https://github.com/LeSaR-school/semester-1)
+- [Сайт кафедры 805](https://dep805.ru)
 
 
 
