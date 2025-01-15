@@ -82,19 +82,19 @@
 - [Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
 
 ### 6.1. Информатика
-### 6.1.1. Текстовые редакторы
+#### 6.1.1. Текстовые редакторы
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [vim](https://www.vim.org/download.php)
 - [Notepad++](https://notepad-plus-plus.org/downloads/)
 
-### 6.1.2. WSL
+#### 6.1.2. WSL
 - [Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
 
-### 6.1.3. Термины
+#### 6.1.3. Термины
 - [Понятие стека](https://skillbox.ru/media/code/prostymi-slovami-chto-takoe-stek-i-kak-on-ustroen)
 - [Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194/)
 
-### 6.1.4. Языки программирования
+#### 6.1.4. Языки программирования
 - [Начало работы в C/C++](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
 
 
