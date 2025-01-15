@@ -78,6 +78,33 @@
 
 
 
+## 6. Дополнительно
+- [Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
+
+### 6.1. Информатика
+### 6.1.1. Текстовые редакторы
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [vim](https://www.vim.org/download.php)
+- [Notepad++](https://notepad-plus-plus.org/downloads/)
+
+### 6.1.2. WSL
+- [Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
+
+### 6.1.3. Термины
+- [Понятие стека](https://skillbox.ru/media/code/prostymi-slovami-chto-takoe-stek-i-kak-on-ustroen)
+- [Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194/)
+
+### 6.1.4. Языки программирования
+- [Начало работы в C/C++](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
+
+
+### 6.2. Математика
+- [mathprofi.net](https://mathprofi.net)
+- [Mathway](https://www.mathway.com)
+- [MathDF](https://mathdf.com)
+
+
+
 ## Примечания
 - У некоторых пользователей возникал один и тот же вопрос: <b>"Почему нельзя представить все файлы с помощью одной ссылки?"</b> Дело в том, что на диске хранятся файлы, которые не предназначены для общего доступа, поэтому пришлось представлять общедоступные файлы точечно, то есть через отдельные ссылки на группы файлов.
 - В <b>mai_library</b> собраны только те файлы, которые пригодились группе М8О-111БВ-24 (в большинстве случаев). Рекомендую при необходимости смотреть хранилища других ребят (выше), так как программа обучения нередко меняется.
