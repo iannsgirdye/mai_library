@@ -56,6 +56,9 @@
 
 
 ## 3. Дополнительно
+- [О сдаче от Евы Заитовой](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view)
+- [Материалы от Евы Заитовой](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f)
+
 ### Git
 - [Ёбаный Git!!!](https://ohshitgit.com/ru)
 - [Git](https://git-scm.com)
