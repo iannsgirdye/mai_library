@@ -4,10 +4,8 @@
 
 ## 1. Файлы
 - Задания
-    - Зачёт и экзамен
-        - [Материалы](https://disk.yandex.ru/d/gJYWlrx5cto4qA)
-        - [Организационное](https://disk.yandex.ru/d/caNZxHIWZbAxfA)
-    - [Лабораторные работы](https://disk.yandex.ru/d/2tV4o2ShwP3jDw)
+    - [Зачёт и экзамен](https://disk.yandex.ru/d/EDDUyXTcOExRvw)
+    - [Лабораторные работы и Курсовой проект](https://disk.yandex.ru/d/2tV4o2ShwP3jDw)
 - Материалы
     - [Конспекты](https://disk.yandex.ru/d/B4qiA0PzCNGbXQ)
     - [Литература](https://disk.yandex.ru/d/wuzTBSTlMCP4Ew)

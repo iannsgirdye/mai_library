@@ -104,6 +104,18 @@
 - [MathDF](https://mathdf.com)
 
 
+### 6.3. Мероприятия
+- [Росмолодёжь](https://fadm.gov.ru)
+- [ФГАИС "Молодёшь России"](https://myrosmol.ru)
+- [Росмолодёшь Бизнес](https://rosmolbusiness.ru)
+- [Наука РФ](https://наука.рф)
+
+### 6.4. Курсы
+- [Яндекс Образование](https://education.yandex.ru)
+- [Яндекс Практикум](https://practicum.yandex.ru)
+- [Yoyng&&Yandex](https://yandex.ru/yaintern?utm_campaign=crm-school24&utm_content=ambiki&utm_medium=social&utm_source=telegram&utm_term=amb)
+
+
 
 ## Примечания
 - У некоторых пользователей возникал один и тот же вопрос: <b>"Почему нельзя представить все файлы с помощью одной ссылки?"</b> Дело в том, что на диске хранятся файлы, которые не предназначены для общего доступа, поэтому пришлось представлять общедоступные файлы точечно, то есть через отдельные ссылки на группы файлов.

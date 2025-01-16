@@ -3,11 +3,9 @@
 
 
 ## 1. Файлы
-- Задания
-    - Домашние задания
-    - [Коллоквиум](https://disk.yandex.ru/d/43H6t7Fxs9Qggw)
+- [Задания (Коллоквиум)](https://disk.yandex.ru/d/omJNdyqn-2MpTg)
 - Материалы
-    - Конспекты
+    - [Конспекты](https://disk.yandex.ru/d/Fig0qABwwLwB4g)
     - [Литература](https://disk.yandex.ru/d/HYYcRCVeKr2ZUg)
 
 

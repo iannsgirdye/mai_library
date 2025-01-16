@@ -4,7 +4,6 @@
 
 ## 1. Файлы
 - Задания
-    - Домашние задания
     - [Контрольные работы](https://disk.yandex.ru/d/DuN2oJ00arwLqA)
     - [Расчётно-графическая работа](https://disk.yandex.ru/d/kDN2yldFuPWfcA)
     - [Экзамен](https://disk.yandex.ru/d/R00xsnH7FUcnbw)

@@ -4,7 +4,6 @@
 
 ## 1. Файлы
 - Задания
-    - Домашние задания
     - [Зачёт](https://disk.yandex.ru/d/40qsjLXCIQHcJw)
     - [Курсовой проект](https://disk.yandex.ru/d/v9P8RtPLY4uuhA)
 - Материалы
