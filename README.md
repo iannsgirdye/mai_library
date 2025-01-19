@@ -102,6 +102,7 @@
 - [mathprofi.net](https://mathprofi.net)
 - [Mathway](https://www.mathway.com)
 - [MathDF](https://mathdf.com)
+- [Desmos](https://www.desmos.com)
 
 
 ### 6.3. Мероприятия
