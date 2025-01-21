@@ -55,8 +55,8 @@
 
 
 ## 4. Дополнительно
-- [О сдаче от Евы Заитовой](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
-- [Материалы от Евы Заитовой](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
+- [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
+- [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
 - [Репозиторий с материалами](https://github.com/mai-806/fund-wiki/tree/main)
 - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0)
 

@@ -28,7 +28,7 @@
 
 ### 2.3. Экзамен
 #### 2.3.1. Содержание
-???
+<i>(нет информации)</i>
 
 #### 2.3.2. Консультации
 | Группа       | Дата и время      | Аудитория  |
@@ -54,4 +54,4 @@
 
 ### 3. Дополнительно
 - [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
-- [Лекции Смерчинской](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
+- [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
