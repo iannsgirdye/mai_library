@@ -1,62 +1,57 @@
 # Доска почёта (aka Вклад людей в проект)
 
 ## Архитектура компьютера и информационных систем. Фундаментальная информатика
-### Диск
-<i>(не соотнесены)</i>
+| Человек | Сведения |
+|---------|----------|
+| Ева Заитова | - [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link) <br> - [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95) <br> - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0) |
 
-### Репозиторий
-- Ева Заитова:
-    - [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
-    - [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
-    - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0)
+<i>(Файлы на диске не соотнесены)</i>
 
 
-## Введение в авиационную и ракетно-космическую технику | Репозиторий
-- Ева Заитова:
-    - [Проект команды потока 2023-2024](https://drive.google.com/drive/folders/1o0PawGJvDIvxROh8MbsW27_gF5fWdRFH?ths=true)
-    - [Таблица команд потока 2023-2024](https://docs.google.com/spreadsheets/d/1DztVer0hMbh-3jpedcu58X6jfaTXOvcm/edit?gid=1783731706#gid=1783731706)
-- Даня Палкин (М8О-111БВ-24): ГОСТ 7.32 2017
+## Введение в авиационную и ракетно-космическую технику
+| Человек | Сведения |
+|---------|----------|
+| Ева Заитова | - [Проект команды потока 2023-2024](https://drive.google.com/drive/folders/1o0PawGJvDIvxROh8MbsW27_gF5fWdRFH?ths=true) <br> - [Таблица команд потока 2023-2024](https://docs.google.com/spreadsheets/d/1DztVer0hMbh-3jpedcu58X6jfaTXOvcm/edit?gid=1783731706#gid=1783731706) |
+| Даня Палкин (М8О-111БВ-24) | ГОСТ 7.32 2017 |
+
 
 ## Дискретная математика
-### Диск
-<i>(не соотнесены)</i>
+| Человек | Сведения |
+|---------|----------|
+| Ева Заитова | [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr) |
 
-### Репозиторий
-- Ева Заитова: [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
+<i>(Файлы на диске не соотнесены)</i>
 
 
-## История России | Диск
-- Никита Отмахов (М8О-111БВ-24): конспекты всех лекций
+## История России
+| Человек | Сведения |
+|---------|----------|
+| Никита Отмахов (М8О-111БВ-24) | Конспекты всех лекций |
 
 
 ## Линейная алгебра и аналитическая геометрия
-### Диск
-<i>(не соотнесены)</i>
+| Человек | Сведения |
+|---------|----------|
+| Ева Заитова | [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1FNZpad8SOA08ERgzVAP-BOUpBuzGvFSILeTt5wbS0u8/edit?gid=0#gid=0) |
 
-### Репозиторий
-- Ева Заитова: [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1FNZpad8SOA08ERgzVAP-BOUpBuzGvFSILeTt5wbS0u8/edit?gid=0#gid=0)
+<i>(Файлы на диске не соотнесены)</i>
 
 
 ## Математический анализ
-### Диск
-- Вова Рыбин (М8О-111БВ-24): 
-    - файлы с ответами на вопросы на экзамене
-    - файл с решениями различных задач
-- Артём Мицкевич (М8О-111БВ-24): файлы с ответами на вопросы на экзамене
+| Человек | Сведения |
+|---------|----------|
+| Даня Палкин (М8О-111БВ-24) | Содержание билета на экзамене |
+| Матвей Захарченко (М8О-111БВ-24) | Оценивание на экзамене |
+| Вова Рыбин (М8О-111БВ-24) | - Файлы с ответами на вопросы на экзамене <br> - Файл с решениями различных задач |
+| Артём Мицкевич (М8О-111БВ-24) | Файлы с ответами на вопросы на экзамене | 
 
-<i>(соотнесены не все)</i>
-
-### Репозиторий
-- Даня Палкин (М8О-111БВ-24): Содержание билета на экзамене
-- Матвей Захарченко (М8О-111БВ-24): Оценивание на экзамене 
+<i>(Не все файлы на диске соотнесены)</i>
 
 
-## Программирование на языке Python | Репозиторий
-- Ева Заитова:
-    - [Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view)
-    - [Notion с материалами](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f)
-    - [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU)
-    - [Git для новичков](https://habr.com/ru/articles/541258)
+## Программирование на языке Python
+| Человек | Сведения |
+|---------|----------|
+| Ева Заитова | - [Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view) <br> - [Notion с материалами](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f) <br> - [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU) <br> - [Git для новичков](https://habr.com/ru/articles/541258) |
 
 
 ## Примечания
