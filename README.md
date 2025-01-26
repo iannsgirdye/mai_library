@@ -112,9 +112,13 @@
 - [Наука РФ](https://наука.рф)
 
 ### 6.4. Курсы
+- [VK Education](https://education.vk.company)
 - [Яндекс Образование](https://education.yandex.ru)
 - [Яндекс Практикум](https://practicum.yandex.ru)
-- [Yoyng&&Yandex](https://yandex.ru/yaintern?utm_campaign=crm-school24&utm_content=ambiki&utm_medium=social&utm_source=telegram&utm_term=amb)
+- [Yoyng&&Yandex](https://yandex.ru/yaintern)
+- [Stepik](https://stepik.org)
+- [Хекслет](https://ru.hexlet.io)
+
 
 
 
