@@ -3,7 +3,7 @@
 ## Архитектура компьютера и информационных систем. Фундаментальная информатика
 | Человек | Сведения |
 |---------|----------|
-| Ева Заитова | - [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link) <br> - [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95) <br> - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0) |
+| Ева Заитова | • [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link) <br> • [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95) <br> • [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0) |
 
 <i>(Файлы на диске не соотнесены)</i>
 
@@ -11,7 +11,7 @@
 ## Введение в авиационную и ракетно-космическую технику
 | Человек | Сведения |
 |---------|----------|
-| Ева Заитова | - [Проект команды потока 2023-2024](https://drive.google.com/drive/folders/1o0PawGJvDIvxROh8MbsW27_gF5fWdRFH?ths=true) <br> - [Таблица команд потока 2023-2024](https://docs.google.com/spreadsheets/d/1DztVer0hMbh-3jpedcu58X6jfaTXOvcm/edit?gid=1783731706#gid=1783731706) |
+| Ева Заитова | • [Проект команды потока 2023-2024](https://drive.google.com/drive/folders/1o0PawGJvDIvxROh8MbsW27_gF5fWdRFH?ths=true) <br> • [Таблица команд потока 2023-2024](https://docs.google.com/spreadsheets/d/1DztVer0hMbh-3jpedcu58X6jfaTXOvcm/edit?gid=1783731706#gid=1783731706) |
 | Даня Палкин (М8О-111БВ-24) | ГОСТ 7.32 2017 |
 
 
@@ -38,7 +38,7 @@
 |---------|----------|
 | Даня Палкин (М8О-111БВ-24) | Содержание билета на экзамене |
 | Матвей Захарченко (М8О-111БВ-24) | Оценивание на экзамене |
-| Вова Рыбин (М8О-111БВ-24) | - Файлы с ответами на вопросы на экзамене <br> - Файл с решениями различных задач |
+| Вова Рыбин (М8О-111БВ-24) | • Файлы с ответами на вопросы на экзамене <br> • Файл с решениями различных задач |
 | Артём Мицкевич (М8О-111БВ-24) | Файлы с ответами на вопросы на экзамене | 
 
 <i>(Не все файлы на диске соотнесены)</i>
@@ -47,7 +47,7 @@
 ## Программирование на языке Python
 | Человек | Сведения |
 |---------|----------|
-| Ева Заитова | - [Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view) <br> - [Notion с материалами](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f) <br> - [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU) <br> - [Git для новичков](https://habr.com/ru/articles/541258) |
+| Ева Заитова | • [Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view) <br> • [Notion с материалами](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f) <br> • [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU) <br> • [Git для новичков](https://habr.com/ru/articles/541258) |
 
 
 ## Примечания
