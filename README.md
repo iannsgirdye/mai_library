@@ -18,29 +18,29 @@
 
 
 ## 3. Общие ресурсы 
-### 3.1. Лента информации
-[Telegram-канал "МАИ"](https://t.me/MAIuniversity)
+### 3.1. Лента информации (Telegram-каналы)
+[МАИ](https://t.me/MAIuniversity)
 
 #### 3.1.1. Учёба
-- [Telegram-канал "IT-Центр МАИ"](https://t.me/itcmai)
-- [Telegram-канал "Цифровая кадровая платформа МАИ"](https://t.me/platforma_mai_ru)
-- [Telegram-канал "CONVERSATION CLUB MAI"](https://t.me/conversationclubMAI)
-- [Telegram-канал "ВУЦ при МАИ"](https://t.me/vucmai)
+- [IT-Центр МАИ](https://t.me/itcmai)
+- [Цифровая кадровая платформа МАИ](https://t.me/platforma_mai_ru)
+- [CONVERSATION CLUB MAI](https://t.me/conversationclubMAI)
+- [ВУЦ при МАИ](https://t.me/vucmai)
 
 #### 3.1.2. Мероприятия
-- [Telegram-канал "Дворец культуры и техники МАИ"](https://t.me/dkit_mai)
-- [Telegram-канал "Волонтёрский центр МАИ"](https://t.me/volonteermai)
-- [Telegram-канал "КВН МАИ (Маёвская лига КВН)"](https://t.me/kvnmai)
-- [Telegram-канал "Молодёжка МАИ"](https://t.me/molodejkaMAI)
-- [Telegram-канал "Профком обучающихся Московского Авиационного Института"](https://t.me/mai_profkom)
-- [Telegram-канал "Профбюро Института №8"](https://t.me/pb8mai)
+- [Дворец культуры и техники МАИ](https://t.me/dkit_mai)
+- [Волонтёрский центр МАИ](https://t.me/volonteermai)
+- [КВН МАИ (Маёвская лига КВН)](https://t.me/kvnmai)
+- [Молодёжка МАИ](https://t.me/molodejkaMAI)
+- [Профком обучающихся Московского Авиационного Института](https://t.me/mai_profkom)
+- [Профбюро Института №8](https://t.me/pb8mai)
 
 #### 3.1.3. Спорт
-- [Telegram-канал "ХК МАИ"](https://t.me/maihockey)
-- [Telegram-канал "Авиаторы. МАИ-МБА"](https://t.me/bk_mai)
+- [ХК МАИ](https://t.me/maihockey)
+- [Авиаторы. МАИ-МБА](https://t.me/bk_mai)
 
 #### 3.1.4. Разное
-- [Telegram-канал "MAI STORE"](https://t.me/maistoreofficial)
+- [MAI STORE](https://t.me/maistoreofficial)
 
 
 ### 3.2. Взаимодействие
@@ -103,6 +103,7 @@
 - [Mathway](https://www.mathway.com)
 - [MathDF](https://mathdf.com)
 - [Desmos](https://www.desmos.com)
+- [3Blue1Brown](https://www.3blue1brown.com)
 
 
 ### 6.3. Мероприятия
@@ -111,6 +112,7 @@
 - [Росмолодёшь Бизнес](https://rosmolbusiness.ru)
 - [Наука РФ](https://наука.рф)
 
+
 ### 6.4. Курсы
 - [VK Education](https://education.vk.company)
 - [Яндекс Образование](https://education.yandex.ru)
@@ -118,7 +120,6 @@
 - [Yoyng&&Yandex](https://yandex.ru/yaintern)
 - [Stepik](https://stepik.org)
 - [Хекслет](https://ru.hexlet.io)
-
 
 
 

@@ -53,9 +53,16 @@
 ## 4. Олимпиадное программирование
 - [Codeforces](https://maiol2025.contest.codeforces.com/group/lHpeUb0TF4/contests)
 - [Материалы и записи](https://drive.google.com/drive/folders/1j9-1NfpJ4p0-3-4fY8quOsEo9voJigZ4)
-- [Материалы разборов](https://rutube.ru/plst/574701/)
-- [cppreference.com](https://en.cppreference.com/w/)
+- [Материалы разборов](https://rutube.ru/plst/574701)
+- [cppreference.com](https://en.cppreference.com/w)
 - [Группа в Telegram по спортивному программированию](https://t.me/+9SdNTDNlfxYyNDcy)
+
+
+
+## 5. Дополнительно
+- [Побитовые операции](https://habr.com/ru/companies/metalamp/articles/809549)
+- [Работа с файлами на Си](https://younglinux.info/c/fopen)
+- [Прямой и обратный порядок байтов](https://habr.com/ru/articles/233245)
 
 
 
