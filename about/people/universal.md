@@ -1,3 +1,5 @@
+![Доска почёта | Общие ресурсы](/about/images/mai_library/about/people/universal.png)
+
 # Доска почёта | Общие ресурсы
 
 ## Математика

@@ -1,4 +1,4 @@
-![resources.md](/about/images/mai_library_resources.png)
+![Общие ресурсы](/about/images/mai_library/resources.png)
 
 # Общие ресурсы
 Рекомендую пользоваться навигацией по файлу, потому что здесь очень много букв.

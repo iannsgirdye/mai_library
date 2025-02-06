@@ -1,4 +1,4 @@
-![something.md](/about/images/mai_library_something.png)
+![Разное](/about/images/mai_library/something.png)
 
 # Разное
 Всё, чему нигде не нашлось места на репозитории, находится здесь.

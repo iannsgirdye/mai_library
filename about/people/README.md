@@ -1,4 +1,4 @@
-![mai_library/about/people](/about/images/mai_library_about_people.png)
+![Доска почёта](/about/images/mai_library/about/people.png)
 
 # Доска почёта 
 aka Вклады людей в проект
