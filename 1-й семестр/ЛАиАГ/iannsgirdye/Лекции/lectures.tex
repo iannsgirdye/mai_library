@@ -53,11 +53,47 @@
     \date{2024/2025 учебный год, 1-й семестр}
     \maketitle
     \begin{center}
-        \includegraphics[scale=0.2]{mai.png}
+        \includegraphics[scale=0.2]{images/mai.png}
     \end{center}
 \end{titlepage}
 
 \tableofcontents
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ЛК-1 | 2024.09.06 (1)}
+\part{Матрицы и операции с ними}
+
+\section{Введение}
+
+\subsection{Определения | Матрица и её элементы}
+\begin{itemize}
+    \item Матрица $A$ порядка $m \times n$ ($m$ на $n$) --- это двумерная таблица чисел, состоящая из $m$ строк и $n$ столбцов.
+    \item Каждый элемент матрицы A, лежащий на пересечении $i$-й строки и $j$-го столбца обозначается как $a_{ij}$.
+\end{itemize}
+
+\begin{gather*}
+    A_{m \times n} \overset{\Delta}{=} \underset{i = \overline{1, m}, ~ j = \overline{1, n}}{\left( a_{ij} \right)} = \begin{vmatrix}
+        a_{11} & a_{12} & \dots & a_{1n} \\
+        a_{21} & a_{22} & \dots & a_{2n} \\
+        \dots  & \dots  & \dots & \dots  \\
+        a_{m1} & a_{m2} & \dots & a_{mn}
+    \end{vmatrix}
+\end{gather*}
+
+\subsubsection{Примечание | Написание элементов}
+...
+
+\subsubsection{Примечание | Область определения элементов}
+\[
+    a_{ij} \in \mathbb{R} \text{ или } a_{ij} \in \mathbb{C}.
+\]
+
+
+\section{Виды матриц}
 
 
 
@@ -79,7 +115,7 @@
     \item Свободный
     \item Фиксированный
 \end{itemize}
-\includegraphics[scale=0.2]{lecture08_01.jpg}
+\includegraphics[scale=0.2]{images/lecture08_01.jpg}
 
 
 \subsection{Определение | Модуль вектора}
@@ -87,12 +123,14 @@
 
 
 \subsection{Определение | Нулевой вектор}
+Нулевым вектором $\overline{0}$ называется вектор с нулевой длиной (начало и конец совпадают).
 \[
 |\overline{0}| = 0,  \overline{0} = \overline{AA}
 \]
 
 
-\subsection{Определение | Колленирные векторы}
+\subsection{Определение | Коллинеарные векторы}
+Коллинеарными называют 2 и более векторов, которые параллельны одной и той же прямой.
 \[
     \overline{a}, \overline{b}, \overline{c}, \dots \Rightarrow 
     \overline{a} \parallel \overline{b} \parallel \overline{c} \parallel \dots
@@ -104,15 +142,15 @@
         \overline{a} \uparrow \downarrow \overline{b} \text{ --- противонаправленные} \\
     \end{sqcases}
 \end{align*}
-\includegraphics[scale=0.3]{lecture08_02.jpg}
+\includegraphics[scale=0.3]{images/lecture08_02.jpg}
 
 
 \subsection{Определение | Компланарные векторы}
-Компланарными векторами называются 3 и более векторов в пространстве, которые параллельны плоскости:
+Компланарными называются 3 и более векторов в пространстве, которые параллельны одной и той же плоскости:
 \[
     (\overline{a}, \overline{b}, \overline{c}, \dots) \parallel P
 \]
-\includegraphics[scale=0.15]{lecture08_03.jpg}
+\includegraphics[scale=0.15]{images/lecture08_03.jpg}
 
 
 
@@ -132,10 +170,12 @@
 \subsection{Сложение}
 
 \subsubsection{Если компланарны}
-\includegraphics[scale=0.15]{lecture08_04.jpg}
+Правила параллелограмма и треугольника соответственно: \\
+\includegraphics[scale=0.15]{images/lecture08_04.jpg}
 
 \subsubsection{Если некомпланарны}
-\includegraphics[scale=0.2]{lecture08_05.jpg}
+Сумма --- диагональ паралеллограмма: \\
+\includegraphics[scale=0.2]{images/lecture08_05.jpg}
 
 \subsubsection{Способы}
 \begin{itemize}
@@ -143,7 +183,7 @@
     \item $(\overline{a} + \overline{b}) + \overline{c} = \overline{a} + (\overline{b} + \overline{c})$
     \item $\overline{a}_1 + \overline{a}_2 + \overline{a}_3 + \overline{a}_4 = \overline{e}$
 \end{itemize}
-\includegraphics[scale=0.2]{lecture08_06.jpg}
+\includegraphics[scale=0.2]{images/lecture08_06.jpg}
 
 
 \subsection{Умножение на число $\lambda \in \mathbb{R}$}
@@ -155,7 +195,7 @@
         |\overline{b}| = |\lambda||\overline{a}|
     \end{cases}
 \end{gather*}
-\includegraphics[scale=0.3]{lecture08_07.jpg}
+\includegraphics[scale=0.3]{images/lecture08_07.jpg}
 
 \subsubsection{Противоположный вектор}
 \[
@@ -174,7 +214,7 @@
 
 
 \par\noindent\rule{\textwidth}{1pt}
-\section{Свойства колленирных векторов}
+\section{Свойства коллинеарных векторов}
 
 \subsection{Всегда пропорциональны}
 \[
@@ -183,12 +223,39 @@
 
 
 
-\section{???}
+\section{Системы координат на плоскости и в пространстве}
+
+\subsection{Афинные}
+
+\subsubsection{Прямоугольная декартова}
+\textit{(изображение)}
+
+
+\subsection{Не афинные}
+
+\subsubsection{Полярная}
+\textit{(изображение)}
+
+\subsubsection{Цилиндрическая}
+\textit{(изображение)}
+
+\subsubsection{Сферическая}
+\textit{(изображение)}
+
+\subsection{Общие афинные}
+
+\subsubsection{Косоугольная}
+\textit{(изображение)}
+\subsubsection{Не декартова}
+\textit{(изображение)}
+
 \subsection{Определение | Базис на плоскости}
 Базисом на плоскости называется любая пара неколлениарных векторов, лежащих на этой плоскости. 
 ~~~~~ $\{\overline{e}_1, \overline{e}_2\}$ \\
-\includegraphics[scale=0.2]{lecture08_08.jpg}
+\includegraphics[scale=0.2]{images/lecture08_08.jpg}
 
+\subsubsection{Свойства}
+Любой третий вектор $\overline{a} \in P$ (линейно-зависимый) может быть представлен в виде линейной комбинации векторов базиса.
 
 \section{Выражение $\overline{a} \cdot \overline{b}$ через декартовы координаты $\overline{a}$ и $\overline{b}$}
 \begin{gather*}
@@ -206,11 +273,6 @@
 \end{gather*}
 
 
-
-%--------------------------------------------------
-\newpage
-\part{???}
-\paragraph{ЛК-8 | 2024.10.25 (1)}
 
 \section{Произведения геометрических векторов}
 
@@ -507,7 +569,7 @@
     \Rightarrow \boxed{Ax + By + Cz + D = 0}, \text{ где } D = - Ax_0 - By_0 - Cz_0 \\
     \{A, B, C\} \bot P ~~~ |D| \sim \rho(O, P)
 \end{gather*}
-\includegraphics[scale=0.3]{lecture10_01.png}
+\includegraphics[scale=0.3]{images/lecture10_01.png}
 
 
 
@@ -521,7 +583,7 @@
         \overline{p} \nparallel \overline{q}
     \end{cases} \Rightarrow
 \end{gather*}
-\includegraphics[scale=0.3]{lecture10_02.png}
+\includegraphics[scale=0.3]{images/lecture10_02.png}
 
 \subsection{Случай 1}
 \begin{gather*}
@@ -545,7 +607,7 @@
         z - z_0 = t_1 p_z + t_2 q_z
     \end{cases}
 \end{gather*}
-\includegraphics[scale=0.3]{lecture10_03.png}
+\includegraphics[scale=0.3]{images/lecture10_03.png}
 
 
 
@@ -571,12 +633,12 @@
     \end{vmatrix} = 0 \rightarrow
     Ax + By + Cz + D = 0
 \end{gather*}
-\includegraphics[scale=0.3]{lecture10_04.png}
+\includegraphics[scale=0.3]{images/lecture10_04.png}
 
 
 
 \section{Уравнение плоскости в отрезках}
-\includegraphics[scale=0.3]{lecture10_05.png}
+\includegraphics[scale=0.3]{images/lecture10_05.png}
 \begin{gather*}
     \Rightarrow \begin{vmatrix}
         x - a & y - 0 & z - 0 \\
@@ -592,7 +654,7 @@
 \[
     Ax + By + Cz + D = 0
 \]
-\includegraphics[scale=0.3]{lecture10_06.png}
+\includegraphics[scale=0.3]{images/lecture10_06.png}
 \paragraph{Дано}
 \begin{gather*}
     \begin{cases}
@@ -644,14 +706,14 @@
     \exists t \in \mathbb{R}: \overline{N_1} = t \overline{N_2} \\
     t = \frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2}
 \end{gather*}
-\includegraphics[scale=0.3]{lecture10_07.png}
+\includegraphics[scale=0.3]{images/lecture10_07.png}
 
 \paragraph{Характеристика $P_1 \parallel P_2$ --- расстояние между ними}
 \begin{gather*}
     \rho(P \parallel P) \overset{\Delta}{=} \rho(M_1 \in P_1, P_2) = 
     \frac{\left| A_2 x_1 + B_2 y_1 + C_2 z_1 + D_2 \right|}{\sqrt{A^2_2 + B^2_2 + C^2_2}}
 \end{gather*}
-\includegraphics[scale=0.3]{lecture10_08.png}
+\includegraphics[scale=0.3]{images/lecture10_08.png}
 
 
 \subsection{Случай 2}
@@ -662,7 +724,7 @@
 
 
 \subsubsection{Линия пересечения}
-\includegraphics[scale=0.3]{lecture10_09.png}
+\includegraphics[scale=0.3]{images/lecture10_09.png}
 \begin{gather*}
     L = P_1 \cap P_2 \\
     L: \underset{\text{Общие уравнения } L \in Oxyz}{
@@ -678,7 +740,7 @@
 \end{itemize}
 
 \subsubsection{Угол между плоскостями}
-\includegraphics[scale=0.3]{lecture10_10.png}
+\includegraphics[scale=0.3]{images/lecture10_10.png}
 \begin{gather*}
     \alpha = \widehat{P_1, P_2} \in \left[ 0 ; \frac{\pi}{2} \right] \text{ --- острый} ~~~~~
     \varphi = \widehat{\overline{N_1}, \overline{N_2}} \in \left[ 0 ; \pi \right] ~~~~~
@@ -698,7 +760,7 @@
 \part{Прямая линия $L$ в пространстве $Oxyz$}
 
 \section{Основные уравнения прямой линии}
-\includegraphics[scale=0.3]{lecture11_01.png}
+\includegraphics[scale=0.3]{images/lecture11_01.png}
 \begin{gather*}
     L = P_1 \overbrace{\cap}^{\exists} P_2 \Rightarrow M(x, y, z) \in L \\
     \boxed{L: \begin{cases}
@@ -710,7 +772,7 @@
 
 
 \section{Параметрические и канонические уравнения прямой линии $L$}
-\includegraphics[scale=0.2]{lecture11_02.png}
+\includegraphics[scale=0.2]{images/lecture11_02.png}
 \begin{align*}
     \begin{rcases}
         M_0(x_0, y_0, z_0) \in L \\
@@ -730,7 +792,7 @@
 \end{gather*}
 
 \subsection{Пример}
-\includegraphics[scale=0.3]{lecture11_03.png}
+\includegraphics[scale=0.3]{images/lecture11_03.png}
 \begin{gather*}
     \frac{x - 1}{0} = \frac{y - 2}{0} = \frac{z + 3}{4} \Rightarrow
     \overline{q} = \{0; 0; 4\} \parallel Oz \\
@@ -741,7 +803,7 @@
 
 
 \section{Уравнение прямой линии $L$ через 2 точки}
-\includegraphics[scale=0.3]{lecture11_04.png}
+\includegraphics[scale=0.3]{images/lecture11_04.png}
 \begin{align*}
     \begin{rcases}
         M_1(x_1, y_1, z_1) \in L \\
@@ -758,11 +820,11 @@
     \underbrace{\frac{y - y_0}{n} = \frac{z - z_0}{p}}_{\text{ЛНЗ}} \text{ --- уравнение } P_2 \parallel Ox \text{ и уравнение } \underbrace{l_{yz}}_{\text{Пр}_{Oyz} L} \in Oyz \\
     \underbrace{\frac{x - x_0}{n} = \frac{z - z_0}{p}}_{\text{ЛЗ} } \text{ --- уравнение } P_3 \parallel Oy \text{ и уравнение } \underbrace{l_{xz}}_{\text{Пр}_{Oxz} L} \in Oxz \\
 \end{gather*}
-\includegraphics[scale=0.3]{lecture11_05.png}
+\includegraphics[scale=0.3]{images/lecture11_05.png}
 
 
 \section{Расстояние от точки до прямой линии $L$}
-\includegraphics[scale=0.3]{lecture11_06.png}
+\includegraphics[scale=0.3]{images/lecture11_06.png}
 \begin{gather*}
     L: \frac{x - x_0}{m} = \frac{y- y_0}{n} = \frac{z - z_0}{p} \\
     \text{Из числителей: }   M_0(x_y, y_0, z_o) \in L \\
@@ -791,7 +853,7 @@
     \overline{N} \cdot \overline{q} = 0 \\
     \boxed{Am + Bn + Cp = 0} \text{ --- условие паралелльности}
 \end{gather*}
-\includegraphics[scale=0.3]{lecture11_07.png}
+\includegraphics[scale=0.3]{images/lecture11_07.png}
 
 \subsubsection{Характеристика}
 \begin{gather*}
@@ -805,7 +867,7 @@
 \[
     L \nparallel P \Rightarrow \boxed{Am + Bn + Cp \neq 0}
 \]
-\includegraphics[scale=0.3]{lecture11_08.png}
+\includegraphics[scale=0.3]{images/lecture11_08.png}
 
 \subsubsection{Характеристики}
 \paragraph{Точка пересечения $K = L \cap P$}
@@ -836,7 +898,7 @@
 
 \paragraph{Угол между прямой линией $L$ и плоскостью $P$}
 ~\\
-\includegraphics[scale=0.3]{lecture11_09.png}
+\includegraphics[scale=0.3]{images/lecture11_09.png}
 \begin{gather*}
     \beta + \varphi_1 = \frac{\pi}{2} ~~~ 
     \varphi_1 = \frac{\pi}{2} - \beta ~~~ 
@@ -865,7 +927,7 @@
     L_1 \parallel L_2 \Leftrightarrow \overline{q}_1 \parallel \overline{q}_2 \Leftrightarrow
     \boxed{\frac{m_1}{m_2} = \frac{n_1}{n_2} = \frac{p_1}{p_2}} \text{ --- условие}
 \]
-\includegraphics[scale=0.3]{lecture11_10.png}
+\includegraphics[scale=0.3]{images/lecture11_10.png}
 
 \subsubsection{Характеристика}
 \begin{gather*}
@@ -882,12 +944,12 @@
     L_1 \nparallel L_2 \Leftrightarrow 
     \boxed{\frac{m_1}{m_2} \neq \frac{n_1}{n_2} \text{ или } \frac{n_1}{n_2} \neq \frac{p_1}{p_2}}
 \]
-\includegraphics[scale=0.3]{lecture11_11.png}
+\includegraphics[scale=0.3]{images/lecture11_11.png}
 
 \subsubsection{Характеристики}
 \paragraph{Расстояние $\rho(L_1 \nparallel L_2)$}
 ~\\
-\includegraphics[scale=0.3]{lecture11_12.png}
+\includegraphics[scale=0.3]{images/lecture11_12.png}
 
 \begin{gather*}
     \rho(L_1 \nparallel L_2) = 
@@ -903,7 +965,7 @@
 
 
 \section{Угол $\alpha$ между прямыми линиями $L_1 \nparallel L_2$}
-\includegraphics[scale=0.3]{lecture11_13.png}
+\includegraphics[scale=0.3]{images/lecture11_13.png}
 \begin{gather*}
     \boxed{\Rightarrow \cos \alpha = \left| \cos \varphi \right| = 
     \frac{\left| \overline{q}_1 \cdot \overline{q}_2 \right|}{\left| \overline{q}_1 \right| \cdot \left| \overline{q}_2 \right|}} \text{ --- как для } l_1 \nparallel l_2
@@ -914,7 +976,7 @@
 \section{Схемы решения стандартных задач в $Oxyz$}
 
 \subsection{Пример}
-\includegraphics[scale=0.3]{lecture11_14.png}
+\includegraphics[scale=0.3]{images/lecture11_14.png}
 \begin{align*}
     \text{Уравнение плоскости } P: P \in L_1, P \parallel L_2, L_1 \nparallel L_2 \\
     \begin{rcases}
@@ -928,7 +990,7 @@
 
 
 \subsection{Пример}
-\includegraphics[scale=0.3]{lecture11_15.png}
+\includegraphics[scale=0.3]{images/lecture11_15.png}
 \begin{align*}
     \text{Уравнение плоскости } P:
     \begin{rcases}
