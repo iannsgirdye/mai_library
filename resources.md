@@ -104,12 +104,41 @@
 - [Репозиторий студента с кафедры 806](https://github.com/LeSaR-school/semester-1)
 - [Сайт кафедры 805](https://dep805.ru)
 
+#### Дополнительно
+- [Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
+
+##### Информатика
+###### Текстовые редакторы
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [vim](https://www.vim.org/download.php)
+- [Notepad++](https://notepad-plus-plus.org/downloads/)
+
+###### WSL
+- [Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
+
+###### Термины
+- [Понятие стека](https://skillbox.ru/media/code/prostymi-slovami-chto-takoe-stek-i-kak-on-ustroen)
+- [Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194/)
+
+###### Языки программирования
+- [Начало работы в C/C++](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
+
+
+##### Математика
+- [mathprofi.net](https://mathprofi.net)
+- [Mathway](https://www.mathway.com)
+- [MathDF](https://mathdf.com)
+- [Desmos](https://www.desmos.com)
+- [3Blue1Brown](https://www.3blue1brown.com)
+
+
 #### Интересное
 - [Python vs C++](https://faq8.ru/read.php?5,15424)
 - [Крылов на форуме](https://postupim.ru/forum/4-4163-1)
 
 
 ### Институт №9
+...
 
 
 ### Институт №10
@@ -130,32 +159,6 @@
 
 
 ## Дополнительно
-- [Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
-
-### Информатика
-#### Текстовые редакторы
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [vim](https://www.vim.org/download.php)
-- [Notepad++](https://notepad-plus-plus.org/downloads/)
-
-#### WSL
-- [Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
-
-#### Термины
-- [Понятие стека](https://skillbox.ru/media/code/prostymi-slovami-chto-takoe-stek-i-kak-on-ustroen)
-- [Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194/)
-
-#### Языки программирования
-- [Начало работы в C/C++](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
-
-
-### Математика
-- [mathprofi.net](https://mathprofi.net)
-- [Mathway](https://www.mathway.com)
-- [MathDF](https://mathdf.com)
-- [Desmos](https://www.desmos.com)
-- [3Blue1Brown](https://www.3blue1brown.com)
-
 
 ### Мероприятия
 - [Росмолодёжь](https://fadm.gov.ru)
