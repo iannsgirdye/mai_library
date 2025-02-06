@@ -1,3 +1,5 @@
+![something.md](/about/images/mai_library_something.png)
+
 # Разное
 Всё, чему нигде не нашлось места на репозитории, находится здесь.
 

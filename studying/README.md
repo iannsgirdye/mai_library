@@ -1,3 +1,5 @@
+![mai_library/studying](/about/images/mai_library_studying.png)
+
 # Учебные материалы ФИИТа
 
 
