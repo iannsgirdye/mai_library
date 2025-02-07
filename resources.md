@@ -79,7 +79,7 @@
 
 ### Институт №4
 - [ФРЭЛА МАИ](https://vk.com/frela_mai)
-- [Профбюро МАИ](https://vk.com/pbfrela)
+- [Профбюро ФРЭЛА](https://vk.com/pbfrela)
 
 
 ### Институт №5
