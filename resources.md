@@ -8,12 +8,13 @@
 ## Основное
 - [МАИ](https://t.me/MAIuniversity)
 
-
 ### Учёба 
 - [Цифровая кадровая платформа МАИ](https://t.me/platforma_mai_ru)
 - [CONVERSATION CLUB MAI](https://t.me/conversationclubMAI)
 - [ВУЦ при МАИ](https://t.me/vucmai)
 - [Учеба по обмену | МАИ](https://t.me/exchange_programs_mai)
+- [МАИ-ШУЦТ](https://t.me/mai_sjtu)
+- [Наука МАИ [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
 
 
 ### Мероприятия
@@ -22,6 +23,7 @@
 - [КВН МАИ (Маёвская лига КВН)](https://t.me/kvnmai)
 - [Молодёжка МАИ](https://t.me/molodejkaMAI)
 - [Профком обучающихся Московского Авиационного Института](https://t.me/mai_profkom)
+- [Университетские смены в МАИ 2024](https://t.me/maismeny2024)
 
 
 ### Спорт
@@ -41,9 +43,18 @@
 - [Telegram-бот "Расписание МАИ"](https://t.me/Timetable_MAI_bot)
 
 
+### Не студентам
+- [Детский технопарк МАИ | Траектория взлёта 🚀](https://t.me/traektoriamai)
+- [Поступи в МАИ | Абитуриент](https://t.me/postupi_v_mai)
+- [Вступительные испытания МАИ](https://t.me/VI_MAIuniversity)
+- [Профсоюз работников МАИ|maiprof.ru](https://t.me/maiprof_ru)
+
+
 ### Разное
 - [MAI STORE](https://t.me/maistoreofficial)
-- [Профсоюз работников МАИ|maiprof.ru](https://t.me/maiprof_ru)
+- [Интернет МАИ](https://t.me/inetmai)
+- [Космос в МАИ](https://t.me/kosmos_mai)
+- [Аэромобильность МАИ](https://t.me/aero_mai)
 
 
 
@@ -154,7 +165,7 @@
 
 
 ### Институт №14
-[Профбюро 14 института](https://t.me/profburopish14)
+- [Профбюро 14 института](https://t.me/profburopish14)
 
 
 
@@ -175,17 +186,3 @@
 - [Stepik](https://stepik.org)
 - [Хекслет](https://ru.hexlet.io)
 - [Leetcode](https://leetcode.com)
-
-
-
-## Несортированное
-- [МАИ-ШУЦТ](https://t.me/mai_sjtu)
-- [Вступительные испытания МАИ](https://t.me/VI_MAIuniversity)
-- [Наука МАИ [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
-- [Университетские смены в МАИ 2024](https://t.me/maismeny2024)
-- [Учеба по обмену | МАИ](https://t.me/exchange_programs_mai)
-- [Детский технопарк МАИ | Траектория взлёта 🚀](https://t.me/traektoriamai)
-- [Интернет МАИ](https://t.me/inetmai)
-- [Космос в МАИ](https://t.me/kosmos_mai)
-- [Поступи в МАИ | Абитуриент](https://t.me/postupi_v_mai)
-- [Аэромобильность МАИ](https://t.me/aero_mai)
