@@ -53,8 +53,7 @@
 
 
 ### 3.3. Оценивание
-- $ \text{Оценка за ЛР} = \frac{1}{2} \cdot \left( \frac{\text{сумма оценок за 12 блоков}}{12} \right) + \frac{1}{2} \cdot \left( \frac{\text{сумма оценок за 3 КР}}{3} \right)$
-- $ \text{Итоговая оценка} = \frac{1}{2} \cdot \text{оценка за ЛР} + \frac{1}{2} \cdot \text{оценка за коллоквиум}$
+![Оценивание ПнЯP](/about/images/mai_library/ПнЯP.png)
 
 
 ### 3.4. Ресурсы
