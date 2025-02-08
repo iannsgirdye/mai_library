@@ -17,6 +17,7 @@
 | Лекции              | [Крылов Сергей Сергеевич](https://mai.ru/education/studies/schedule/ppc.php?guid=e4a9bcc4-1d99-11e0-9baf-1c6f65450efa) | |
 | Лабораторные работы | [Кондаратцев Вадим Леонидович](https://mai.ru/education/studies/schedule/ppc.php?guid=947f1639-38fa-11e9-aa0b-485b3919ee6d) | |
 
+
 ### 2.2. Ресурсы
 #### 2.2.1. Лекции
 1) [Типы данных. Ввод и вывод данных. Операции с числами, строками. Форматирование. Условный оператор](https://colab.research.google.com/drive/19i0WdY-WSVeuUWbCoyO4VCpMfruOVym7?usp=sharing)
@@ -35,28 +36,47 @@
 
 
 ## 3. Коллоквиум
-### 3.1. Организационное
+### 3.1. Организационное (для всех групп)
 - Дата и время: 27.12.2024, 09:00
-- Аудитория: ГУК, В-221
+- Аудитория: ГУК, В-214 и В-221
 
-### 3.2. Ресурсы
+
+### 3.2. Содержание
+1. Форматирование строк. Format-string, f-string, %-string, raw-string, выравнивание строк. Условный оператор. Каскадные/вложенные условия, тернарный оператор. ord(), chr(), сравнение строк. Операции с целыми/вещественными числами, неявное приведение типов во время арифметических операций.
+2. Итерация, итерируемый объект. Цикл, циклы for, циклы while. Функция range: ее сигнатура, что возвращает. Break, Continue, else в циклах. Вложенные циклы. Асимптотическая сложность.
+3. Коллекция. Идентификатор объекта. Оператор is. Изменяемые/Неизменяемые типы. Строки. Списки. Сложность основных операций со списком. List comprehension. Кортежи.
+4. Хеш-функция. Хеш-таблица. Множества. Сложность основных операций с множеством. Словарь. Коллизии, методы борьбы с коллизией(Метод цепочек, метод пробинга [зондирования]).
+5. Потоковый ввод/вывод (I/O). Контекстный менеджер. Буферизация. Исключение. Try-except-else. JSON. Сериализация/Десериализация.Struct, Pickle.
+6. Функция. *args, **kwargs. Область видимости переменных. Передача аргументов в функцию.
+7. Функции высших порядков. Lambda-функции. Рекурсия. Стек, стек вызова функции. Мемоизация.
+8. Замыкание. Декораторы. Связь декоратора с замыканием. Декораторы с параметрами. Генераторы. Функции-генераторы. Генераторные выражения. Отправка значений в генератор, делегирование генераторов.
+
+
+### 3.3. Оценивание
+- $ \text{Оценка за ЛР} = \frac{1}{2} \cdot \left( \frac{\text{сумма оценок за 12 блоков}}{12} \right) + \frac{1}{2} \cdot \left( \frac{\text{сумма оценок за 3 КР}}{3} \right)$
+- $ \text{Итоговая оценка} = \frac{1}{2} \cdot \text{оценка за ЛР} + \frac{1}{2} \cdot \text{оценка за коллоквиум}$
+
+
+### 3.4. Ресурсы
 - [Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view)
 - [Notion с материалами](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f)
 
 
 
 ## 4. Дополнительно
-### Git
+### 4.1. Git
 - [Ёбаный Git!!!](https://ohshitgit.com/ru)
 - [Git](https://git-scm.com)
 - [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU)
 - [Git для новичков](https://habr.com/ru/articles/541258)
 
-### Jupyter Notebook и Markdown
+
+### 4.2. Jupyter Notebook и Markdown
 - [Особенности Jupyter Notebook](https://habr.com/ru/companies/wunderfund/articles/316826)
 - [Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax)
 - [Шпаргалка по Markdown](https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c)
 - [Математический режим Markdown](https://www.upyesp.org/posts/makrdown-vscode-math-notation)
 
-#### Miniconda
+
+### 4.3. Miniconda
 - [Miniconda — Anaconda documentation](https://docs.anaconda.com/miniconda)
