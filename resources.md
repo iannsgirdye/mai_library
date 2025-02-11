@@ -27,6 +27,8 @@
 
 
 ### Спорт
+- [Спортивные секции и клубы](https://mai.ru/campus/locations/sport/sections/stud.php)
+- [Отзывы о секциях](https://carbonated-mimosa-298.notion.site/532d2159388f416c9921c283e3eb914e)
 - [ХК МАИ](https://t.me/maihockey)
 - [Авиаторы. МАИ-МБА](https://t.me/bk_mai)
 - [MAI Rowing Club](https://t.me/mai_rowing)
@@ -37,10 +39,14 @@
 - [Личный кабинет](https://my.mai.ru/lk_student)
 - [Электронная почта](https://mail.mai.education/#1)
 - [Система электронного обучения МАИ](https://lms.mai.ru)
-- [Спортивные секции и клубы](https://mai.ru/campus/locations/sport/sections/stud.php)
-- [Отзывы о секциях](https://carbonated-mimosa-298.notion.site/532d2159388f416c9921c283e3eb914e)
 - [Telegram-бот "Расписание МАИ v2.0"](https://t.me/mai_timetablebot)
 - [Telegram-бот "Расписание МАИ"](https://t.me/Timetable_MAI_bot)
+- [Мини-приложение "Расписание МАИ](https://t.me/maiuniversity_schedule_bot)
+
+
+## ВУЦ
+- [Официальный сайт](https://vuc-mai.ru)
+- [Организационное](https://institutes.mai.ru/military)
 
 
 ### Не студентам
