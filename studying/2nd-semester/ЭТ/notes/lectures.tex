@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases, lipsum}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Экономическая теория}
+    \author{Бабицкий Иван | М8О-111БВ-24 \\ 02.03.02 "Фундаментальная информатика и информационные технологии"}
+    \date{2024/2025 учебный год, 2-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ЛК-1 | 2025.02.12 (3)}
+\part{Предысловие}
+
+\section{Тезисы}
+
+\subsection{Учебник}
+"Экономическая теория" (1-е издание) --- Сажина Муза Аркадьевна.
+\begin{itemize}
+    \item Сажина Муза Аркадьевна --- сильная женщина, работает на "паганом" факультете
+    \item Самый клёвый учебник по словам преподавателя
+\end{itemize}
+
+
+\subsection{Раньше было хуже (про СССР)}
+\begin{itemize}
+    \item Шампанское --- народный напиток (цена как водка)
+    \item Взлететь = врать народу
+    \item "Сдох --- и слава богу! Не смотрите туда!"
+\end{itemize}
+
+
+
+
+
+%--------------------------------------------------
+\newpage
+\part{Введение в экономику}
+
+\section{Высказывания}
+\begin{itemize}
+    \item "Учить экономику, чтобы сдать зачёт"
+    \item "Ставлю плюсы за хорошие ответы, за smart brains"
+    \item "Я обречён власти, а власть развращает"
+    \item "Надеюсь вы придёте в следующий раз"
+\end{itemize}
+
+
+
+\section{Экономика}
+Экономика --- очень нагруженное понятие, имеет 3 смысла в русском языке:
+\begin{itemize}
+    \item Законы ведения хозяйства (сементика слова): вести экономно, потому что ресурс всегда ограничен.
+    \item Народное хозяйство, совокупность орудий (предметов) и средств труда.
+    \item Наука о законах развития хозяйства.
+\end{itemize}
+
+\subsection{Бизнес}
+\begin{itemize}
+    \item Открывать бизнес нужно не допуская ошибки, то есть владеть навыками заранее.
+    \item Руководителю нужн о следить за бухгалтерию, иначе "бухгалтер поедет на лимузине, а руководитель пойдёт пешком"
+\end{itemize}
+
+
+\subsection{Государство}
+Государство не является родиной:
+\begin{itemize}
+    \item государство --- политический инструмент экономистов;
+    \item родина --- люди, территория, история.
+\end{itemize}
+
+
+\subsection{Экономическая теория}
+Экономическая теория --- наука об экономических отношениях между людьми, 
+в которые они вступают в процессе производства, распределения, обмена и потребления (4 фазы воспроизводственного цикла):
+\begin{itemize}
+    \item экономическая теория изучает общие принципы построения экономической действительности;
+    \item ни один учебник о финансах не содержит теорию финансов, потому что финансы никто не должен понимать;
+    \item люди начали логически мыслить в 5-м веке до нашей эры;
+    \item если вы хотите накопить денег на покупку квартиры, вам нужно продать то, что вы произвели, 
+          чтобы получить деньги (накопить ресурсы) и обменять их --- так построена экономика;
+    \item первичный строительный элемент строительства отношений --- товар, то есть кирпичик экономики.
+\end{itemize}
+
+Выделяется 2 типа человеческих отношений: социально-экономический (человек --- человек) 
+и технико-экономические (человек --- вещество природы).
+
+
+
+
+\end{document}
