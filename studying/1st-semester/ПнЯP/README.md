@@ -14,7 +14,7 @@
 ### 2.1. Преподаватели
 | Тип | ФИО | Контакты |
 |-----|-----|----------|
-| Лекции              | [Крылов Сергей Сергеевич](https://mai.ru/education/studies/schedule/ppc.php?guid=e4a9bcc4-1d99-11e0-9baf-1c6f65450efa) | |
+| Лекции | [Крылов Сергей Сергеевич](https://mai.ru/education/studies/schedule/ppc.php?guid=e4a9bcc4-1d99-11e0-9baf-1c6f65450efa) | |
 | Лабораторные работы | [Кондаратцев Вадим Леонидович](https://mai.ru/education/studies/schedule/ppc.php?guid=947f1639-38fa-11e9-aa0b-485b3919ee6d) | |
 
 

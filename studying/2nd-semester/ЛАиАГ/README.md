@@ -12,10 +12,10 @@
 
 
 
-## 2. Занятия
+## 2. Занятия (преподаватели)
 | Тип | ФИО | Контакты |
 |-----|-----|----------|
-| Лекции               | [Руденко Евгений Александрович](https://mai.ru/education/studies/schedule/ppc.php?guid=6c63f786-1d99-11e0-9baf-1c6f65450efa)    | |
+| Лекции | [Руденко Евгений Александрович](https://mai.ru/education/studies/schedule/ppc.php?guid=6c63f786-1d99-11e0-9baf-1c6f65450efa) | |
 | Практические занятия | [Каранэ Мария Магдалина Сергеевна](https://mai.ru/education/studies/schedule/ppc.php?guid=13f42ff4-b3c4-11eb-bbd2-ac1f6b64c5eb) | |
 
 

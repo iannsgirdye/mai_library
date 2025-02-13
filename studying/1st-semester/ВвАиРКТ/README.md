@@ -11,7 +11,7 @@
 
 
 
-## 2. Занятия
+## 2. Занятия (преподаватели)
 | Тип | ФИО | Контакты |
 |-----|-----|----------|
 | Лекции | [Тимохин Максим Юрьевич](https://mai.ru/education/studies/schedule/ppc.php?guid=15fb8002-1d9b-11e0-9baf-1c6f65450efa) | timokhin@physics.msu.ru |

@@ -14,10 +14,10 @@
 
 
 
-## 2. Занятия
+## 2. Занятия (преподаватели)
 | Тип | ФИО | Контакты |
 |-----|-----|----------|
-| Лекции               | [Михайлова Екатерина Олеговна](https://mai.ru/education/studies/schedule/ppc.php?guid=deb75c8d-0d8f-11e4-b897-005056c00008) | |
+| Лекции | [Михайлова Екатерина Олеговна](https://mai.ru/education/studies/schedule/ppc.php?guid=deb75c8d-0d8f-11e4-b897-005056c00008) | |
 | Практические занятия | [Солонюк Александр Анатольевич](https://mai.ru/education/studies/schedule/ppc.php?guid=a2eccc7e-e98f-11ed-bbfc-3cecef1c132f) | |
 
 

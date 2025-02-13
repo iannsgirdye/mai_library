@@ -12,8 +12,8 @@
 
 
 
-## 2. Занятия
+## 2. Занятия (преподаватели)
 | Тип | ФИО | Контакты |
 |-----|-----|----------| 
-| Лекции               | [Шкарубо Сергей Николаевич](https://mai.ru/education/studies/schedule/ppc.php?guid=1bcdcc3d-ef66-11e6-8b79-3cd92bf20bfe) | |
+| Лекции | [Шкарубо Сергей Николаевич](https://mai.ru/education/studies/schedule/ppc.php?guid=1bcdcc3d-ef66-11e6-8b79-3cd92bf20bfe) | |
 | Практические занятия | [Медведева Кристина Михайловна](https://mai.ru/education/studies/schedule/ppc.php?guid=94d945e4-8d17-11ef-bc24-3cecef1c132f) | yerokri@mail.ru |
