@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Математический анализ}
+    \author{Бабицкий Иван | М8О-111БВ-24 \\ 02.03.02 "Фундаментальная информатика и информационные технологии"}
+    \date{2024/2025 учебный год, 2-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+%-------------------------------------------------------
+\newpage
+\paragraph{2025.02.13 (3)}
+\part{Неопределённый интеграл}
+
+\section{Введение}
+
+\subsection{Определение | Неопределённый интергал}
+\[
+    f(x) = \underset{(a, b)}{\text{любой, главное неразгрывный}} \text{} \rightarrow \mathbb{R}
+\]
+Функция $F(x): \underset{(a, b)}{\text{этот же промежуток}} \rightarrow \mathbb{R}$ называется первообразной функции $f(x)$ на промужтке $(a, b)$, 
+если $F(x) \in D(a, b)$ (дифференцирума на этом промежутке), причём $F'(x) = f(x)$.
+
+\subsubsection{Пример}
+\begin{align*}
+    f(x) = 2x \Rightarrow F(x) = x^2, F(x) = x^2 + 2,718281828 \\
+    f(x) = \frac{1}{x} \Rightarrow \begin{sqcases}
+        x \in (0; +\infty): F(x) = \ln x \\
+        x \in (-\infty, 0): F(x) = -\ln x
+    \end{sqcases} \\
+    f(x) = \frac{1}{1 + x^2} \Rightarrow F(x) = \arctan x + 1000
+\end{align*}
+
+
+\subsection{Утверждение}
+Попытается описать множество всех первообразных, если есть хотя бы одна
+\begin{gather*}
+    f(x): (a, b) \Rightarrow \mathbb{R} \\
+    \text{Пусть } F_1(x), F_2(x) \text{ --- первообразные функции} f(x) на (a, b) \\
+    \text{Пусть } \Phi(x) = F_1(x) - F_2(x) \\
+    \text{Пусть } \widetilde{x}, \widehat{x} \in (a, b), \text{ по теореме Лангранжа о конечной приращении } \\
+    \Phi(\widetilde{x}) - \Phi(\widehat{x}) = 
+    \Psi'(\psi)(\widetilde{x} - \widehat{x}), \psi \text{ между } \widetilde{x} \text{ и } \widehat{x} \\
+    \Phi'(\psi) = F_1'(\psi) - F_2'(\psi) = f(\psi) - f(\psi) = 0 \\
+    \Phi(\widetilde{x}) = \Phi(\widehat{x}) \\
+    \Phi(c) = c = const
+\end{gather*}
+Множежство всех первообразных функций на промежутке исчерпывается функциями вида $F(x) + c$, 
+где $F(x)$ --- первообразная, $c$ --- произвольная действительная постоянная.
+
+
+\subsection{Определение}
+Неопределённым интергалом функции $f(x)$ на промежутке $(a, b)$ называется множество всех её первообразных на промежутке $(a, b)$.
+\[
+    \int f(x) dx = F(x) + c
+\]
+
+
+
+\section{Элементы таблицы интергалов}
+\begin{gather*}
+    \int \sin x dx = -\cos x + c \\
+    \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + c \\
+    \int \frac{dx}{\sqrt{1 + x^2}} = \ln \left| x + \sqrt{1 + x^2} \right| + c \\
+    \int \frac{dx}{1 - x^2} = \frac{1}{2} \ln \left| \frac{1 + x}{1 - x} \right| + c \\
+    \int x^n dx = \frac{x^{n + 1}}{n + 1} + c, n \neq -1
+\end{gather*}
+
+
+
+\section{Связь операций дифференцирования и интегрирования}
+\begin{gather*}
+    \text{Пусть } f(x): (a, b) \rightarrow \mathbb{R}, F(x) \text{ --- первообразная } f(x) \text{ на } (a, b) \\
+    d \left( \int f(x) dx \right) = d \left( F(x) + c \right) = F'(x) dx = f(x) dx \\
+    "\text{Значки } d \text{ и } \int \text{ убили друг друга (с) Родников}"
+\end{gather*}
+\begin{gather*}
+    \int d F = \int F'(x) dx = \int f(x) dx = F(x) + c
+\end{gather*}
+
+
+
+\section{Элементарные свойства неопределённого интеграла}
+
+\subsection{Первое}
+\begin{gather*}
+    \int \left( \alpha f(x) + \beta g(x) \right) dx = 
+    \alpha \int f(x) dx + \beta \int g(x) dx, \text{ где}
+    \alpha, \beta \in \mathbb{R} \text{ --- и интегралы в правой части существуют}
+\end{gather*}
+
+
+\subsection{Второе}
+\begin{gather*}
+    \text{Пусть } u(x) \text{ и } v(x) \in D(\alpha, \beta), \\
+    \int (u \cdot v)' dx = \int u'v dx + \int uv' dx = u \cdot v + c
+\end{gather*}
+
+
+\subsection{Третье}
+\begin{gather*}
+    f(x): (a, b) \rightarrow \mathbb{R} \\
+    \varphi(t): (\alpha, \beta) \Rightarrow (a, b) \\
+    \varphi(t): D(\alpha, \beta) \\
+    F(x) \text{ --- первообразная } f(x) \text{ на } (a, b) \\
+    \text{Тогда } \int f(\varphi(t)) \varphi'(t) dt = F(\varphi(t)) + c
+\end{gather*}
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    d(F(\varphi(t))) = F'(\varphi(t)) \cdot \varphi' dt = f(\varphi(t)) \cdot \varphi'(t) dt
+\end{gather*}
+
+\subsubsection{Комментарий}
+\begin{gather*}
+    \int f(\varphi(t)) \underbrace{\varphi'(t) dt}_{d\varphi(t)} = \int f(\varphi(t)) d\varphi(t) = 
+    \int f(x) dx = F(x) + c = F(\varphi(t)) + c
+\end{gather*}
+
+
+
+\section{Методы интергрирования}
+
+\subsection{Интегрирование по частям}
+\begin{gather*}
+    \int u \cdot v' dx = u \cdot v - \int u' v dx
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    \int \ln x dx = \int (\ln x) \cdot (x)' dx = \begin{cases}
+        u = \ln x, u' = \frac{1}{x} \\
+        v = x, v' = 1
+    \end{cases} = \underbrace{\ln x}_{u} \underbrace{\cdot x}_{v} - \int \frac{1}{x} \cdot x dx = x \ln x - x + c
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    I = \int e^x \sin x dx = \int \underbrace{e^x}_{u} \underbrace{(-cos x)'}_{v'} = \begin{cases}
+        u = e^x, u' = e^x \\
+        v = cos x, v' = -sin x
+    \end{cases} = \\ 
+    = -e^x \cos x + \int e^x \cos dx = \begin{cases}
+        u = e^x, u' = e^x \\
+        v = \sin x, v' = \cos x
+    \end{cases} =
+    -e^x \cos x + e^x \sin x - \int e^x \sin x dx = e^x (\sin x - \cos x) - I = I \\
+    I = \frac{1}{2} e^x (\sin x - \cos x)
+\end{gather*}
+
+
+
+
+\end{document}

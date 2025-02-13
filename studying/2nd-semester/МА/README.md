@@ -5,10 +5,8 @@
 ## 1. Файлы
 - Задания
 - Материалы
-    - Конспекты
-    - Литература
-        - Дополнительная
-        - Основная
+    - [Конспекты](https://disk.yandex.ru/d/jmoUIc37BoxfgA)
+    - [Литература](https://disk.yandex.ru/d/iibkfo3D-VnPnw)
 
 
 
