@@ -1,0 +1,55 @@
+name: prikol
+source code: |-
+  input: 'abc'
+  blank: ' '
+  start state: start
+  table:
+    start:
+      [a,b,c]: {R: start}
+      ' ': {L: next_step}
+    next_step:
+      a: {write: x, R: mva}
+      b: {write: x, R: mvb}
+      c: {write: x, R: mvc}
+    mva:
+      [a,b,c,x]: {R: mva}
+      ' ': {R: pa}
+    pa:
+      [a,b,c]: {R: pa}
+      ' ': {write: a, L: bm}
+    mvb:
+      [a,b,c,x]: {R: mvb}
+      ' ': {R: pb}
+    pb:
+      [a,b,c]: {R: pb}
+      ' ': {write: b, L: bm}
+    mvc:
+      [a,b,c,x]: {R: mvc}
+      ' ': {R: pc}
+    pc:
+      [a,b,c]: {R: pc}
+      ' ': {write: c, L: bm}
+    bm:
+      ' ': {L: bm2}
+      [a,b,c]: {L: bm}
+    bm2:
+      x: {L: bm2}
+      [a,b,c]: {L: musor}
+      ' ': {L: done}
+    musor:
+      [' ',a,b,c,]: {R: next_step}
+    
+    done:
+positions:
+  start: {x: 96.83, y: 292.66}
+  next_step: {x: 223.33, y: 290.54}
+  mva: {x: 360.79, y: 285.44}
+  pa: {x: 446.4, y: 283.58}
+  mvb: {x: 363.41, y: 207.93}
+  pb: {x: 452.67, y: 212.67}
+  mvc: {x: 347.36, y: 381.7}
+  pc: {x: 446.52, y: 384.53}
+  bm: {x: 513.98, y: 289.97}
+  bm2: {x: 608.26, y: 272.7}
+  musor: {x: 409.31, y: 44.07}
+  done: {x: 758.75, y: 277.08}

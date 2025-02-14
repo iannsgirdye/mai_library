@@ -1,0 +1,326 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Линейная алгебра и аналитическая геометрия}
+    \author{Бабицкий Иван, М8О-111БВ-24}
+    \date{2024/2025 учебный год, 2-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.02.17 (1) | ЛК-1}
+\part{Линейные пространства, их базисы и размерность}
+
+\textbf{Примечание.} Материал будет написан:
+\begin{itemize}
+    \item из книги "Типовые задачи по линейной алгебре" (часть 2) --- Бортаковский и Пегачкова
+    \item на первом практическом занятии
+\end{itemize}
+
+
+
+\section{Введение}
+
+\subsection{Определение | Линейное пространство}
+\dots
+
+
+\subsection{Определение | Линейная зависимоть и линейная независимость линейного пространства}
+\dots
+
+
+\subsection{Определение | Базис линейного пространства}
+\dots
+
+
+\subsection{Определение | Размерность пространства}
+\dots
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.02.14 (3) | ЛК-2}
+\part{Координаты элементов линейных пространств (векторных) и их преобразование при смене базиса}
+
+\section{Координаты элемента линейного пространства}
+\textbf{Было в аналитической геометрии:}
+\begin{gather*}
+    \forall \underset{\text{ЛЗ}}{\overline{a}} = a_x \overline{i} + a_y \overline{j} + a_z \overline{k} ~~~~~
+    \underbrace{(\overline{i}, \overline{j}, \overline{k})}_{\text{ЛНЗ}} \text{ --- базис в } V_3 ~~~~~
+    \overline{a} = (a_x, a_y, a_z)_{(\overline{i}, \overline{j}, \overline{k})}
+\end{gather*}
+
+\textbf{Теперь в линейном пространстве $V$ есть базис 
+$\overline{B} = \underbrace{(\overline{e}_1, \overline{e}_2, \dots, \overline{e}_n)}_{\text{ЛНЗ}}$, так что}
+\begin{gather*}
+    \underbrace{(\overline{e}_1, \overline{e}_2, \dots, \overline{e}_n, \overline{x})}_{\text{ЛЗ}}, ~~~~~
+    n = \dim V, ~~~~~ \overline{e}_n \in V, ~~\overline{x} \in V
+\end{gather*}
+
+
+\begin{gather*}
+    \textbf{Разложим $\overline{x}$ по $\overline{B}$: } 
+    \overline{x} = \underbrace{x_1 \overline{e}_1 + x_2 \overline{e}_2 + \dots + x_n \overline{e}_n}_{\text{ЛК}} \Rightarrow
+    \underbrace{X = \begin{bmatrix}
+        x_1    \\
+        x_2    \\
+        \vdots \\
+        x_n
+    \end{bmatrix}}_{\underset{\text{элемента } \overline{x} \text{ в } \overline{B}}{\text{столбец координат}}}, X = X_{\overline{B}}
+    ~~\Leftrightarrow
+\end{gather*}
+ 
+
+\begin{gather*}
+    \Leftrightarrow~~ \textbf{Матрично: } 
+    \overline{x} = (\overline{e}_1, \dots, \overline{e}_n) \begin{bmatrix}
+        x_1    \\
+        \vdots \\
+        x_n
+    \end{bmatrix}
+\end{gather*}
+
+\begin{gather*}
+    \boxed{\overline{a} = \underset{\text{строка}}{\overline{B}} \cdot \underset{\text{столбец}}{X}} ~~~~~
+    X = (x_1, \dots, x_n)^{\text{т}}
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Линейные операции в линейном пространстве в координатной форме}
+
+\subsection{Сложение}
+\[
+    \forall \overline{x}, \overline{y} \in V: ~~\overline{z} = \overline{x} + \overline{y}, ~~\overline{z} \in V
+\]
+
+
+\begin{gather*}
+    \text{Пусть } \overline{x} = \overline{B} \cdot X, ~~\overline{y} = \overline{B} \cdot Y, ~~ y = \begin{bmatrix}
+        y_1    \\
+        \vdots \\
+        y_n
+    \end{bmatrix} ~~\Rightarrow~~
+\overline{z} = \overline{x} + \overline{y} = \overline{B} \cdot X + \overline{B} \cdot Y = \overline{B} \cdot (X + Y) \\
+    \text{Сравним с } \overline{z} = \overline{B} \cdot Z, ~~ Z = \begin{bmatrix}
+        z_1    \\
+        \vdots \\
+        z_n
+    \end{bmatrix}: ~~\overline{B} \cdot Z = \overline{B} (X + Y) \\
+    \text{В следствии единсвенности разложения по } \overline{B} \text{ (базису)}: ~~\boxed{Z = X + Y}
+\end{gather*}
+
+
+\subsection{Умножение элемента $\overline{x}$ на число $\alpha \in \mathbb{R}$}
+\begin{gather*}
+    \text{Пусть } \overline{x} = \overline{B} \cdot X \Rightarrow \overline{z} = \alpha \overline{x} \\
+    \overline{B} \cdot Z = \alpha (\overline{B} \cdot X) \\
+    \overline{B} \cdot Z = \overline{B} (\alpha X) \Rightarrow \boxed{Z = \alpha X}, \\
+    \text{где } X = \begin{bmatrix}
+        x_1   \\
+        \vdots \\
+        x_n
+    \end{bmatrix} \in \mathbb{R}^n \text{ --- п-мерное пространство арифметических векторов.}
+\end{gather*}
+\paragraph{Примечание}
+$\overline{B}$ --- набор векторов.
+... (фото)
+
+\begin{gather*}
+    \begin{bmatrix}
+        x_1    \\
+        x_2    \\
+        \vdots \\
+        x_n
+    \end{bmatrix} = x_1 \underbrace{\begin{bmatrix}
+        1      \\
+        0      \\
+        0      \\
+        \vdots \\
+        0
+    \end{bmatrix}}_{\overline{e}_1} + x_2 \underbrace{\begin{bmatrix}
+        0      \\
+        1      \\
+        0      \\
+        \vdots \\
+        0
+    \end{bmatrix}}_{\overline{e}_2} + \dots + x_n \underbrace{\begin{bmatrix}
+        0      \\
+        0      \\
+        0      \\
+        \vdots \\
+        1
+    \end{bmatrix}}_{\overline{e}_n} \underset{\underset{\underset{\underset{\underset{\underset{\underset{\underset{\underset{\underset{\underset{\underset{\text{--- стандартный базис в } \mathbb{R}^n}{~}}{~}}{~}}{~}}{~}}{~}}{~}}{~}}{~}}{~}}{~}}{~}
+\end{gather*}
+
+
+\subsection{Изоморфизм (взаимооднозначное соответствие) линейных пространств}
+\[
+    U = \{\overline{u}_1, \overline{u}_2, \dots\} ~~~~~
+    W = \{\overline{w}_1, \overline{w}_2, \dots\}
+\]
+
+Есть правило $\overline{u}_i \leftrightarrow \overline{w}_i$
+
+\subsubsection{Свойства}
+\begin{align*}
+    \textbf{Первое: } ~~
+    \begin{rcases}
+        \overline{u_1} \leftrightarrow \overline{w_2} \\
+        \overline{u_2} \leftrightarrow \overline{w_2}
+    \end{rcases} \Rightarrow
+    \underset{\text{замкнуто по отношению }\boxed{+}}{
+        (\overline{u}_1 + \overline{u}_2) \leftrightarrow (\overline{w}_1 + \overline{w}_2)}
+\end{align*}
+\begin{gather*}
+    \textbf{Второе: } ~~
+    \underset{\text{замкнуто по отношению } b \neq \alpha \in \mathbb{R}}{
+        \overline{u}_1 \leftrightarrow \overline{w}_1 \Rightarrow (\alpha \overline{u}_1) \leftrightarrow (\alpha \overline{w}_1)}
+\end{gather*}
+Тогда $\boxed{U \leftrightarrow W}$: изоморфизм $W \leftrightarrow U$.
+
+\subsubsection{Теорема об изоморфизме}
+\[
+    \text{Если } \dim U = \dim W = n \Leftrightarrow U = U_n, W = W_n: \boxed{U_n \leftrightarrow W_n}
+\]
+
+\subsubsection{Следствие}
+Все свойства элементов в $U_n$ совпадают со свойствами элементов $W_n$. 
+
+\subsubsection{Вывод}
+\begin{gather*}
+    \overline{x} \in V_n \Rightarrow \boxed{\overline{x} \underset{\text{*}}{=} \overline{B} \cdot X}, X \in \mathbb{R}^n. \\
+    \text{*Правило }: ~~ \overline{x} \leftrightarrow X ~~\Rightarrow~~
+    (1)~ \overline{x} + \overline{y} \leftrightarrow X + Y, ~~~ (2)~ \alpha \overline{x} \leftrightarrow \alpha X ~~\Rightarrow~~
+    V_n \leftrightarrow \mathbb{R}^n, \text{где } \\
+    V_n \text{ --- линейное пространство конечномерное}, \\
+    \mathbb{R}^n \text{ --- линейное пространство арифметических векторов координат элементов из } V_n
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Преобразования координат элемента $\overline{x} \in V_n$ при переходе к новому базису}
+\textbf{Была кривая 2-го порядка: } $Ax^2 + 2Bxy + Cy^2 + Dx + Ey + F = 0$ \\
+\textbf{Две системы координат: } $Oxy = \{O, B = (\overline{i}, \overline{j})\}, ~~ Ox'y' = \{O, \overline{B} = (\overline{e}_1, \overline{e}_2)\}$
+
+\begin{gather*}
+    \textbf{Теперь: } \text{Пусть в } V_n \text{ есть } \underbrace{\overline{B} = (\overline{e}_1, \dots, \overline{e}_n)}_{\text{старый}} 
+    \text{ и } \underbrace{\overline{B}' = (\overline{e}_1', \dots, \overline{e}_n')}_{\text{новый}} \\
+    \text{(1) Установим связь базисов. Новый: } \
+    \overline{e}_1 = s_{11} \overline{e}_1 + s_{21} \overline{e}_2 + \dots + s_{n1} \overline{e}_n \Rightarrow E_1' = \begin{bmatrix}
+        s_{11} \\
+        s_{21} \\
+        \vdots \\
+        s_{n1}
+    \end{bmatrix} \\
+    \overline{e}_n' = s_{1n} \overline{e}_1 + s_{2n} \overline{e}_2 + \dots + s_{nn} \overline{e}_n \Rightarrow E_n' = \begin{bmatrix}
+        s_{1n} \\
+        s_{2n} \\
+        \vdots \\
+        s_{nn}
+    \end{bmatrix} \\
+    \text{Найдём координаты нового базиса в старых: }
+    \overline{e}_1' = \overline{B} \cdot \overline{E}_1', ~\dots, ~\overline{e}_n' = \overline{B} \cdot \overline{E}_n' \\
+    \text{Тогда } \overline{B}' = (\overline{e}_1', ~\dots, ~\overline{e}_n') = 
+    (\overline{B} E_1', ~\dots, ~\overline{B} E_n') = 
+    \overline{B}\underbrace{(\underset{\text{столбец}}{E_1'}, ~\dots, ~E_n')}_{\text{матрица } \underset{\overline{B} = \overline{B}'}{S}} \\
+    \text{Матрицы перехода от } \overline{B} \text{ к } \overline{B}':
+    \underset{\overline{B} \rightarrow \overline{B}'}{S} = ~\underset{E_1' ~~~~~~~~~~ E_n'}{\begin{vmatrix}
+        s_{11} & \dots & s_{1n} \\
+        s_{21} & \dots & s_{2n} \\
+        \dots  & \dots & \dots  \\
+        s_{1n} & \dots & s_{nn}
+    \end{vmatrix}} \\
+    \text{Так как } \overline{B} \text{ и } \overline{B}' содержат ЛНЗ элементы \Rightarrow
+    \left( E_1', ~\dots, ~E_n' \right) \text{ --- ЛНЗ} ~~~~~
+    \underset{\overline{B} \rightarrow \overline{B}'}{S}: ~ \boxed{\det \underset{\overline{B} \rightarrow \overline{B}'}{S} \neq 0}
+\end{gather*}
+\begin{gather*}
+    \text{(2) Свяжем координаты одного элемента } \overline{x} \in V_n \text{ в обоих базисах}. \\
+    \text{По старому: } \overline{x} = \overline{B}  \cdot X,  ~X  = X_B    \\
+    \text{По новому: }  \overline{x} = \overline{B}' \cdot X', ~X' = X_{B'} \\
+    \text{Тогда } \overline{B} \cdot X = \underset{\overline{B} \cdot \underset{B \to B'}{S}}{B'} \cdot X', 
+    \overline{B} \cdot X = \overline{B} (\underset{B \to B'}{S} \cdot X') \Rightarrow \boxed{X = \underset{B \to B'}{S} \cdot X'} \\
+    \text{Пусть } X \text{ --- известно, найдём } X': ~
+    S \cdot X' = X \text{ --- матричное уравнение } \exists S^{-1} \text{ или СЛАУ } A \overline{x} = \overline{b} \\
+    \text{Решение } \exists!: ~\underset{\text{метод обратной матрицы решения СЛАУ}}{\boxed{X' = S^{-1} \cdot X}}. ~
+    \text{Проще правилом Крамера или методом Гаусса }
+\end{gather*}
+
+
+
+\par\noindent\rule{\textwidth}{1pt}
+\section{Свойства матриц перехода между базисами}
+\begin{gather*}
+    \text{Пусть в } V_n \text{ есть старый базис } \underset{\text{старый}}{\overline{B}} 
+    \rightarrow \underset{\text{новый}}{\overline{B}'} \rightarrow \underset{\text{суперновый}}{\overline{B}''} \\
+    B  \rightarrow B' : \underset{B  \to B' }{S} \Rightarrow X'  = \underset{B  \to B' }{S} \cdot X \\
+    B' \rightarrow B'': \underset{B' \to B''}{S} \Rightarrow X'' = \underset{B' \to B''}{S} \cdot X' \\
+    \text{Суперновый } \overline{B}'' = \overline{B}' \cdot S, \overline{B}' = \overline{B} \cdot S
+\end{gather*}
+
+
+
+
+\end{document}

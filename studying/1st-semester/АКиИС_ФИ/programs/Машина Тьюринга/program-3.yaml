@@ -1,0 +1,27 @@
+name: prikol2
+source code: |-
+  input: '1101\'
+  blank: ' '
+  start state: start
+  table:
+    start:
+      [1, 0]: {R: start}
+      \: {L: qc}
+    qc:
+      1: {write: 0, R: qf}
+      0: {write: 1, L: qc}
+    qf:
+      \: {R: plp}
+      [1,0]: {R: qf}
+    plp:
+      /: {R: plp}
+      ' ': {write: /, L: ml}
+    ml:
+      /: {L: ml}
+      \: {L: qc}
+positions:
+  start: {x: 174.3, y: 282.99}
+  qc: {x: 331.58, y: 285.15}
+  qf: {x: 465.36, y: 285.73}
+  plp: {x: 661.29, y: 284.26}
+  ml: {x: 477.03, y: 107.87}

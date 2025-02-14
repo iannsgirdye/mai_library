@@ -1,0 +1,137 @@
+name: prikol
+source code: |-
+  input: '9abcdefghjk'
+  blank: ' '
+  start state: start
+  table:
+    start:
+      1: {write: ' ', R: rep1}
+      2: {write: ' ', R: rep2}
+      3: {write: ' ', R: rep3}
+      4: {write: ' ', R: rep4}
+      5: {write: ' ', R: rep5}
+      6: {write: ' ', R: rep6}
+      7: {write: ' ', R: rep7}
+      8: {write: ' ', R: rep8}
+      9: {write: ' ', R: rep9}
+    rep1:
+      a: {write: b, R: rep1}
+      b: {write: c, R: rep1}
+      c: {write: d, R: rep1}
+      d: {write: e, R: rep1}
+      e: {write: f, R: rep1}
+      f: {write: g, R: rep1}
+      g: {write: h, R: rep1}
+      h: {write: j, R: rep1}
+      j: {write: k, R: rep1}
+      k: {write: a, R: rep1}
+      ' ': {R: done} 
+    rep2:
+      a: {write: c, R: rep2}
+      b: {write: d, R: rep2}
+      c: {write: e, R: rep2}
+      d: {write: f, R: rep2}
+      e: {write: g, R: rep2}
+      f: {write: h, R: rep2}
+      g: {write: j, R: rep2}
+      h: {write: k, R: rep2}
+      j: {write: a, R: rep2}
+      k: {write: b, R: rep2}
+      ' ': {R: done}  
+    rep3:
+      a: {write: d, R: rep3}
+      b: {write: e, R: rep3}
+      c: {write: f, R: rep3}
+      d: {write: g, R: rep3}
+      e: {write: h, R: rep3}
+      f: {write: j, R: rep3}
+      g: {write: k, R: rep3}
+      h: {write: a, R: rep3}
+      j: {write: b, R: rep3}
+      k: {write: c, R: rep3}
+      ' ': {R: done} 
+    rep4:
+      a: {write: e, R: rep4}
+      b: {write: f, R: rep4}
+      c: {write: g, R: rep4}
+      d: {write: h, R: rep4}
+      e: {write: j, R: rep4}
+      f: {write: k, R: rep4}
+      g: {write: a, R: rep4}
+      h: {write: b, R: rep4}
+      j: {write: c, R: rep4}
+      k: {write: d, R: rep4}
+      ' ': {R: done} 
+    rep5:
+      a: {write: f, R: rep5}
+      b: {write: g, R: rep5}
+      c: {write: h, R: rep5}
+      d: {write: j, R: rep5}
+      e: {write: k, R: rep5}
+      f: {write: a, R: rep5}
+      g: {write: b, R: rep5}
+      h: {write: c, R: rep5}
+      j: {write: d, R: rep5}
+      k: {write: e, R: rep5}
+      ' ': {R: done} 
+    rep6:
+      a: {write: g, R: rep6}
+      b: {write: h, R: rep6}
+      c: {write: j, R: rep6}
+      d: {write: k, R: rep6}
+      e: {write: a, R: rep6}
+      f: {write: b, R: rep6}
+      g: {write: c, R: rep6}
+      h: {write: d, R: rep6}
+      j: {write: e, R: rep6}
+      k: {write: f, R: rep6}
+      ' ': {R: done} 
+    rep7:
+      a: {write: h, R: rep7}
+      b: {write: j, R: rep7}
+      c: {write: k, R: rep7}
+      d: {write: a, R: rep7}
+      e: {write: b, R: rep7}
+      f: {write: c, R: rep7}
+      g: {write: d, R: rep7}
+      h: {write: e, R: rep7}
+      j: {write: f, R: rep7}
+      k: {write: g, R: rep7}
+      ' ': {R: done} 
+    rep8:
+      a: {write: j, R: rep8}
+      b: {write: k, R: rep8}
+      c: {write: a, R: rep8}
+      d: {write: b, R: rep8}
+      e: {write: c, R: rep8}
+      f: {write: d, R: rep8}
+      g: {write: e, R: rep8}
+      h: {write: f, R: rep8}
+      j: {write: g, R: rep8}
+      k: {write: h, R: rep8}
+      ' ': {R: done} 
+    rep9:
+      a: {write: k, R: rep9}
+      b: {write: a, R: rep9}
+      c: {write: b, R: rep9}
+      d: {write: c, R: rep9}
+      e: {write: d, R: rep9}
+      f: {write: e, R: rep9}
+      g: {write: f, R: rep9}
+      h: {write: g, R: rep9}
+      j: {write: h, R: rep9}
+      k: {write: j, R: rep9}
+      ' ': {R: done} 
+    done:
+positions:
+  start: {x: 74.84, y: 313.18}
+  rep1: {x: 286.61, y: 285.19, fixed: false}
+  rep2: {x: 287.25, y: 320.56, fixed: false}
+  rep3: {x: 326.37, y: 340.7, fixed: false}
+  rep4: {x: 325.77, y: 302.65, fixed: false}
+  rep5: {x: 325.08, y: 264.74, fixed: false}
+  rep6: {x: 285.23, y: 248.58, fixed: false}
+  rep7: {x: 288.27, y: 357.51, fixed: false}
+  rep8: {x: 314.75, y: 379.73, fixed: false}
+  rep9: {x: 311.94, y: 226.98, fixed: false}
+  done: {x: 529.35, y: 302}

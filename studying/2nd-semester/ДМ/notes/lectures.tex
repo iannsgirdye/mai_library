@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Дискретная математика}
+    \author{Бабицкий Иван, М8О-111БВ-24}
+    \date{2024/2025 учебный год, 2-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.02.14 (2) | ЛК-1}
+\part{...}
+
+\section{Введение}
+Фото 2, 3: один и тот же граф можно отобразить по-разному.
+Фото 4: тот же граф может быть показан через множества
+
+Граф --- совокупность двух множеств: $G: V, X$, где $V$ --- множество вершин, $X$ --- множество рёбер
+$V = \{A, B, C, D, E, F\}$ \\ 
+$X = \{\underset{}{(A, B)}_{\text{ориентация не имеет значение}}, (B, C), ...\}$
+
+
+\subsection{"Уточняющие моменты"}
+
+\subsubsection{Ориентация рёбер}
+\begin{itemize}
+    \item Неориентированные
+    \item Ориентированное (дуги)
+\end{itemize}
+Конечные графы --- графы, у которых множества $X$ и $V$ --- конечные множества.
+
+\subsubsection{Дрпустимы ли кратные рёбра?}
+...
+
+\subsubsection{Допустимы ли петли?}
+...
+
+Смежные вершины --- вершины, которые являются началом и концом одного ребра.
+
+Вершины и рёбра (дуги) называются элементами графа.
+
+\subsection{Определение | Обыкновенный граф}
+Обыкновенным графом (просто графом) называется граф, состоящий из...: \\
+$G = (V, X)$, где 
+$V$ --- множество вершин, 
+$X$ --- множество \underset{$y w p$ = орграф без петлей}{неоднородных} пар элементов (если пары различны, то граф с петлями).
+
+\section{something}
+Бинарное отношение $\rho$ на множестве $A$ ($\rho \subseteq A \times A$) $\Leftrightarrow G = (A, \rho)$
+
+Граф --- два множества: вершин, и ребёр (абстрактное математическое определение)
+Изображение графа --- рисунок графа в любом виде
+
+
+\subsection{Количество}
+\begin{gather*}
+    g_n = 2 \cdot 2 \cdot 2 \cdot \dots \cdot 2 = 2^{\frac{...}{2}}
+\end{gather*}
+
+
+
+\section{Степени вершины $U$}
+
+
+
+\end{document}
