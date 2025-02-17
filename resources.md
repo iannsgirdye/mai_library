@@ -16,6 +16,7 @@
 - [МАИ-ШУЦТ](https://t.me/mai_sjtu)
 - [Наука МАИ [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
 - [Проект "Топ-100" МАИ](https://top100mai.tilda.ws/#rec834796140)
+- [Онлайн-курсы МАИ](https://mai.ru/education/dpo/online/)
 
 
 ### Мероприятия
