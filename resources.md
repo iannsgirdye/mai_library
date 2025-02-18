@@ -7,11 +7,11 @@
 
 ## Основное
 - [МАИ](https://t.me/MAIuniversity)
+- [Облако](https://oblako.mai.ru)
 
 ### Учёба 
 - [Цифровая кадровая платформа МАИ](https://t.me/platforma_mai_ru)
 - [CONVERSATION CLUB MAI](https://t.me/conversationclubMAI)
-- [ВУЦ при МАИ](https://t.me/vucmai)
 - [Учеба по обмену | МАИ](https://t.me/exchange_programs_mai)
 - [МАИ-ШУЦТ](https://t.me/mai_sjtu)
 - [Наука МАИ [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
@@ -48,6 +48,7 @@
 
 ## ВУЦ
 - [Официальный сайт](https://vuc-mai.ru)
+- [Телеграм-канал "ВУЦ при МАИ"](https://t.me/vucmai)
 - [Организационное](https://institutes.mai.ru/military)
 
 
