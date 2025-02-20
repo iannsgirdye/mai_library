@@ -65,33 +65,9 @@
 
 %--------------------------------------------------
 \newpage
-\paragraph{2025.02.17 (1) | ЛК-1}
+\paragraph{2025.02.17 (2) | ПЗ-1}
 \part{Линейные пространства, их базисы и размерность}
-
-\textbf{Примечание.} Материал будет написан:
-\begin{itemize}
-    \item из книги "Типовые задачи по линейной алгебре" (часть 2) --- Бортаковский и Пегачкова
-    \item на первом практическом занятии
-\end{itemize}
-
-
-
-\section{Введение}
-
-\subsection{Определение | Линейное пространство}
-\dots
-
-
-\subsection{Определение | Линейная зависимоть и линейная независимость линейного пространства}
-\dots
-
-
-\subsection{Определение | Базис линейного пространства}
-\dots
-
-
-\subsection{Определение | Размерность пространства}
-\dots
+Конспект написан в тетради для практических занятий.
 
 
 
@@ -108,6 +84,7 @@
     \underbrace{(\overline{i}, \overline{j}, \overline{k})}_{\text{ЛНЗ}} \text{ --- базис в } V_3 ~~~~~
     \overline{a} = (a_x, a_y, a_z)_{(\overline{i}, \overline{j}, \overline{k})}
 \end{gather*}
+\includegraphics[scale=0.2]{images/2025-02-14/01.jpg}
 
 \textbf{Теперь в линейном пространстве $V$ есть базис 
 $\overline{B} = \underbrace{(\overline{e}_1, \overline{e}_2, \dots, \overline{e}_n)}_{\text{ЛНЗ}}$, так что}
@@ -262,12 +239,14 @@ $\overline{B}$ --- набор векторов.
 \par\noindent\rule{\textwidth}{1pt}
 \section{Преобразования координат элемента $\overline{x} \in V_n$ при переходе к новому базису}
 \textbf{Была кривая 2-го порядка: } $Ax^2 + 2Bxy + Cy^2 + Dx + Ey + F = 0$ \\
-\textbf{Две системы координат: } $Oxy = \{O, B = (\overline{i}, \overline{j})\}, ~~ Ox'y' = \{O, \overline{B} = (\overline{e}_1, \overline{e}_2)\}$
+\textbf{Две системы координат: } $Oxy = \{O, B = (\overline{i}, \overline{j})\}, ~~ Ox'y' = \{O, \overline{B} = (\overline{e}_1, \overline{e}_2)\}$ \\
+\includegraphics[scale=0.2]{images/2025-02-14/02.jpg}
 
 \begin{gather*}
     \textbf{Теперь: } \text{Пусть в } V_n \text{ есть } \underbrace{\overline{B} = (\overline{e}_1, \dots, \overline{e}_n)}_{\text{старый}} 
     \text{ и } \underbrace{\overline{B}' = (\overline{e}_1', \dots, \overline{e}_n')}_{\text{новый}} \\
-    \text{(1) Установим связь базисов. Новый: } \
+    \includegraphics[scale=0.2]{images/2025-02-14/03.jpg} \\
+    \text{(1) Установим связь базисов. Новый: } \\
     \overline{e}_1 = s_{11} \overline{e}_1 + s_{21} \overline{e}_2 + \dots + s_{n1} \overline{e}_n \Rightarrow E_1' = \begin{bmatrix}
         s_{11} \\
         s_{21} \\
@@ -315,10 +294,18 @@ $\overline{B}$ --- набор векторов.
 \begin{gather*}
     \text{Пусть в } V_n \text{ есть старый базис } \underset{\text{старый}}{\overline{B}} 
     \rightarrow \underset{\text{новый}}{\overline{B}'} \rightarrow \underset{\text{суперновый}}{\overline{B}''} \\
-    B  \rightarrow B' : \underset{B  \to B' }{S} \Rightarrow X'  = \underset{B  \to B' }{S} \cdot X \\
-    B' \rightarrow B'': \underset{B' \to B''}{S} \Rightarrow X'' = \underset{B' \to B''}{S} \cdot X' \\
-    \text{Суперновый } \overline{B}'' = \overline{B}' \cdot S, \overline{B}' = \overline{B} \cdot S
+    B  \rightarrow B' : \underset{\overline{B}  \to \overline{B}' }{S} \Rightarrow X'  = \underset{\overline{B}  \to \overline{B}' }{S} \cdot X \\
+    B' \rightarrow B'': \underset{\overline{B}' \to \overline{B}''}{S} \Rightarrow X'' = \underset{\overline{B}' \to \overline{B}''}{S} \cdot X' \\
+    \text{Суперновый } \overline{B}'' = \overline{B}' \cdot \underset{\overline{B}' \to \overline{B}''}{S}, 
+    \overline{B}' = \overline{B} \cdot \underset{\overline{B} \to \overline{B}'}{S}
 \end{gather*}
+\begin{align*}
+    \begin{rcases}
+        \text{Послед. } \overline{B}'' = \left( \overline{B} \cdot \underset{\overline{B} \to \overline{B}'}{S} \right) \cdot \underset{\overline{B}' \to \overline{B}''}{S} \\
+        \text{Сразу } \overline{B}'' = \overline{B} \cdot \underset{\overline{B} \to \overline{B}''}{S}
+    \end{rcases} \overline{B} \cdot \underset{\overline{B} \to \overline{B}'}{S} \cdot \underset{\overline{B}' \to \overline{B}''}{S} = \overline{B} \cdot \underset{\overline{B} \to \overline{B}''}{S} \\
+    \boxed{\underset{\overline{B} \to \overline{B}''}{S} = \underset{\overline{B} \to \overline{B}'}{S} \cdot \underset{\overline{B}' \to \overline{B}''}{S}}
+\end{align*}
 
 
 

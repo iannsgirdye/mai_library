@@ -182,6 +182,9 @@
 \end{gather*}
 
 \subsubsection{Пример}
+\[
+    \int \ln x dx
+\]
 \begin{gather*}
     \int \ln x dx = \int (\ln x) \cdot (x)' dx = \begin{cases}
         u = \ln x, u' = \frac{1}{x} \\
@@ -190,6 +193,9 @@
 \end{gather*}
 
 \subsubsection{Пример}
+\[
+    I = \int e^x \sin x dx
+\]
 \begin{gather*}
     I = \int e^x \sin x dx = \int \underbrace{e^x}_{u} \underbrace{(-cos x)'}_{v'} = \begin{cases}
         u = e^x, u' = e^x \\
@@ -198,9 +204,149 @@
     = -e^x \cos x + \int e^x \cos dx = \begin{cases}
         u = e^x, u' = e^x \\
         v = \sin x, v' = \cos x
-    \end{cases} =
-    -e^x \cos x + e^x \sin x - \int e^x \sin x dx = e^x (\sin x - \cos x) - I = I \\
+    \end{cases} = \\
+    = -e^x \cos x + e^x \sin x - \int e^x \sin x dx = e^x (\sin x - \cos x) - I = I \\
     I = \frac{1}{2} e^x (\sin x - \cos x)
+\end{gather*}
+
+
+\paragraph{2025.02.20 (3)}
+\subsection{Замена}
+\[
+    \int f(\varphi(t)) \varphi'(t) dt
+\]
+\begin{gather*}
+    \text{Замена: } x = \varphi(t) \\
+    dx = \varphi'(t) dt \\
+    \int f(\varphi(t)) \varphi'(t) dt = \int f(x)dx
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{tdt}{\sqrt{t^2 + 1}}
+\]
+\begin{gather*}
+    \text{Замена: } x = t^2 + 1, ~\text{тогда } dx = 2tdt \\
+    \int \frac{tdt}{\sqrt{t^2 + 1}} = \frac{1}{2} \int \frac{dx}{\sqrt{x}} = \sqrt{x} + C = \sqrt{t^2 + 1} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int e^{\sin x} \cos x ~dx
+\]
+\begin{gather*}
+    \text{Замена: } y = \sin x, ~\text{тогда } dy = \cos x ~dx \\
+    \int e^{\sin x} \cos x ~dx = \int e^y dy = e^y + C = e^{\sin x} + C
+\end{gather*}
+
+\subsubsection{Формула Эйлера (вне курса)}
+\[
+    e^{ix} = \cos x + i\sin x
+\]
+\paragraph{Следствие}
+\[
+    \cos x = \frac{e^{ix} + e^{-ix}}{2}
+\]
+
+
+
+
+%-------------------------------------------------------
+\newpage
+\part{Интегрирование дробно-рациональных функций}
+Дробно-рациональная функция --- функция вида ''многочлен делить на многочлен''
+
+\section{Введение}
+\begin{gather*}
+    R(x) = \frac{P_m(x)}{Q_n(x)} \\
+    m < n \Rightarrow \text{дробь правильная, иначе неправильная}. \\
+    \text{Если } m \ge n, \text{ то } R(x) = A_{m-n}(x) + \frac{B_l(x)}{Q_n(x)}, ~l < n
+\end{gather*}
+
+
+\subsection{Теорема | Девушка не человек}
+Пусть девушка молодая $\Rightarrow$ молодой человек, но молодой человека --- это мужчина, то есть юноша $\Rightarrow$ противоречие.
+
+\subsection{Разложение многочлена на множители}
+\begin{gather*}
+    \text{Если } x_0 = \alpha + i \beta \text{ --- корень, то } \overline{x}_0 = \alpha - i\beta \text{ --- тоже корень} \\
+    (x - x_0)(x - \overline{x}_0) = x^2 - (x_0 + \overline{x}_0)x + x_0\overline{x_0} = x^2 - 2\alpha x + \alpha^2 + \beta^2
+\end{gather*}
+Любой многочлен с действительными коэффициентами имеет действительный или комплексный корень.
+
+\subsubsection{Пример}
+\[
+    x^4 + 1
+\]
+\begin{gather*}
+    x^4 + 1 = x^4 + 2x^2 + 1 - 2x^2 = (x + 1)^2 - 2x^2 = (x^2 - \sqrt{2}x + 1)(x^2 + \sqrt{2}x + 1)
+\end{gather*}
+
+\paragraph{Если дробь правильная, то:}
+\begin{gather*}
+    \frac{B_l(x)}{(x - \alpha)^{k_1} (x^2 + ax + b)^{k_2} \dots} =
+    \frac{a_1}{x - \alpha} + \frac{a_2}{(x - \alpha)^2} + \dots + \frac{a_{k_1}}{(x - \alpha)^{k_1}} + \\
+    + \frac{b_1x + c_1}{x^2 + ax + b} + \frac{b_2x + c_2}{(x^2 + ax + b)^2} + \dots + \frac{b_{k_2}x + c_{k_2}}{(x^2 + ax + b)^{k_2}} + \dots
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \frac{x}{x^2 - 1}
+\]
+\begin{gather*}
+    \frac{x}{x^2 - 1} = \frac{x}{(x - 1)(x + 1)} = \frac{A}{x - 1} + \frac{B}{x + 1} = \frac{Ax + A + Bx - B}{(x^2 - 1)} = \frac{x}{x^2 - 1} \\
+    A + B = 1, A - B = 0 \Rightarrow A = B = \frac{1}{2} \\
+    \frac{x}{x^2 - 1} = \frac{\frac{1}{2}}{x - 1} + \frac{\frac{1}{2}}{x + 1}
+\end{gather*}
+
+\subsubsection{Случай 1}
+\[
+    \int \frac{dx}{(x - \alpha)^k}
+\]
+\begin{gather*}
+    \text{Замена: } y = x - \alpha, \text{ тогда } dy = dx \\
+    \int \frac{dx}{(x - \alpha)^k} = \int \frac{dy}{y^k} = \begin{cases}
+        \ln |y| + C, k = 1 \\
+        \frac{y^{-k + 1}}{-k + 1} + C, k \neq 1, k \in \mathbb{N}
+    \end{cases}
+\end{gather*}
+
+\subsubsection{Случай 2}
+\[
+    \int \frac{x + \beta}{(x^2 - ax + b)^k} dx
+\]
+\begin{gather*}
+    \int \frac{x + \beta}{(x^2 - ax + b)^k} dx = 
+    \int \frac{\left( x - \frac{a}{2} \right) + \beta + \frac{a}{2}}{\left( \left( x - \frac{a}{2} \right)^2 + \underbrace{b - \frac{a^2}{4}}_{> 0} \right)^k} dx = \\
+    \text{Замена: } y = x - \frac{a}{2}, \text{ тогда } dy = dx; q^2 = b - \frac{a^2}{4}; h = \beta  +\frac{a}{2} \\
+    = \int \frac{y + h}{(y^2 + q^2)^k} dy = 
+    \int \frac{ydy}{(y^2 + q^2)^k} + h \int \frac{dy}{(y^2 + q^2)^k} \\
+    \text{Замена: } z = y^2 + q^2, \text{тогда } dz = 2ydy \\
+    \int \frac{ydy}{(y^2 + q^2)^k} = \frac{1}{2} \int \frac{dz}{z^k} = \begin{cases}
+        \frac{1}{2} \ln |z| + C, k = 1 \\
+        \frac{1}{2} \frac{z^{-k + 1}}{-k + 1}, k \neq 1, k \in \mathbb{N}
+    \end{cases} \\
+    I_{k - 1} = \int \frac{dy}{(y^2 + q^2)^{k - 1}} = \begin{cases}
+        u = \frac{1}{(y^2 + q^2)^{k - 1}}, u' = 2y(1 - k)(y^2 + q^2)^{-k} \\
+        v = y, v' = 1
+    \end{cases} = \\
+    =  \frac{y}{(y^2 + q^2)^{k - 1}} - \int \frac{2y(1 - k)(y^2 + q^2)^{-k}}{(y^2 + q^2)^k} = \\
+    = \frac{y}{(y^2 + q^2)^{k - 1}} + 2(k - 1) \int \frac{y^2 dy}{(y^2 + q^2)^k} =
+    \frac{y}{(y^2 + q^2)^{k - 1}} + 2(k - 1)I_{k - 1} - 2(k - 1)qI_k \\
+    I_k = \dots I_{k - 1} \dots = \dots I_1 \dots \\
+    \int \frac{dy}{y^2 + q^2} = \frac{1}{q} \arctg \frac{y}{q} + C
+\end{gather*}
+
+\subsubsection{Что-то}
+\[
+    \int R(\sin x, \cos x) dx
+\]
+\begin{gather*}
+    \sin x = \frac{2\tg \frac{x}{2}}{1 + \tg^2 \frac{x}{2}} ~~~~~
+    \cos x = \frac{1 - \tg^2 \frac{x}{2}}{1 + \tg^2 \frac{x}{2}} \\
+    \text{Замена: } y = \tg \frac{x}{2}, 
+    \text{ тогда } dy = \frac{1}{2\cos^2 \frac{x}{2}}dx = \frac{1}{2} \left( 1 + \tg^2 \frac{x}{2} \right) dx = \frac{1}{2} \left( 1 + y^2 \right) dx \\
+    R(\sin x, \cos x) dx = \int R \left( \frac{2y}{1 + y^2}, \frac{1 - y^2}{1 + y^2}\right) \frac{2dy}{1 + y^2}
 \end{gather*}
 
 
