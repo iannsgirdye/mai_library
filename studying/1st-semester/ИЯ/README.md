@@ -2,18 +2,7 @@
 
 
 
-## 1. Файлы
-- Задания
-    - [Классные задания и Домашние задания](https://disk.yandex.ru/d/mQ_VbJchWQwWeg)
-    - [Зачёт](https://disk.yandex.ru/d/bVs9VrceDw6riw)
-- Материалы
-    - [Конспекты](https://disk.yandex.ru/d/UcoN0aOw8D8eJA)
-    - [Литература](https://disk.yandex.ru/d/pJ9kPjlfJ37bMQ)
-    - [Маршрутный лист (файл)](https://disk.yandex.ru/i/Sm8Fg-MvwSn-xw)
-
-
-
-## 2. Занятия (преподаватели, практические занятия)
+## Преподаватели (практические занятия)
 | Группа | Кабинет | ФИО | Контакты |
 |--------|---------|-----|----------|
 | ИЯ2-34-24 | 603Б | [Волотов Дмитрий Андреевич](https://mai.ru/education/studies/schedule/ppc.php?guid=4a53c1d8-6778-11ea-a206-485b3919ee6d) | |
@@ -25,3 +14,15 @@
 | ИЯ2-40-24 | 611В | [Шаройко Екатерина Александровна](https://mai.ru/education/studies/schedule/ppc.php?guid=d4c23775-d092-11e5-9673-3cd92bf20bfe) | |
 | ИЯ2-41-24 | 604Б | [Глоткина Антонина Александровна](https://mai.ru/education/studies/schedule/ppc.php?guid=841ed3d8-9842-11e2-849a-3cd92bf20bfe) | |
 
+
+
+## Материалы
+- [Конспекты](https://disk.yandex.ru/d/UcoN0aOw8D8eJA)
+- [Литература](https://disk.yandex.ru/d/pJ9kPjlfJ37bMQ)
+- [Маршрутный лист (файл)](https://disk.yandex.ru/i/Sm8Fg-MvwSn-xw)
+
+
+
+## Задания
+- [Классные задания и Домашние задания](https://disk.yandex.ru/d/mQ_VbJchWQwWeg)
+- [Зачёт](https://disk.yandex.ru/d/bVs9VrceDw6riw)
