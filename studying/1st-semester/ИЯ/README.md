@@ -24,5 +24,5 @@
 
 
 ## Задания (ИЯ2-36-24)
-- [Упражнения](https://disk.yandex.ru/d/mQ_VbJchWQwWeg)
 - [Зачёт](https://disk.yandex.ru/d/bVs9VrceDw6riw)
+- [Практические занятия](https://disk.yandex.ru/d/mQ_VbJchWQwWeg)
