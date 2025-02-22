@@ -12,9 +12,7 @@
 
 ## Материалы
 - [Конспекты](https://disk.yandex.ru/d/SB3zomj-P1nVzQ)
-- [Литература](https://disk.yandex.ru/d/_XKes1uV_gjIpA):
-    - Дополнительная
-    - Основная
+- [Литература](https://disk.yandex.ru/d/_XKes1uV_gjIpA)
 
 
 

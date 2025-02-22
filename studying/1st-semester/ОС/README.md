@@ -12,16 +12,14 @@
 
 ## Материалы
 - [Конспекты](https://disk.yandex.ru/d/RUffhXhlvl9XJw)
-- [Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g):
-    - Дополнительная
-    - Основная
-- [добро.рф](https://dobro.ru)
+- [Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g)
 
 
 
 ## Задания
 ### Курсовой проект
 - [Файлы](https://disk.yandex.ru/d/v9P8RtPLY4uuhA)
+- [добро.рф](https://dobro.ru)
 
 ### Зачёт
 - [Файлы](https://disk.yandex.ru/d/40qsjLXCIQHcJw)

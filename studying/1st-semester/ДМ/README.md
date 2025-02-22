@@ -12,10 +12,8 @@
 
 ## Материалы
 - [Конспекты](https://disk.yandex.ru/d/Kmo0Q50qp1GFHA)
-- [Литература](https://disk.yandex.ru/d/-ANnPaegxFCPzg):
-    - Дополнительная
-    - Основная
-- [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
+- [Литература](https://disk.yandex.ru/d/-ANnPaegxFCPzg)
+- [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo)
 - **Дополнительно:** [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
 
 
