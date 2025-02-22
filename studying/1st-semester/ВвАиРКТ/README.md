@@ -21,7 +21,6 @@
 - [Файлы](https://disk.yandex.ru/d/Wan4WLFyQ9QDtQ)
 - [Таблица команд потока 2024-2025](https://docs.google.com/spreadsheets/d/1O8wexgEsrICv9gaEjPlsQNl0K4x3RxHDeizsFPTeAGM/edit?usp=drivesdk)
 - ГОСТ 7.32 2017
-
-**Дополнительно**
-- [Проект команды потока 2023-2024](https://drive.google.com/drive/folders/1o0PawGJvDIvxROh8MbsW27_gF5fWdRFH?ths=true)
-- [Таблица команд потока 2023-2024](https://docs.google.com/spreadsheets/d/1DztVer0hMbh-3jpedcu58X6jfaTXOvcm/edit?gid=1783731706#gid=1783731706)
+- **Дополнительно:**
+    - [Проект команды потока 2023-2024](https://drive.google.com/drive/folders/1o0PawGJvDIvxROh8MbsW27_gF5fWdRFH?ths=true)
+    - [Таблица команд потока 2023-2024](https://docs.google.com/spreadsheets/d/1DztVer0hMbh-3jpedcu58X6jfaTXOvcm/edit?gid=1783731706#gid=1783731706)

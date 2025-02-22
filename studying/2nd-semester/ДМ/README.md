@@ -12,17 +12,18 @@
 
 ## Материалы
 - [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
-- [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
+- **Дополнительно:** [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
 
 
 
 ## Задания
-
 ### Контрольная работа
 ...
 
+
 ### Курсовой проект
 ...
+
 
 ### Экзамен
 ...

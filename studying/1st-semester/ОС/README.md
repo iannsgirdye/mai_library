@@ -12,7 +12,7 @@
 
 ## Материалы
 - [Конспекты](https://disk.yandex.ru/d/RUffhXhlvl9XJw)
-- [Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g)
+- [Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g):
     - Дополнительная
     - Основная
 - [добро.рф](https://dobro.ru)
@@ -25,4 +25,4 @@
 
 ### Зачёт
 - [Файлы](https://disk.yandex.ru/d/40qsjLXCIQHcJw)
-- Сдача: 26.12.2024, с 10:45 до 14:45; ГУК, А-521
+- **Сдача:** 26.12.2024, с 10:45 до 14:45; ГУК, А-521

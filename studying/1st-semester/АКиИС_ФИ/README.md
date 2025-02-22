@@ -14,11 +14,10 @@
 ## Материалы
 - [Конспекты](https://disk.yandex.ru/d/B4qiA0PzCNGbXQ)
 - [Литература](https://disk.yandex.ru/d/wuzTBSTlMCP4Ew)
-
-**Дополнительно**
-- [Побитовые операции](https://habr.com/ru/companies/metalamp/articles/809549)
-- [Работа с файлами на Си](https://younglinux.info/c/fopen)
-- [Прямой и обратный порядок байтов](https://habr.com/ru/articles/233245)
+- **Дополнительно:**
+    - [Побитовые операции](https://habr.com/ru/companies/metalamp/articles/809549)
+    - [Работа с файлами на Си](https://younglinux.info/c/fopen)
+    - [Прямой и обратный порядок байтов](https://habr.com/ru/articles/233245)
 
 
 
@@ -45,12 +44,11 @@
 ### Экзамены
 - [Файлы](https://disk.yandex.ru/d/EDDUyXTcOExRvw)
 - [Содержание и сдача](https://faq8.ru/read.php?2,16469)
-
-**Дополнительно**
-- [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
-- [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
-- [Репозиторий с материалами](https://github.com/mai-806/fund-wiki/tree/main)
-- [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0)
+- **Дополнительно:**
+    - [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
+    - [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
+    - [Репозиторий с материалами](https://github.com/mai-806/fund-wiki/tree/main)
+    - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0)
 
 
 
