@@ -7,7 +7,6 @@
 
 ## Основное
 - [МАИ](https://t.me/MAIuniversity)
-- [Облако](https://oblako.mai.ru)
 
 ### Учёба 
 - [Цифровая кадровая платформа МАИ](https://t.me/platforma_mai_ru)
@@ -46,12 +45,6 @@
 - [Мини-приложение "Расписание МАИ](https://t.me/maiuniversity_schedule_bot)
 
 
-## ВУЦ
-- [Официальный сайт](https://vuc-mai.ru)
-- [Телеграм-канал "ВУЦ при МАИ"](https://t.me/vucmai)
-- [Организационное](https://institutes.mai.ru/military)
-
-
 ### Не студентам
 - [Детский технопарк МАИ | Траектория взлёта 🚀](https://t.me/traektoriamai)
 - [Поступи в МАИ | Абитуриент](https://t.me/postupi_v_mai)
@@ -60,6 +53,7 @@
 
 
 ### Разное
+- [Облако](https://oblako.mai.ru)
 - [MAI STORE](https://t.me/maistoreofficial)
 - [Интернет МАИ](https://t.me/inetmai)
 - [Космос в МАИ](https://t.me/kosmos_mai)
@@ -124,7 +118,7 @@
 - **Дополнительно:**
     - [Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
     - **Информатика:**
-        - **Текстовые редакторы**
+        - **Текстовые редакторы:**
             - [Visual Studio Code](https://code.visualstudio.com/)
             - [Vim](https://www.vim.org/download.php)
             - [Notepad++](https://notepad-plus-plus.org/downloads/)
@@ -160,13 +154,18 @@
 ...
 
 
+## ВУЦ
+- [Официальный сайт](https://vuc-mai.ru)
+- [Телеграм-канал "ВУЦ при МАИ"](https://t.me/vucmai)
+- [Организационное](https://institutes.mai.ru/military)
+
+
 ### Институт №14
 - [Профбюро 14 института](https://t.me/profburopish14)
 
 
 
 ## Дополнительно
-
 ### Мероприятия
 - [Росмолодёжь](https://fadm.gov.ru)
 - [ФГАИС "Молодёшь России"](https://myrosmol.ru)
