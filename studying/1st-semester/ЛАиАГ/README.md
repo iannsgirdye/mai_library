@@ -20,11 +20,13 @@
 ### Контрольная работа
 - [Файлы](https://disk.yandex.ru/d/DuN2oJ00arwLqA)
 
+
 ### Расчётно-графическая работа
-- [Расчётно-графическая работа](https://disk.yandex.ru/d/kDN2yldFuPWfcA)
+- [Задачи и титульный лист](https://disk.yandex.ru/d/kDN2yldFuPWfcA)
+
 
 ### Экзамен
-- [Файлы](https://disk.yandex.ru/d/R00xsnH7FUcnbw)
+- [Список вопросов и гайд](https://disk.yandex.ru/d/R00xsnH7FUcnbw)
 - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1FNZpad8SOA08ERgzVAP-BOUpBuzGvFSILeTt5wbS0u8/edit?gid=0#gid=0)
 
 | Группа       | Консультация                  | Сдача                         |

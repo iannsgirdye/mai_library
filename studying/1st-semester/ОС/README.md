@@ -21,6 +21,7 @@
 - [Файлы](https://disk.yandex.ru/d/v9P8RtPLY4uuhA)
 - [добро.рф](https://dobro.ru)
 
+
 ### Зачёт
 - [Файлы](https://disk.yandex.ru/d/40qsjLXCIQHcJw)
 - **Сдача:** 26.12.2024, с 10:45 до 14:45; ГУК, А-521

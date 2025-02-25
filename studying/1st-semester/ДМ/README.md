@@ -22,8 +22,10 @@
 ### Контрольная работа
 - [Демонстрационные варианты](https://disk.yandex.ru/d/bCPdBKt8tkOoTA)
 
+
 ### Расчётно-графическая работа
 - [Списки задач по вариантам](https://disk.yandex.ru/i/QuBSyKbwsdy74A)
+
 
 ### Экзамен
 - [Файлы](https://disk.yandex.ru/d/R7i6gjLSuFgdEg)
