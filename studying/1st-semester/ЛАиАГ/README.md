@@ -5,8 +5,8 @@
 ## Преподаватели (М8О-111БВ-24)
 | Тип | ФИО | Контакты |
 |-----|-----|----------|
-| Лекции | [Руденко Евгений Александрович](https://mai.ru/education/studies/schedule/ppc.php?guid=6c63f786-1d99-11e0-9baf-1c6f65450efa) | |
-| Практические занятия | [Руденко Евгений Александрович](https://mai.ru/education/studies/schedule/ppc.php?guid=6c63f786-1d99-11e0-9baf-1c6f65450efa) | |
+| Лекции | [Руденко Евгений Александрович](https://mai.ru/education/studies/schedule/ppc.php?guid=6c63f786-1d99-11e0-9baf-1c6f65450efa) | rudenkoevg@yandex.ru |
+| Практические занятия | [Руденко Евгений Александрович](https://mai.ru/education/studies/schedule/ppc.php?guid=6c63f786-1d99-11e0-9baf-1c6f65450efa) | rudenkoevg@yandex.ru |
 
 
 

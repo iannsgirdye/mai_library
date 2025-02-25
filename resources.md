@@ -154,7 +154,7 @@
 ...
 
 
-## ВУЦ
+### ВУЦ
 - [Официальный сайт](https://vuc-mai.ru)
 - [Телеграм-канал "ВУЦ при МАИ"](https://t.me/vucmai)
 - [Организационное](https://institutes.mai.ru/military)
