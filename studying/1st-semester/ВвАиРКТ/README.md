@@ -17,7 +17,7 @@
 
 
 
-## Задания (Курсовой проект)
+## Задания (Проект)
 - [Файлы](https://disk.yandex.ru/d/Wan4WLFyQ9QDtQ)
 - [Таблица команд потока 2024-2025](https://docs.google.com/spreadsheets/d/1O8wexgEsrICv9gaEjPlsQNl0K4x3RxHDeizsFPTeAGM/edit?usp=drivesdk)
 - ГОСТ 7.32 2017

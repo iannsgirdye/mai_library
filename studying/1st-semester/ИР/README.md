@@ -17,5 +17,9 @@
 
 
 ## Задания
-- [Зачёт](https://disk.yandex.ru/d/bu_TStoUiaWOiA)
-- [Практические занятия](https://disk.yandex.ru/d/WBWdS1ZJNYivbQ)
+### Зачёт
+- [Файлы](https://disk.yandex.ru/d/bu_TStoUiaWOiA)
+
+
+### Практические занятия
+- [Файлы](https://disk.yandex.ru/d/WBWdS1ZJNYivbQ)
