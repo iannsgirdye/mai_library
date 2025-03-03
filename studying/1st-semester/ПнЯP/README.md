@@ -11,17 +11,18 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/Fig0qABwwLwB4g)
-- [Литература](https://disk.yandex.ru/d/HYYcRCVeKr2ZUg)
-- **Лекции:**
-    1) [Типы данных. Ввод и вывод данных. Операции с числами, строками. Форматирование. Условный оператор](https://colab.research.google.com/drive/19i0WdY-WSVeuUWbCoyO4VCpMfruOVym7?usp=sharing)
-    2) [Циклы](https://colab.research.google.com/drive/1qBw9vb7SqRRP2DPCH8nlvhALcmyKcvCA?usp=sharing)
-    3) [Изменяемые/неизменяемые типы](https://colab.research.google.com/drive/1KLrdvIHLyrFMhHBUOGwJOcU8Tb5rJ-YA?usp=sharing)
-    4) [Хэширование. Коллекции](https://colab.research.google.com/drive/1khdfOfOgQtiaRP1qbGhuLxvt-nkphB2z?usp=sharing)
-    5) [Работа с файлами](https://colab.research.google.com/drive/16bfPdtAPkUJ28yM6m0Gbt3OWBV2QcvXz?usp=sharing)
-    6) [Функции](https://colab.research.google.com/drive/1Pv8ywi-s-j9EV0io0bQ99Jsdd0zS1RD-#scrollTo=2ceCfv1Q3-UT)
-    7) [Функции высших порядков](https://colab.research.google.com/drive/1UXPLa7vnOIrew4hKZ3Ww7O2djZhrD2M7)
-    8) [Декораторы. Генераторы](https://colab.research.google.com/drive/1ka49gVSleYC5iY6gbyKi7Q139RS1b518?usp=sharing)
+- **Основное:**
+    - [Конспекты](https://disk.yandex.ru/d/Fig0qABwwLwB4g)
+    - [Литература](https://disk.yandex.ru/d/HYYcRCVeKr2ZUg)
+    - **Лекции:**
+        - [Типы данных. Ввод и вывод данных. Операции с числами, строками. Форматирование. Условный оператор](https://colab.research.google.com/drive/19i0WdY-WSVeuUWbCoyO4VCpMfruOVym7?usp=sharing)
+        - [Циклы](https://colab.research.google.com/drive/1qBw9vb7SqRRP2DPCH8nlvhALcmyKcvCA?usp=sharing)
+        - [Изменяемые/неизменяемые типы](https://colab.research.google.com/drive/1KLrdvIHLyrFMhHBUOGwJOcU8Tb5rJ-YA?usp=sharing)
+        - [Хэширование. Коллекции](https://colab.research.google.com/drive/1khdfOfOgQtiaRP1qbGhuLxvt-nkphB2z?usp=sharing)
+        - [Работа с файлами](https://colab.research.google.com/drive/16bfPdtAPkUJ28yM6m0Gbt3OWBV2QcvXz?usp=sharing)
+        - [Функции](https://colab.research.google.com/drive/1Pv8ywi-s-j9EV0io0bQ99Jsdd0zS1RD-#scrollTo=2ceCfv1Q3-UT)
+        - [Функции высших порядков](https://colab.research.google.com/drive/1UXPLa7vnOIrew4hKZ3Ww7O2djZhrD2M7)
+        - [Декораторы. Генераторы](https://colab.research.google.com/drive/1ka49gVSleYC5iY6gbyKi7Q139RS1b518?usp=sharing)
 - **Дополнительно:**
     - **Git:**
         - [Ёбаный Git!!!](https://ohshitgit.com/ru) 

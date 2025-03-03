@@ -11,9 +11,11 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/H_38uM9SrDFsOg)
-- [Литература](https://disk.yandex.ru/d/Nv7XQ62r6M01Uw)
-- **Дополнительно:** [Делить на ноль — это норма](https://habr.com/ru/articles/247635)
+- **Основное:**
+    - [Конспекты](https://disk.yandex.ru/d/H_38uM9SrDFsOg)
+    - [Литература](https://disk.yandex.ru/d/Nv7XQ62r6M01Uw)
+- **Дополнительно:** 
+    - [Делить на ноль — это норма](https://habr.com/ru/articles/247635)
 
 
 

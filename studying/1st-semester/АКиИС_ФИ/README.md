@@ -42,8 +42,9 @@
 
 
 ### Экзамены
-- [Файлы](https://disk.yandex.ru/d/EDDUyXTcOExRvw)
-- [Содержание и сдача](https://faq8.ru/read.php?2,16469)
+- **Основное:**
+    - [Файлы](https://disk.yandex.ru/d/EDDUyXTcOExRvw)
+    - [Содержание и сдача](https://faq8.ru/read.php?2,16469)
 - **Дополнительно:**
     - [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
     - [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)

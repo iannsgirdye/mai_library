@@ -11,8 +11,10 @@
 
 
 ## Материалы
-- [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
-- **Дополнительно:** [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
+- **Основное:**
+    - [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
+- **Дополнительно:** 
+    - [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
 
 
 
