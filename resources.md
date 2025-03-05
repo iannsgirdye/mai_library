@@ -136,6 +136,7 @@
 - **Интересное:**
     - [Python vs C++](https://faq8.ru/read.php?5,15424)
     - [Крылов на форуме](https://postupim.ru/forum/4-4163-1)
+    - [Fuckyou8.ru](https://fuckyou8.ru)
 
 
 ### Институт №9
@@ -178,6 +179,14 @@
 - [Яндекс Образование](https://education.yandex.ru)
 - [Яндекс Практикум](https://practicum.yandex.ru)
 - [Young&&Yandex](https://yandex.ru/yaintern)
+- [Т-Образование](https://education.tbank.ru)
 - [Stepik](https://stepik.org)
 - [Хекслет](https://ru.hexlet.io)
 - [Leetcode](https://leetcode.com)
+
+
+### Интересное
+- [Animation vs. Coding](https://www.youtube.com/watch?v=EFmxPMdBqmU)
+- [Animation vs. Math](https://www.youtube.com/watch?v=B1J6Ou4q8vE)
+- [Animation vs. Geometry](https://www.youtube.com/watch?v=VEJWE6cpqw0)
+- [Animation vs. Physics](https://www.youtube.com/watch?v=ErMSHiQRnc8)
