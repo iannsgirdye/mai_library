@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[12pt]{extsizes}
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases, lipsum}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\DeclareMathOperator{\rank}{rank}
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\DeclareRobustCommand{\divby}{\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{rcases}
+    {\left.\begin{aligned}}
+    {\end{aligned}\right\rbrace}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \title{Экономическая теория}
+    \author{Бабицкий Иван | М8О-111БВ-24 \\ 02.03.02 "Фундаментальная информатика и информационные технологии"}
+    \date{2024/2025 учебный год, 2-й семестр}
+    \maketitle
+    \begin{center}
+        \includegraphics[scale=0.2]{images/mai.png}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{ПЗ-2 | 2025.03.06 (2)}
+\part{Без темы}
+
+\section{Высказывания}
+\begin{itemize}
+    \item Для того, чтобы добиться успеха в обществе, нужно сжигать женщин, поэтому попы преимущественно сжигали женщин.
+    \item Поп мог бы отвести девушку в поле и надругаться над ней, но он же поп, ему нельзя, поэтому он её сжигает.
+    \item sorry
+    \item *Фамилия?* Он собак не мучает?
+    \item Я в вашим услугам, пользуйтесь мною. А что, я вами должен пользоваться? Я, конечно, могу, но я считаю иначе.
+    \item Будьте проще и люди к Вам понятутся (цитата).
+    \item Дорогой, что ты переживаешь? У тебя в паспорте же написано, что ты русский! \\
+          Дорогая, бьют же не по паспорту, а по лицу.
+\end{itemize}
+
+
+
+
+\end{document}
