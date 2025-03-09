@@ -5,7 +5,7 @@
 
 
 ## Предназначение
-- Папка `studying`: Институт №8 → Кафедра 806 → ФИИТ → 2024-й год набора
+- Папка `studying`: [Институт №8](https://institutes.mai.ru/computing) → [Кафедра 806](https://institutes.mai.ru/computing/806) → [ФИИТ](https://priem.mai.ru/base/programs/informatika-i-kompyuternye-nauki) → 2024-й год набора
 - Остальное: для всех
 
 
