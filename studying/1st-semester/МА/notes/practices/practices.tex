@@ -1358,7 +1358,7 @@ $\varphi$ --- аргумент $c$
     y = (1 - x^2)(1 + x^3)(1 + x^4)
 \]
 \begin{gather*}
-    y' = \left((1 - x^2)'(1 + x^3) + (1 - x^2)(1 + x^3) \right)(1 + x^4) + (1 + x^4)'(1 - x^2)(1 + x^3) = \\
+    y' = \left((1 - x^2)'(1 + x^3) + (1 - x^2)(1 + x^3)' \right)(1 + x^4) + (1 + x^4)'(1 - x^2)(1 + x^3) = \\
     = -2x (1 + x^3)(1 + x^4) + 3x^2 (1 - x^2)(1 + x^4) + 4x^3 (1 - x^2)(1 + x^3) 
 \end{gather*}
 
@@ -1432,7 +1432,7 @@ $\varphi$ --- аргумент $c$
     y = \sqrt[3]{\sin^2 x} + \frac{1}{\cos^3 x}
 \]
 \begin{gather*}
-    y' = \left( \sin^{\frac{2}{3}} + \frac{1}{\cos^3 x} \right)' = 
+    y' = \left( \sin^{\frac{2}{3}} x + \frac{1}{\cos^3 x} \right)' = 
     \frac{2}{3} \cdot \frac{1}{\sqrt[3]{\sin x}} \cdot \cos x - \frac{3}{\cos^4 x} \cdot (-\sin x)
 \end{gather*}
 
@@ -1581,7 +1581,7 @@ $\varphi$ --- аргумент $c$
 \]
 \begin{gather*}
     \tg \underbrace{\cos^2 x}_{y(x)} = x \underbrace{\cos^2 x}_{y(x)} \\
-    \frac{1}{\cos^4 x} \cdot (\cos^2 x)' = \cos^2 x + x \cdot (\cos^2 x) \\
+    \frac{1}{\cos^4 x} \cdot (\cos^2 x)' = \cos^2 x + x \cdot (\cos^2 x)' \\
     \frac{1}{\cos^2 y} \cdot y' = y + xy' \\
     y' = \frac{4}{\frac{1}{\cos^2 y} - x}
 \end{gather*}
@@ -1675,10 +1675,13 @@ $\varphi$ --- аргумент $c$
 
 
 
-\par\noindent\rule{\textwidth}{1pt}
-\paragraph{2024.12.02 (5)}
-\section{???}
 
+%--------------------------------------------------
+\newpage
+\paragraph{2024.12.02 (5)}
+\part{Производные n-го порядка}
+
+\section{Введение}
 \subsection{Теория}
 \begin{gather*}
     y' = \frac{dx}{dy} \\
@@ -2111,16 +2114,6 @@ $\varphi$ --- аргумент $c$
     y' = 0, \neg \exists, y' = 2x - \frac{2}{x^2}
 \end{gather*}
 
-
-
-
-\newpage
-\part{Объясняшки Вики}
-\begin{gather*}
-    \text{Дана } f(x) \\
-    \text{Нужно найти такое значение } n, \text{ при котором } \lim_{x \to a} \frac{f(x)}{(x - a)^n} = C, \text{ где C --- const} \\
-    \text{Главная часть}: C(x - a)^n
-\end{gather*}
 
 
 
