@@ -64,7 +64,7 @@
 
 %-------------------------------------------------------
 \newpage
-\paragraph{2025.02.13 (3)}
+\paragraph{2025.02.13 (3) | ЛК-1}
 \part{Неопределённый интеграл}
 
 \section{Введение}
@@ -210,7 +210,7 @@
 \end{gather*}
 
 
-\paragraph{2025.02.20 (3)}
+\paragraph{2025.02.20 (3) | ЛК-2}
 \subsection{Замена}
 \[
     \int f(\varphi(t)) \varphi'(t) dt
@@ -348,6 +348,169 @@
     \text{ тогда } dy = \frac{1}{2\cos^2 \frac{x}{2}}dx = \frac{1}{2} \left( 1 + \tg^2 \frac{x}{2} \right) dx = \frac{1}{2} \left( 1 + y^2 \right) dx \\
     R(\sin x, \cos x) dx = \int R \left( \frac{2y}{1 + y^2}, \frac{1 - y^2}{1 + y^2}\right) \frac{2dy}{1 + y^2}
 \end{gather*}
+
+
+
+
+\newpage
+\paragraph{2025.02.27 (3) | ЛК-3}
+\dots
+
+
+
+
+\newpage
+\paragraph{2025.03.06 (3) | ЛК-4}
+\dots
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.03.13 (3) | ЛК-5}
+\part{Интегралы Дарбу (Дачвоих)}
+
+\section{Введение}
+\subsection{Определение}
+\begin{gather*}
+    f(x) \text{ --- ограниченная на } [a, b] \\
+    \overline{\overline{s}} \left(f, P\right) = \sum_{i=1}^{n} m_i \Delta x_i \text{, --- нижняя сумма Дарбу} \\
+    m_i = \inf_{[x_{i-1}, x_i]} f(x), \Delta x_i = x_i - x_{i-1} \\
+    \underline{\underline{S}} \left(f, P\right) = \sum_{i=1}^{n} M_i \Delta x_i, 
+    M_i = \sup_{[x_{i-1}, x_i]} f(x) \text{ --- верхняя сумма Дарбу}
+\end{gather*}
+
+\subsubsection{Следствие}
+При измельчении разбиения нижняя сумма Дарбу может только увеличиться. \\
+При измельчении разбиения верхняя сумма Дарбу может только уменьшиться.
+
+
+
+\subsection{Утверждение}
+Любая нижняя сумма Дарбу не превосходит любую верхнюю сумму Дарбу.
+
+\subsubsection{Доказательство}
+\begin{gather*}
+    \overline{\overline{s}} \left(f, P_1\right), \underline{\underline{S}} \left(f, P_2\right) \\
+    \widetilde{P} = P_1 \cup P_2 \\
+    \overline{\overline{s}} \left(f, P_1\right) \le 
+    \overline{\overline{s}} \left(f, \widetilde{P}\right) \le
+    \underline{\underline{S}} \left(F, \widetilde{P}\right) \le 
+    \underline{\underline{S}} \left(f, P_2\right)
+\end{gather*}
+
+Множество всех нижних сумм ограничено сверху и множество всех верхних сумм ограничено снизу.
+
+
+\subsection{Определение}
+\begin{gather*}
+    \underline{I} = \sup_{P} \overline{\overline{s}} \left(f, P\right) \text{ --- нижний интеграл Дарбу} \\
+    \overline{I} = \inf_{P} \underline{\underline{s}} \left(f, P\right) \text{ --- верхний интеграл Дарбу} \\
+    \underline{I} \le \overline{I}
+\end{gather*}
+
+
+\subsection{Утверждение}
+\begin{gather*}
+    \overline{\overline{s}} \left(f, P\right) \le \sigma \left(f, P, \xi\right) \le \underline{\underline{S}} \left(f, P\right) \\
+    \lim_{\lambda(P) \to 0} \overline{\overline{s}} \left(f, P\right) = \underline{I} \\
+    \lim_{\lambda(P) \to 0} \underline{\underline{s}} \left(f, P\right) = \overline{I}
+\end{gather*}
+
+\subsubsection{Пример}
+\begin{gather*}
+    y = D(x) = \begin{cases}
+        1, x \in \mathbb{Q} \\
+        0, x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases} \\
+    [a, b] = [0, 1] \\
+    \overline{\overline{s}} \left(D(x), P\right) = 0 \Rightarrow \underline{I} = 0 \\
+    \underline{\underline{S}} \left(D(x), P\right) = 1 \Rightarrow \overline{I} = 1
+\end{gather*}
+
+
+\subsection{Теорема}
+\begin{gather*}
+    \left( f(x) \in \mathbb{R}[a, b] \right) \Leftrightarrow 
+    \left( \underline{I} = \overline{I} = I, I = \int_{a}^{b} f(x)\,dx \right)
+\end{gather*}
+
+\subsubsection{Доказательство $\Leftarrow$}
+\begin{gather*}
+    \overline{\overline{s}} \left(f, P\right) \le \sigma \left(f, P, \xi\right) \le \underline{\underline{s}} \left(f, P\right) \\
+    \lambda(P) \to 0 \\
+    \text{(фото)}
+\end{gather*}
+
+\subsubsection{Доказательство $\Rightarrow$}
+\begin{gather*}
+    \lim_{\lambda(P) \to 0} \sum_{i=1}^{n} 
+    \underbrace{\omega\left(f, [x_{i-1}, x_i]\right)}_{\underset{[x_{i-1}, x_i]}{\sup} f - \underset{{[x_{i-1}, x_i]}}{\inf} f} \\
+    \lim_{\lambda(P) \to 0} \left(\underline{\underline{S}}\left(f, P\right) - 
+    \overline{\overline{s}}\left(f, P\right)\right) = 0 \\
+    \overline{I} = \underline{I}
+\end{gather*}
+
+
+\subsection{Определение}
+Множество точек действительной оси называется множеством меры ноль, 
+если $\forall \epsilon > 0$ существует такая не более чем счётная система интервалов, 
+что сумма их длин меньше $\epsilon$, но они полностью покрывают наше множество.
+
+
+\subsubsection{Пример}
+\begin{itemize}
+    \item \dots
+    \item Конечное число точек 
+    \item Счётное число точек
+\end{itemize}
+
+\subsection{Свойства}
+\begin{itemize}
+    \item Подмножество множества меры ноль имеет меру ноль.
+    \item Объединение конечного числа множеств меры ноль есть множество меры ноль.
+    \item Объединение счётного числа множеств меры ноль есть множество меры ноль.
+\end{itemize}
+
+\subsubsection{Пример}
+(фото)
+
+
+\subsection{Определение}
+Если некоторое свойство выполняется во всех точках множества за исключением множества меры ноль, 
+то говорят, что это свойство выполняется почти всюду на множестве.
+
+
+
+\subsection{Критерий Лебега интегрируемости функции на отрезке по Риману}
+Ограниченная на отрезке функция интегрируема по Риману в том и только в том случае, 
+когда она непрерывна почти всюду на этом отрезке.
+
+
+\subsection{Арифметические свойства интегралов}
+
+\subsubsection{Пример}
+\begin{gather*}
+    f(x) = \begin{cases}
+        \frac{1}{n}, x = \frac{m}{n}, m \in \mathbb{Z}, n \in \mathbb{N} \text{ (дробь несократима)} \\
+        0, x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases} \\
+    f(x) \in C(\mathbb{R} \setminus \mathbb{Q})
+\end{gather*}
+\begin{gather*}
+    g(x) = \begin{cases}
+        1, x \neq 0 \\
+        0, x = 0
+    \end{cases}
+\end{gather*}
+\begin{gather*}
+    \varphi(x) = g(f(x)) = \begin{cases}
+        1, x \in \mathbb{Q} \\
+        0, x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases}
+\end{gather*}
+Композиция интегрируемых функций не интегрируема.
 
 
 

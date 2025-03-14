@@ -121,7 +121,7 @@
             - [Сайт | Visual Studio Code](https://code.visualstudio.com/)
             - [Сайт | Vim](https://www.vim.org/download.php)
             - [Сайт | Notepad++](https://notepad-plus-plus.org/downloads/)
-        - **WSL:** [Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
+        - **WSL:** [Сайт | Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
         - **Термины:**
             - [Сайт | Понятие стека](https://skillbox.ru/media/code/prostymi-slovami-chto-takoe-stek-i-kak-on-ustroen)
             - [Сайт | Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194/)
