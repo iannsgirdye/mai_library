@@ -11,8 +11,8 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/v3hlgVmZmhPwEQ)
-- [Литература](https://disk.yandex.ru/d/rYPf5k7bERX-sA)
+- [Диск | Конспекты](https://disk.yandex.ru/d/v3hlgVmZmhPwEQ)
+- [Диск | Литература](https://disk.yandex.ru/d/rYPf5k7bERX-sA)
 
 
 

@@ -12,25 +12,25 @@
 
 ## Материалы
 - **Основное:**
-    - [Конспекты](https://disk.yandex.ru/d/Kmo0Q50qp1GFHA)
-    - [Литература](https://disk.yandex.ru/d/-ANnPaegxFCPzg)
-    - [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo)
+    - [Диск | Конспекты](https://disk.yandex.ru/d/Kmo0Q50qp1GFHA)
+    - [Диск | Литература](https://disk.yandex.ru/d/-ANnPaegxFCPzg)
+    - [Сайт | Система РГР-ДуплО](https://sites.google.com/site/rgrduplo)
 - **Дополнительно:** 
-    - [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
+    - [Видео | Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
 
 
 
 ## Задания
 ### Контрольная работа
-- [Демонстрационные варианты](https://disk.yandex.ru/d/bCPdBKt8tkOoTA)
+- [Диск | Демонстрационные варианты](https://disk.yandex.ru/d/bCPdBKt8tkOoTA)
 
 
 ### Расчётно-графическая работа
-- [Списки задач по вариантам](https://disk.yandex.ru/i/QuBSyKbwsdy74A)
+- [Диск | Списки задач по вариантам](https://disk.yandex.ru/i/QuBSyKbwsdy74A)
 
 
 ### Экзамен
-- [Файлы](https://disk.yandex.ru/d/R7i6gjLSuFgdEg)
+- [Диск | Разное](https://disk.yandex.ru/d/R7i6gjLSuFgdEg)
 
 | Группа       | Консультация                | Сдача                       |
 |--------------|-----------------------------|-----------------------------|

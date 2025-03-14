@@ -12,14 +12,14 @@
 
 
 ## Материалы
-- [Конспекты и литература](https://disk.yandex.ru/d/4-zg6rUPKgQLJA)
+- [Диск | Конспекты и литература](https://disk.yandex.ru/d/4-zg6rUPKgQLJA)
 
 
 
 ## Задания
 ### Лабораторные работы и курсовой проект
-- [Форум 8-го факультета](https://faq8.ru)
-- [Все КП и ЛР](https://faq8.ru/read.php?2,11562https://faq8.ru/read.php?2,11562)
+- [Сайт | Форум 8-го факультета](https://faq8.ru)
+- [Сайт | Все КП и ЛР](https://faq8.ru/read.php?2,11562https://faq8.ru/read.php?2,11562)
 
 | №  | Дата выдачи | Задание         | Название и ссылка |
 |----|-------------|-----------------|-------------------| 
@@ -36,8 +36,8 @@
 
 
 ## Разное (Олимпиадное программирование)
-- [Codeforces](https://maiol2025.contest.codeforces.com/group/lHpeUb0TF4/contests)
-- [Материалы и записи](https://drive.google.com/drive/folders/1j9-1NfpJ4p0-3-4fY8quOsEo9voJigZ4)
-- [Материалы разборов](https://rutube.ru/plst/574701)
-- [cppreference.com](https://en.cppreference.com/w)
-- [Группа в Telegram по спортивному программированию](https://t.me/+9SdNTDNlfxYyNDcy)
+- [Сайт | Codeforces](https://maiol2025.contest.codeforces.com/group/lHpeUb0TF4/contests)
+- [Диск | Материалы и записи](https://drive.google.com/drive/folders/1j9-1NfpJ4p0-3-4fY8quOsEo9voJigZ4)
+- [Видео | Материалы разборов](https://rutube.ru/plst/574701)
+- [Сайт | cppreference.com](https://en.cppreference.com/w)
+- [Telegram-группа](https://t.me/+9SdNTDNlfxYyNDcy)

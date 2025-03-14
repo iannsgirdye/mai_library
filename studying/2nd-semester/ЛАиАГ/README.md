@@ -11,9 +11,9 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/HZ-V-tAS82Yxbw)
-- [Литература](https://disk.yandex.ru/d/zDOQqbOuLNOiuw)
-- [Диск по ЛАиАГ](https://drive.google.com/drive/folders/1uTs2bAfgqQ1s1ws7ciGPgYj5pJWaQjor)
+- [Диск | Конспекты](https://disk.yandex.ru/d/HZ-V-tAS82Yxbw)
+- [Диск | Литература](https://disk.yandex.ru/d/zDOQqbOuLNOiuw)
+- [Диск | От преподавателей](https://drive.google.com/drive/folders/1uTs2bAfgqQ1s1ws7ciGPgYj5pJWaQjor)
 
 
 

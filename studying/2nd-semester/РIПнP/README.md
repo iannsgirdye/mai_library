@@ -11,15 +11,15 @@
 
 
 ## Материалы
-- [Конспекты и литература](https://disk.yandex.ru/d/7_t-vXWDwXkf_Q)
-- [ООП в картинках](https://habr.com/ru/articles/463125)
+- [Диск | Конспекты и литература](https://disk.yandex.ru/d/7_t-vXWDwXkf_Q)
+- [Сайт | ООП в картинках](https://habr.com/ru/articles/463125)
 
 
 
 ## Задания
 ### Лабораторные работы
-- [Yandex LMS](https://lms.yandex.ru)
-- [GitLab MAI](https://gitlab.mai.ru)
+- [Сайт | Yandex LMS](https://lms.yandex.ru)
+- [Сайт | GitLab MAI](https://gitlab.mai.ru)
 - **Дедлайны домашних заданий:**
 
 | Уроки     | на "5"         | на "4"         | на "3"           |
@@ -53,4 +53,4 @@
         - Backend: Python Wrapper
         - Frontend: PyGame, GYM
         - Что-то с GPU
-- **Дополнительно:** [Реальный проект 2023-2024](https://github.com/MrXrel/SuperBirzha)
+- **Дополнительно:** [Репозиторий | Реальный проект потока 2023-2024](https://github.com/MrXrel/SuperBirzha)

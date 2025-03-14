@@ -12,36 +12,36 @@
 
 ## Материалы
 - **Основное:**
-    - [Конспекты](https://disk.yandex.ru/d/Fig0qABwwLwB4g)
-    - [Литература](https://disk.yandex.ru/d/HYYcRCVeKr2ZUg)
+    - [Диск | Конспекты](https://disk.yandex.ru/d/Fig0qABwwLwB4g)
+    - [Диск | Литература](https://disk.yandex.ru/d/HYYcRCVeKr2ZUg)
     - **Лекции:**
-        - [Типы данных. Ввод и вывод данных. Операции с числами, строками. Форматирование. Условный оператор](https://colab.research.google.com/drive/19i0WdY-WSVeuUWbCoyO4VCpMfruOVym7?usp=sharing)
-        - [Циклы](https://colab.research.google.com/drive/1qBw9vb7SqRRP2DPCH8nlvhALcmyKcvCA?usp=sharing)
-        - [Изменяемые/неизменяемые типы](https://colab.research.google.com/drive/1KLrdvIHLyrFMhHBUOGwJOcU8Tb5rJ-YA?usp=sharing)
-        - [Хэширование. Коллекции](https://colab.research.google.com/drive/1khdfOfOgQtiaRP1qbGhuLxvt-nkphB2z?usp=sharing)
-        - [Работа с файлами](https://colab.research.google.com/drive/16bfPdtAPkUJ28yM6m0Gbt3OWBV2QcvXz?usp=sharing)
-        - [Функции](https://colab.research.google.com/drive/1Pv8ywi-s-j9EV0io0bQ99Jsdd0zS1RD-#scrollTo=2ceCfv1Q3-UT)
-        - [Функции высших порядков](https://colab.research.google.com/drive/1UXPLa7vnOIrew4hKZ3Ww7O2djZhrD2M7)
-        - [Декораторы. Генераторы](https://colab.research.google.com/drive/1ka49gVSleYC5iY6gbyKi7Q139RS1b518?usp=sharing)
+        - [Файл | Типы данных. Ввод и вывод данных. Операции с числами, строками. Форматирование. Условный оператор](https://colab.research.google.com/drive/19i0WdY-WSVeuUWbCoyO4VCpMfruOVym7?usp=sharing)
+        - [Файл | Циклы](https://colab.research.google.com/drive/1qBw9vb7SqRRP2DPCH8nlvhALcmyKcvCA?usp=sharing)
+        - [Файл | Изменяемые/неизменяемые типы](https://colab.research.google.com/drive/1KLrdvIHLyrFMhHBUOGwJOcU8Tb5rJ-YA?usp=sharing)
+        - [Файл | Хэширование. Коллекции](https://colab.research.google.com/drive/1khdfOfOgQtiaRP1qbGhuLxvt-nkphB2z?usp=sharing)
+        - [Файл | Работа с файлами](https://colab.research.google.com/drive/16bfPdtAPkUJ28yM6m0Gbt3OWBV2QcvXz?usp=sharing)
+        - [Файл | Функции](https://colab.research.google.com/drive/1Pv8ywi-s-j9EV0io0bQ99Jsdd0zS1RD-#scrollTo=2ceCfv1Q3-UT)
+        - [Файл | Функции высших порядков](https://colab.research.google.com/drive/1UXPLa7vnOIrew4hKZ3Ww7O2djZhrD2M7)
+        - [Файл | Декораторы. Генераторы](https://colab.research.google.com/drive/1ka49gVSleYC5iY6gbyKi7Q139RS1b518?usp=sharing)
 - **Дополнительно:**
     - **Git:**
-        - [Ёбаный Git!!!](https://ohshitgit.com/ru) 
-        - [Git](https://git-scm.com)
-        - [Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU)
-        - [Git для новичков](https://habr.com/ru/articles/541258)
+        - [Сайт | Ёбаный Git!!!](https://ohshitgit.com/ru) 
+        - [Сайт | Git](https://git-scm.com)
+        - [Сайт | Learn Git Branching](https://learngitbranching.js.org/?locale=ru_RU)
+        - [Сайт | Git для новичков](https://habr.com/ru/articles/541258)
     - **Jupyter Notebook & Markdown:**
-        - [Особенности Jupyter Notebook](https://habr.com/ru/companies/wunderfund/articles/316826)
-        - [Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax)
-        - [Шпаргалка по Markdown](https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c)
-        - [Математический режим Markdown](https://www.upyesp.org/posts/makrdown-vscode-math-notation)
-    - **Anaconda:** [Miniconda — Anaconda documentation](https://docs.anaconda.com/miniconda)
+        - [Сайт | Особенности Jupyter Notebook](https://habr.com/ru/companies/wunderfund/articles/316826)
+        - [Сайт | Basic Syntax | Markdown Guide](https://www.markdownguide.org/basic-syntax)
+        - [Сайт | Шпаргалка по Markdown](https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c)
+        - [Сайт | Математический режим Markdown](https://www.upyesp.org/posts/makrdown-vscode-math-notation)
+    - **Anaconda:** [Сайт | Miniconda — Anaconda documentation](https://docs.anaconda.com/miniconda)
 
 
 
 ## Задания
 ### Лабораторные работы
-- [Yandex LMS](https://lms.yandex.ru)
-- [GitLab MAI](https://gitlab.mai.ru)
+- [Сайт | Yandex LMS](https://lms.yandex.ru)
+- [Сайт | GitLab MAI](https://gitlab.mai.ru)
 - **Дедлайны домашних заданий (поток 1 / поток 2):**
 
 | Уроки     | Дедлайн на "5" | Дедлайн на "4" | Дедлайн на "3"   |
@@ -58,9 +58,9 @@
 
 ### Коллоквиум
 - **Подготовка:**
-    - [Файлы](https://disk.yandex.ru/d/omJNdyqn-2MpTg)
-    - [Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view)
-    - [Notion с материалами](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f)
+    - [Диск | Разное](https://disk.yandex.ru/d/omJNdyqn-2MpTg)
+    - [Диск | Файл о сдаче](https://drive.google.com/file/d/1_qXYYyOs7VnLo_IRvY2-IK_M6rEImLcD/view)
+    - [Диск | Материалы](https://mewing-wealth-995.notion.site/Python-0e078601a3d648958ea203ac23e2901f)
 - **Организационное:**
     - **Сдача:** 27.12.2024 09:00, ГУК В-214 и В-221
     - **Содержание:**

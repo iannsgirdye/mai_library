@@ -11,15 +11,15 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/xh3aeie8Cr7gTQ)
-- [Литература](https://disk.yandex.ru/d/jkIYz11h7feu7A)
+- [Диск | Конспекты](https://disk.yandex.ru/d/xh3aeie8Cr7gTQ)
+- [Диск | Литература](https://disk.yandex.ru/d/jkIYz11h7feu7A)
 
 
 
 ## Задания
 ### Зачёт
-- [Файлы](https://disk.yandex.ru/d/bu_TStoUiaWOiA)
+- [Диск | Разное](https://disk.yandex.ru/d/bu_TStoUiaWOiA)
 
 
 ### Практические занятия
-- [Файлы](https://disk.yandex.ru/d/WBWdS1ZJNYivbQ)
+- [Диск | Разное](https://disk.yandex.ru/d/WBWdS1ZJNYivbQ)

@@ -12,20 +12,20 @@
 
 ## Материалы
 - **Основное:**
-    - [Конспекты](https://disk.yandex.ru/d/H_38uM9SrDFsOg)
-    - [Литература](https://disk.yandex.ru/d/Nv7XQ62r6M01Uw)
+    - [Диск | Конспекты](https://disk.yandex.ru/d/H_38uM9SrDFsOg)
+    - [Диск | Литература](https://disk.yandex.ru/d/Nv7XQ62r6M01Uw)
 - **Дополнительно:** 
-    - [Делить на ноль — это норма](https://habr.com/ru/articles/247635)
+    - [Сайт | Делить на ноль — это норма](https://habr.com/ru/articles/247635)
 
 
 
 ## Задания
 ### Контрольная работа и Контрольный рубеж
-- [Файлы](https://disk.yandex.ru/d/OHE1HJnqlXiZAg)
+- [Диск | Разное](https://disk.yandex.ru/d/OHE1HJnqlXiZAg)
 
 
 ### Экзамен
-- [Файлы](https://disk.yandex.ru/d/8YRfHQugts1zfQ)
+- [Диск | Разное](https://disk.yandex.ru/d/8YRfHQugts1zfQ)
 - **Содержание:** в билете 2 вопроса и задачка (очень похожа на Демидовича), без задачи не будет хорошей оценки.
 - **Оценивание:**
     - на "3": решена задача и всё сформулировано;

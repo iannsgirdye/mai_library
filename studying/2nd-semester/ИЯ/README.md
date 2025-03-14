@@ -17,16 +17,16 @@
 
 
 ## Материалы (ИЯ2-36-24)
-- [Конспекты](https://disk.yandex.ru/d/kbSGERoxbod2gQ)
-- [Литература](https://disk.yandex.ru/d/5yDsrHUmD5mm5A)
-- [Маршрутный лист](https://disk.yandex.ru/i/_-DoiSaAJJ1raQ)
+- [Диск | Конспекты](https://disk.yandex.ru/d/kbSGERoxbod2gQ)
+- [Диск | Литература](https://disk.yandex.ru/d/5yDsrHUmD5mm5A)
+- [Диск | Маршрутный лист](https://disk.yandex.ru/i/_-DoiSaAJJ1raQ)
 
 
 
 ## Задания (ИЯ2-36-24)
 ### Зачёт
-- [Файлы](https://disk.yandex.ru/d/H4SN32bADyQsxw)
+- [Диск | Разное](https://disk.yandex.ru/d/H4SN32bADyQsxw)
 
 
 ### Практические занятия
-- [Файлы](https://disk.yandex.ru/d/6BrNRKLcNGhCRA)
+- [Диск | Разное](https://disk.yandex.ru/d/6BrNRKLcNGhCRA)

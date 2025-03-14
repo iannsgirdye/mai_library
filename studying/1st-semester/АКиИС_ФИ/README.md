@@ -12,20 +12,20 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/B4qiA0PzCNGbXQ)
-- [Литература](https://disk.yandex.ru/d/wuzTBSTlMCP4Ew)
+- [Диск | Конспекты](https://disk.yandex.ru/d/B4qiA0PzCNGbXQ)
+- [Диск | Литература](https://disk.yandex.ru/d/wuzTBSTlMCP4Ew)
 - **Дополнительно:**
-    - [Побитовые операции](https://habr.com/ru/companies/metalamp/articles/809549)
-    - [Работа с файлами на Си](https://younglinux.info/c/fopen)
-    - [Прямой и обратный порядок байтов](https://habr.com/ru/articles/233245)
+    - [Сайт | Побитовые операции](https://habr.com/ru/companies/metalamp/articles/809549)
+    - [Сайт | Работа с файлами на Си](https://younglinux.info/c/fopen)
+    - [Сайт | Прямой и обратный порядок байтов](https://habr.com/ru/articles/233245)
 
 
 
 ## Задания
 ### Лабораторные работы и Курсовой проект
-- [Файлы](https://disk.yandex.ru/d/2tV4o2ShwP3jDw)
-- [Форум 8-го факультета](https://faq8.ru)
-- [Все КП и ЛР](https://faq8.ru/read.php?2,11562https://faq8.ru/read.php?2,11562)
+- [Диск | Разное](https://disk.yandex.ru/d/2tV4o2ShwP3jDw)
+- [Сайт | Форум 8-го факультета](https://faq8.ru)
+- [Сайт | Все КП и ЛР](https://faq8.ru/read.php?2,11562https://faq8.ru/read.php?2,11562)
 
 | №  | Дата выдачи | Задание         | Название и ссылка                                                                     |
 |----|-------------|-----------------|---------------------------------------------------------------------------------------| 
@@ -43,19 +43,19 @@
 
 ### Экзамены
 - **Основное:**
-    - [Файлы](https://disk.yandex.ru/d/EDDUyXTcOExRvw)
+    - [Диск | Разное](https://disk.yandex.ru/d/EDDUyXTcOExRvw)
     - [Содержание и сдача](https://faq8.ru/read.php?2,16469)
 - **Дополнительно:**
-    - [Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
-    - [Notion с материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
-    - [Репозиторий с материалами](https://github.com/mai-806/fund-wiki/tree/main)
-    - [Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0)
+    - [Диск | Файл о сдаче](https://drive.google.com/file/d/1oCULtRW5gN3xn35mmW7J1iauCjgAmGqw/view?usp=drive_link)
+    - [Сайт | Материалами](https://mewing-wealth-995.notion.site/edbcde1ca9654e48997974c1a26d5a95)
+    - [Репозиторий | Материалы](https://github.com/mai-806/fund-wiki/tree/main)
+    - [Таблица | Билеты 2024-2025](https://docs.google.com/spreadsheets/d/1LzESPkwjqB6btne0mVi99_I7x7eCZvFaFbvH9uy4ijI/edit?gid=0#gid=0)
 
 
 
 ## Разное (Олимпиадное программирование)
-- [Codeforces](https://maiol2025.contest.codeforces.com/group/lHpeUb0TF4/contests)
-- [Материалы и записи](https://drive.google.com/drive/folders/1j9-1NfpJ4p0-3-4fY8quOsEo9voJigZ4)
-- [Материалы разборов](https://rutube.ru/plst/574701)
-- [cppreference.com](https://en.cppreference.com/w)
-- [Группа в Telegram по спортивному программированию](https://t.me/+9SdNTDNlfxYyNDcy)
+- [Сайт | Codeforces](https://maiol2025.contest.codeforces.com/group/lHpeUb0TF4/contests)
+- [Диск | Материалы и записи](https://drive.google.com/drive/folders/1j9-1NfpJ4p0-3-4fY8quOsEo9voJigZ4)
+- [Видео | Материалы разборов](https://rutube.ru/plst/574701)
+- [Сайт | cppreference.com](https://en.cppreference.com/w)
+- [Telegram-группа](https://t.me/+9SdNTDNlfxYyNDcy)

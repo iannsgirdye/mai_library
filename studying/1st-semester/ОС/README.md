@@ -11,19 +11,19 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/RUffhXhlvl9XJw)
-- [Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g)
+- [Диск | Конспекты](https://disk.yandex.ru/d/RUffhXhlvl9XJw)
+- [Диск | Литература](https://disk.yandex.ru/d/1M10-MRPBu1M3g)
 
 
 
 ## Задания
 ### Курсовой проект
-- [Файлы](https://disk.yandex.ru/d/v9P8RtPLY4uuhA)
-- [добро.рф](https://dobro.ru)
+- [Диск | Разное](https://disk.yandex.ru/d/v9P8RtPLY4uuhA)
+- [Сайт | добро.рф](https://dobro.ru)
 - **Условие:** должен быть сдан до зачёта, иначе недопуск
 
 
 ### Зачёт
-- [Файлы](https://disk.yandex.ru/d/40qsjLXCIQHcJw)
+- [Диск | Разное](https://disk.yandex.ru/d/40qsjLXCIQHcJw)
 - **Сдача:** 26.12.2024 10:45-14:45, ГУК А-521
 - **Пересдача:** 13.03.2025 12:15, ГУК А-521

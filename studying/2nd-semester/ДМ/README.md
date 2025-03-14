@@ -12,20 +12,11 @@
 
 ## Материалы
 - **Основное:**
-    - [Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
+    - [Сайт | Система РГР-ДуплО](https://sites.google.com/site/rgrduplo/)
 - **Дополнительно:** 
-    - [Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
+    - [Видео | Лекции Смерчинской Светланы Олеговны](https://www.youtube.com/playlist?list=PLuEsw_mLXnFG59CmhZnedS3tabwB4rGyr)
 
 
 
 ## Задания
-### Контрольная работа
-...
-
-
-### Курсовой проект
-...
-
-
-### Экзамен
-...
+*Всё о контрольной работе, курсовому проекту и экзамену на РГР-Дупло*

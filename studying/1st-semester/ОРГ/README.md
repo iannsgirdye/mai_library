@@ -11,10 +11,10 @@
 
 
 ## Материалы
-- [Конспекты](https://disk.yandex.ru/d/yrVuARmF378nTw)
-- [Литература](https://disk.yandex.ru/d/hKMfXN_s01R_jA)
+- [Диск | Конспекты](https://disk.yandex.ru/d/yrVuARmF378nTw)
+- [Диск | Литература](https://disk.yandex.ru/d/hKMfXN_s01R_jA)
 
 
 
 ## Задания (Зачёт)
-- [Файлы](https://disk.yandex.ru/d/GjcNMGBDEaIWUQ)
+- [Диск | Разное](https://disk.yandex.ru/d/GjcNMGBDEaIWUQ)
