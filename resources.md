@@ -15,7 +15,7 @@
 - [Telegram-канал | МАИ-ШУЦТ](https://t.me/mai_sjtu)
 - [Telegram-канал | Наука [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
 - [Сайт | Проект "Топ-100"](https://top100mai.tilda.ws/#rec834796140)
-- [Сайт | Онлайн-курсы](https://mai.ru/education/dpo/online/)
+- [Сайт | Онлайн-курсы](https://mai.ru/education/dpo/online)
 
 
 ### Мероприятия
@@ -118,13 +118,13 @@
     - [Сайт | Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
     - **Информатика:**
         - **Текстовые редакторы:**
-            - [Сайт | Visual Studio Code](https://code.visualstudio.com/)
+            - [Сайт | Visual Studio Code](https://code.visualstudio.com)
             - [Сайт | Vim](https://www.vim.org/download.php)
-            - [Сайт | Notepad++](https://notepad-plus-plus.org/downloads/)
+            - [Сайт | Notepad++](https://notepad-plus-plus.org/downloads)
         - **WSL:** [Сайт | Как установить WSL на Windows 11](https://vc.ru/dev/744877-kak-ustanovit-wsl-na-windows-11)
         - **Термины:**
             - [Сайт | Понятие стека](https://skillbox.ru/media/code/prostymi-slovami-chto-takoe-stek-i-kak-on-ustroen)
-            - [Сайт | Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194/)
+            - [Сайт | Понятие итератора](https://habr.com/ru/companies/domclick/articles/674194)
         - **Языки программирования:** [Сайт | Начало работы в C/C++](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
     - **Математика:**
         - [Сайт | mathprofi.net](https://mathprofi.net)
@@ -132,6 +132,7 @@
         - [Сайт | MathDF](https://mathdf.com)
         - [Сайт | Desmos](https://www.desmos.com)
         - [Сайт | 3Blue1Brown](https://www.3blue1brown.com)
+        - [Сайт | WolframAlpha](https://www.wolframalpha.com)
 - **Интересное:**
     - [Сайт | Python vs C++](https://faq8.ru/read.php?5,15424)
     - [Сайт | Крылов на форуме](https://postupim.ru/forum/4-4163-1)
@@ -169,12 +170,13 @@
 ## Дополнительно
 ### Мероприятия
 - [Сайт | Росмолодёжь](https://fadm.gov.ru)
+- [Сайт | Росмолодёжь (госуслуги)](https://www.gosuslugi.ru/molodym) 
 - [Сайт | ФГАИС "Молодёшь России"](https://myrosmol.ru)
 - [Сайт | Росмолодёшь Бизнес](https://rosmolbusiness.ru)
 - [Сайт | Наука РФ](https://наука.рф)
 
 
-### Курсы
+### Саморазвитие
 - [Сайт | VK Education](https://education.vk.company)
 - [Сайт | Яндекс Образование](https://education.yandex.ru)
 - [Сайт | Яндекс Практикум](https://practicum.yandex.ru)
@@ -182,6 +184,7 @@
 - [Сайт | Т-Образование](https://education.tbank.ru)
 - [Сайт | Stepik](https://stepik.org)
 - [Сайт | Хекслет](https://ru.hexlet.io)
+- [Сайт | CodeRun](https://coderun.yandex.ru)
 - [Сайт | Leetcode](https://leetcode.com)
 
 

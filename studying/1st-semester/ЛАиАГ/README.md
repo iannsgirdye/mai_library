@@ -26,7 +26,7 @@
 
 
 ### Экзамен
-- [Диск | Список вопросов и гайд](https://disk.yandex.ru/d/R00xsnH7FUcnbw)
+- [Диск | Список вопросов](https://disk.yandex.ru/d/R00xsnH7FUcnbw)
 - [Таблица | Билеты потока 2024-2025](https://docs.google.com/spreadsheets/d/1FNZpad8SOA08ERgzVAP-BOUpBuzGvFSILeTt5wbS0u8/edit?gid=0#gid=0)
 
 | Группа       | Консультация                | Сдача                       |
