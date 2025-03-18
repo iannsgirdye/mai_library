@@ -137,21 +137,20 @@
 \section{Тригонометрические подстановки}
 
 \subsection{Теория}
-\paragraph{$\boxed{1}$}
+\paragraph{$\boxed{1} ~~~ \sqrt{a^2 - x^2}$}
 \begin{gather*}
-    \sqrt{a^2 - x^2} = \sqrt{a^2 - a^2 \sin^2 t} = a \sqrt{1 - \sin^2 t} = a \cos t \\
-    x = a \sin t ~~~~~ dx = a \cos t dt
+    \text{Замена: } x = a \sin t ~\rightarrow~ dx = a \cos t dt \\
+    \sqrt{a^2 - a^2 \sin^2 t} = a \sqrt{1 - \sin^2 t} = a \cos t
 \end{gather*}
-\paragraph{$\boxed{2}$}
+\paragraph{$\boxed{2} ~~~ \sqrt{x^2 - a^2}$}
 \begin{gather*}
-    \sqrt{x^2 - a^2} = \sqrt{\frac{a^2}{\cos^2 t} - a^2} = a \sqrt{\frac{1 - \cos^2 t}{\cos^2 t}} = a \tg t \\
-    x = a \sec t = \frac{a}{\cos t} ~~~~~ dx = \frac{a \sin t}{\cos^2 t} dt
+    \text{Замена: } x = a \sec t = \frac{a}{\cos t} ~\rightarrow~ dx = \frac{a \sin t}{\cos^2 t} dt \\
+    \sqrt{\frac{a^2}{\cos^2 t} - a^2} = a \sqrt{\frac{1 - \cos^2 t}{\cos^2 t}} = a \tg t
 \end{gather*}
-\paragraph{$\boxed{3}$}
+\paragraph{$\boxed{3} ~~~ \sqrt{x^2 + a^2}$}
 \begin{gather*}
-    \sqrt{x^2 + a^2} = \sqrt{\frac{a^2 \sin^2 t}{\cos^2 t} + a^2} =
-    a \sqrt{\frac{\sin^2 t + \cos^2 t}{\cos^2 t}} = \frac{a}{\cos t} \\
-    x = a \tg t ~~~~~ dx = \frac{a}{\cos^2 t} dt
+    \text{Замена: } x = a \tg t ~\rightarrow~ dx = \frac{a}{\cos^2 t} dt \\
+    \sqrt{\frac{a^2 \sin^2 t}{\cos^2 t} + a^2} = a \sqrt{\frac{\sin^2 t + \cos^2 t}{\cos^2 t}} = \frac{a}{\cos t}
 \end{gather*}
 
 
@@ -435,7 +434,7 @@
     \int \frac{3z + 2}{(z^2 + 1)^2} dz =
     3\int \frac{z}{(z^2 + 1)^2} dz + 2\int \frac{1}{(z^2 + 1)^2} dz = \\
     = 3\int \frac{zdz}{(z^2 + 1)^2} dz + 2\int \frac{(z^2 + 1) - z^2}{(z^2 + 1)^2} dz =
-    3\int \frac{zdz}{(z^2 + 1)^2} dz + 2\int \frac{dz}{z^2 + 1} - \underbrace{2\int \frac{z^2dz}{(z^2 + 1)^2}}_{(*)} = \dots \\
+    3\int \frac{zdz}{(z^2 + 1)^2} dz + 2\int \frac{dz}{z^2 + 1} \underbrace{- 2\int \frac{z^2dz}{(z^2 + 1)^2}}_{(*)} = \dots \\
     (*) = -\int \frac{2z \cdot zdz}{(z^2 + 1)^2} =
     -\int \frac{zdz^2}{(z^2 + 1)^2} =
     -\int \frac{z d(x^2 + 1)}{(z^2 + 1)^2} =
