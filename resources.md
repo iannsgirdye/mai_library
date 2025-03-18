@@ -7,6 +7,9 @@
 
 ## Основное
 - [Сайт | МАИ](https://t.me/MAIuniversity)
+- [Сайт | Личный кабинет](https://my.mai.ru/lk_student)
+- [Сайт | Электронная почта](https://mail.mai.education/#1)
+- [Сайт | Система электронного обучения](https://lms.mai.ru)
 
 ### Учёба 
 - [Telegram-канал | Цифровая кадровая платформа](https://t.me/platforma_mai_ru)
@@ -16,6 +19,12 @@
 - [Telegram-канал | Наука [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
 - [Сайт | Проект "Топ-100"](https://top100mai.tilda.ws/#rec834796140)
 - [Сайт | Онлайн-курсы](https://mai.ru/education/dpo/online)
+
+
+### Расписание
+- [Telegram-бот | Расписание v2.0](https://t.me/mai_timetablebot)
+- [Telegram-бот | Расписание](https://t.me/Timetable_MAI_bot)
+- [Telegram-приложение | Расписание](https://t.me/maiuniversity_schedule_bot)
 
 
 ### Мероприятия
@@ -34,15 +43,6 @@
 - [Telegram-канал | Баскетбольная команда МАИ-МБА](https://t.me/bk_mai)
 - [Telegram-канал | Сборная по академической гребле](https://t.me/mai_rowing)
 - [Telegram-канал | Мужская сборная по волейболу](https://t.me/volleymai)
-
-
-### Организационное
-- [Сайт | Личный кабинет](https://my.mai.ru/lk_student)
-- [Сайт | Электронная почта](https://mail.mai.education/#1)
-- [Сайт | Система электронного обучения](https://lms.mai.ru)
-- [Telegram-бот | Расписание v2.0](https://t.me/mai_timetablebot)
-- [Telegram-бот | Расписание](https://t.me/Timetable_MAI_bot)
-- [Telegram-приложение | Расписание](https://t.me/maiuniversity_schedule_bot)
 
 
 ### Не студентам
