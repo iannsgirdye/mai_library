@@ -1,4 +1,4 @@
-![Доска почёта | Учебные материалы ФИИТа](/about/images/mai_library/about/people/FIIT.png)
+![Доска почёта | Учебные материалы ФИИТа](/project/images/project/people/FIIT.png)
 
 # Доска почёта | Учебные материалы ФИИТа (2-й семестр)
 *aka Вклады людей в проект*

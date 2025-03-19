@@ -1,4 +1,4 @@
-![Учебные материалы ФИИТа](/about/images/mai_library/studying.png)
+![Учебные материалы ФИИТа](/project/images/FIIT.png)
 
 # Учебные материалы ФИИТа
 

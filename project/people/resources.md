@@ -1,4 +1,4 @@
-![Доска почёта | Общие ресурсы](/about/images/mai_library/about/people/universal.png)
+![Доска почёта | Общие ресурсы](/project/images/project/people/resources.png)
 
 # Доска почёта | Общие ресурсы
 *aka Вклады людей в проект*

@@ -1,16 +1,16 @@
-![mai_library](/about/images/mai_library.png)
+![mai_library](/project/images/README.png)
 
 # О проекте
 Сборник файлов и ресурсов, которые обязательно пригодятся студенту [Московского авиационного института](https://mai.ru) во время учебной и внеучебной деятельностей. 
 
 
 ## Предназначение
-- Папка `studying`: [Институт №8](https://institutes.mai.ru/computing) → [Кафедра 806](https://institutes.mai.ru/computing/806) → [ФИИТ](https://priem.mai.ru/base/programs/informatika-i-kompyuternye-nauki) → 2024-й год набора
+- `/FIIT`: [Институт №8](https://institutes.mai.ru/computing) → [Кафедра 806](https://institutes.mai.ru/computing/806) → [ФИИТ](https://priem.mai.ru/base/programs/informatika-i-kompyuternye-nauki) → 2024-й год набора
 - Остальное: для всех
 
 
 ## Структура
-- [Telegram-канал](https://t.me/mai_library) — ссылка на репозиторий, чтобы не терять её.
+- [Telegram-канал](https://t.me/mai_library) — ссылка на репозиторий, чтобы не терять его.
 - Хранилище — сборник файлов, ссылки на которые представлены в предметных `README.md` (конкретно для ФИИТовцев).
 - [Репозиторий](https://github.com/iannsgirdye/mai_library) — сборник ресурсов (ты прям здесь).
 - [Фото-конспекты](https://t.me/mai_library_photo) — фотографии записей на досках (и это тоже для ФИИТовцев).
@@ -24,4 +24,4 @@
 - предложить идею по улучшению;
 - накормить [владельца проекта](https://t.me/iannsgirdye) в Додо или Теремке.
 
-Хорошо, я готов помочь. Что дальше? Достаточно просто написать [владельцу проекта](https://t.me/iannsgirdye).
+Хорошо, я готов помочь. Что дальше? Достаточно просто написать [владельцу проекта](https://t.me/iannsgirdye). Взамен ты будешь добавлен на соответствующую доску почёта (подробно в `/project/people/README.md`).
