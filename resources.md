@@ -12,107 +12,107 @@
 - 🔎 [Система электронного обучения](https://lms.mai.ru)
 
 ### Учёба 
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Цифровая кадровая платформа](https://t.me/platforma_mai_ru)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [CONVERSATION CLUB](https://t.me/conversationclubMAI)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Учеба по обмену](https://t.me/exchange_programs_mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [МАИ-ШУЦТ](https://t.me/mai_sjtu)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Наука [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Цифровая кадровая платформа](https://t.me/platforma_mai_ru)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [CONVERSATION CLUB](https://t.me/conversationclubMAI)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Учеба по обмену](https://t.me/exchange_programs_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [МАИ-ШУЦТ](https://t.me/mai_sjtu)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Наука [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
 - 🔎 [Проект "Топ-100"](https://top100mai.tilda.ws/#rec834796140)
 - 🔎 [Онлайн-курсы](https://mai.ru/education/dpo/online)
 
 
 ### Расписание
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Расписание v2.0 (бот)](https://t.me/mai_timetablebot)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Расписание (бот)](https://t.me/Timetable_MAI_bot)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Расписание (мини-приложение)](https://t.me/maiuniversity_schedule_bot)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Расписание v2.0 (бот)](https://t.me/mai_timetablebot)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Расписание (бот)](https://t.me/Timetable_MAI_bot)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Расписание (мини-приложение)](https://t.me/maiuniversity_schedule_bot)
 
 
 ### Мероприятия
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Дворец культуры и техники](https://t.me/dkit_mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Волонтёрский центр](https://t.me/volonteermai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [КВН (Маёвская лига КВН)](https://t.me/kvnmai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Молодёжка](https://t.me/molodejkaMAI)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профком обучающихся](https://t.me/mai_profkom)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Университетские смены в 2024](https://t.me/maismeny2024)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Дворец культуры и техники](https://t.me/dkit_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Волонтёрский центр](https://t.me/volonteermai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [КВН (Маёвская лига КВН)](https://t.me/kvnmai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Молодёжка](https://t.me/molodejkaMAI)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профком обучающихся](https://t.me/mai_profkom)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Университетские смены в 2024](https://t.me/maismeny2024)
 
 
 ### Спорт
 - 🔎 [Спортивные секции и клубы](https://mai.ru/campus/locations/sport/sections/stud.php)
 - 🔎 [Отзывы о секциях](https://carbonated-mimosa-298.notion.site/532d2159388f416c9921c283e3eb914e)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Хоккейный клуб МАИ](https://t.me/maihockey)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Баскетбольная команда МАИ-МБА](https://t.me/bk_mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Сборная по академической гребле](https://t.me/mai_rowing)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Мужская сборная по волейболу](https://t.me/volleymai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Хоккейный клуб МАИ](https://t.me/maihockey)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Баскетбольная команда МАИ-МБА](https://t.me/bk_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Сборная по академической гребле](https://t.me/mai_rowing)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Мужская сборная по волейболу](https://t.me/volleymai)
 
 
 ### Не студентам
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Траектория взлёта](https://t.me/traektoriamai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Поступление](https://t.me/postupi_v_mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Вступительные испытания](https://t.me/VI_MAIuniversity)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профсоюз работников](https://t.me/maiprof_ru)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Траектория взлёта](https://t.me/traektoriamai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Поступление](https://t.me/postupi_v_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Вступительные испытания](https://t.me/VI_MAIuniversity)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профсоюз работников](https://t.me/maiprof_ru)
 
 
 ### Разное
 - 🔎 [Облако](https://oblako.mai.ru)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [MAI STORE](https://t.me/maistoreofficial)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Интернет](https://t.me/inetmai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Аэромобильность](https://t.me/aero_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [MAI STORE](https://t.me/maistoreofficial)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Интернет](https://t.me/inetmai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Аэромобильность](https://t.me/aero_mai)
 
 
 
 ## Факультеты
 ### Институт №1
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/avia_mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/kmkpb1)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Приёмная комиссия](https://t.me/avia_mai_pc)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/avia_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/kmkpb1)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Приёмная комиссия](https://t.me/avia_mai_pc)
 
 
 ### Институт №2
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/institute2mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/pbin2)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/institute2mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/pbin2)
 
 
 ### Институт №3
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://vk.com/club2240)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Кафедра 304](https://t.me/kafedra304)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Кафедра 307](https://t.me/info307)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/pb_treshka)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://vk.com/club2240)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Кафедра 304](https://t.me/kafedra304)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Кафедра 307](https://t.me/info307)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/pb_treshka)
 
 
 ### Институт №4
-- <img src="/project/icons/VK.png" alt="Node" align=left width=24> [Институт](https://vk.com/frela_mai)
-- <img src="/project/icons/VK.png" alt="Node" align=left width=24> [Профбюро](https://vk.com/pbfrela)
+- <img src="/project/icons/VK.png" alt="Node" align=left width=24> [Институт](https://vk.com/frela_mai)
+- <img src="/project/icons/VK.png" alt="Node" align=left width=24> [Профбюро](https://vk.com/pbfrela)
 
 
 ### Институт №5
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/inst5mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/inzhekinmai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/inst5mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/inzhekinmai)
 
 
 ### Институт №6
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://vk.com/aerocosmos_mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://vk.com/pb_aerocosmos)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://vk.com/aerocosmos_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://vk.com/pb_aerocosmos)
 
 
 ### Институт №7
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/institute7mai)
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/profburo_institute7)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/institute7mai)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/profburo_institute7)
 
 
 ### Институт №8
 - **Лента информации:**
-    - <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [IT-Центр](https://t.me/itcmai)
-    - <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/pb8mai)
+    - <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [IT-Центр](https://t.me/itcmai)
+    - <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/pb8mai)
 - **Группы ФИИТа:**
-    - <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Основная группа 2024-2025](https://vk.me/join/7L0TaQLi0mxL9ZKUA2pWpwYlbLSdAN9Ah7I=)
-    - <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Флудилка 2024-2025](https://vk.me/join/pIP2DyKEjIltNvsJ4iayzDQVHQDyGVG0QTM=)
-    - <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Группа ФИИТа](https://t.me/+IWtNm2uDIbQ0YTdi)
+    - <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Основная группа 2024-2025](https://vk.me/join/7L0TaQLi0mxL9ZKUA2pWpwYlbLSdAN9Ah7I=)
+    - <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Флудилка 2024-2025](https://vk.me/join/pIP2DyKEjIltNvsJ4iayzDQVHQDyGVG0QTM=)
+    - <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Группа ФИИТа](https://t.me/+IWtNm2uDIbQ0YTdi)
 - **Сборники материалов:**
-    - <img src="/project/icons/GoogleDrive.png" alt="Node" align="left" width="20" height="20"> ["Как не сдохнуть" от Яны Касьяновой (ФИИТ)](https://drive.google.com/drive/folders/1gWxsOAPNeuCbiQ0fGdL3hJu5sokCZNTi)
-    - <img src="/project/icons/GoogleDrive.png" alt="Node" align="left" width="20" height="20"> ["Как не сдохнуть 2.0" от Евы Заитовой (ФИИТ)](https://drive.google.com/drive/u/2/folders/1yQ6xCF8Y_2JbCnXkUn84iUSl3NrZUmkB)
-    - <img src="/project/icons/YandexDisk.png" alt="Node" align="left" width="20" height="20"> [от Марата Вещина с ПМ-805](https://t.me/mafiramulDisk)
-    - <img src="/project/icons/GitHub.png" alt="Node" align="left" width="20" height="20"> [От студента с ПМ-804](https://github.com/studyPM804/MAI_study/tree/main)
-    - <img src="/project/icons/GitHub.png" alt="Node" align="left" width="20" height="20"> [от студента с ФИИТа](https://github.com/LeSaR-school/semester-1)
+    - <img src="/project/icons/GoogleDrive.png" alt="Node" align="left" width="20" height="20"> ["Как не сдохнуть" от Яны Касьяновой (ФИИТ)](https://drive.google.com/drive/folders/1gWxsOAPNeuCbiQ0fGdL3hJu5sokCZNTi)
+    - <img src="/project/icons/GoogleDrive.png" alt="Node" align="left" width="20" height="20"> ["Как не сдохнуть 2.0" от Евы Заитовой (ФИИТ)](https://drive.google.com/drive/u/2/folders/1yQ6xCF8Y_2JbCnXkUn84iUSl3NrZUmkB)
+    - <img src="/project/icons/YandexDisk.png" alt="Node" align="left" width="20" height="20"> [от Марата Вещина с ПМ-805](https://t.me/mafiramulDisk)
+    - <img src="/project/icons/GitHub.png" alt="Node" align="left" width="20" height="20"> [От студента с ПМ-804](https://github.com/studyPM804/MAI_study/tree/main)
+    - <img src="/project/icons/GitHub.png" alt="Node" align="left" width="20" height="20"> [от студента с ФИИТа](https://github.com/LeSaR-school/semester-1)
     - 🔎 [Кафедра 805](https://dep805.ru)
 - **Дополнительно:**
     - 🔎 [Открытые видеолекции учебных курсов МГУ](https://teach-in.ru)
@@ -136,20 +136,20 @@
 
 
 ### Институт №9
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/Inst9MAI)
-- <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://vk.com/prof9fak)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/Inst9MAI)
+- <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://vk.com/prof9fak)
 
 
 ### Институт №10
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/MAIx10)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Институт](https://t.me/MAIx10)
 
 
 ### Институт №11
-- <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://vk.com/institut_mtm)
+- <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://vk.com/institut_mtm)
 
 
 ### Институт №12
-- <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Институт](https://vk.com/mai_pb_12)
+- <img src="/project/icons/VK.png" alt="Node" align="left" width="20" height="20"> [Институт](https://vk.com/mai_pb_12)
 
 
 ### ВУЦ
@@ -159,7 +159,7 @@
 
 
 ### Институт №14
-- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/profburopish14)
+- <img src="/project/icons/Telegram.png" alt="Node" align="left" width="20" height="20"> [Профбюро](https://t.me/profburopish14)
 
 
 
