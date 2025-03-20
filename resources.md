@@ -136,7 +136,7 @@
 
 
 ### Институт №9
-- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Институт](https://t.me/Inst9MAI)
+- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: px;">  [Институт](https://t.me/Inst9MAI)
 - <img src="/project/icons/VK.png" alt="Node" width=20 style="vertical-align: middle; line-height: 20px;">  [Профбюро](https://vk.com/prof9fak)
 
 
@@ -173,11 +173,16 @@
 
 
 ### Саморазвитие
+- 🔎 [Changellenge](https://changellenge.com)
 - 🔎 [VK Education](https://education.vk.company)
 - 🔎 [Яндекс Образование](https://education.yandex.ru)
 - 🔎 [Яндекс Практикум](https://practicum.yandex.ru)
 - 🔎 [Young&&Yandex](https://yandex.ru/yaintern)
 - 🔎 [Т-Образование](https://education.tbank.ru)
+- 🔎 [Alfa Students](https://alfabank.ru/alfastudents)
+- 🔎 [Карьера в ВТБ](https://vtbcareer.com)
+- 🔎 [Молодёжный портал Сбера](https://sberstudent.ru)
+- 🔎 [Ozon Camp](https://ozoncamp.pro)
 - 🔎 [Stepik](https://stepik.org)
 - 🔎 [Хекслет](https://ru.hexlet.io)
 - 🔎 [CodeRun](https://coderun.yandex.ru)
