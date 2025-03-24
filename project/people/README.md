@@ -3,6 +3,11 @@
 # Доски почёта 
 *aka Вклады людей в проект*
 
+- [Учебные материалы ФИИТа (1-й семестр)](/project/people/FIIT_1st-semester.md)
+- [Учебные материалы ФИИТа (2-й семестр)](/project/people/FIIT_2nd-semester.md)
+- [Улучшения проекта](/project/people/project.md)
+- [Общие ресурсы](/project/people/resources.md)
+
 
 ## Ответы на некоторые вопросы
 — **Материал мой, а на доске не я. Как так?** <br>
