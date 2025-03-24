@@ -4,6 +4,7 @@
 Всё то, что есть в МАИ.
 
 - [МАИ](#маи)
+    - [Основное](#основное)
     - [Учёба](#учёба)
     - [Расписание](#расписание)
     - [Мероприятия](#мероприятия)
@@ -32,6 +33,7 @@
 
 
 ## МАИ
+### Основное
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [МАИ](https://t.me/MAIuniversity)
 - 🔎 [Личный кабинет](https://my.mai.ru/lk_student)
 - 🔎 [Электронная почта](https://mail.mai.education/#1)
