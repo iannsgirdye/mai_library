@@ -41,7 +41,7 @@
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [CONVERSATION CLUB](https://t.me/conversationclubMAI)
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Учеба по обмену](https://t.me/exchange_programs_mai)
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [МАИ-ШУЦТ](https://t.me/mai_sjtu)
-- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Наука [НИРС, СНО, аспиранты]()](https://t.me/nauka_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Наука [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
 - 🔎 [Проект "Топ-100"](https://top100mai.tilda.ws/#rec834796140)
 - 🔎 [Онлайн-курсы](https://mai.ru/education/dpo/online)
 
