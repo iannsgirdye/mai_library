@@ -1,8 +1,9 @@
 ![Общие ресурсы](/project/images/resources.png)
 
 # Общие ресурсы
+Всё то, что есть в МАИ.
 
-- [Основное](#основное)
+- [МАИ](#маи)
     - [Учёба](#учёба)
     - [Расписание](#расписание)
     - [Мероприятия](#мероприятия)
@@ -30,11 +31,12 @@
     - [Интересное](#интересное)
 
 
-## Основное
-- 🔎 [МАИ](https://t.me/MAIuniversity)
+## МАИ
+- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [МАИ](https://t.me/MAIuniversity)
 - 🔎 [Личный кабинет](https://my.mai.ru/lk_student)
 - 🔎 [Электронная почта](https://mail.mai.education/#1)
 - 🔎 [Система электронного обучения](https://lms.mai.ru)
+
 
 ### Учёба 
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Цифровая кадровая платформа](https://t.me/platforma_mai_ru)
