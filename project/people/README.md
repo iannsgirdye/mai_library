@@ -1,6 +1,6 @@
-![Доска почёта](/project/images/project/people/README.png)
+![Доски почёта](/project/images/project/people/README.png)
 
-# Доска почёта 
+# Доски почёта 
 *aka Вклады людей в проект*
 
 

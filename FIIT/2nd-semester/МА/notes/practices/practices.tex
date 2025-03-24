@@ -80,7 +80,7 @@
 %-------------------------------------------------------
 \newpage
 \paragraph{2025.03.03 | ПЗ-3}
-На основе конспектов Никиты Отмахова и Давида Губеева (оба — М8О-111БВ-24).
+~\\ На основе конспектов Никиты Отмахова и Давида Губеева (оба — М8О-111БВ-24).
 
 \section{Интегрирование по частям}
 
@@ -285,7 +285,16 @@
 %-------------------------------------------------------
 \newpage
 \paragraph{2025.03.10 | ПЗ-4}
-На основе конспектов Никиты Отмахова и Давида Губеева (оба — М8О-111БВ-24).
+~\\ На основе конспектов Никиты Отмахова и Давида Губеева (оба — М8О-111БВ-24).
+
+
+\[
+    \int \sqrt{ax^2 + bx + c} ~dx
+\]  
+\begin{gather*}
+    \int \sqrt{a^2 - x^2} ~dx = \frac{x}{2} \sqrt{a^2 - x^2} + \frac{a^2}{2} \arcsin \frac{x}{a} + C \\
+    \int \sqrt{x^2 \pm a^2} ~dx = \frac{x}{2} \sqrt{x^2 \pm a^2} + \frac{a^2}{2} \ln \left|x + \sqrt{x^2 \pm a^2}\right|
+\end{gather*}
 
 
 
@@ -321,7 +330,7 @@
     x^* = p \pm qi, \alpha > 1 ~~~~~~~~~~
     \frac{A_1x = B_1}{ax^2 + bx + c} + \frac{A_2x + B_2}{(ax^2 + bx + c)^2} + \dots
 \]
-\subsubsection{Правило (кого?)}
+\subsubsection{Метод Остроградского}
 \begin{gather*}
     \int \frac{P_m(x)}{Q_n(x)} dx = \frac{X(x)}{Q^*(x)} + \int \frac{Y(x)}{\widetilde{Q}(x)} dx \\
     \underline{Q_n(x)} ~~~ \underline{Q_n'(x)} ~~~ \widetilde{Q}(x) = Q_m(x): Q^*(x)
@@ -443,7 +452,7 @@
     \dots = -\frac{3}{2} \cdot \frac{1}{z^2 + 1} + 2\arctg z - \frac{z}{z^2 + 1} + \arctg z + C
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{Пример (метод Остроградского)}
 \[
     \int \frac{dx}{(x + 1)^2(x^2 + 1)^2} dx = \dots
 \]
@@ -453,6 +462,199 @@
     2\underline{\underline{(x + 1)(x^2 + 1)}}\left[(x^2 + 1) + 2x(x + 1)\right] \\ \\
     \dots = \frac{A_1x^2 + A_2x + A_3}{(x + 1)(x^2 + 1)} + \int \frac{B_1x^2 + B_2x + B_3}{(x + 1)(x^2 + 1)} dx
 \end{gather*}
+
+
+
+\newpage
+\paragraph{2025.03.24 (1) | ПЗ-6}
+\section{Интегрирование иррациональных функций (наверное)}
+
+\subsection{Теория}
+\paragraph{$\boxed{2}$}
+\begin{gather*}
+    \int \frac{P_n(x)}{\sqrt{ax^2 + bx + c}} dx = 
+    Q_{n - 1}(x) \sqrt{ax^2 + bx + c} + \lambda \int \frac{dx}{\sqrt{ax^2 + bx + c}} \\
+    Q_{n - 1}(x), \lambda = const \text{ --- } ? 
+\end{gather*}
+\paragraph{$\boxed{3}$}
+\begin{gather*}
+    \int \frac{dx}{(x - \alpha)^n \sqrt{ax^2 + bx + c}} \\
+    \frac{1}{x - \alpha} = t \dots
+\end{gather*}
+\paragraph{$\boxed{4}$}
+\begin{gather*}
+    \int x^m \left(a + bx^n\right)^p dx \\
+    \boxed{4.1}:~ p \text{ --- целое} \\
+    \boxed{4.2}:~ \frac{m + 1}{n} \text{ --- целое}, a + bx^n = t^s, s \text{ --- знаменатель } p \\
+    \boxed{4.3}:~ \frac{m + 1}{n} + p \text{ --- целое}, ax^{-n} + b = t^s
+\end{gather*}
+
+
+\subsection{Практика}
+
+\subsubsection{Пример}
+\[
+    \int \frac{x^3}{\sqrt{x + 1}} dx
+\]  
+\begin{gather*}
+    \text{Замена: } x + 1 = t^2 ~~\Rightarrow~~ x = t^2 - 1 ~~~~~~~~~~ dx = 2tdt \\
+    \int \frac{(t^2 - 1)^3}{t} 2tdt =
+    2 \int \left(t^6 - 3t^4 + 3t^2 - 1\right) dt =
+    \frac{2}{7}t^7 - \frac{6}{5}t^5 + 2t^3 - 2t + C = \dots
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{dx}{\sqrt{x} + \sqrt[3]{x}}
+\]
+\begin{gather*}
+    \text{Замена: } x = t^6 ~~~~~~~~~~ dx = 6t^5dt \\
+    6 \int \frac{t^5 dt}{t^3 + t^2} =
+    6 \int \frac{t^3 dt}{t + 1} =
+    6 \int \frac{(t + 1)(t^2 - t + 1) - 1}{t + 1} dt = \\
+    = \frac{6}{3}t^3 - \frac{6}{2}t^2 + 6t + \ln \left|t + 1\right| + C =
+    2 \sqrt{x} - 3 \sqrt[3]{x} + 6 \sqrt[6]{t} + \ln \left|\sqrt[6]{x} + 1\right| + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int x \cdot \sqrt{\frac{x - 1}{x + 1}} dx
+\]
+\begin{gather*}
+    \text{Замена: } \frac{x - 1}{x + 1} = t^2 \\
+    x - 1 = t^2(x + 1) = t^2 x + t^2 \\
+    t^2x - x = -t^2 - 1 \\
+    x(t^2 - 1) = -t^2 - 1 \\
+    x = \frac{-t^2 - 1}{t^2 - 1} \\
+    dx = \frac{-2t \cdot (t^2 - 1) - 2t \cdot (-t^2 - 1)}{(t^2 - 1)^2} dt = 
+    \frac{-2t^3 + 2t + 2t^3 + 2t}{(t^2 - 1)^2} dt =
+    \frac{4t}{(t^2 - 1)^2} dt \\
+    \int \frac{-t^2 - 1}{t^2} \cdot t \cdot \frac{4t}{(t^2 - 1)^2} dt = 
+    -4\int \frac{(t^2 + 1)t^2}{(t^2 - 1)^3} dt = 
+    \frac{At^3 + Bt^2 + Ct + D}{(t^2 - 1)^2} + \int \frac{Et + F}{t^2 - 1} dt
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{x^2 dx}{\sqrt{x^2 - x + 1}} =
+\]
+\begin{gather*}
+    = \left(Ax + B\right) \sqrt{x^2 - x + 1} + \lambda \int \frac{dx}{\sqrt{ax^2 + bx + c}} = \dots \\
+    \frac{x^2}{\sqrt{x^2 - x + 1}} = A \sqrt{x^2 - x + 1} + \frac{(Ax + B)(2x - 1)}{2 \sqrt{x^2 - x + 1}} + \frac{\lambda}{\sqrt{x^2 - x + 1}} ~~~~\big| \cdot \sqrt{x^2 - x + 1} \\
+    x^2 = A(x^2 - x + 1) + \frac{(Ax + B)(2x - 1)}{2} + \lambda \\
+    \begin{cases}
+        1 = A + A                \\
+        0 = -A - \frac{A}{2} + B \\
+        0 = A - \frac{B}{2} + \lambda
+    \end{cases}
+    \begin{cases}
+        A = \frac{1}{2} \\
+        B = \frac{3}{4} \\
+        \lambda = -\frac{1}{8}
+    \end{cases} \\
+    \dots = \left(\frac{x}{2} + \frac{3}{4}\right) \sqrt{x^2 - x + 1} - \frac{1}{8} \int \frac{dx}{\left(x - \frac{1}{2}\right)^2 + \frac{3}{4}} = 
+    \frac{1}{2} \left(x + \frac{3}{2}\right) \sqrt{x^2 - x + 1} - \frac{1}{8} \ln \left|x - \frac{1}{2} + \sqrt{x^2 - x + 1}\right|
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{x^3}{\sqrt{1 - x^2}} = 
+\]
+\begin{gather*}
+    = \left(Ax^2 + Bx + C\right) \cdot \sqrt{1 - x^2} + \lambda \int \frac{dx}{\sqrt{1 - x^2}} = \dots \\
+    \frac{x^3}{\sqrt{1 - x^2}} = (2Ax + B) \cdot \sqrt{1 - x^2} + \frac{(Ax^2 + Bx + C)(-2x)}{2\sqrt{1 - x^2}} + \frac{\lambda}{\sqrt{1 - x^2}} ~~~~\big| \cdot \sqrt{1 - x^2} \\
+    x^3 = (2Ax + B)(1 - x^2) - (Ax^2 + Bx + C)x + \lambda \\
+    \begin{cases}
+        1 = -2A - A \\
+        0 = -B - B  \\
+        0 = 2A - C  \\
+        0 = B + \lambda
+    \end{cases} 
+    \begin{cases}
+        A = -\frac{1}{3} \\
+        B = 0            \\
+        C = -\frac{2}{3} \\
+        \lambda = 0 
+    \end{cases}
+    \dots = \left(-\frac{1}{3}x^2 - \frac{2}{3}\right) \sqrt{1 - x^2} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{dx}{(x + 1)^3 \sqrt{x^2 + 2x}}
+\]
+\begin{gather*}
+    \text{Замена: } \frac{1}{x + 1} = t ~~\rightarrow~~ x + 1 = \frac{1}{t} ~~\rightarrow~~ x = \frac{1}{t} - 1 = t^2 - 1 ~~~~~~~~~~
+    dx = -\frac{1}{t^2} dt \\
+    -\int \frac{t^3 \cdot \frac{1}{t^2} dt}{\sqrt{\left(\frac{1}{t} - 1\right)^2 + 2\left(\frac{1}{t} - 1\right)}} =
+    -\int \frac{tdt}{\sqrt{\frac{1}{t^2} - 1}} =
+    -\int \frac{t^2 dt}{\sqrt{1 - t^2}} = 
+    (At + B) \sqrt{1 - t^2} + \lambda \int \frac{dt}{\sqrt{1 - t^2}} \\
+    -\frac{t^2}{\sqrt{1 - t^2}} = \frac{\lambda}{\sqrt{1 - t^2}} + \left(A \sqrt{1 - t^2} + (At + B) \cdot \frac{-2t}{2\sqrt{1 - t^2}}\right) ~~\big| \cdot \sqrt{1 - t^2} \\
+    -t^2 = \lambda + A(1 - t^2) - (At + B) \\
+    -t^2 = \lambda + A - t^2A - At^2 - Bt \\
+    \begin{cases}
+        -1 = -A - A \\
+         0 = -B     \\
+         0 = \lambda + A
+    \end{cases}
+    \begin{cases}
+        A = \frac{1}{2} \\
+        B = 0           \\
+        \lambda = -\frac{1}{2}
+    \end{cases} \\
+    \frac{1}{2}t \sqrt{1 - t^2} - \frac{1}{2} \int \frac{dt}{\sqrt{1 - t^2}} = 
+    \frac{1}{2(x + 1)} \cdot \sqrt{1 - \left(\frac{1}{x + 1}\right)^2} - \frac{1}{2} \arcsin \frac{1}{x + 1} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{x^2 + x + 1}{x \sqrt{x^2 - x + 1}} dx = 
+\]
+\begin{gather*}
+    = \int \frac{(x + 1) dx}{\sqrt{x^2 - x + 1}} + \int \frac{dx}{x \sqrt{x^2 - x + 1}} \\
+    \text{Замена: } t = \frac{1}{x} ~~\rightarrow~~ x = \frac{1}{t} ~~~~~~~~~~ dx = -\frac{1}{t^2} dt \\
+    \int \frac{dx}{x \sqrt{x^2 - x + 1}} = 
+    -\int \frac{tdt}{t^2 \sqrt{\frac{1}{t^2} - \frac{1}{t} + 1}} = 
+    -\int \frac{dt}{\sqrt{1 - t + t^2}} =
+    -\int \frac{dt}{\sqrt{\left(t - \frac{1}{2}\right)^2 + \frac{3}{4}}} = \\
+    = -\ln \left| t - \frac{1}{2} + \sqrt{\left(t - \frac{1}{2}\right)^2 + \frac{3}{4}}\right| + C =
+    -\ln \left|\frac{1}{x} - \frac{1}{2} + \sqrt{\left(\frac{1}{x} - \frac{1}{2}\right)^2 + \frac{3}{4}}\right| + C \\
+    \int \frac{x + 1}{\sqrt{x^2 - x + 1}} dx = 
+    \frac{1}{2} \int \frac{(2x - 1) + 3}{\sqrt{x^2 - x + 1}} dx =
+    \frac{1}{2} \int \frac{2x - 1}{\sqrt{x^2 - x + 1}} dx + \frac{3}{2} \frac{dx}{\sqrt{x^2 - x + 1}} = \\
+    = \sqrt{x^2 - x + 1} + \frac{3}{2} \ln \left|x - \frac{1}{2} + \sqrt{\left(x - \frac{1}{2}\right)^2 + \frac{3}{4}}\right| + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{x^3}{\sqrt{(1 + 2x^2)^3}} =
+\]
+\begin{gather*}
+    = \int x^3 \left(1 + 2x^2\right)^{-\frac{3}{2}} = \dots \\
+    m = 3, n = 2, p = -\frac{3}{2} ~~\Rightarrow~~ \frac{m + 1}{n} = \frac{3 + 1}{2} = 2 ~~\Rightarrow~~ 1 + 2x^2 = t^2 \\
+    x = \left(\frac{t^2 - 1}{2}\right)^{\frac{1}{2}} = \frac{\left(t^2 - 1\right)^{\frac{1}{2}}}{\sqrt{2}} \\
+    dx = \frac{1 \cdot 2t}{2 \cdot (t^2 - 1)^{\frac{1}{2}}} \cdot \frac{1}{\sqrt{2}} dt = \frac{tdt}{\sqrt{2} (t^2 - 1)^{\frac{1}{2}}} \\
+    \dots = \int \left(\frac{t^2 - 1}{2}\right)^{\frac{3}{2}} \cdot t^{-3} \cdot \frac{t}{\sqrt{2}(t^2 - 1)^{\frac{1}{2}}} dt =
+    \frac{1}{4} \int \frac{t^2 - 1}{t^2} dt =
+    \frac{1}{4} \int \left(1 - \frac{1}{t^2}\right) dt = \\
+    = \frac{t}{4} + \frac{1}{4t} + C = 
+    \frac{1}{4} \sqrt{1 + 2x^2} + \frac{1}{4 \sqrt{1 + 2x^2}} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{dx}{\sqrt[4]{1 + x^4}}
+\]
+\begin{gather*}
+    m = 0, n = 4, p = -\frac{1}{4} ~~~~~~~~~~
+    \frac{m + 1}{n} = \frac{0 + 1}{4} = \frac{1}{4} ~~\boxed{-} ~~~~~~~~~~
+    \frac{m + 1}{n} + p = \frac{1}{4} - \frac{1}{4} = 0 ~~\boxed{+} \\
+    x^{-4} + 1 = t^4 ~~\Rightarrow~~ \frac{1}{x^4} = t^4 - 1 ~~\Rightarrow~~ x = \left(\frac{1}{t^4 - 1}\right)^{-\frac{1}{4}} \\
+    dx = -\frac{1}{4} \cdot \frac{4t^3dt}{(t^4 - 1)^{\frac{5}{4}}} = \frac{-t^3dt}{4(t^4 - 1)^{\frac{5}{4}}} \\
+    \dots
+\end{gather*}
+(последнее фото в канале)
 
 
 

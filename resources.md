@@ -1,8 +1,33 @@
 ![Общие ресурсы](/project/images/resources.png)
 
 # Общие ресурсы
-*Рекомендую пользоваться навигацией (кнопка справа сверху), потому что здесь очень много букв.*
 
+- [Основное](#основное)
+    - [Учёба](#учёба)
+    - [Расписание](#расписание)
+    - [Мероприятия](#мероприятия)
+    - [Спорт](#спорт)
+    - [Не студентам](#не-студентам)
+    - [Разное](#разное)
+- [Факультеты](#факультеты)
+    - [Институт №1](#институт-1)
+    - [Институт №2](#институт-2)
+    - [Институт №3](#институт-3)
+    - [Институт №4](#институт-4)
+    - [Институт №5](#институт-5)
+    - [Институт №6](#институт-6)
+    - [Институт №7](#институт-7)
+    - [Институт №8](#институт-8)
+    - [Институт №9](#институт-9)
+    - [Институт №10](#институт-10)
+    - [Институт №11](#институт-11)
+    - [Институт №12](#институт-12)
+    - [ВУЦ](#вуц)
+    - [Институт №14](#институт-14)
+- [Дополнительно](#дополнительно)
+    - [Мероприятия](#мероприятия-1)
+    - [Саморазвитие](#саморазвитие)
+    - [Интересное](#интересное)
 
 
 ## Основное
@@ -16,7 +41,7 @@
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [CONVERSATION CLUB](https://t.me/conversationclubMAI)
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Учеба по обмену](https://t.me/exchange_programs_mai)
 - <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [МАИ-ШУЦТ](https://t.me/mai_sjtu)
-- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Наука [НИРС, СНО, аспиранты]](https://t.me/nauka_mai)
+- <img src="/project/icons/Telegram.png" alt="Node" width="20" style="vertical-align: middle; line-height: 20px;">  [Наука [НИРС, СНО, аспиранты]()](https://t.me/nauka_mai)
 - 🔎 [Проект "Топ-100"](https://top100mai.tilda.ws/#rec834796140)
 - 🔎 [Онлайн-курсы](https://mai.ru/education/dpo/online)
 
