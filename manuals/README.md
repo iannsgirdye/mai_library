@@ -1,6 +1,8 @@
 ![Справочник](/project/images/manuals/README.png)
 
 # Справочник
+Полезная информация по популярным темам.
 
-- [Деньги](/manuals/money.md)
-- [Локации](/manuals/locations.md)
+> [!NOTE]
+> - [Деньги](/manuals/money.md)
+> - [Локации](/manuals/locations.md)

@@ -1,8 +1,10 @@
 ![Учебные материалы ФИИТа](/project/images/FIIT/README.png)
 
 # Учебные материалы ФИИТа
-- [1-й семестр](/FIIT/1st-semester/)
-- [2-й семестр](/FIIT/2nd-semester/)
+
+> [!NOTE]
+> - [1-й семестр](/FIIT/1st-semester/)
+> - [2-й семестр](/FIIT/2nd-semester/)
 
 
 ## Ответы на некоторые вопросы

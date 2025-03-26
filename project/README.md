@@ -2,5 +2,6 @@
 
 # Внутренности проекта
 
-- [Доски почёта](/project/people/)
-- [Версионирование](/project/versions.md)
+> [!NOTE]
+> - [Доски почёта](/project/people/)
+> - [Версионирование](/project/versions.md)
