@@ -816,3 +816,9 @@
 ## 2.4.8 (2025.03.27) | Репозиторий
 - Внесены улучшения в `/manuals/locations.md`.
 - Внесено небольшое исправление в `/README.md`.
+
+
+## 2.4.9 (2025.03.27) | Репозиторий
+- Внесено уточнение в `/FIIT/2nd-semester/РIПнP/README.md`.
+- Внесено незначительное улучшение в `/FIIT/1st-semester/ПнЯP/README.md`.
+- Внесены улучшения и исправления в `/project/people/project.md` и `/FIIT/2nd-semester/ЛАиАГ/README.md`.
