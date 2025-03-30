@@ -822,3 +822,7 @@
 - Внесено уточнение в `/FIIT/2nd-semester/РIПнP/README.md`.
 - Внесено незначительное улучшение в `/FIIT/1st-semester/ПнЯP/README.md`.
 - Внесены улучшения и исправления в `/project/people/project.md` и `/FIIT/2nd-semester/ЛАиАГ/README.md`.
+
+
+## 2.4.10 (2025.03.30) | Репозиторий
+Внесены улучшения в `/FIIT/2nd-semester/ЛАиАГ/README.md`.
