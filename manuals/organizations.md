@@ -1,6 +1,6 @@
-![Справочник: организации](/project/images/manuals/organizations.png)
+![Справочник: Организации](/project/images/manuals/organizations.png)
 
-# Справочник: организации
+# Справочник: Организации
 
 > [!NOTE]
 > - [Дирекция Института №8](#дирекция-института-8)
