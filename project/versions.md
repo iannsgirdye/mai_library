@@ -834,3 +834,7 @@
 - Внесены исправления и улучшения в `/manuals/money.md` и `/manuals/organizations.md`. 
 - Внесены необходимые изменения в `/README.md` и `/manuals/README.md`.
 - Внесено небольшое исправление в `/FIIT/2nd-semester/ЛАиАГ/README.md`.
+
+
+## 2.4.12 (2025.03.31) | Репозиторий
+Внесены улучшения в `/manuals/money.md`.
