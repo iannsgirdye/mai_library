@@ -1,8 +1,9 @@
 ![Справочник](/project/images/manuals/README.png)
 
 # Справочник
-Полезная информация по популярным темам.
+Статьи на внеучебные темы. На основе материалов [профбюро Института №8](https://t.me/pb8mai).
 
 > [!NOTE]
 > - [Деньги](/manuals/money.md)
-> - [Локации](/manuals/locations.md)
+> - [Организации](/manuals/organizations.md)
+> - [Профсоюз](/manuals/union.md)

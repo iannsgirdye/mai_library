@@ -826,3 +826,11 @@
 
 ## 2.4.10 (2025.03.30) | Репозиторий
 Внесены улучшения в `/FIIT/2nd-semester/ЛАиАГ/README.md`.
+
+
+## 2.4.11 (2025.03.31) | Репозиторий
+- Создан новый справочник — `/manuals/union.md`.
+- `/manuals/locations.md` переименован в `/manuals/organizations.md`.
+- Внесены исправления и улучшения в `/manuals/money.md` и `/manuals/organizations.md`. 
+- Внесены необходимые изменения в `/README.md` и `/manuals/README.md`.
+- Внесено небольшое исправление в `/FIIT/2nd-semester/ЛАиАГ/README.md`.
