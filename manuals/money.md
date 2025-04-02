@@ -14,8 +14,8 @@
 
 ## Стипендии
 - **Ресурсы:**
-    - [Одна страница на сайте МАИ](https://mai.ru/education/studies/scholarship)
-    - [Другая страница на сайте МАИ](https://mai.ru/sveden/grants)
+    - [Страница №1 на сайте МАИ](https://mai.ru/education/studies/scholarship)
+    - [Страница №2 на сайте МАИ](https://mai.ru/sveden/grants)
     - [Страница на сайте Госуслуг Москвы](https://www.mos.ru/otvet-obrazovanie/kakie-stipendii-posobiya-i-lgoty-mogut-poluchit-studenty)
 - **Виды:**
     - **Государственные академические:**
