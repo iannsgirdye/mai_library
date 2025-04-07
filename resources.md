@@ -28,7 +28,6 @@
 >     - [ВУЦ](#вуц)
 >     - [Институт №14](#институт-14)
 > - [Дополнительно](#дополнительно)
->     - [Мероприятия](#мероприятия-1)
 >     - [Саморазвитие](#саморазвитие)
 >     - [Интересное](#интересное)
 
@@ -194,29 +193,31 @@
 
 
 ## Дополнительно
-### Мероприятия
-- 🔎 [Росмолодёжь](https://fadm.gov.ru)
-- 🔎 [Росмолодёжь (госуслуги)](https://www.gosuslugi.ru/molodym) 
-- 🔎 [ФГАИС "Молодёшь России"](https://myrosmol.ru)
-- 🔎 [Росмолодёшь Бизнес](https://rosmolbusiness.ru)
-- 🔎 [Наука РФ](https://наука.рф)
-
-
 ### Саморазвитие
-- 🔎 [Changellenge](https://changellenge.com)
 - 🔎 [VK Education](https://education.vk.company)
 - 🔎 [Яндекс Образование](https://education.yandex.ru)
 - 🔎 [Яндекс Практикум](https://practicum.yandex.ru)
 - 🔎 [Young&&Yandex](https://yandex.ru/yaintern)
 - 🔎 [Т-Образование](https://education.tbank.ru)
+- 🔎 [Учебник Т—Ж](https://t-j.ru/pro)
 - 🔎 [Alfa Students](https://alfabank.ru/alfastudents)
 - 🔎 [Карьера в ВТБ](https://vtbcareer.com)
 - 🔎 [Молодёжный портал Сбера](https://sberstudent.ru)
+- 🔎 [Школа 21](https://21-school.ru)
 - 🔎 [Ozon Camp](https://ozoncamp.pro)
+- 🔎 [Карьёра в T1](https://career.t1.ru)
 - 🔎 [Stepik](https://stepik.org)
 - 🔎 [Хекслет](https://ru.hexlet.io)
 - 🔎 [CodeRun](https://coderun.yandex.ru)
 - 🔎 [Leetcode](https://leetcode.com)
+- 🔎 [Changellenge](https://changellenge.com)
+- 🔎 [Росмолодёжь](https://fadm.gov.ru)
+- 🔎 [Росмолодёжь (госуслуги)](https://www.gosuslugi.ru/molodym)
+- 🔎 [Твой ход](https://tvoyhod.online)
+- 🔎 [Молодёжь Москвы](https://mosmolodezh.ru)
+- 🔎 [ФГАИС "Молодёшь России"](https://myrosmol.ru)
+- 🔎 [Росмолодёшь Бизнес](https://rosmolbusiness.ru)
+- 🔎 [Наука РФ](https://наука.рф)
 
 
 ### Интересное
