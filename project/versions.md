@@ -859,3 +859,7 @@
 
 ## 2.4.17 [2025.04.09] | Репозиторий
 Наполнен [`/FIIT/2nd-semester/ОП/README.md`](/FIIT/2nd-semester/ОП/README.md).
+
+
+## 2.4.18 [2025.04.13] | Репозиторий
+Добавлены разные ресурсы в [`/something.md`](/something.md).

@@ -3,6 +3,11 @@
 # Разное
 Всё то, чему нигде не нашлось места на репозитории.
 
+> [!NOTE]
+> - [Цитаты преподавателей](#цитаты-преподавателей)
+> - [Разные ресурсы](#разные-ресурсы)
+
+
 
 ## Цитаты преподавателей
 **03.09.2024, В.Е. Зайцев**
@@ -23,3 +28,16 @@
 
 **20.02.2025, А.В. Родников**
 > Давайте возьмём расход топлива $m$. Нет, $m$ много, давайте $l$. *(о полковнике на его военной подготовке)*
+
+
+
+## Разные ресурсы
+- [Stack Overflow](https://stackoverflow.com)
+- [Алгоритмика](https://ru.algorithmica.org)
+- [Симулятор SQL онлайн](https://karpov.courses/simulator-sql)
+- [SQL OnLine IDE](https://sqliteonline.com)
+- [CodePen](https://codepen.io)
+- [HTML5BOOK](https://html5book.ru)
+- [MDN Web Docs](https://developer.mozilla.org)
+- [Hexlet Codebattle](https://codebattle.hexlet.io)
+- [Проект Эйлера](https://euler.jakumo.org)
