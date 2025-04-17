@@ -879,3 +879,8 @@
 
 ## 2.4.21 [2025.04.17] | Репозиторий
 Внесено улучшение в [`/README.md`](/README.md).
+
+
+## 2.4.22 [2025.04.17] | Репозиторий
+- Добавлены 2 организации в [`/manuals/organizations.md`](/manuals/organizations.md).
+- Внесены незначительные исправления в [`/manuals/organizations.md`](/manuals/organizations.md) и [`/manuals/money.md`](/manuals/money.md).
