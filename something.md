@@ -31,7 +31,14 @@
 
 
 
-## Разные ресурсы
+## Разные материалы
+### Литература
+- [Объектно-ориентированное программирование](https://practicum.yandex.ru/blog/obektno-orientirovannoe-programmirovanie)
+- [Парадигмы программирования](https://practicum.yandex.ru/blog/paradigmy-programmirovaniya)
+- [Виртуальное окружение в Python, Менеджер пакетов PIP, Файл requirements.txt](https://youtu.be/rsG1Y5k-9jo?si=-qNbnEuC-c2JQUo-)
+
+
+### Ресурсы
 - [Stack Overflow](https://stackoverflow.com)
 - [Алгоритмика](https://ru.algorithmica.org)
 - [Симулятор SQL онлайн](https://karpov.courses/simulator-sql)
