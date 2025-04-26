@@ -194,13 +194,12 @@
 
 ## Дополнительно
 ### Саморазвитие
-- 🔎 [VK Education](https://education.vk.company)
 - 🔎 [Яндекс Образование](https://education.yandex.ru)
 - 🔎 [Яндекс Практикум](https://practicum.yandex.ru)
 - 🔎 [Young&&Yandex](https://yandex.ru/yaintern)
+- 🔎 [VK Education](https://education.vk.company)
 - 🔎 [Т-Образование](https://education.tbank.ru)
-- 🔎 [Учебник Т—Ж](https://t-j.ru/pro)
-- 🔎 [Alfa Students](https://alfabank.ru/alfastudents)
+- 🔎 [Альфа-Будущее](https://alfabank.ru/alfafuture)
 - 🔎 [Карьера в ВТБ](https://vtbcareer.com)
 - 🔎 [Молодёжный портал Сбера](https://sberstudent.ru)
 - 🔎 [Школа 21](https://21-school.ru)
