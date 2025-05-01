@@ -6,9 +6,9 @@
 \usepackage[english, russian]{babel}
 \usepackage{amsmath, amssymb, fleqn, cancel, graphicx, wrapfig, tabbing, color, cases}
 
-\usepackage{amstext} % for \text macro
-\usepackage{array}   % for \newcolumntype macro
-\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\usepackage{amstext}          % for \text macro
+\usepackage{array}            % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}}  % math-mode version of "l" column type
 
 \DeclareMathOperator{\rank}{rank}
 \makeatletter
@@ -65,7 +65,19 @@
 
 %-------------------------------------------------------
 \newpage
+~\\ \textbf{Примечание.} Теория и задачи взяты из ''Сборника задач и упражнений по математическому анализу для втузов''
+— под редакцией Б.П. Демидовича (2004)
+
 \paragraph{2025.02.17 | ПЗ-1}
+\part{Неопределённый интеграл}
+
+\section{...}
+\subsection{Теория}
+...
+
+
+\subsection{Практика}
+...
 
 
 
@@ -73,6 +85,13 @@
 %-------------------------------------------------------
 \newpage
 \paragraph{2025.02.24 | ПЗ-2}
+\section{...}
+\subsection{Теория}
+...
+
+
+\subsection{Практика}
+...
 
 
 
@@ -209,19 +228,19 @@
 \[
     \int \frac{mx + n}{ax^2 + bx + c} dx 
 \]
-\subsubsection{Случай 1}
+\paragraph{$\boxed{1} ~m = 0$}
 \[
-    m = 0: ~~~ \int \frac{n}{ax^2 + bx + c} dx
+    \int \frac{n}{ax^2 + bx + c} dx
 \]
-\subsubsection{Случай 2}
+\paragraph{$\boxed{2} ~m \neq 0$}
 \[
-    m \neq 0: ~~~ (ax^2 + bx + c)' = 2ax + b
+    (ax^2 + bx + c)' = 2ax + b
 \]
 
 
 \subsection{Практика}
 
-\subsubsection{Пример (Случай 1)}
+\subsubsection{№1255}
 \[
     \int \frac{dx}{x^2 + 2x + 5} =
 \]
@@ -231,7 +250,7 @@
       \frac{1}{2} \arctg \frac{x + 1}{2} + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 1)}
+\subsubsection{№1257}
 \[
     \int \frac{dx}{3x^2 - x + 1} =
 \]
@@ -242,7 +261,7 @@
       \frac{1}{3} \cdot \frac{6}{\sqrt{11}} \arctg \frac{6x}{\sqrt{11}} + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 1)}
+\subsubsection{№1256}
 \[
     \int \frac{dx}{x^2 + 2x} = 
 \]
@@ -252,7 +271,7 @@
       \frac{1}{2} \ln \left|\frac{x + 1 - 1}{x + 1 + 1}\right| + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 2)}
+\subsubsection{№1258}
 \[
     \int \frac{xdx}{x^2 - 7x + 13} =
 \]
@@ -266,7 +285,7 @@
       \frac{7}{2} \cdot \frac{2}{\sqrt{3}} \arctg \frac{x - \frac{7}{2}}{\frac{2}{\sqrt{3}}} + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 2)}
+\subsubsection{№1259}
 \[
     \int \frac{3x - 2}{x^2 - 4x + 5} dx = 
 \]
@@ -287,6 +306,78 @@
 \paragraph{2025.03.10 | ПЗ-4}
 ~\\ На основе конспектов Никиты Отмахова и Давида Губеева (оба — М8О-111БВ-24).
 
+\section{...}
+\subsection{Теория}
+\[
+    \int \frac{mx + n}{\sqrt{ax^2 + bx + c}} dx
+\]
+\paragraph{$\boxed{1} ~m = 0$}
+\[
+    \int \frac{n dx}{\sqrt{ax^2 + bx + c}}
+\]
+
+
+\subsection{Практика}
+\subsubsection{Пример}
+\[
+    \int \frac{dx}{\sqrt{x^2 - 4x + 5}} = 
+\]
+\begin{gather*}
+    = \int \frac{d(x + 2)}{\sqrt{(x + 2)^2 + 1}} =
+      \ln \left|(x + 2) + \sqrt{x^2 - 4x + 5}\right| + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{3x - 6}{\sqrt{x^2 - 4x + 5}} dx =
+\]
+\begin{gather*}
+    = \frac{3}{2} \int \frac{2(x - 2)}{\sqrt{(x - 2)^2 + 1}} dx =
+      \frac{3}{2} \int \frac{d(x^2 - 4x + 5)}{\sqrt{x^2 - 4x + 5}} =
+      3 \sqrt{x^2 - 4x + 5} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{dx}{\sqrt{2 + 3x - 2x^2}} =
+\]
+\begin{gather*}
+    = \frac{1}{\sqrt{2}} \int \frac{d \left(x - \frac{3}{4}\right)}{\sqrt{\frac{25}{16}} - \left(x - \frac{3}{4}\right)^2} =
+      \frac{1}{\sqrt{2}} \arcsin \frac{x - \frac{3}{4}}{\frac{5}{4}} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{2x - 8}{\sqrt{1 - x - x^2}} dx =
+\]
+\begin{gather*}
+    = -\int \frac{8 - 2x}{\sqrt{1 - x - x^2}} dx =
+      -\int \frac{-1 - 2x}{\sqrt{1 - x - x^2}} - 9\int \frac{dx}{\sqrt{1 - x - x^2}} = \\
+    = -\int \frac{d(1 - x - x^2)}{\sqrt{1 - x - x^2}} - 
+      9\int \frac{d \left(x + \frac{1}{2}\right)}{\sqrt{-\left(x^2 + x + \frac{1}{4} - \frac{5}{4}\right)}} =
+      -2\sqrt{1 - x - x^2} -
+      9\int \frac{d \left(x + \frac{1}{2}\right)}{\sqrt{-\left[\left(x + \frac{1}{2}\right)^2 - \frac{5}{4}\right]}} = \\
+    = -2\sqrt{1 - x - x^2} - 
+      9\int \frac{d \left(x + \frac{1}{2}\right)}{\sqrt{\frac{5}{4} - \left(x + \frac{1}{2}\right)^2}} =
+      -2\sqrt{1 - x - x^2} - 9\arcsin \frac{2x + 1}{\sqrt{5}} + C
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int \frac{x}{\sqrt{5x^2 - 2x + 1}} dx =
+\]
+\begin{gather*}
+    = \frac{1}{10} \int \frac{10x - 2 + 2}{\sqrt{5x^2 - 2x + 1}} dx =
+      \frac{1}{10} \int \frac{d(5x^2 - 2x + 1)}{\sqrt{5x^2 - 2x + 1}} + 
+      \frac{2}{10} \int \frac{dx}{\sqrt{5 \left(x^2 - \frac{2}{5} + \frac{1}{5}\right)}} = \\
+    = \frac{2}{10} \sqrt{5x^2 - 2x + 1} + 
+      \frac{2}{10\sqrt{5}} \int \frac{d \left(x - \frac{1}{5}\right)}{\sqrt{\left(x - \frac{1}{5}\right) + \frac{4}{25}}} =
+      \frac{1}{5} \sqrt{5x^2 - 2x + 1} + 
+      \frac{1}{5\sqrt{5}} \ln \left|\left(x - \frac{1}{5}\right) + \sqrt{\left(x - \frac{1}{5}\right) + \frac{4}{25}}\right|
+\end{gather*}
+
+
+
 
 \[
     \int \sqrt{ax^2 + bx + c} ~dx
@@ -303,44 +394,39 @@
 \newpage
 \paragraph{2025.03.17 | ПЗ-5}
 
-\section{Интегрирование дробно-рациональных функций}
+\section{Интегрирование рациональных функций}
 
 \subsection{Теория}
 \[
     \int \frac{P_m(x)}{Q_n(x)} dx,~ m < n ~~~~~~~~~~
     Q_n(x) = 0 ~\rightarrow~ x_1, x_2, \dots, x_n \text{ --- корни}
 \]
-\subsubsection{Случай 1}
+\paragraph{$\boxed{1}~~ x^* \in \mathbb{R}, \alpha = 1$}
 \[
-    x^* \in \mathbb{R}, \alpha = 1 ~\rightarrow~ 
     \frac{A}{x - x^*}
 \]
-\subsubsection{Случай 2}
+\paragraph{$\boxed{2}~~ x^* \in \mathbb{R}, \alpha > 1$}
 \[
-    x^* \in \mathbb{R}, \alpha > 1 ~\rightarrow~ 
     \frac{A_1}{x - x^*} + \frac{A_2}{(x - x^*)^2} + \dots + \frac{A_{\alpha}}{(x - x^*)^{\alpha}}
 \]
-\subsubsection{Случай 3}
+\paragraph{$\boxed{3}~~ x^* = p \pm qi, \alpha = 1$}
 \[
-    x^* = p \pm qi, \alpha = 1 ~~~~~~~~~~
     ax^2 + bx + c = 0 ~\rightarrow~ D < 0 ~\rightarrow~ \frac{Ax + B}{ax^2 + bx + c}
 \]
-\subsubsection{Случай 4}
+\paragraph{$\boxed{4}~~ x^* = p \pm qi, \alpha > 1$}
 \[
-    x^* = p \pm qi, \alpha > 1 ~~~~~~~~~~
     \frac{A_1x = B_1}{ax^2 + bx + c} + \frac{A_2x + B_2}{(ax^2 + bx + c)^2} + \dots
 \]
-\subsubsection{Метод Остроградского}
+\paragraph{$\boxed{5}~~ \text{Метод Остроградского}$}
 \begin{gather*}
     \int \frac{P_m(x)}{Q_n(x)} dx = \frac{X(x)}{Q^*(x)} + \int \frac{Y(x)}{\widetilde{Q}(x)} dx \\
     \underline{Q_n(x)} ~~~ \underline{Q_n'(x)} ~~~ \widetilde{Q}(x) = Q_m(x): Q^*(x)
 \end{gather*}
 
 
-
 \subsection{Практика}
 
-\subsubsection{Пример}
+\subsubsection{(похоже на) №1283}
 \[
     \int \frac{dx}{(x - 1)(x + 3)(x - 4)}
 \]
@@ -353,7 +439,7 @@
     x^0:~ -12A_1 + 4A_2 - 3A_3 = 1 \\
 \end{gather*}
 
-\subsubsection{Пример (Случай 1)}
+\subsubsection{(похоже на) №1287}
 \[
     \int \frac{x^4 + 6x^3 + 12x^2 + 6}{x^3 - 6x^2 + 12x - 8} dx =
 \]
@@ -374,7 +460,7 @@
       \frac{x^2}{2} - \frac{8}{x - 2} - \frac{10}{2} \cdot \frac{1}{(x - 2)^2} + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 2)}
+\subsubsection{№1288}
 \[
     \int \frac{5x^2 + 6x + 9}{(x - 3)^2(x + 1)^2} dx = \dots
 \]
@@ -398,7 +484,7 @@
     = A_1 \ln |x - 3| - \frac{A_2}{x - 3} + A_3 \ln |x + 1| - \frac{A_4}{x + 1} + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 3)}
+\subsubsection{№1294}
 \[
     \int \frac{dx}{x^3 + 1} =
 \]
@@ -422,7 +508,7 @@
     \dots = \frac{1}{3} \ln |x + 1| + \frac{1}{6} \ln |x^2 - x + 1| - \frac{\sqrt{3}}{3} \arctg \frac{x - \frac{1}{2}}{\left(\frac{\sqrt{2}}{2}\right)} + C
 \end{gather*}
 
-\subsubsection{Пример (Случай 3)}
+\subsubsection{(похоже на) №1293}
 \[
     \int \frac{dx}{(x^2 - 4x + 3)(x^2 - 4x + 5)} = 
 \]
@@ -432,7 +518,7 @@
     \frac{A_1(x - 1)(x^2 - 4x + 5) + A_2(x - 3)(x^2 - 4x + 5) + (A_3x + B)(x^2 - 4x + 5)}{(x^2 - 4x + 3)(x^2 - 4x + 5)}
 \end{gather*}
 
-\subsubsection{Пример (Случай 4)}
+\subsubsection{№1298}
 \[
     \int \frac{3x + 5}{(x^2 + 2x + 2)^2} dx =
 \]
@@ -452,7 +538,7 @@
     \dots = -\frac{3}{2} \cdot \frac{1}{z^2 + 1} + 2\arctg z - \frac{z}{z^2 + 1} + \arctg z + C
 \end{gather*}
 
-\subsubsection{Пример (метод Остроградского)}
+\subsubsection{№1301}
 \[
     \int \frac{dx}{(x + 1)^2(x^2 + 1)^2} dx = \dots
 \]
@@ -492,7 +578,7 @@
 
 \subsection{Практика}
 
-\subsubsection{Пример}
+\subsubsection{(похоже на) №1315}
 \[
     \int \frac{x^3}{\sqrt{x + 1}} dx
 \]  
@@ -503,7 +589,7 @@
     \frac{2}{7}t^7 - \frac{6}{5}t^5 + 2t^3 - 2t + C = \dots
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1318}
 \[
     \int \frac{dx}{\sqrt{x} + \sqrt[3]{x}}
 \]
@@ -516,7 +602,7 @@
     2 \sqrt{x} - 3 \sqrt[3]{x} + 6 \sqrt[6]{t} + \ln \left|\sqrt[6]{x} + 1\right| + C
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1323}
 \[
     \int x \cdot \sqrt{\frac{x - 1}{x + 1}} dx
 \]
@@ -534,7 +620,7 @@
     \frac{At^3 + Bt^2 + Ct + D}{(t^2 - 1)^2} + \int \frac{Et + F}{t^2 - 1} dt
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1326}
 \[
     \int \frac{x^2 dx}{\sqrt{x^2 - x + 1}} =
 \]
@@ -556,7 +642,7 @@
     \frac{1}{2} \left(x + \frac{3}{2}\right) \sqrt{x^2 - x + 1} - \frac{1}{8} \ln \left|x - \frac{1}{2} + \sqrt{x^2 - x + 1}\right|
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{(похоже на) №1327}
 \[
     \int \frac{x^3}{\sqrt{1 - x^2}} = 
 \]
@@ -579,7 +665,7 @@
     \dots = \left(-\frac{1}{3}x^2 - \frac{2}{3}\right) \sqrt{1 - x^2} + C
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1330}
 \[
     \int \frac{dx}{(x + 1)^3 \sqrt{x^2 + 2x}}
 \]
@@ -607,7 +693,7 @@
     \frac{1}{2(x + 1)} \cdot \sqrt{1 - \left(\frac{1}{x + 1}\right)^2} - \frac{1}{2} \arcsin \frac{1}{x + 1} + C
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1331}
 \[
     \int \frac{x^2 + x + 1}{x \sqrt{x^2 - x + 1}} dx = 
 \]
@@ -626,7 +712,7 @@
     = \sqrt{x^2 - x + 1} + \frac{3}{2} \ln \left|x - \frac{1}{2} + \sqrt{\left(x - \frac{1}{2}\right)^2 + \frac{3}{4}}\right| + C
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1332}
 \[
     \int \frac{x^3}{\sqrt{(1 + 2x^2)^3}} =
 \]
@@ -642,19 +728,220 @@
     \frac{1}{4} \sqrt{1 + 2x^2} + \frac{1}{4 \sqrt{1 + 2x^2}} + C
 \end{gather*}
 
-\subsubsection{Пример}
+\subsubsection{№1333}
 \[
-    \int \frac{dx}{\sqrt[4]{1 + x^4}}
+    \int \frac{dx}{\sqrt[4]{1 + x^4}} =
 \]
 \begin{gather*}
-    m = 0, n = 4, p = -\frac{1}{4} ~~~~~~~~~~
+    = \int \frac{dx}{x\left(x^{-4} + 1\right)^{\frac{1}{4}}} = \dots \\
+    m = 0, n = 4, p = -\frac{1}{4} ~~\boxed{-} ~~~~~~~~~~
     \frac{m + 1}{n} = \frac{0 + 1}{4} = \frac{1}{4} ~~\boxed{-} ~~~~~~~~~~
     \frac{m + 1}{n} + p = \frac{1}{4} - \frac{1}{4} = 0 ~~\boxed{+} \\
-    x^{-4} + 1 = t^4 ~~\Rightarrow~~ \frac{1}{x^4} = t^4 - 1 ~~\Rightarrow~~ x = \left(\frac{1}{t^4 - 1}\right)^{-\frac{1}{4}} \\
+    \text{Замена: } x^{-4} + 1 = t^4 ~~\Rightarrow~~ 
+    \frac{1}{x^4} = t^4 - 1 ~~\Rightarrow~~ 
+    x = \left(\frac{1}{t^4 - 1}\right)^{\frac{1}{4}} = \left(t^4 - 1\right)^{-\frac{1}{4}} \\
     dx = -\frac{1}{4} \cdot \frac{4t^3dt}{(t^4 - 1)^{\frac{5}{4}}} = \frac{-t^3dt}{4(t^4 - 1)^{\frac{5}{4}}} \\
-    \dots
+    \dots = \int \frac{\frac{-t^3dt}{\left(t^4 - 1\right)^{\frac{5}{4}}}}{\left(t^4 - 1\right)^{-\frac{1}{4}} \cdot t} =
+    -\int \frac{t^2dt}{t^4 - 1} =
+    -\int \frac{t^2dt}{(t^2 - 1)(t^2 + 1)} =
+    \frac{A}{t - 1} + \frac{B}{t + 1} + \frac{Ct + D}{t^2 + 1} = \dots
 \end{gather*}
-(последнее фото в канале)
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.03.31 | ПЗ-7}
+\section{Тригонометрические интегралы}
+
+\subsection{Теория}
+\[
+    \int \sin x dx = -\cos x + C ~~~~~~~~~~ \int \cos x dx = \sin x + C
+\]
+\paragraph{$\boxed{1}$}
+\[
+    \int \sin^m x \cos^n x dx
+\]
+\paragraph{$\boxed{1.1}$ $m$ и $n$ --- целые}
+\begin{gather*}
+    \cos 2x = 1 - 2\sin^2 x ~\Rightarrow~ \sin^2 x = \frac{1 - \cos 2x}{2} \\
+    \cos 2x = 2\cos^2 x - 1 ~\Rightarrow~ \cos^2 x = \frac{1 + \cos 2x}{2}
+\end{gather*}
+
+
+\subsection{Практика}
+...
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.04.07 | ПЗ-8}
+\section{Интегрирование разных функций}
+
+\subsection{Практика}
+
+\subsubsection{№1452}
+\[
+    \int \sqrt{x^2 - 9} dx = 
+\]
+\begin{gather*}
+    = \frac{x}{9} \sqrt{x^2 - 9} + \frac{9}{2} \ln \left|x + \sqrt{x^2 - 9}\right| + C
+\end{gather*}
+
+\subsubsection{№1464}
+\[
+    \int \cosec^5 5x dx =
+\]
+\begin{gather*}
+    \sec x = \sqrt{1 + \tg^2 x} = \sqrt{1 + \frac{1}{\ctg^2 x}} ~~~~~
+    \cosec x = \sqrt{1 + \frac{1}{\tg^2 x}} = \sqrt{1 + \ctg^2 x} \\\\
+    = \int \frac{1}{\sin^5 5x} dx
+\end{gather*}
+
+\subsubsection{№1477}
+\[
+    \int x^2 e^{x^3} dx =
+\]
+\begin{gather*}
+    = \frac{1}{3} \int e^{x^3} dx^3 = \frac{1}{3} e^{x^3} + C
+\end{gather*}
+
+\subsubsection{№1455}
+\[
+    \int x \sqrt{x^2 + 2x + 2} =
+\]
+\begin{gather*}
+    = \int x \sqrt{(x + 1)^2 + 1} ~dx \\
+    \text{Замена: } x + 1 = \tg x ~~~~~ 
+\end{gather*}
+
+
+
+
+%--------------------------------------------------
+\newpage
+\part{Определённый интеграл}
+\section{Введение}
+\subsection{Теория}
+\begin{gather*}
+    \int f(x) dx = F(x) + C \\
+    \int_{a}^{b} f(x) dx = F(x) \Big|_a^b = F(b) - F(a) \\
+    \int 2xdx = x^2 + C ~~~~~ \int_{0}^{1} 2x dx = x^2 \Big|_0^1 = 1^2 - 0^2 = 1
+\end{gather*}
+
+
+\subsection{Практика}
+\subsubsection{Пример}
+\[
+    \int_{1}^{2} (x^2 - 2x + 3) dx =
+\]
+\begin{gather*}
+    = \left(\frac{1}{3}x^3 - x^2 + 3x\right) \Big|_1^2 =
+    \left(\frac{1}{3} \cdot 2^3 - 2^2 + 3 \cdot 2\right) - \left(\frac{1}{3} \cdot 1 - 1^2 + 3 \cdot 1\right) =
+    \left(\frac{8}{3} - 4 + 6\right) - \left(\frac{1}{3} - 1 + 3\right) = \\
+    = \frac{14}{3} - \frac{7}{3}
+    = \frac{7}{3}
+\end{gather*}
+(рисунок)
+
+\subsubsection{Пример}
+\[
+    \int_{0}^{5} \frac{dx}{2x + \sqrt{3x + 1}} =
+\]
+\begin{gather*}    
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    \int_{0}^{1} x^3 e^{2x} dx =
+\]
+\begin{gather*}
+    \frac{1}{2} \int_{0}^{1} x^3 e^{2x} d(2x) =
+    \frac{1}{2} \int_{0}^{1} x^3 de^{2x} =
+    \frac{1}{2} \left(x^3 e^{2x} \Big|_0^1 -  \int_{0}^{1} e^{2x} dx^3\right) =
+    \frac{1}{2} \left(x^3 e^{2x} \Big|_0^1 - \underbrace{3\int_{0}^{1} e^{2x} x^2 dx}_{(*)}\right) \\
+    (*) = 3\int_{0}^{1} e^{2x} x^2 dx = 
+    \frac{3}{2} \int_{0}^{1} x^2 de^{2x} =
+    \frac{3}{2} \left(x^2 e^{2x} \Big|_0^1 - \underbrace{2\int_{0}^{1} x e^{2x} dx}_{(**)}\right) \\
+    (**) = \int_{0}^{1} x de^{2x} = x e^{2x} \Big|_0^1 - \int_{0}^{1}
+\end{gather*}
+
+
+\section{Приложения определённого интеграла}
+
+\subsection{Теория}
+
+\paragraph{Площадь плоской фигуры}
+\begin{gather*}
+    S = \int_{a}^{b} f(x) dx \\
+\end{gather*}
+(рисунок)
+
+
+\subsection{Практика}
+\subsubsection{Пример}
+\[
+    S - ? ~~~~~ y = 4x - x^2, Ox
+\]
+\begin{gather*}
+    y = -(x^2 - 4x) = -\left((x - 2)^2 - 4\right) = 4 - (x - 2)^2 \\
+    \text{(рисунок)} \\
+    S = \int_{0}^{4} (4x - x^2) dx = \int_{0}^{4} \left(2x^2 - \frac{x^3}{3}\right) \Bigg|_{0}^{4} = 32 - \frac{64}{3}
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    S - ? ~~~~~ y^3 = x, ~~y = 1, ~~x = 8
+\]
+(рисунок)
+\begin{gather*}
+    \int_{1}^{8} \left(x^{\frac{1}{3}} - 1\right) dx =
+    \left(\frac{4}{3} x^{\frac{4}{3}} - x\right) \Bigg|_{1}^{8} =
+    (12 - 8) - \left(\frac{3}{4} - 1\right) = \frac{17}{4}
+\end{gather*}
+
+
+
+
+%--------------------------------------------------
+\newpage
+\paragraph{2025.04.14 | ПЗ-9}
+\section{...}
+\subsection{Практика}
+\subsubsection{Пример}
+\[
+    S - ? ~~~~~ y = x^2, ~~y = \frac{x^2}{2}, ~~y = 2x 
+\]
+(рисунок)
+\begin{gather*}
+    \int_{0}^{2} \left(x^2 - \frac{x^2}{2}\right) dx + \int_{2}^{4} \left(2x - \frac{x^2}{2}\right) dx = 4 \\
+    \int_{0}^{4} \left(2x - \frac{x^2}{2} - \left(2x - x^2\right)\right) dx =
+    \int_{0}^{4} \frac{x^2}{2} dx = \frac{x^3}{6} \Bigg|_{0}^{4} = \frac{4^2}{6} = \frac{64}{6} \\
+    \frac{x^2}{2} - 2x = 0 ~~\rightarrow~~ x^2 - 4x = 0 ~~\rightarrow~~ x = 4 \\
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    s - ? ~~~~~ y = e^x, ~~y = e^{-x}, ~~x = 1
+\]
+(рисунок)
+\begin{gather*}
+    ...
+\end{gather*}
+
+\subsubsection{Пример}
+\[
+    y = \arcsin \left(e^{-x}\right), ~~x = 0, ~~x = 1
+\]
+\begin{gather*}
+    \int_{0}^{1} \sqrt{1 + \left(\frac{-e^{-x}}{\sqrt{1 - (e^{-x})^2}}\right)} dx = 
+    \int_{0}^{1} \sqrt{1 + \frac{e^{-2x}}{1 - e^{-2x}}} dx =
+    \int_{0}^{1} \sqrt{\frac{1 - e^{-2x} + e^{-2x}}{1 - e^{-2x}}} dx =
+    \int_{0}^{1} \frac{1}{\sqrt{1 - e^{-2x}}} dx = \dots
+\end{gather*}
 
 
 
