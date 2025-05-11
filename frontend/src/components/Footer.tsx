@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p><b>mai_library</b> не является официальным ресурсом Московского авиационного института и несёт ознакомительных характер.</p>
+          <p><b>mai_library</b> не является официальным ресурсом <a href="https://mai.ru">Московского авиационного института</a> и несёт ознакомительных характер.</p>
         </div>
       </div>
     </footer>
