@@ -16,7 +16,13 @@ export default function Header() {
     { name: 'Проект и интересное', href: '/project' },
   ];
 
-  const isActive = (href: string) => pathname.startsWith(href);
+  const isActive = (href: string) => {
+    // Для главной страницы
+    if (href === '/') return pathname === '/';
+    
+    // Для остальных страниц проверяем точное соответствие или вложенные пути с /
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   return (
     <header className="hero-gradient text-white shadow-lg">
