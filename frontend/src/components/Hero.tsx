@@ -1,4 +1,4 @@
-export default function HomeHero() {
+export default function Hero() {
   return (
     <section className="text-center py-16 fade-in bg-blue-50">
       <div className="container mx-auto px-4">

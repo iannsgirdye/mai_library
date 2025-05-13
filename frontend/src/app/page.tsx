@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import HomeHero from "@/components/Hero";
-import HomePages from "@/components/Pages"
+import Hero from "@/components/Hero";
+import Menu from "@/components/Menu"
 
 export const metadata: Metadata = {
   title: "mai_library — cборник материалов для маёвца",
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HomeHero />
-      <HomePages />
+      <Hero />
+      <Menu />
     </>
   );
 }

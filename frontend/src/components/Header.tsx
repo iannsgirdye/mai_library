@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <header className="hero-gradient text-white shadow-lg">
+    <header className="sticky top-0 z-50 hero-gradient text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div className="flex justify-between items-center">
           {/* Логотип */}

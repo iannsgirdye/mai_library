@@ -3,39 +3,35 @@
 import Link from "next/link";
 import { FaBook, FaExternalLinkAlt, FaQuestion, FaLaptopCode } from "react-icons/fa";
 
-export default function HomePages() {
+export default function Menu() {
   const sections = [
     {
       title: "Учебное",
       description: "Файлы, ресурсы и сведения по предметам в рамках программ подготовок.",
       icon: <FaBook className="text-blue-600 text-2xl" />,
       bgColor: "bg-blue-100",
-      delay: "0.1s",
-      href: "/studying",
+      href: "/studying"
     },
     {
       title: "Сервисы и ленты",
       description: "Ссылки на сервисы и информационные ресурсы МАИ и других организаций.",
       icon: <FaExternalLinkAlt className="text-green-600 text-2xl" />,
       bgColor: "bg-green-100",
-      delay: "0.2s",
-      href: "/something",
+      href: "/something"
     },
     {
       title: "Справочники",
       description: "Справочная информация на студенческие темы от разработчика платформы.",
       icon: <FaQuestion className="text-yellow-600 text-2xl" />,
       bgColor: "bg-yellow-100",
-      delay: "0.3s",
-      href: "/manuals",
+      href: "/manuals"
     },
     {
       title: "Проект и интересное",
       description: "Блог разработчика платформы, студенческие моменты и вклады людей в проект.",
       icon: <FaLaptopCode className="text-purple-600 text-2xl" />,
       bgColor: "bg-purple-100",
-      delay: "0.4s",
-      href: "/project",
+      href: "/project"
     },
   ];
 
@@ -51,7 +47,7 @@ export default function HomePages() {
             key={idx}
             href={section.href}
             className="section-card block bg-white rounded-xl shadow-md overflow-hidden opacity-0 animate-fade-in-up"
-            style={{ animationDelay: section.delay }}
+            style={{ animationDelay: `${0.1 * (idx + 1)}s` }}
           >
             <div className="p-6">
               <div className="flex justify-center mb-4">
