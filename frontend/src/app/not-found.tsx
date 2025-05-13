@@ -11,6 +11,7 @@ export default function NotFound() {
           </div>
         </div>
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Страница не найдена</h1>
+        <p className="text-gray-600 text-center mb-4">Она не существует или находится на стадии разработки.</p>
         <Link href="/">
           <span className="inline-block px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">
             Вернуться на главную
