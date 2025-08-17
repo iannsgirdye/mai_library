@@ -93,8 +93,19 @@ main a {
   color: inherit;
 }
 
+main > section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  align-items: center;
+}
+
 main > section > div {
   padding-inline: 4em;
+}
+
+main > section:not(.catalog) {
+  margin-bottom: 2em;
 }
 
 main > section.catalog:not(:last-child):after {
