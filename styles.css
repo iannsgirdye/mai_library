@@ -1,8 +1,22 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-white: #ffffff;
-  --color-gray: #efefef;
+  --color-gray: #f1f2f3;
   --color-black: #202020;
   --color-light-blue: #22aaee;
   --color-blue: #0077ff;
   --color-link: #7755ee;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #202020;
 }
