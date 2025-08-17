@@ -19,7 +19,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  color: #202020;
+  color: var(--color-black);
 }
 
 .header {
@@ -69,3 +69,4 @@ body {
 .header__menu-link:hover {
   background-color: var(--color-dark-blue);
 }
+
