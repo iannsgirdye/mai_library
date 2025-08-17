@@ -157,3 +157,22 @@ main > section.catalog:not(:last-child):after {
 .menu-card:hover {
   transform: scale(1.05);
 }
+
+.page-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.page-menu__item {
+  padding: 0.5em;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+  border-radius: 0.5em;
+  transition-duration: 0.2s;
+}
+
+.page-menu__item:hover {
+  transform: scale(1.05);
+}
