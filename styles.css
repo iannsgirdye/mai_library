@@ -50,6 +50,14 @@ main h2 {
   text-align: center;
 }
 
+.link {
+  color: var(--color-light-blue);
+}
+
+.link:hover {
+  color: var(--color-dark-blue);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
