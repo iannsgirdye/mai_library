@@ -40,13 +40,14 @@ body {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 700;
 }
 
 main h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 700;
+  text-align: center;
 }
 
 .header {
@@ -119,18 +120,8 @@ main > section > p {
   width: 90%;
 }
 
-main > section:not(.catalog) {
-  margin-bottom: 3em;
-}
-
-main > section.catalog:not(:last-child):after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: var(--color-black);
-  border-radius: 4px;
-  margin-block: 2em;
+main > section {
+  margin-block: 4em;
 }
 
 .about__content {
