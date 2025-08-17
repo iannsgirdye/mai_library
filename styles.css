@@ -12,6 +12,7 @@
   --color-black: #202020;
   --color-light-blue: #22aaee;
   --color-blue: #0077ff;
+  --color-dark-blue: #18A0E4;
   --color-link: #7755ee;
 }
 
@@ -19,4 +20,52 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #202020;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+  padding: 2em 4em;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.header__logo-title {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.header__menu-list {
+  display: flex;
+  column-gap: 1em;
+  font-size: 1.25em;
+}
+
+.header__menu-link {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  transition-duration: 0.2s;
+}
+
+.header__menu-link--active {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.header__menu-link:hover {
+  background-color: var(--color-dark-blue);
 }
