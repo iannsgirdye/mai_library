@@ -63,10 +63,10 @@ body {
 
 .header__menu-link--active {
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-black) !important;
 }
 
-.header__menu-link:hover {
+.header__menu-link:hover:not(.header__menu-link--active) {
   background-color: var(--color-dark-blue);
 }
 
