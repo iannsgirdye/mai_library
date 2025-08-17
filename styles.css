@@ -11,9 +11,12 @@
   --color-gray: #f1f2f3;
   --color-black: #202020;
   --color-light-blue: #22aaee;
+  --color-light-blue-background: #90d4f6;
   --color-blue: #0077ff;
+  --color-blue-background: #7fbaff;
   --color-dark-blue: #18A0E4;
-  --color-link: #7755ee;
+  --color-violet-background: #baa9f6;
+  --color-violet: #7755ee;
 }
 
 .visually-hidden {
@@ -175,4 +178,70 @@ main > section.catalog:not(:last-child):after {
 
 .page-menu__item:hover {
   transform: scale(1.05);
+}
+
+.catalog__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.card {
+  display: flex;
+  column-gap: 1.25em;
+  background-color: var(--color-white);
+  border-radius: 2em;
+  padding: 1.25em;
+  transition-duration: 0.2s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--color-violet);
+}
+
+.card__icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-violet-background);
+  color: var(--color-violet);
+  font-weight: 700;
+  border-radius: 0.75em;
+}
+
+.card--telegram > .card__icon-wrapper {
+  background-color: var(--color-light-blue-background);
+  color: var(--color-light-blue);
+}
+
+.card--vk > .card__icon-wrapper {
+  background-color: var(--color-blue-background);
+  color: var(--color-blue);
+}
+
+.card__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.5em;
+}
+
+.card__title {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.card__description {
+  font-size: 0.875em;
 }
