@@ -278,10 +278,13 @@ main > section {
   opacity: 0.7;
 }
 
-
 .resources__list {
   display: flex;
   column-gap: 0.5em;
+}
+
+.resources__item:first-child {
+  margin-right: 4px;
 }
 
 .warning {
