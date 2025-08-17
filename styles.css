@@ -130,6 +130,11 @@ main > section.catalog:not(:last-child):after {
   margin-block: 2em;
 }
 
+.about__content {
+  font-size: 1.25em;
+  text-align: center;
+}
+
 .menu__content-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
