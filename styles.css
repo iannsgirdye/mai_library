@@ -36,6 +36,16 @@ body {
   background-color: var(--color-gray);
 }
 
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+main h2 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -85,7 +95,7 @@ body {
 }
 
 main {
-  padding: 2em 4em;
+  padding: 3em 8em;
 }
 
 main a {
@@ -100,12 +110,14 @@ main > section {
   align-items: center;
 }
 
-main > section > div {
-  padding-inline: 4em;
+main > section > div,
+main > section > nav,
+main > section > p {
+  width: 90%;
 }
 
 main > section:not(.catalog) {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 main > section.catalog:not(:last-child):after {
