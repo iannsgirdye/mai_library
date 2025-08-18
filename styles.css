@@ -270,7 +270,7 @@ main > section > p {
   transition-duration: 0.2s;
 }
 
-.page-menu__item:hover {
+.page-menu__link:hover {
   transform: scale(1.05);
 }
 
