@@ -366,10 +366,12 @@ main > section > p {
   display: flex;
   flex-direction: column;
   row-gap: 0.5em;
+  width: 100%;
 }
 
 .manual-part__title {
   font-size: clamp(28px, 2.08vw, 40px);
+  text-align: start;
 }
 
 .manual-part__content {
