@@ -417,7 +417,7 @@ table caption {
   font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 700;
   text-align: start;
-  /* margin-bottom: 0.25em; */
+  margin-bottom: 0.25em;
 }
 
 .footer {
