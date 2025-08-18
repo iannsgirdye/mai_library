@@ -239,6 +239,10 @@ main > section > p {
   gap: 32px;
 }
 
+.menu__content-list--manuals {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .menu-card {
   background-color: var(--color-white);
   border-radius: 2em;
@@ -250,6 +254,10 @@ main > section > p {
   text-align: center;
   height: 100%;
   transition-duration: 0.2s;
+}
+
+.menu__content-list--manuals .menu-card img {
+  margin-bottom: 16px;
 }
 
 .menu-card:hover {
