@@ -324,6 +324,10 @@ main > section > p {
   color: var(--color-blue);
 }
 
+.card__type {
+  margin-inline: -1em;
+}
+
 .card__text-wrapper {
   display: flex;
   flex-direction: column;
