@@ -399,16 +399,22 @@ main > section > p {
   font-size: clamp(20px, 1.25vw, 24px);
 }
 
-table {
-  border: 2px solid var(--color-black);
-  overflow-x: auto;
+.table-wrapper {
   width: 100%;
+  overflow-x: auto;
+  border: 0.25em solid var(--color-black);
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+table {
+  width: 100%;
+  border: 2px solid var(--color-black);
 }
 
 th, td {
-  --border: 2px solid var(--color-black);
-  border-top: var(--border);
-  border-left: var(--border);
+  border-top: 2px solid var(--color-black);
+  border-left: 2px solid var(--color-black);
   padding: 0.5em;
   overflow-x: auto;
 }
