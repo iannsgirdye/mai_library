@@ -44,15 +44,9 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(36px, 3.33vw, 64px);
   font-weight: 700;
   line-height: 1;
-}
-
-main h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
 }
 
 .link {
@@ -73,6 +67,7 @@ main h2 {
   padding: 2em 4vw;
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
+  font-size: clamp(14px, 0.833vw, 16px);
 }
 
 .header a {
@@ -87,7 +82,7 @@ main h2 {
 }
 
 .header__logo-title {
-  font-size: 3rem;
+  font-size: clamp(40px, 2.5vw, 48px);
   font-weight: 700;
 }
 
@@ -199,23 +194,29 @@ main h2 {
   transform: translateY(0);
 }
 
+main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  margin: 0 auto;
+}
+
+main h2 {
+  font-size: clamp(28px, 2.5vw, 48px);
+  font-weight: 700;
+  text-align: center;
+}
+
 main a {
   text-decoration: none;
   color: inherit;
 }
 
-main {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 4em;
-  margin: 0 auto;
-}
-
 main > section {
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  row-gap: 16px;
   align-items: center;
   width: 100%;
 }
@@ -234,7 +235,7 @@ main > section > p {
 .menu__content-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2em;
+  gap: 32px;
 }
 
 .menu-card {
@@ -243,7 +244,7 @@ main > section > p {
   padding: 1.25em;
   display: flex;
   flex-direction: column;
-  row-gap: 0.25em;
+  row-gap: 4px;
   align-items: center;
   text-align: center;
   height: 100%;
@@ -276,15 +277,16 @@ main > section > p {
 .catalog__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
+  gap: 32px;
 }
 
 .card {
+  font-size: 20px;  /* для локальных em*/
   display: flex;
-  column-gap: 1.25em;
+  column-gap: 20px;
   background-color: var(--color-white);
   border-radius: 2em;
-  padding: 1.25em;
+  padding: 1em;
   transition-duration: 0.2s;
   height: 100%;
   min-height: 9em;
@@ -295,8 +297,8 @@ main > section > p {
 }
 
 .card svg {
-  width: 2.5em;
-  height: 2.5em;
+  width: 40px;
+  height: 40px;
   stroke: var(--color-violet);
 }
 
@@ -311,7 +313,7 @@ main > section > p {
   background-color: var(--color-violet-background);
   color: var(--color-violet);
   font-weight: 700;
-  border-radius: 0.75em;
+  border-radius: 1em;
 }
 
 .card--telegram > .card__icon-wrapper {
@@ -336,12 +338,12 @@ main > section > p {
 }
 
 .card__title {
-  font-size: 1.25rem;
+  font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 700;
 }
 
 .card__description {
-  font-size: 0.875rem;
+  font-size: clamp(14px, 0.833vw, 16px);
 }
 
 .footer {
@@ -354,10 +356,11 @@ main > section > p {
   padding: 2em 4vw;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+  font-size: clamp(14px, 0.833vw, 16px);
 }
 
 .footer h2 {
-  font-size: 1.5rem;
+  font-size: clamp(16px, 1.25vw, 24px);
   font-weight: 700;
 }
 
@@ -394,8 +397,14 @@ main > section > p {
 }
 
 @media (max-width: 1440px) {
-  .menu__content-list {
+  main {
+    row-gap: 56px;
+  }
+
+  .menu__content-list,
+  .catalog__content {
     grid-template-columns: 1fr 1fr;
+    gap: 28px;
   }
 }
 
@@ -406,6 +415,10 @@ main > section > p {
 }
 
 @media (max-width: 1024px) {
+  main {
+    row-gap: 48px;
+  }
+
   .header__menu-list {
     display: none;
   }
@@ -417,19 +430,20 @@ main > section > p {
   .burger__list {
     column-gap: 0.5em;
   }
+
+  .menu__content-list,
+  .catalog__content {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 768px) {
-  body {
-    font-size: 0.875rem;
+  main {
+    row-gap: 40px;
   }
 
   .header {
     padding-block: 1.5em;
-  }
-
-  .header__logo-title {
-    font-size: 2.5rem;
   }
 
   .burger__list-wrapper {
@@ -437,8 +451,10 @@ main > section > p {
     gap: 0.25em;
   }
 
-  .menu__content-list {
+  .menu__content-list,
+  .catalog__content {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .footer {
@@ -450,5 +466,20 @@ main > section > p {
   .contact {
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    width: 85%;
+  }
+
+  .card {
+    font-size: 16px;
+  }
+
+  .card__icon-wrapper svg {
+    width: 32px;
+    height: 32px;
   }
 }
