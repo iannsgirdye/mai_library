@@ -372,6 +372,12 @@ main > section > p {
   font-size: clamp(28px, 2.08vw, 40px);
 }
 
+.manual-part__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
 .manual-part__content > ul:first-child,
 .manual-part__content > ol:first-child {
   margin-top: 0;
@@ -380,6 +386,15 @@ main > section > p {
 .manual-part__content > ul:only-child,
 .manual-part__content > ol:only-child {
   margin: 0;
+}
+
+.manual-part__content h3,
+.manual-part__content h3 + ul{
+  margin: 0;
+}
+
+.manual-part__content h3 {
+  font-size: clamp(20px, 1.25vw, 24px);
 }
 
 table {
@@ -397,8 +412,9 @@ th, td {
 }
 
 table caption {
-  font-size: clamp(24px, 1.45vw, 28px);
+  font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 700;
+  text-align: start;
   /* margin-bottom: 0.25em; */
 }
 
