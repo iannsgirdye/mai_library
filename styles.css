@@ -409,23 +409,23 @@ main > section > p {
 }
 
 @media (max-width: 768px) {
-    body {
-      font-size: 0.875rem;
-    }
+  body {
+    font-size: 0.875rem;
+  }
 
-    .header {
-      padding-block: 1.5rem;
-    }
+  .header {
+    padding-block: 1.5rem;
+  }
 
-    .header__logo-title {
-      font-size: 2.5rem;
-    }
+  .header__logo-title {
+    font-size: 2.5rem;
+  }
 
-    .burger__list {
-      height: 129px;
-      line-height: 1.1;
-      padding: 1rem 5rem 1rem 4vw;
-    }
+  .burger__list {
+    height: 129px;
+    line-height: 1.1;
+    padding: 1rem 5rem 1rem 4vw;
+  }
 
   .menu__content-list {
     grid-template-columns: 1fr;
