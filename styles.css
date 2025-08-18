@@ -488,6 +488,11 @@ main > section > p {
     font-size: 16px;
   }
 
+  .menu-card img {
+    width: 80px;
+    height: 80px;
+  }
+
   .card__icon-wrapper svg {
     width: 32px;
     height: 32px;
