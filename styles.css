@@ -356,6 +356,16 @@ main > section > p {
   font-size: clamp(14px, 0.833vw, 16px);
 }
 
+.manual {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.manual-part__content ul {
+  margin: 0;
+}
+
 .footer {
   margin-top: auto;
   display: grid;
