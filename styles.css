@@ -366,6 +366,11 @@ main > section > p {
   margin: 0;
 }
 
+table caption {
+  font-size: clamp(24px, 1.45vw, 28px);
+  font-weight: 700;
+}
+
 .footer {
   margin-top: auto;
   display: grid;
