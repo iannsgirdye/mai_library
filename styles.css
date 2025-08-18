@@ -256,7 +256,7 @@ main > section > p {
   justify-content: center;
 }
 
-.page-menu__item {
+.page-menu__link {
   padding: 0.5em;
   background-color: var(--color-light-blue);
   color: var(--color-white);
