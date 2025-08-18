@@ -382,11 +382,11 @@ main > section > p {
   text-align: center;
 }
 
-/* @media (max-width: 1440px) {
+@media (max-width: 1440px) {
   .menu__content-list {
     grid-template-columns: 1fr 1fr;
   }
-} */
+}
 
 @media (max-width: 1200px) {
   .header__menu-list {
@@ -427,9 +427,9 @@ main > section > p {
       padding: 1rem 5rem 1rem 4vw;
     }
 
-  /* .menu__content-list {
+  .menu__content-list {
     grid-template-columns: 1fr;
-  } */
+  }
 }
 
 @media (max-width: 425px) {
