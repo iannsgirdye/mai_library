@@ -335,6 +335,7 @@ main > section > p {
   flex-direction: column;
   justify-content: center;
   row-gap: 0.5em;
+  word-break: break-word;
 }
 
 .card__title {
