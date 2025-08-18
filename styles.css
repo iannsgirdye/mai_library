@@ -362,13 +362,44 @@ main > section > p {
   row-gap: 40px;
 }
 
-.manual-part__content ul {
+.manual-part {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.manual-part__title {
+  font-size: clamp(28px, 2.08vw, 40px);
+}
+
+.manual-part__content > ul:first-child,
+.manual-part__content > ol:first-child {
+  margin-top: 0;
+}
+
+.manual-part__content > ul:only-child,
+.manual-part__content > ol:only-child {
   margin: 0;
+}
+
+table {
+  border: 2px solid var(--color-black);
+  overflow-x: auto;
+  width: 100%;
+}
+
+th, td {
+  --border: 2px solid var(--color-black);
+  border-top: var(--border);
+  border-left: var(--border);
+  padding: 0.5em;
+  overflow-x: auto;
 }
 
 table caption {
   font-size: clamp(24px, 1.45vw, 28px);
   font-weight: 700;
+  /* margin-bottom: 0.25em; */
 }
 
 .footer {
