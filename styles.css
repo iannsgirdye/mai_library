@@ -197,37 +197,6 @@ main > section > p {
   text-align: center;
 }
 
-.menu__content-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-
-.menu__content-list--manuals {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.menu-card {
-  background-color: var(--color-white);
-  border-radius: 2em;
-  padding: 1.25em;
-  display: flex;
-  flex-direction: column;
-  row-gap: 4px;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  transition-duration: 0.2s;
-}
-
-.menu__content-list--manuals .menu-card img {
-  margin-bottom: 16px;
-}
-
-.menu-card:hover {
-  transform: scale(1.05);
-}
-
 .page-menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -272,6 +241,10 @@ main > section > p {
   gap: 32px;
 }
 
+.catalog-group__list--index {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .card {
   font-size: 20px;  /* для локальных em*/
   display: flex;
@@ -282,6 +255,17 @@ main > section > p {
   transition-duration: 0.2s;
   height: 100%;
   min-height: 9em;
+}
+
+.card--menu {
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 1.25em;
+  row-gap: 4px;
+  column-gap: none;
+  align-items: center;
+  text-align: center;
+  min-height: none;
 }
 
 .card:hover {
@@ -312,6 +296,10 @@ main > section > p {
 .card--vk > .card__icon-wrapper {
   background-color: var(--color-blue-background);
   color: var(--color-blue);
+}
+
+.card--menu > .card__icon {
+  width: clamp(80px, 5.2vw, 100px);
 }
 
 .card__type {
@@ -461,7 +449,6 @@ table caption {
     row-gap: 56px;
   }
 
-  .menu__content-list,
   .catalog-group__list {
     grid-template-columns: 1fr 1fr;
     gap: 28px;
@@ -501,7 +488,6 @@ table caption {
     display: block;
   }
 
-  .menu__content-list,
   .catalog-group__list {
     gap: 24px;
   }
@@ -521,7 +507,6 @@ table caption {
     min-height: 123px;
   }
 
-  .menu__content-list,
   .catalog-group__list {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -546,11 +531,6 @@ table caption {
 
   .card {
     font-size: 16px;
-  }
-
-  .menu-card img {
-    width: 80px;
-    height: 80px;
   }
 
   .card__icon-wrapper {
