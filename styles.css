@@ -347,23 +347,15 @@ main > section > p {
   row-gap: 1em;
 }
 
-.manual-part__content > ul:first-child,
-.manual-part__content > ol:first-child {
-  margin-top: 0;
-}
-
-.manual-part__content > ul:only-child,
-.manual-part__content > ol:only-child {
+.manual-part__content ul,
+.manual-part__content ol {
   margin: 0;
-}
-
-.manual-part__content h3,
-.manual-part__content h3 + ul{
-  margin: 0;
+  padding-left: 30px;
 }
 
 .manual-part__content h3 {
   font-size: clamp(20px, 1.25vw, 24px);
+  margin-block: 0 0.5rem;
 }
 
 .table-wrapper {
@@ -390,7 +382,7 @@ table caption {
   font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 700;
   text-align: start;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5rem;
 }
 
 .footer {
