@@ -460,12 +460,13 @@ table caption {
 }
 
 @media (max-width: 1440px) {
-  main {
+  main,
+  .catalog__content {
     row-gap: 56px;
   }
 
   .menu__content-list,
-  .catalog__content {
+  .catalog-group__list {
     grid-template-columns: 1fr 1fr;
     gap: 28px;
   }
@@ -478,7 +479,8 @@ table caption {
 }
 
 @media (max-width: 1024px) {
-  main {
+  main,
+  .catalog__content {
     row-gap: 48px;
   }
 
@@ -504,13 +506,14 @@ table caption {
   }
 
   .menu__content-list,
-  .catalog__content {
+  .catalog-group__list {
     gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
-  main {
+  main,
+  .catalog__content {
     row-gap: 40px;
   }
 
@@ -523,7 +526,7 @@ table caption {
   }
 
   .menu__content-list,
-  .catalog__content {
+  .catalog-group__list {
     grid-template-columns: 1fr;
     gap: 20px;
   }
