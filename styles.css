@@ -173,12 +173,6 @@ main {
   margin: 0 auto;
 }
 
-main h2 {
-  font-size: clamp(28px, 2.5vw, 48px);
-  font-weight: 700;
-  text-align: center;
-}
-
 main a {
   text-decoration: none;
   color: inherit;
@@ -254,6 +248,25 @@ main > section > p {
 }
 
 .catalog__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  margin: 0 auto;
+}
+
+.catalog-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.catalog-group__title {
+  font-size: clamp(28px, 2.5vw, 48px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.catalog-group__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
