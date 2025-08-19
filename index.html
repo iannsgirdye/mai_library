@@ -41,53 +41,36 @@
           материалов для самообразования и справочников по различным вопросам.
         </p>
       </section>
-      <section class="menu">
-        <h2 class="menu__title">Разделы</h2>
-        <nav class="menu__content">
-          <ul class="menu__content-list">
-            <li class="menu__content-item">
-              <a class="menu-card" href="./services.html">
-                <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 13C6.55 13 7 12.55 7 12C7 11.45 6.55 11 6 11C5.45 11 5 11.45 5 12C5 12.55 5.45 13 6 13Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M6 7C6.55 7 7 6.55 7 6C7 5.45 6.55 5 6 5C5.45 5 5 5.45 5 6C5 6.55 5.45 7 6 7Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M6 19C6.55 19 7 18.55 7 18C7 17.45 6.55 17 6 17C5.45 17 5 17.45 5 18C5 18.55 5.45 19 6 19Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M12 13C12.55 13 13 12.55 13 12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12C11 12.55 11.45 13 12 13Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M12 7C12.55 7 13 6.55 13 6C13 5.45 12.55 5 12 5C11.45 5 11 5.45 11 6C11 6.55 11.45 7 12 7Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M12 19C12.55 19 13 18.55 13 18C13 17.45 12.55 17 12 17C11.45 17 11 17.45 11 18C11 18.55 11.45 19 12 19Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M18 13C18.55 13 19 12.55 19 12C19 11.45 18.55 11 18 11C17.45 11 17 11.45 17 12C17 12.55 17.45 13 18 13Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M18 7C18.55 7 19 6.55 19 6C19 5.45 18.55 5 18 5C17.45 5 17 5.45 17 6C17 6.55 17.45 7 18 7Z" stroke="#000000" stroke-width="2"/>
-                  <path d="M18 19C18.55 19 19 18.55 19 18C19 17.45 18.55 17 18 17C17.45 17 17 17.45 17 18C17 18.55 17.45 19 18 19Z" stroke="#000000" stroke-width="2"/>
-                </svg>
-                <h3 class="menu-card__title">Сервисы</h3>
-                <p class="menu-card__description">Цифровые инструменты вуза для образования</p>
+      <section class="catalog-group">
+        <h2 class="catalog-group__title"></h2>
+        <nav class="catalog-group__content">
+          <ul class="catalog-group__list catalog-group__list--index">
+            <li class="catalog-group__item">
+              <a class="card card--menu" href="./services.html">
+                <img class="card__icon" src="./icons/index/services.svg" alt="" width="100" height="100"/>
+                <h3 class="card__title">Сервисы</h3>
+                <p class="card__description">Цифровые инструменты вуза для образования</p>
               </a>
             </li>
-            <li class="menu__content-item">
-              <a class="menu-card" href="./organizations.html">
-                <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 6C14.3432 6 13 7.34315 13 9C13 10.6569 14.3432 12 16 12C17.6569 12 19 10.6569 19 9C19 7.34315 17.6569 6 16 6ZM11 9C11 6.23858 13.2386 4 16 4C18.7614 4 21 6.23858 21 9C21 10.3193 20.489 11.5193 19.6542 12.4128C21.4951 13.0124 22.9176 14.1993 23.8264 15.5329C24.1374 15.9893 24.0195 16.6114 23.5631 16.9224C23.1068 17.2334 22.4846 17.1155 22.1736 16.6591C21.1979 15.2273 19.4178 14 17 14C13.166 14 11 17.0742 11 19C11 19.5523 10.5523 20 10 20C9.44773 20 9.00001 19.5523 9.00001 19C9.00001 18.308 9.15848 17.57 9.46082 16.8425C9.38379 16.7931 9.3123 16.7323 9.24889 16.6602C8.42804 15.7262 7.15417 15 5.50001 15C3.84585 15 2.57199 15.7262 1.75114 16.6602C1.38655 17.075 0.754692 17.1157 0.339855 16.7511C-0.0749807 16.3865 -0.115709 15.7547 0.248886 15.3398C0.809035 14.7025 1.51784 14.1364 2.35725 13.7207C1.51989 12.9035 1.00001 11.7625 1.00001 10.5C1.00001 8.01472 3.01473 6 5.50001 6C7.98529 6 10 8.01472 10 10.5C10 11.7625 9.48013 12.9035 8.64278 13.7207C9.36518 14.0785 9.99085 14.5476 10.5083 15.0777C11.152 14.2659 11.9886 13.5382 12.9922 12.9945C11.7822 12.0819 11 10.6323 11 9ZM3.00001 10.5C3.00001 9.11929 4.1193 8 5.50001 8C6.88072 8 8.00001 9.11929 8.00001 10.5C8.00001 11.8807 6.88072 13 5.50001 13C4.1193 13 3.00001 11.8807 3.00001 10.5Z" fill="#000000"/>
-                </svg>
-                <h3 class="menu-card__title">Организации</h3>
-                <p class="menu-card__description">Информационные ресурсы подразделений вуза</p>
+            <li class="catalog-group__item">
+              <a class="card card--menu" href="./organizations.html">
+                <img class="card__icon" src="./icons/index/organizations.svg" alt="" width="100" height="100"/>
+                <h3 class="card__title">Организации</h3>
+                <p class="card__description">Информационные ресурсы подразделений вуза</p>
               </a>
             </li>
-            <li class="menu__content-item">
-              <a class="menu-card" href="./manuals.html">
-                <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 14C12 14 12 13.3223 12 12.5C12 11.6777 15.5 11.5 15.5 9C15.5 7.5 14 6.5 12 6.5C10.5 6.5 9 7.5 9 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.2271 16.9535C13.2271 17.6313 12.6777 18.1807 11.9999 18.1807C11.3221 18.1807 10.7726 17.6313 10.7726 16.9535C10.7726 16.2757 11.3221 15.7262 11.9999 15.7262C12.6777 15.7262 13.2271 16.2757 13.2271 16.9535Z" fill="#000000"/>
-                </svg>
-                <h3 class="menu-card__title">Справочник</h3>
-                <p class="menu-card__description">Статьи для решения различных вопросов</p>
+            <li class="catalog-group__item">
+              <a class="card card--menu" href="./manuals.html">
+                <img class="card__icon" src="./icons/index/manuals.svg" alt="" width="100" height="100"/>
+                <h3 class="card__title">Справочник</h3>
+                <p class="card__description">Статьи для решения различных вопросов</p>
               </a>
             </li>
-            <li class="menu__content-item">
-              <a class="menu-card" href="./self-education.html">
-                <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <h3 class="menu-card__title">Самообразование</h3>
-                <p class="menu-card__description">Материалы для самостоятельной подготовки</p>
+            <li class="catalog-group__item">
+              <a class="card card--menu" href="./self-education.html">
+                <img class="card__icon" src="./icons/index/self-education.svg" alt="" width="100" height="100"/>
+                <h3 class="card__title">Самообразование</h3>
+                <p class="card__description">Материалы для самостоятельной подготовки</p>
               </a>
             </li>
           </ul>

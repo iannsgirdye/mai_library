@@ -173,12 +173,6 @@ main {
   margin: 0 auto;
 }
 
-main h2 {
-  font-size: clamp(28px, 2.5vw, 48px);
-  font-weight: 700;
-  text-align: center;
-}
-
 main a {
   text-decoration: none;
   color: inherit;
@@ -203,37 +197,6 @@ main > section > p {
   text-align: center;
 }
 
-.menu__content-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-
-.menu__content-list--manuals {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.menu-card {
-  background-color: var(--color-white);
-  border-radius: 2em;
-  padding: 1.25em;
-  display: flex;
-  flex-direction: column;
-  row-gap: 4px;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  transition-duration: 0.2s;
-}
-
-.menu__content-list--manuals .menu-card img {
-  margin-bottom: 16px;
-}
-
-.menu-card:hover {
-  transform: scale(1.05);
-}
-
 .page-menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -254,9 +217,32 @@ main > section > p {
 }
 
 .catalog__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  margin: 0 auto;
+}
+
+.catalog-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.catalog-group__title {
+  font-size: clamp(28px, 2.5vw, 48px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.catalog-group__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+
+.catalog-group__list--index {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
@@ -271,14 +257,19 @@ main > section > p {
   min-height: 9em;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.card--menu {
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 1.25em;
+  row-gap: 4px;
+  column-gap: none;
+  align-items: center;
+  text-align: center;
+  min-height: none;
 }
 
-.card svg {
-  width: 40px;
-  height: 40px;
-  stroke: var(--color-violet);
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card__icon-wrapper {
@@ -293,6 +284,8 @@ main > section > p {
   color: var(--color-violet);
   font-weight: 700;
   border-radius: 1em;
+  flex-shrink: 0;  /* Запрет на сжатие обёртки */
+  width: 80px;     /*                          */
 }
 
 .card--telegram > .card__icon-wrapper {
@@ -303,6 +296,10 @@ main > section > p {
 .card--vk > .card__icon-wrapper {
   background-color: var(--color-blue-background);
   color: var(--color-blue);
+}
+
+.card--menu > .card__icon {
+  width: clamp(80px, 5.2vw, 100px);
 }
 
 .card__type {
@@ -447,12 +444,12 @@ table caption {
 }
 
 @media (max-width: 1440px) {
-  main {
+  main,
+  .catalog__content {
     row-gap: 56px;
   }
 
-  .menu__content-list,
-  .catalog__content {
+  .catalog-group__list {
     grid-template-columns: 1fr 1fr;
     gap: 28px;
   }
@@ -465,7 +462,8 @@ table caption {
 }
 
 @media (max-width: 1024px) {
-  main {
+  main,
+  .catalog__content {
     row-gap: 48px;
   }
 
@@ -490,14 +488,14 @@ table caption {
     display: block;
   }
 
-  .menu__content-list,
-  .catalog__content {
+  .catalog-group__list {
     gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
-  main {
+  main,
+  .catalog__content {
     row-gap: 40px;
   }
 
@@ -509,8 +507,7 @@ table caption {
     min-height: 123px;
   }
 
-  .menu__content-list,
-  .catalog__content {
+  .catalog-group__list {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -536,13 +533,7 @@ table caption {
     font-size: 16px;
   }
 
-  .menu-card img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .card__icon-wrapper svg {
-    width: 32px;
-    height: 32px;
+  .card__icon-wrapper {
+    width: 64px;
   }
 }
