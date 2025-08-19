@@ -239,6 +239,10 @@ main > section > p {
   gap: 32px;
 }
 
+.menu__content-list--manuals {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .menu-card {
   background-color: var(--color-white);
   border-radius: 2em;
@@ -250,6 +254,10 @@ main > section > p {
   text-align: center;
   height: 100%;
   transition-duration: 0.2s;
+}
+
+.menu__content-list--manuals .menu-card img {
+  margin-bottom: 16px;
 }
 
 .menu-card:hover {
@@ -346,6 +354,76 @@ main > section > p {
 
 .card__description {
   font-size: clamp(14px, 0.833vw, 16px);
+}
+
+.manual {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.manual-part {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  width: 100%;
+}
+
+.manual-part__title {
+  font-size: clamp(28px, 2.08vw, 40px);
+  text-align: start;
+}
+
+.manual-part__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.manual-part__content > ul:first-child,
+.manual-part__content > ol:first-child {
+  margin-top: 0;
+}
+
+.manual-part__content > ul:only-child,
+.manual-part__content > ol:only-child {
+  margin: 0;
+}
+
+.manual-part__content h3,
+.manual-part__content h3 + ul{
+  margin: 0;
+}
+
+.manual-part__content h3 {
+  font-size: clamp(20px, 1.25vw, 24px);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 0.25em solid var(--color-black);
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+table {
+  width: 100%;
+  border: 2px solid var(--color-black);
+}
+
+th, td {
+  border-top: 2px solid var(--color-black);
+  border-left: 2px solid var(--color-black);
+  padding: 0.5em;
+  overflow-x: auto;
+}
+
+table caption {
+  font-size: clamp(20px, 1.25vw, 24px);
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 0.25em;
 }
 
 .footer {
@@ -478,6 +556,11 @@ main > section > p {
 
   .card {
     font-size: 16px;
+  }
+
+  .menu-card img {
+    width: 80px;
+    height: 80px;
   }
 
   .card__icon-wrapper svg {
