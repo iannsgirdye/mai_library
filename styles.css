@@ -288,12 +288,6 @@ main > section > p {
   transform: scale(1.05);
 }
 
-.card svg {
-  width: 40px;
-  height: 40px;
-  stroke: var(--color-violet);
-}
-
 .card__icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -306,6 +300,8 @@ main > section > p {
   color: var(--color-violet);
   font-weight: 700;
   border-radius: 1em;
+  flex-shrink: 0;  /* Запрет на сжатие обёртки */
+  width: 80px;     /*                          */
 }
 
 .card--telegram > .card__icon-wrapper {
@@ -557,8 +553,7 @@ table caption {
     height: 80px;
   }
 
-  .card__icon-wrapper svg {
-    width: 32px;
-    height: 32px;
+  .card__icon-wrapper {
+    width: 64px;
   }
 }
