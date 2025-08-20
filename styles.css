@@ -52,6 +52,7 @@ h1 {
 
 .link {
   color: var(--color-light-blue);
+  transition-duration: 0.2s;
 }
 
 .header {
@@ -65,11 +66,6 @@ h1 {
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
   font-size: clamp(14px, 0.833vw, 16px);
-}
-
-.header a {
-  color: white;
-  text-decoration: none;
 }
 
 .header__logo {
@@ -165,7 +161,7 @@ main {
   margin: 0 auto;
 }
 
-main a {
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -391,6 +387,10 @@ table caption {
   width: 3em;
   height: 3em;
   transition-duration: 0.2s;
+}
+
+.footer .link {
+  color: inherit;
 }
 
 .resources,
