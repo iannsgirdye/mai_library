@@ -384,6 +384,7 @@ table caption {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   font-size: clamp(14px, 0.833vw, 16px);
+  user-select: none;
 }
 
 .footer h2 {
