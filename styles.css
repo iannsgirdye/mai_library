@@ -19,6 +19,11 @@
   --color-violet: #7755ee;
 }
 
+::selection {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
