@@ -71,6 +71,7 @@ h1 {
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
   font-size: clamp(14px, 0.833vw, 16px);
+  user-select: none;
 }
 
 .header__logo {
