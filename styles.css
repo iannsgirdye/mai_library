@@ -317,6 +317,21 @@ main > section > p {
   row-gap: 40px;
 }
 
+.manual-about {
+  display: flex;
+  justify-content: center;
+  column-gap: 32px;
+}
+
+.manual-about__element {
+  display: flex;
+  column-gap: 4px;
+}
+
+.manual-about__icon {
+  user-select: none;
+}
+
 .manual-part {
   display: flex;
   flex-direction: column;
