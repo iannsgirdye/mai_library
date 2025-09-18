@@ -60,6 +60,10 @@ h1 {
   transition-duration: 0.2s;
 }
 
+.link--hidden {
+  color: inherit;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -411,10 +415,6 @@ table caption {
   width: 3em;
   height: 3em;
   transition-duration: 0.2s;
-}
-
-.footer .link {
-  color: inherit;
 }
 
 .resources,
