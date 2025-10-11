@@ -204,9 +204,9 @@ main > section > p {
 
 .page-menu__link {
   padding: 0.5em;
-  background-color: var(--color-light-blue);
-  color: var(--color-white);
+  background-color: var(--color-white);
   border-radius: 0.5em;
+  border: 2px solid var(--color-black);
   transition-duration: 0.2s;
 }
 
